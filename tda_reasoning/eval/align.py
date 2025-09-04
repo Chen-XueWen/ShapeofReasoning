@@ -22,7 +22,8 @@ def cosine_sim(a: np.ndarray, b: np.ndarray) -> float:
 def align_steps(
     model_emb: np.ndarray,
     gold_emb: np.ndarray,
-    gap_penalty: float = 0.0,
+    gap_penalty_model: float = 0.01,
+    gap_penalty_gold: float = 0.0,
 ) -> AlignmentResult:
     """
     Monotonic alignment (DP) maximizing total cosine similarity with optional gap penalty.
@@ -42,17 +43,17 @@ def align_steps(
         for j in range(m + 1):
             if i < n and j < m:
                 v = dp[i, j] + S[i, j]
-                if v > dp[i + 1, j + 1]:
+                if v > dp[i + 1, j + 1]: #good match, moving to the next pair to match
                     dp[i + 1, j + 1] = v
                     bt[i + 1, j + 1] = (i, j)
             if i < n:
-                v = dp[i, j] - gap_penalty
-                if v > dp[i + 1, j]:
+                v = dp[i, j] - gap_penalty_model
+                if v > dp[i + 1, j]: #jumping to the next model sentence
                     dp[i + 1, j] = v
                     bt[i + 1, j] = (i, j)
             if j < m:
-                v = dp[i, j] - gap_penalty
-                if v > dp[i, j + 1]:
+                v = dp[i, j] - gap_penalty_gold
+                if v > dp[i, j + 1]: #jumping to the next gold sentence
                     dp[i, j + 1] = v
                     bt[i, j + 1] = (i, j)
 
