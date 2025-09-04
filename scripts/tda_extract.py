@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 import sys
 from pathlib import Path as _Path
@@ -9,7 +8,6 @@ sys.path.append(str(_Path(__file__).resolve().parents[1]))
 import argparse
 import json
 from pathlib import Path
-from typing import Dict
 
 import numpy as np
 from tqdm import tqdm
@@ -17,7 +15,7 @@ from tqdm import tqdm
 from tda_reasoning.tda.features import compute_diagrams, assemble_feature_vector
 
 
-def load_npz(path: str | Path) -> Dict[str, np.ndarray]:
+def load_npz(path: str | Path) -> dict[str, np.ndarray]:
     with np.load(path) as data:
         return {k: data[k] for k in data.files}
 

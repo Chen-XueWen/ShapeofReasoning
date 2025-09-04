@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import re
 from typing import List
 
@@ -27,8 +25,8 @@ def segment_steps(text: str, min_len: int = 2) -> List[str]:
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
     has_markers = sum(_looks_like_step_start(ln) for ln in lines) >= 2
     if has_markers:
-        segments: List[str] = []
-        buf: List[str] = []
+        segments: list[str] = []
+        buf: list[str] = []
         for ln in lines:
             if _looks_like_step_start(ln) and buf:
                 segments.append(" ".join(buf).strip())

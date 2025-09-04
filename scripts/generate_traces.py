@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 import argparse
 import json
 import time
 from pathlib import Path
-from typing import Any, Dict, Iterable, List
+from typing import Any, Iterable
 from tqdm import tqdm
 import requests
 
 
-def read_jsonl(path: str | Path) -> Iterable[Dict[str, Any]]:
+def read_jsonl(path: str | Path) -> Iterable[dict[str, Any]]:
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
             if line.strip():
@@ -24,7 +23,7 @@ def ensure_dir(path: str | Path) -> None:
 def ollama_generate(
     model: str,
     prompt: str,
-    options: Dict[str, Any] | None = None,
+    options: dict[str, Any] | None = None,
     host: str = "http://localhost:11434",
 ) -> str:
     url = f"{host}/api/generate"
@@ -86,7 +85,7 @@ def main() -> None:
     }
 
     # Read all rows to enable a progress bar with total (dataset is small)
-    rows: List[Dict[str, Any]] = list(read_jsonl(args.aime))
+    rows: list[dict[str, Any]] = list(read_jsonl(args.aime))
     n = 0
     for ex in tqdm(rows, desc="Generating traces", unit="problem"):
         statement = ex.get("statement", "")

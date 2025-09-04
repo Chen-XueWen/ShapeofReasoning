@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 """
 Analyze association between topological features and alignment score using OLS.

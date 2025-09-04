@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from typing import Dict, Literal, Optional
 from ripser import ripser
 import numpy as np

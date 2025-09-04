@@ -1,16 +1,12 @@
-from __future__ import annotations
-
-from typing import Dict
-
 import numpy as np
 
 
-def summarize_diagrams(dgms: Dict[int, np.ndarray]) -> Dict[str, float]:
+def summarize_diagrams(dgms: dict[int, np.ndarray]) -> dict[str, float]:
     """
     Simple summary statistics over persistence diagrams per dimension.
     Returns a flat dict like {"H0_count": ..., "H1_total_life": ..., ...}.
     """
-    feats: Dict[str, float] = {}
+    feats: dict[str, float] = {}
     for dim, dgm in dgms.items():
         if dgm.size == 0:
             feats[f"H{dim}_count"] = 0.0
