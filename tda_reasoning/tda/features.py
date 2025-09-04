@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, Iterable, Tuple
+from typing import Dict, Iterable, Literal, Tuple
 
 import numpy as np
 
@@ -10,9 +10,9 @@ from .persistence import summarize_diagrams
 
 def compute_diagrams(
     points: np.ndarray,
-    metric: str = "cosine",
+    metric: Literal["euclidean", "cosine"] = "cosine",
     maxdim: int = 1,
-    filtration: str = "vr",
+    filtration: Literal["vr"] = "vr",
     **kwargs,
 ) -> Dict[int, np.ndarray]:
     """
@@ -110,8 +110,8 @@ def betti_curve_summary_features(
     # Centroid and spread treating bc as a density over t
     mass = float(np.trapz(bc, ts))
     if mass > 0:
-        centroid = float(np.trapz(bc * ts, ts) / mass)
-        var = float(np.trapz(bc * (ts - centroid) ** 2, ts) / mass)
+        centroid = float(np.trapezoid(bc * ts, ts) / mass)
+        var = float(np.trapezoid(bc * (ts - centroid) ** 2, ts) / mass)
         spread = float(np.sqrt(max(var, 0.0)))
         centroid_n = float((centroid - t_min) / t_range)
         spread_n = float(spread / t_range)
