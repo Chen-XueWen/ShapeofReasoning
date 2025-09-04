@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Iterable, List, Optional
+from typing import Iterable, Optional
 from sentence_transformers import SentenceTransformer
 import numpy as np
 

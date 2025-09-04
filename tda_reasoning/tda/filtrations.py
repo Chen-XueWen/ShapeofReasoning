@@ -1,4 +1,4 @@
-from typing import Dict, Literal, Optional
+from typing import Literal, Optional
 from ripser import ripser
 import numpy as np
 
@@ -9,7 +9,7 @@ def vr_diagrams(
     maxdim: int = 1,
     thresh: Optional[float] = None,
     return_dgm_dict: bool = True,
-) -> Dict[int, np.ndarray] | dict:
+) -> dict[int, np.ndarray] | dict:
     """
     Compute Vietoris–Rips persistent homology from a point cloud or distance matrix.
 

@@ -1,5 +1,4 @@
 import re
-from typing import List
 
 
 _STEP_PATTERNS = [
@@ -11,7 +10,7 @@ def _looks_like_step_start(s: str) -> bool:
     return any(pat.search(s) for pat in _STEP_PATTERNS)
 
 
-def segment_steps(text: str, min_len: int = 2) -> List[str]:
+def segment_steps(text: str, min_len: int = 2) -> list[str]:
     """
     Heuristic segmentation of reasoning into steps.
 

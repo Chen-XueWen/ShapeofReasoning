@@ -2,6 +2,10 @@
 
 import argparse
 import json
+import sys
+from pathlib import Path as _Path
+# Ensure project root is on sys.path when running from scripts/
+sys.path.append(str(_Path(__file__).resolve().parents[1]))
 
 from tda_reasoning.data.loader import (
     load_dataset_generic,
