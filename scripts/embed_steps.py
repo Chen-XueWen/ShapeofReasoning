@@ -30,7 +30,7 @@ def ensure_dir(path: str | Path) -> None:
 
 def save_npz(path: str | Path, **arrays: np.ndarray) -> None:
     ensure_dir(path)
-    np.savez_compressed(path, **arrays)
+    np.savez_compressed(path, allow_pickle=True, **arrays)
 
 
 def main() -> None:
