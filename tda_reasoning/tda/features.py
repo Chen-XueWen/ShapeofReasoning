@@ -71,12 +71,12 @@ def betti_curve_summary_features(
     - betti_trend: Pearson correlation between t and Betti values in [-1, 1]
     """
     out = {
-        "betti_peak": 0.0,
-        "betti_location": 0.0,
-        "betti_width": 0.0,
-        "betti_centroid": 0.0,
-        "betti_spread": 0.0,
-        "betti_trend": 0.0,
+        f"H{dim}_betti_peak": 0.0,
+            f"H{dim}_betti_location": 0.0,
+            f"H{dim}_betti_width": 0.0,
+            f"H{dim}_betti_centroid": 0.0,
+            f"H{dim}_betti_spread": 0.0,
+            f"H{dim}_betti_trend": 0.0,
     }
 
     dgm = diagrams.get(dim, np.empty((0, 2)))
@@ -141,12 +141,12 @@ def betti_curve_summary_features(
 
     out.update(
         {
-            "betti_peak": peak,
-            "betti_location": t_peak_n,
-            "betti_width": width_n,
-            "betti_centroid": centroid_n,
-            "betti_spread": spread_n,
-            "betti_trend": trend,
+            f"H{dim}_betti_peak": peak,
+            f"H{dim}_betti_location": t_peak_n,
+            f"H{dim}_betti_width": width_n,
+            f"H{dim}_betti_centroid": centroid_n,
+            f"H{dim}_betti_spread": spread_n,
+            f"H{dim}_betti_trend": trend,
         }
     )
     return out
@@ -172,4 +172,5 @@ def assemble_feature_vector(
     # persim-derived features (PI/PL) are disabled by default and not computed
     if curves:
         feats.update(betti_curve_summary_features(diagrams, dim=curve_dim))
+        feats.update(betti_curve_summary_features(diagrams, dim=1)) #H1 betti features 
     return feats
