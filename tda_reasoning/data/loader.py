@@ -2,7 +2,7 @@ import json
 import os
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable, Optional
+from typing import Any, Dict, Iterable, List, Optional
 
 
 @dataclass
@@ -11,7 +11,7 @@ class AIMEExample:
     year: Optional[int]
     index: Optional[int]
     statement: str
-    gold_steps: Optional[list[str]] = None
+    gold_steps: Optional[List[str]] = None
     final_answer: Optional[str] = None
     solution_text: Optional[str] = None
 
@@ -20,14 +20,14 @@ def ensure_dir(path: str | os.PathLike) -> None:
     Path(path).parent.mkdir(parents=True, exist_ok=True)
 
 
-def save_jsonl(path: str | os.PathLike, rows: Iterable[dict[str, Any]]) -> None:
+def save_jsonl(path: str | os.PathLike, rows: Iterable[Dict[str, Any]]) -> None:
     ensure_dir(path)
     with open(path, "w", encoding="utf-8") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
 
-def load_dataset_generic(dataset_name: str, split: str = "train", **kwargs) -> list[dict[str, Any]]:
+def load_dataset_generic(dataset_name: str, split: str = "train", **kwargs) -> List[Dict[str, Any]]:
     """
     Load a dataset via Hugging Face Datasets by name and split.
 
@@ -44,7 +44,7 @@ def load_dataset_generic(dataset_name: str, split: str = "train", **kwargs) -> l
     return [dict(x) for x in ds]
 
 
-def load_dataset_via_hub_parquet(dataset_name: str, path: Optional[str] = None) -> list[dict[str, Any]]:
+def load_dataset_via_hub_parquet(dataset_name: str, path: Optional[str] = None) -> List[Dict[str, Any]]:
     """
     Lightweight loader using huggingface_hub to download a parquet file and read via polars.
     If path is None, attempts to infer from dataset card (cardData.data_files[0].path).
@@ -83,9 +83,9 @@ def load_dataset_via_hub_parquet(dataset_name: str, path: Optional[str] = None) 
 
 
 def normalize_aime_examples(
-    raw_items: list[dict[str, Any]],
-    field_map: Optional[dict[str, str]] = None,
-) -> list[AIMEExample]:
+    raw_items: List[Dict[str, Any]],
+    field_map: Optional[Dict[str, str]] = None,
+) -> List[AIMEExample]:
     """
     Map raw Hugging Face fields into a normalized AIMEExample schema.
 
@@ -100,10 +100,10 @@ def normalize_aime_examples(
     idx_key = field_map.get("index", "index")
     steps_key = field_map.get("steps", "steps")
 
-    out: list[AIMEExample] = []
+    out: List[AIMEExample] = []
     for i, it in enumerate(raw_items):
         # Accept case-variant keys (e.g., "Problem")
-        def get_any(d: dict[str, Any], key: str) -> Any:
+        def get_any(d: Dict[str, Any], key: str) -> Any:
             if key in d:
                 return d[key]
             # try case-insensitive match
@@ -142,7 +142,7 @@ def normalize_aime_examples(
     return out
 
 
-def to_jsonl_rows(examples: list[AIMEExample]) -> list[dict[str, Any]]:
+def to_jsonl_rows(examples: List[AIMEExample]) -> List[Dict[str, Any]]:
     rows = []
     for e in examples:
         rows.append(

@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 import sys
-from pathlib import Path as _Path
+from pathlib import Path
 # Ensure project root is on sys.path when running from scripts/
-sys.path.append(str(_Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import argparse
 import json
-from pathlib import Path
 from typing import Any, Iterable
 
 from tqdm import tqdm

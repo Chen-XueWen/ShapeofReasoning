@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 import sys
-from pathlib import Path as _Path
+from pathlib import Path
 # Ensure project root is on sys.path when running from scripts/
-sys.path.append(str(_Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import argparse
 import json
-from pathlib import Path
 from typing import Any, Iterable
 import numpy as np
 from tqdm import tqdm
@@ -36,7 +34,7 @@ def save_npz(path: str | Path, **arrays: np.ndarray) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description="Segment traces and compute embeddings")
     ap.add_argument("--traces", default="data/raw/traces_aime2024.jsonl", help="Input JSONL")
-    ap.add_argument("--outdir", default="data/processed/embeddings", help="Output dir")
+    ap.add_argument("--outdir", default="data/processed/embeddings/", help="Output dir")
     ap.add_argument(
         "--model-name",
         default="sentence-transformers/all-MiniLM-L6-v2",

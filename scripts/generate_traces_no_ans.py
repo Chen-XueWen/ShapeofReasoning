@@ -4,7 +4,7 @@ import argparse
 import json
 import time
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Iterable, Literal
 from tqdm import tqdm
 import requests
 
@@ -24,11 +24,26 @@ def ollama_generate(
     model: str,
     prompt: str,
     options: dict[str, Any] | None = None,
+    think_level: bool | Literal["low", "medium", "high"] | None = None,
     host: str = "http://localhost:11434",
 ) -> str:
+    if "gpt-oss" in model and think_level is not None:
+        if think_level not in ["low", "medium", "high"]:
+            raise ValueError("think_level for gpt-oss models must be one of 'low', 'medium', 'high'")
+    if "qwen3" in model and think_level is not None:
+        think_level = bool(int(think_level))
+        if think_level not in [True, False]:
+            raise ValueError("think_level for qwen3 models must be True or False")
+    if "deepseek" in model and think_level is not None:
+        think_level = bool(int(think_level))
+        if think_level not in [True, False]:
+            raise ValueError("think_level for deepseek models must be True or False")
+    if "gpt-oss" not in model and "qwen3" not in model and "deepseek" not in model and think_level is not None:
+        think_level = None  # ignore think_level for other models
     url = f"{host}/api/generate"
     payload = {
         "model": model,
+        "think": think_level,
         "prompt": prompt,
         "stream": False,
         "options": options or {},
@@ -45,21 +60,15 @@ def ollama_generate(
 
 
 SYS_PROMPT_GIVEN_ANSWER = (
-    "You are an expert competition mathematician. You are given the correct final numeric answer. "
-    "Produce a clear, rigorous step-by-step solution that leads to this answer. "
-    "Do not change the answer. Ensure each step is justified and consistent. "
-    "End with the final line formatted exactly as 'Final Answer: <number>' using the provided answer."
+    "Produce a clear, rigorous step-by-step solution to the given question. "
+    "End with the final line formatted exactly as 'Final Answer: <number>'."
 )
 
 
-def build_prompt(statement: str, final_answer: str | None) -> str:
-    if final_answer is None or str(final_answer).strip() == "":
-        raise ValueError("final_answer is required in the dataset for prompt construction")
-    ans = str(final_answer).strip()
+def build_prompt(statement: str) -> str:
     return (
         f"{SYS_PROMPT_GIVEN_ANSWER}\n\n"
         f"Problem:\n{statement}\n\n"
-        f"Provided Final Answer: {ans}\n\n"
         f"Solution:"
     )
 
@@ -71,6 +80,7 @@ def main() -> None:
     ap.add_argument("--model", default="gpt-oss:20b", help="Ollama model name/tag")
     ap.add_argument("--host", default="http://localhost:11434", help="Ollama host")
     ap.add_argument("--seed", type=int, default=42, help="Random seed (for reproducibility)")
+    ap.add_argument("--think-level", default=None, help="Level of 'thinking' to apply (model-dependent)")
     ap.add_argument("--max_tokens", type=int, default=2048, help="Max tokens to generate")
     args = ap.parse_args()
 
@@ -87,13 +97,13 @@ def main() -> None:
     # Read all rows to enable a progress bar with total (dataset is small)
     rows: list[dict[str, Any]] = list(read_jsonl(args.aime))
     n = 0
-    for ex in tqdm(rows, desc="Generating traces", unit="problem"):
+    for ex in tqdm(rows, desc=f"Generating traces for {args.model}", unit="problem"):
         statement = ex.get("statement", "")
         pid = ex.get("id")
+        prompt = build_prompt(statement)
         final_answer = ex.get("final_answer")
-        prompt = build_prompt(statement, final_answer=final_answer)
         try:
-            resp = ollama_generate(args.model, prompt, options=options, host=args.host)
+            resp = ollama_generate(args.model, prompt, options=options, think_level=args.think_level, host=args.host)
         except Exception as e:
             resp = f"<ERROR: {e}>"
         row = {
