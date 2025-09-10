@@ -21,6 +21,7 @@ from transformers import BigBirdTokenizer, BigBirdModel, BigBirdConfig
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import torch
+import pandas as pd
 
 
 
@@ -39,7 +40,7 @@ def ensure_dir(path: str | Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description="Scoring 10 traces manually")
     ap.add_argument("--aime", default="data/raw/aime2024.jsonl", help="AIME JSONL with gold text")
-    ap.add_argument("--traces", default="data/raw/traces_gpt-oss_20b.jsonl", help="Model traces JSONL")
+    ap.add_argument("--traces", default="data/raw/traces_gpt-oss_120b.jsonl", help="Model traces JSONL")
     ap.add_argument("--out", default="data/processed/alignments_sampling_scores.jsonl", help="Output JSONL")
     args = ap.parse_args()
 
@@ -54,23 +55,28 @@ def main() -> None:
     n = 0
 
     scores = {}
+    all_df = pd.DataFrame()
     for i in range(1, 11): 
         trace_path = args.traces.replace(".jsonl", f"_{i}.jsonl")
+        cur_series = {}
         for tr in tqdm(read_jsonl(args.traces), desc="sampling", unit="trace"):
             pid = str(tr.get("id"))
             model_text = tr.get("trace", "")
             answer = gold_by_id.get(pid)
-            print(model_text)
+            print(model_text[-500:])
+            print(pid)
             print("GOLD ANSWER: " + answer)
             print("is the answer right? (y/n)")
 
-            # trace_score = 1 if input().strip().lower() == "y" else 0
-            trace_score = 1
+            trace_score = 1 if input().strip().lower() == "y" else 0 #use pandas to add this to a dataframe for each qn so we don't lose the info
+            # trace_score = 1
+            cur_series[pid] = trace_score
             #update dictionary
-
             cur_scores = scores.get(pid, 0)
             scores[pid] = cur_scores + trace_score
+        all_df[i] = cur_series
     
+    all_df.to_csv("data/processed/sampling_scores.csv")
     for pid, score in scores.items():
         score = score / 10.0
         row = {
@@ -80,25 +86,6 @@ def main() -> None:
         out_f.write(json.dumps(row) + "\n")
     out_f.close()
     print(f"Wrote {n} alignments to {args.out}")
-    # for tr in tqdm(read_jsonl(args.traces), desc="sampling", unit="trace"):
-    #     pid = str(tr.get("id"))
-    #     model_text = tr.get("trace", "")
-
-    #     gold_standard = gold_by_id.get(pid)
-    #     model_embedding = get_text_embedding(model_text, bigbird)
-    #     golden_embedding = get_text_embedding(gold_standard, bigbird)
-
-    #     similarity = cosine_similarity(model_embedding, golden_embedding)[0][0]
-        
-    #     similarity = max(0.0, similarity)
-    #     row = {
-    #         "id": pid,
-    #         "score": float(similarity),
-    #     }
-    #     out_f.write(json.dumps(row) + "\n")
-    #     n += 1
-    # out_f.close()
-    # print(f"Wrote {n} alignments to {args.out}")
 
 
 if __name__ == "__main__":
