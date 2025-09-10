@@ -57,7 +57,8 @@ def main() -> None:
     scores = {}
     all_df = pd.DataFrame()
     for i in range(1, 11): 
-        trace_path = args.traces.replace(".jsonl", f"_{i}.jsonl")
+        args.traces = "data/raw/traces_gpt-oss_120b.jsonl"
+        args.traces = args.traces.replace(".jsonl", f"_{i}.jsonl")
         cur_series = {}
         for tr in tqdm(read_jsonl(args.traces), desc="sampling", unit="trace"):
             pid = str(tr.get("id"))
