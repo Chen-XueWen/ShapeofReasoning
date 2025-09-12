@@ -40,7 +40,7 @@ def ensure_dir(path: str | Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description="Scoring 10 traces manually")
     ap.add_argument("--aime", default="data/raw/aime2024.jsonl", help="AIME JSONL with gold text")
-    ap.add_argument("--traces", default="data/raw/traces_gpt-oss_120b.jsonl", help="Model traces JSONL")
+    ap.add_argument("--traces", default="data/raw/traces_gpt-oss_20b.jsonl", help="Model traces JSONL")
     ap.add_argument("--out", default="data/processed/alignments_sampling_scores.jsonl", help="Output JSONL")
     args = ap.parse_args()
 
@@ -57,7 +57,8 @@ def main() -> None:
     scores = {}
     all_df = pd.DataFrame()
     for i in range(1, 11): 
-        args.traces = "data/raw/traces_gpt-oss_120b.jsonl"
+        n += 1
+        args.traces = "data/raw/traces_gpt-oss_20b.jsonl"
         args.traces = args.traces.replace(".jsonl", f"_{i}.jsonl")
         cur_series = {}
         for tr in tqdm(read_jsonl(args.traces), desc="sampling", unit="trace"):
@@ -65,6 +66,7 @@ def main() -> None:
             model_text = tr.get("trace", "")
             answer = gold_by_id.get(pid)
             print(model_text[-500:])
+            # print(model_text)
             print(pid)
             print("GOLD ANSWER: " + answer)
             print("is the answer right? (y/n)")

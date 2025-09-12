@@ -29,6 +29,7 @@ def ensure_dir(path: str | Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description="Compute TDA features from embeddings")
     ap.add_argument("--emb-dir", default="data/processed/embeddings", help="Embeddings dir")
+    # ap.add_argument("--emb-dir", default="data/processed/gpt-oss_120b/embeddings", help="Embeddings dir") #trying just one file
     ap.add_argument("--out", default="data/processed/tda_features.jsonl", help="Output JSONL")
     ap.add_argument("--metric", default="cosine", help="Distance metric for VR")
     ap.add_argument("--maxdim", type=int, default=1, help="Max homology dimension")

@@ -82,11 +82,11 @@ def check_multicollinearity(df, outdir=Path("data/processed/analysis")):
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Analyze TDA feature influence on alignment score (OLS)")
-    ap.add_argument("--align", default="data/processed/alignments.jsonl")
-    ap.add_argument("--features", default="data/processed/tda_features.jsonl")
-    # ap.add_argument("--align", default="data/processed/gpt-oss_120b/alignments.jsonl")
-    # ap.add_argument("--features", default="data/processed/gpt-oss_120b/tda_features.jsonl")
-    ap.add_argument("--outdir", default="data/processed/analysis")
+    # ap.add_argument("--align", default="data/processed/alignments.jsonl")
+    # ap.add_argument("--features", default="data/processed/tda_features.jsonl")
+    ap.add_argument("--align", default="data/processed/gpt-oss_20b_1/alignments.jsonl")
+    ap.add_argument("--features", default="data/processed/gpt-oss_20b_1/tda_features.jsonl")
+    ap.add_argument("--outdir", default="data/processed/analysis/gpt-oss_20b_1")
     ap.add_argument("--pca-reg-k", type=int, default=5, help="Number of principal components for PCA-OLS")
     ap.add_argument("--pca-report-k", type=int, default=10, help="Top-K PCs to report explained variance")
     args = ap.parse_args()
@@ -107,7 +107,8 @@ def main() -> None:
     # Identify feature columns: numeric TDA columns excluding id and control columns
     feat_cols = [
         c for c in df.columns
-        if c not in {"id", "score", "coverage", "n_pairs", "indices", "H0_betti_location", "H0_betti_peak", "H0_betti_trend", "H1_betti_trend", "H1_count", "H0_entropy"}
+        if c not in {"id", "score", "coverage", "n_pairs", "indices", "H0_betti_location", "H0_betti_peak", "H0_betti_trend", "H1_betti_trend", "H0_mean_life", "H0_skewness", "H1_mean_life", "H1_skewness"}
+        #including H1_count, H0_entropy
         and pd.api.types.is_numeric_dtype(df[c])
         # and c in {"H0_total_life", "H0_max_life", "H0_entropy", "H1_entropy"}
     ] ###TODO: test this and try it out!!!!!

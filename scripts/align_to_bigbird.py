@@ -76,8 +76,8 @@ def get_text_embedding(text, model_dict):
 def main() -> None:
     ap = argparse.ArgumentParser(description="Align model to bigbird")
     ap.add_argument("--aime", default="data/raw/aime2024.jsonl", help="AIME JSONL with gold text")
-    ap.add_argument("--traces", default="data/raw/traces_gpt-oss_20b.jsonl", help="Model traces JSONL")
-    ap.add_argument("--out", default="data/processed/alignments_bigbird.jsonl", help="Output JSONL")
+    ap.add_argument("--traces", default="data/raw/traces_gpt-oss_20b_1.jsonl", help="Model traces JSONL")
+    ap.add_argument("--out", default="data/processed/gpt-oss_20b_1_alignments_bigbird.jsonl", help="Output JSONL")
     args = ap.parse_args()
 
     ensure_dir(args.out)

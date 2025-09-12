@@ -98,7 +98,7 @@ def main() -> None:
     n = 10
     for i in range(1, n+1):
         args.features = "data/processed/gpt-oss_120b/tda_features.jsonl"
-        args.features = args.features.replace(".jsonl", f"_{i}.jsonl")
+        args.features = args.features.replace("/tda_features.jsonl", f"_{i}/tda_features.jsonl")
         features_i = pd.read_json(Path(args.features), lines=True)
         features_i = features_i.sort_values(by="id")
         features_i = features_i.set_index("id")
@@ -128,7 +128,7 @@ def main() -> None:
     # Identify feature columns: numeric TDA columns excluding id and control columns
     feat_cols = [
         c for c in df.columns
-        if c not in {"id", "score", "coverage", "n_pairs", "indices", "H0_betti_location", "H0_betti_peak", "H0_betti_trend", "H1_betti_trend"}
+        if c not in {"id", "score", "coverage", "n_pairs", "indices", "H0_betti_location", "H0_betti_peak", "H0_betti_trend", "H1_betti_trend", "H0_mean_life", "H0_skewness", "H1_mean_life", "H1_skewness"}
         #including H1_count, H0_entropy
         and pd.api.types.is_numeric_dtype(df[c])
         # and c in {"H0_total_life", "H0_max_life", "H0_entropy", "H1_entropy"}
