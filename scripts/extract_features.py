@@ -10,7 +10,7 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 import numpy as np
 from tqdm import tqdm
 
-from tda_reasoning.tda.vr import vr_diagrams, vr_features
+from tda_reasoning.tda.vr import landscape_features, vr_diagrams, vr_features
 from tda_reasoning.tda.betti import betti_features
 
 
@@ -39,6 +39,7 @@ def main() -> None:
         dgms = load_npz(npz_path)
         feats = vr_features(dgms)
         feats.update(betti_features(dgms))
+        feats.update(landscape_features(dgms))
         row = {"id": pid, **{k: (v.tolist() if isinstance(v, np.ndarray) else v) for k, v in feats.items()}}
         out_f.write(json.dumps(row) + "\n")
         n += 1

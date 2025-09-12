@@ -6,7 +6,7 @@ import numpy as np
 
 @dataclass
 class EmbeddingConfig:
-    model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
+    model_name: str = "sentence-transformers/all-mpnet-base-v2"
     batch_size: int = 32
     device: Optional[str] = None  # e.g., "cpu" or "cuda"
 

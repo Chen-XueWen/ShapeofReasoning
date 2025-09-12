@@ -60,8 +60,7 @@ def ollama_generate(
 
 
 SYS_PROMPT_GIVEN_ANSWER = (
-    "Produce a clear, rigorous step-by-step solution to the given question. "
-    "End with the final line formatted exactly as 'Final Answer: <number>'."
+    "Produce a clear, rigorous step-by-step solution to the given question, where each step is delimited by a newline."
 )
 
 
@@ -89,7 +88,7 @@ def main() -> None:
 
     # Options: temperature 0 for reproducibility
     options = {
-        "temperature": 0.0,
+        "temperature": 0.3,
         "seed": args.seed,
         "num_predict": args.max_tokens,
     }

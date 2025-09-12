@@ -22,22 +22,13 @@ def segment_steps(text: str, min_len: int = 2) -> list[str]:
         return []
 
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-    has_markers = sum(_looks_like_step_start(ln) for ln in lines) >= 2
-    if has_markers:
-        segments: list[str] = []
-        buf: list[str] = []
-        for ln in lines:
-            if _looks_like_step_start(ln) and buf:
-                segments.append(" ".join(buf).strip())
-                buf = [ln]
-            else:
-                buf.append(ln)
-        if buf:
-            segments.append(" ".join(buf).strip())
-        return [s for s in segments if len(s.split()) >= min_len]
+    return lines
 
-    # Fallback: sentence split on punctuation
+
+def segment_solution_steps(text: str) -> list[str]:
+    """
+    Segment solution text into steps
+    """
     sentences = re.split(r"(?<=[\.\!\?])\s+", text.strip())
     sentences = [s.strip() for s in sentences if s.strip()]
-    return [s for s in sentences if len(s.split()) >= min_len]
-
+    return [s for s in sentences]

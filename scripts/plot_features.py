@@ -35,6 +35,8 @@ def main():
                     features[file][name].append(item[name])
     
     for name in args.feature_names:
+        for file in args.feature_files:
+            print(f"Mean of {name} for {file}:", sum(features[file][name]) / len(features[file][name]) if features[file][name] else 0)
         plt.hist(
             [features[file][name] for file in args.feature_files],
             label=args.feature_files,

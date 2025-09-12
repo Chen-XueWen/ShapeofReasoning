@@ -2,7 +2,7 @@ from typing import Literal, Optional
 from ripser import ripser
 import numpy as np
 from scipy.stats import skew
-
+from persim import PersLandscapeExact
 
 def vr_diagrams(
     X: np.ndarray,
@@ -36,6 +36,8 @@ def vr_features(
                 f"{dim}_mean_life": 0.0,
                 f"{dim}_entropy": 0.0,
                 f"{dim}_skewness": 0.0,
+                f"{dim}_max_birth": 0.0,
+                f"{dim}_max_death": 0.0,
             })
             continue
         births = dgm[:, 0]
@@ -59,5 +61,46 @@ def vr_features(
             f"{dim}_mean_life": total_life / float(finite.shape[0]) if finite.shape[0] > 0 else 0.0,
             f"{dim}_entropy": entropy,
             f"{dim}_skewness": skewness,
+            f"{dim}_max_birth": float(np.max(births) if births.size else 0.0),
+            f"{dim}_max_death": float(np.max(deaths[finite]) if np.any(finite) else 0.0),
+        })
+    return feats
+
+def landscape_features(
+    diagrams: dict[str, np.ndarray],
+) -> dict[str, float]:
+    """
+    Compute persistence landscape features from Vietoris–Rips persistent homology diagrams.
+
+    - For each dimension, compute `num_landscapes` landscapes, each with `num_levels` levels.
+    - Summarise each landscape level with mean, max, and total area.
+    """
+    
+
+    feats: dict[str, float] = {}
+    dgms = [d for d in diagrams.values()]
+    for dim, dgm in diagrams.items():
+        if dgm.size == 0:
+            feats.update({
+                f"{dim}_landscape_mean": 0.0,
+                f"{dim}_landscape_max": 0.0,
+                f"{dim}_landscape_area": 0.0,
+            })
+            continue
+        dim = int(dim[-1])
+        pl = PersLandscapeExact(dgms=dgms, hom_deg=dim)
+        landscape = pl.critical_pairs
+        xs = np.array([x for x, _ in landscape[0]])
+        ys = np.array([y for _, y in landscape[0]])
+        full_xs = [np.array([x for x, _ in level]) for level in landscape]
+        full_ys = [np.array([y for _, y in level]) for level in landscape]
+        mean_val = float(np.mean(ys)) if ys.size > 0 else 0.0
+        max_val = float(np.max(ys)) if ys.size > 0 else 0.0
+        area_val = float(np.trapezoid(ys, xs)) if ys.size > 1 else 0.0
+        total_area_val = float(sum(np.trapezoid(y, x) for x, y in zip(full_xs, full_ys) if y.size > 1)) if ys.size > 1 else 0.0
+        feats.update({
+            f"H{dim}_landscape_mean": mean_val,
+            f"H{dim}_landscape_max": max_val,
+            f"H{dim}_landscape_area": area_val,
         })
     return feats

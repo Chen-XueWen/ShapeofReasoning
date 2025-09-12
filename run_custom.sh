@@ -1,44 +1,24 @@
 #!/usr/bin/env bash
 # set -euo pipefail
 
-models=(
-  # "gemma3:27b"
-  # "qwen3:8b"
-  # "deepseek-r1:8b"
-  # "qwen3:30b,1"
-  # "qwen3:30b,0"
-  # "deepseek-r1:32b,1"
-  # "qwen2.5:32b,1"
-  "deepseek-r1:32b,0"
-  # "gpt-oss:20b,low"
-  # "gpt-oss:20b,high"
-  # "gpt-oss:120b,low"
-  # "gpt-oss:120b,high"
-  "gpt-oss:20b,0"
-  "gpt-oss:120b,0"
-  "qwen3:30b,0"
-  # "qwen3:235b"
-)
-
 slugify() {
   # Replace characters unsafe for paths with underscores
   echo "$1" | tr ':/, ' '___'
 }
 
-for setup in "${models[@]}"; do
-  model="${setup%%,*}"
-  think_level="${setup#*,}"
-  slug="$(slugify "$setup")"
-  echo "=== Running experiment for setup: $setup (slug: $slug) ==="
+model=$1
+for i in $(seq 1 $2); do
+  slug="$(slugify "${model},${i}")"
+  echo "=== Running experiment for setup: $model, $i (slug: $slug) ==="
 
-  traces="past_data/greedy/raw/traces_${slug}.jsonl"
-  emb_dir="past_data/greedy/processed/${slug}/embeddings"
-  diag_dir="past_data/greedy/processed/${slug}/diagrams"
-  feats="past_data/greedy/processed/${slug}/tda_features.jsonl"
-  aligns="past_data/greedy/processed/${slug}/alignments.jsonl"
-  analysis_dir="past_data/greedy/processed/analysis/${slug}"
+  traces="past_data/new_segments/raw/traces_${slug}.jsonl"
+  emb_dir="past_data/new_segments/processed/${slug}/embeddings"
+  diag_dir="past_data/new_segments/processed/${slug}/diagrams"
+  feats="past_data/new_segments/processed/${slug}/tda_features.jsonl"
+  aligns="past_data/new_segments/processed/${slug}/alignments.jsonl"
+  analysis_dir="past_data/new_segments/processed/analysis/${slug}"
 
-  # # 1) Generate reasoning traces (conditioned on provided answer)
+  # 1) Generate reasoning traces (conditioned on provided answer)
   # python scripts/generate_traces_no_ans.py \
   #   --aime data/raw/aime2024.jsonl \
   #   --out "$traces" \

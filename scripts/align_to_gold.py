@@ -11,7 +11,7 @@ from typing import Any, Iterable
 
 from tqdm import tqdm
 
-from tda_reasoning.embedding.segment import segment_steps
+from tda_reasoning.embedding.segment import segment_solution_steps, segment_steps
 from tda_reasoning.embedding.embedder import EmbeddingConfig, SentenceTransformerEmbedder
 from tda_reasoning.eval.align import align_steps
 
@@ -45,7 +45,7 @@ def main() -> None:
     for ex in read_jsonl(args.aime):
         gold_steps = ex.get("gold_steps")
         if not gold_steps and ex.get("solution"):
-            gold_steps = segment_steps(ex["solution"])  # best-effort
+            gold_steps = segment_solution_steps(ex["solution"])  # best-effort
         gold_by_id[str(ex.get("id"))] = gold_steps or []
 
     embedder = SentenceTransformerEmbedder(EmbeddingConfig(model_name=args.model_name))
@@ -54,7 +54,7 @@ def main() -> None:
     n = 0
     for tr in tqdm(read_jsonl(args.traces), desc="Aligning traces", unit="trace"):
         pid = str(tr.get("id"))
-        trace_steps = segment_steps(tr.get("trace", ""))
+        trace_steps = segment_solution_steps(tr.get("trace", ""))
         gold_steps = gold_by_id.get(pid, [])
         if not trace_steps or not gold_steps:
             continue
