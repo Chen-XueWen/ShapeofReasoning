@@ -1,14 +1,11 @@
-from __future__ import annotations
-
 from dataclasses import dataclass
-from typing import List, Optional, Tuple
 
 import numpy as np
 
 
 @dataclass
 class AlignmentResult:
-    indices: List[Tuple[int, int]]  # (model_step_idx, gold_step_idx)
+    indices: list[tuple[int, int]]  # (model_step_idx, gold_step_idx)
     score: float  # average similarity over aligned pairs
     coverage: float  # fraction of gold steps aligned
 
@@ -58,7 +55,7 @@ def align_steps(
 
     # Backtrack to get path ending at (n, m)
     i, j = n, m
-    pairs: List[Tuple[int, int]] = []
+    pairs: list[tuple[int, int]] = []
     while i > 0 or j > 0:
         pi, pj = bt[i, j]
         if pi == i - 1 and pj == j - 1:

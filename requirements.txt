@@ -1,0 +1,8 @@
+numpy
+sentence-transformers
+ripser
+tqdm
+requests
+pandas
+statsmodels
+stargazer

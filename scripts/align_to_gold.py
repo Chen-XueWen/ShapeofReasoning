@@ -1,25 +1,22 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 import sys
-from pathlib import Path as _Path
+from pathlib import Path
 # Ensure project root is on sys.path when running from scripts/
-sys.path.append(str(_Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import argparse
 import json
-from pathlib import Path
-from typing import Any, Dict, Iterable, List
+from typing import Any, Iterable
 
-import numpy as np
 from tqdm import tqdm
 
-from tda_reasoning.embedding.segment import segment_steps
+from tda_reasoning.embedding.segment import segment_solution_steps, segment_steps
 from tda_reasoning.embedding.embedder import EmbeddingConfig, SentenceTransformerEmbedder
 from tda_reasoning.eval.align import align_steps
 
 
-def read_jsonl(path: str | Path) -> Iterable[Dict[str, Any]]:
+def read_jsonl(path: str | Path) -> Iterable[dict[str, Any]]:
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
             if line.strip():
@@ -44,11 +41,11 @@ def main() -> None:
 
     ensure_dir(args.out)
 
-    gold_by_id: Dict[str, List[str]] = {}
+    gold_by_id: dict[str, list[str]] = {}
     for ex in read_jsonl(args.aime):
         gold_steps = ex.get("gold_steps")
         if not gold_steps and ex.get("solution"):
-            gold_steps = segment_steps(ex["solution"])  # best-effort
+            gold_steps = segment_solution_steps(ex["solution"])  # best-effort
         gold_by_id[str(ex.get("id"))] = gold_steps or []
 
     embedder = SentenceTransformerEmbedder(EmbeddingConfig(model_name=args.model_name))
@@ -57,7 +54,7 @@ def main() -> None:
     n = 0
     for tr in tqdm(read_jsonl(args.traces), desc="Aligning traces", unit="trace"):
         pid = str(tr.get("id"))
-        trace_steps = segment_steps(tr.get("trace", ""))
+        trace_steps = segment_solution_steps(tr.get("trace", ""))
         gold_steps = gold_by_id.get(pid, [])
         if not trace_steps or not gold_steps:
             continue

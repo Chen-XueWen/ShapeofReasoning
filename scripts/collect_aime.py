@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 import argparse
 import json
-from pathlib import Path
-from typing import Any, Dict
 
 from tda_reasoning.data.loader import (
     load_dataset_generic,
@@ -31,7 +28,7 @@ def main() -> None:
     )
     args = ap.parse_args()
 
-    field_map: Dict[str, str] | None = None
+    field_map: dict[str, str] | None = None
     if args.field_map:
         field_map = json.loads(args.field_map)
 

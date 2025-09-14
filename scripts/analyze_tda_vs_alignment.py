@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from __future__ import annotations
 
 """
 Analyze association between topological features and alignment score using OLS.
@@ -76,7 +75,7 @@ def main() -> None:
     # Identify feature columns: numeric TDA columns excluding id and control columns
     feat_cols = [
         c for c in df.columns
-        if c not in {"id", "score", "coverage", "n_pairs", "indices"}
+        if c in {"H0_betti_centroid", "H0_betti_spread", "H0_betti_width", "H0_count", "H0_entropy", "H0_max_life", "H0_total_life", "H1_betti_centroid", "H1_betti_location", "H1_betti_peak", "H1_betti_spread", "H1_betti_width", "H1_count", "H1_entropy", "H1_max_life", "H1_total_life"}
         and pd.api.types.is_numeric_dtype(df[c])
     ]
     if betti_cols:
@@ -88,7 +87,7 @@ def main() -> None:
     controls = [c for c in ["coverage", "n_pairs"] if c in df.columns]
 
     # OLS on score
-    X = df[controls + feature_terms].astype(float) if feature_terms else df[controls].astype(float)
+    X = df[feature_terms].astype(float) if feature_terms else df[controls].astype(float)
     X = sm.add_constant(X)
     y_raw = df["score"].astype(float)
     y = pd.Series(y_raw.to_numpy(), index=y_raw.index, name="score")
@@ -136,7 +135,7 @@ def main() -> None:
     print(f"Wrote: {tex_path}")
 
     # VIF report (no NaNs assumed by user; compute on predictors excluding constant)
-    X_vif_df = df[controls + feature_terms].astype(float)
+    X_vif_df = df[feature_terms].astype(float)
     vif_rows = []
     for i, col in enumerate(X_vif_df.columns):
         vif_val = float(variance_inflation_factor(X_vif_df.values, i))
@@ -187,7 +186,7 @@ def main() -> None:
     pcs_df = pd.DataFrame(scores[:, :k_reg], columns=pc_cols, index=F.index)
 
     # PCA-OLS with controls
-    X_pca = pd.concat([df[controls].astype(float), pcs_df], axis=1) if controls else pcs_df
+    X_pca = pcs_df
     X_pca = sm.add_constant(X_pca)
     model_pca = sm.OLS(y, X_pca, missing="drop").fit()
     with (outdir / "pca_ols_summary.txt").open("w", encoding="utf-8") as f:

@@ -1,14 +1,12 @@
-from __future__ import annotations
-
 from dataclasses import dataclass
-from typing import Iterable, List, Optional
+from typing import Iterable, Optional
 from sentence_transformers import SentenceTransformer
 import numpy as np
 
 
 @dataclass
 class EmbeddingConfig:
-    model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
+    model_name: str = "sentence-transformers/all-mpnet-base-v2"
     batch_size: int = 32
     device: Optional[str] = None  # e.g., "cpu" or "cuda"
 
