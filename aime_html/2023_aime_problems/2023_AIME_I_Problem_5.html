@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2023 AIME I Problems/Problem 5 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2023_AIME_I_Problems/Problem_5","wgTitle":"2023 AIME I Problems/Problem 5","wgCurRevisionId":224176,"wgRevisionId":224176,"wgArticleId":23867,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Geometry Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2023_AIME_I_Problems/Problem_5","wgRelevantArticleId":23867,"wgRequestId":"4a1a0dc065f0bd10afa4e1de","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2023_AIME_I_Problems_Problem_5 rootpage-2023_AIME_I_Problems_Problem_5 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2023 AIME I Problems/Problem 5																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2023_AIME_I_Problems/Problem_5" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2023_AIME_I_Problems/Problem_5&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2023_AIME_I_Problems/Problem_5&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2023_AIME_I_Problems/Problem_5&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2023_AIME_I_Problems/Problem_5" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2023 AIME I Problems/Problem 5</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1_.28Ptolemy.27s_Theorem.29"><span class="tocnumber">2</span> <span class="toctext">Solution 1 (Ptolemy's Theorem)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.28Areas_and_Pythagorean_Theorem.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (Areas and Pythagorean Theorem)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28Similar_Triangles.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (Similar Triangles)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Heights_and_Half-Angle_Formula.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Heights and Half-Angle Formula)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28Analytic_Geometry.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (Analytic Geometry)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6_.28Law_of_Cosines.29"><span class="tocnumber">7</span> <span class="toctext">Solution 6 (Law of Cosines)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7_.28Subtended_Chords.29"><span class="tocnumber">8</span> <span class="toctext">Solution 7 (Subtended Chords)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_8_.28Coordinates_and_Algebraic_Manipulation.29"><span class="tocnumber">9</span> <span class="toctext">Solution 8 (Coordinates and Algebraic Manipulation)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Solution_9_.28Law_of_Sines.29"><span class="tocnumber">10</span> <span class="toctext">Solution 9 (Law of Sines)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Solution_10_.28Areas_and_Trigonometry.29"><span class="tocnumber">11</span> <span class="toctext">Solution 10 (Areas and Trigonometry)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Solution_11_.28Angle_Chasing_and_Trigonometric_Identities.29"><span class="tocnumber">12</span> <span class="toctext">Solution 11 (Angle Chasing and Trigonometric Identities)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Video_Solution_1_by_TheBeautyofMath"><span class="tocnumber">13</span> <span class="toctext">Video Solution 1 by TheBeautyofMath</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">14</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> be a point on the circle circumscribing square <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> that satisfies <img src="//latex.artofproblemsolving.com/5/a/9/5a9e8b75c7a8cf75704c84700d9af1f9a20480bb.png" class="latex" alt="$PA \cdot PC = 56$" width="111" height="13" /> and <img src="//latex.artofproblemsolving.com/9/9/4/9945632391a05a0f8d3a0f31bc498e6f567be3cf.png" class="latex" alt="$PB \cdot PD = 90.$" style="vertical-align: -1px" width="121" height="14" /> Find the area of <img src="//latex.artofproblemsolving.com/4/a/e/4ae54b43c219341de4a6e5919922cf55371e6ee3.png" class="latex" alt="$ABCD.$" width="61" height="13" />
+</p>
+<h2><span id="Solution_1_(Ptolemy's_Theorem)"></span><span class="mw-headline" id="Solution_1_.28Ptolemy.27s_Theorem.29">Solution 1 (Ptolemy's Theorem)</span></h2>
+<p><a href="/wiki/index.php/Ptolemy%27s_theorem" title="Ptolemy&#39;s theorem">Ptolemy's theorem</a> states that for cyclic quadrilateral <img src="//latex.artofproblemsolving.com/2/b/0/2b076f2e7f124fc5d8b5ef7b30b95bfcfe85449f.png" class="latex" alt="$WXYZ$" width="64" height="12" />, <img src="//latex.artofproblemsolving.com/e/8/f/e8f2b43f23f43ab969eed063de3ca88a80c84a5a.png" class="latex" alt="$WX\cdot YZ + XY\cdot WZ = WY\cdot XZ$" style="vertical-align: -2px" width="281" height="16" />.
+</p><p>We may assume that <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> is between <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> and <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />. Let <img src="//latex.artofproblemsolving.com/0/2/f/02f4a6285e2c6aedab557b081af89f32754ea33c.png" class="latex" alt="$PA = a$" style="vertical-align: -1px" width="64" height="14" />, <img src="//latex.artofproblemsolving.com/1/a/a/1aa11fc29f32107bdda6186878389776c30bf05d.png" class="latex" alt="$PB = b$" width="61" height="12" />, <img src="//latex.artofproblemsolving.com/0/c/b/0cb5f63fc688bfd3a85e1b382eaa376d8b530fe6.png" class="latex" alt="$PC = c$" style="vertical-align: -1px" width="62" height="14" />, <img src="//latex.artofproblemsolving.com/9/f/2/9f27321b77d498254e555a6148056fd03bb9d859.png" class="latex" alt="$PD = d$" style="vertical-align: -1px" width="65" height="14" />, and <img src="//latex.artofproblemsolving.com/d/2/0/d20737c9754efd7e0e5f02a4598ff5e402d95a98.png" class="latex" alt="$AB = s$" width="60" height="13" />. We have <img src="//latex.artofproblemsolving.com/a/3/c/a3c5a50351625834bc89f4a6cfaea14c994f71cb.png" class="latex" alt="$a^2 + c^2 = AC^2 = 2s^2$" style="vertical-align: -2px" width="165" height="18" />, because <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" /> is a diameter of the circle. Similarly, <img src="//latex.artofproblemsolving.com/1/b/4/1b4b781975c95e21e63bbeac4401d715807648bd.png" class="latex" alt="$b^2 + d^2 = 2s^2$" style="vertical-align: -2px" width="106" height="18" />. Therefore, <img src="//latex.artofproblemsolving.com/1/d/9/1d92941d8892ab40b04ea6097b62e00dff5bf92c.png" class="latex" alt="$(a+c)^2 = a^2 + c^2 + 2ac = 2s^2 + 2(56) = 2s^2 + 112$" style="vertical-align: -5px" width="402" height="21" />. Similarly, <img src="//latex.artofproblemsolving.com/7/b/d/7bdd472c897e7f6aa492560d4a2c98e15ca2cfc8.png" class="latex" alt="$(b+d)^2 = 2s^2 + 180$" style="vertical-align: -5px" width="162" height="21" />. 
+</p><p>By Ptolemy's Theorem on <img src="//latex.artofproblemsolving.com/c/7/6/c76275e401aac97a74b726b5fce94b38cbad911b.png" class="latex" alt="$PCDA$" width="57" height="13" />, <img src="//latex.artofproblemsolving.com/3/5/8/3587b6e9cf98a8008f21d6a513e9489038a57cae.png" class="latex" alt="$as + cs = ds\sqrt{2}$" style="vertical-align: -2px" width="125" height="21" />, and therefore <img src="//latex.artofproblemsolving.com/7/c/b/7cb62f34993e4a136b58bc511691e34b0b9608e5.png" class="latex" alt="$a + c = d\sqrt{2}$" style="vertical-align: -2px" width="99" height="21" />. By Ptolemy's on <img src="//latex.artofproblemsolving.com/e/a/c/eac2a45d1f5d4b553335cf46ee69173ae94081ac.png" class="latex" alt="$PBAD$" style="vertical-align: -1px" width="60" height="14" />, <img src="//latex.artofproblemsolving.com/a/7/f/a7f2faa95d041fe49c599f8e3b66717f1f73a9da.png" class="latex" alt="$bs + ds = as\sqrt{2}$" style="vertical-align: -2px" width="125" height="21" />, and therefore <img src="//latex.artofproblemsolving.com/7/d/b/7dbda60ff7b4f23ee6b03478d89ca0bb21206019.png" class="latex" alt="$b + d = a\sqrt{2}$" style="vertical-align: -2px" width="99" height="21" />. By squaring both equations, we obtain
+<img src="//latex.artofproblemsolving.com/a/3/b/a3b878622e172674b95793e4121c3eab5a1fcd88.png" class="latexcenter" alt="\begin{alignat*}{8} 2d^2 &amp;= (a+c)^2 &amp;&amp;= 2s^2 + 112, \\ 2a^2 &amp;= (b+d)^2 &amp;&amp;= 2s^2 + 180. \end{alignat*}" width="214" height="47" />
+Thus, <img src="//latex.artofproblemsolving.com/f/b/2/fb210d05d0103ce4450cc2061f2fb2a9b68d1530.png" class="latex" alt="$a^2 = s^2 + 90$" style="vertical-align: -2px" width="100" height="18" />, and <img src="//latex.artofproblemsolving.com/8/c/c/8cc664fcd2ea29444669d38e7f15f659094e3870.png" class="latex" alt="$d^2 = s^2 + 56$" style="vertical-align: -2px" width="99" height="18" />. Plugging these values into <img src="//latex.artofproblemsolving.com/9/9/f/99f257a048e1e03eab043677ed3ced4de93c5989.png" class="latex" alt="$a^2 + c^2 = b^2 + d^2 = 2s^2$" style="vertical-align: -2px" width="184" height="18" />, we obtain <img src="//latex.artofproblemsolving.com/6/b/6/6b660f55bdb0658120edd8cc5113922a6a9eb58e.png" class="latex" alt="$c^2 = s^2 - 90$" style="vertical-align: -2px" width="98" height="18" />, and <img src="//latex.artofproblemsolving.com/c/6/7/c67af0ab8f745d8950419e9e8edaa31f3d22a4e9.png" class="latex" alt="$b^2 = s^2 - 56$" style="vertical-align: -2px" width="98" height="18" />. Now, we can solve using <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> (though using <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> and <img src="//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png" class="latex" alt="$d$" width="9" height="12" /> yields the same solution for <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" />).
+<img src="//latex.artofproblemsolving.com/0/e/0/0e04d96076a54934c64a9ab4c490d432e92fa706.png" class="latexcenter" alt="\begin{align*} ac = (\sqrt{s^2 - 90})(\sqrt{s^2 + 90}) &amp;= 56 \\ (s^2 + 90)(s^2 - 90) &amp;= 56^2 \\ s^4 &amp;= 90^2 + 56^2 = 106^2 \\ s^2 &amp;= \boxed{106}. \end{align*}" width="367" height="107" />
+~mathboy100
+</p>
+<h2><span id="Solution_2_(Areas_and_Pythagorean_Theorem)"></span><span class="mw-headline" id="Solution_2_.28Areas_and_Pythagorean_Theorem.29">Solution 2 (Areas and Pythagorean Theorem)</span></h2>
+<p>By the <b>Inscribed Angle Theorem</b>, we conclude that <img src="//latex.artofproblemsolving.com/d/9/e/d9e2286f54a8da97297935452f9b0ecc9069d9a8.png" class="latex" alt="$\triangle PAC$" width="58" height="13" /> and <img src="//latex.artofproblemsolving.com/3/3/8/3384b050481512a588cd508110376b0131e81ef0.png" class="latex" alt="$\triangle PBD$" width="60" height="13" /> are right triangles.
+</p><p>Let the brackets denote areas. We are given that
+<img src="//latex.artofproblemsolving.com/3/8/4/384aa2be60ffdf8511ada2b498604e3d8393c2ad.png" class="latexcenter" alt="\begin{alignat*}{8} 2[PAC] &amp;= PA \cdot PC &amp;&amp;= 56, \\ 2[PBD] &amp;= PB \cdot PD &amp;&amp;= 90. \end{alignat*}" width="205" height="43" />
+Let <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the center of the circle, <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" /> be the foot of the perpendicular from <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> to <img src="//latex.artofproblemsolving.com/2/c/a/2caa0918e410a55dfb04ac612c1f569e7e1dcbb8.png" class="latex" alt="$\overline{AC},$" style="vertical-align: -3px" width="32" height="19" /> and <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" /> be the foot of the perpendicular from <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> to <img src="//latex.artofproblemsolving.com/2/a/e/2ae4f866671229c5e8a6b7c2bc5ef859c3214820.png" class="latex" alt="$\overline{BD},$" style="vertical-align: -3px" width="34" height="19" /> as shown below:
+<img src="//latex.artofproblemsolving.com/9/c/0/9c0a09a29f01bde94eeb44ed19b9de1241fe34c2.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */  size(200); pair A, B, C, D, O, P, X, Y; A = (-sqrt(106)/2,sqrt(106)/2); B = (-sqrt(106)/2,-sqrt(106)/2); C = (sqrt(106)/2,-sqrt(106)/2); D = (sqrt(106)/2,sqrt(106)/2); O = origin;  path p; p = Circle(O,sqrt(212)/2); draw(p);  P = intersectionpoints(Circle(A,4),p)[1]; X = foot(P,A,C); Y = foot(P,B,D);  draw(A--B--C--D--cycle); draw(P--A--C--cycle,red); draw(P--B--D--cycle,blue); draw(P--X,red+dashed); draw(P--Y,blue+dashed); markscalefactor=0.075; draw(rightanglemark(A,P,C),red); draw(rightanglemark(P,X,C),red); draw(rightanglemark(B,P,D),blue); draw(rightanglemark(P,Y,D),blue); dot(&quot;$A$&quot;, A, 1.5*NW, linewidth(4)); dot(&quot;$B$&quot;, B, 1.5*SW, linewidth(4)); dot(&quot;$C$&quot;, C, 1.5*SE, linewidth(4)); dot(&quot;$D$&quot;, D, 1.5*NE, linewidth(4)); dot(&quot;$P$&quot;, P, 1.5*dir(P), linewidth(4)); dot(&quot;$X$&quot;, X, 1.5*dir(20), linewidth(4)); dot(&quot;$Y$&quot;, Y, 1.5*dir(Y-P), linewidth(4)); dot(&quot;$O$&quot;, O, 1.5*E, linewidth(4)); [/asy]" width="335" height="312" />
+Let <img src="//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png" class="latex" alt="$d$" width="9" height="12" /> be the diameter of <img src="//latex.artofproblemsolving.com/f/f/6/ff6358b4c293dee6c3b1b5200ee4f889f6bfd1f4.png" class="latex" alt="$\odot O.$" style="vertical-align: -2px" width="35" height="16" /> It follows that 
+<img src="//latex.artofproblemsolving.com/5/9/4/5941f6b14bace5f0b1491a4cca631b3aaf02f6fd.png" class="latexcenter" alt="\begin{alignat*}{8} 2[PAC] &amp;= d\cdot PX &amp;&amp;= 56, \\ 2[PBD] &amp;= d\cdot PY &amp;&amp;= 90. \end{alignat*}" width="187" height="43" />
+Moreover, note that <img src="//latex.artofproblemsolving.com/4/1/a/41a3365561fdd1469bda2b97ed0da3825953f45b.png" class="latex" alt="$OXPY$" style="vertical-align: -1px" width="61" height="14" /> is a rectangle. By the Pythagorean Theorem, we have <img src="//latex.artofproblemsolving.com/3/b/2/3b2db23303cc48584668b0cb7db0746157a39702.png" class="latexcenter" alt="\[PX^2+PY^2=PO^2.\]" width="160" height="17" />
+We rewrite this equation in terms of <img src="//latex.artofproblemsolving.com/6/9/6/69687857718e773d01c884ca3ee95dd8b6e5ebc9.png" class="latex" alt="$d:$" style="vertical-align: -1px" width="21" height="14" /> <img src="//latex.artofproblemsolving.com/0/4/f/04f118557804f248a39f3525462bcfd715f53cfd.png" class="latexcenter" alt="\[\left(\frac{56}{d}\right)^2+\left(\frac{90}{d}\right)^2=\left(\frac d2\right)^2,\]" width="208" height="46" /> from which <img src="//latex.artofproblemsolving.com/d/d/4/dd4c5c729e13983305b3356fe89f8b0bb9efb88c.png" class="latex" alt="$d^2=212.$" style="vertical-align: -1px" width="75" height="17" /> Therefore, we get <img src="//latex.artofproblemsolving.com/2/0/f/20fbca875a585f9e27bf205ac46118528e9e60e1.png" class="latexcenter" alt="\[[ABCD] = \frac{d^2}{2} = \boxed{106}.\]" width="177" height="39" />
+~MRENTHUSIASM
+</p>
+<h2><span id="Solution_3_(Similar_Triangles)"></span><span class="mw-headline" id="Solution_3_.28Similar_Triangles.29">Solution 3 (Similar Triangles)</span></h2>
+<p><img src="//latex.artofproblemsolving.com/9/c/0/9c0a09a29f01bde94eeb44ed19b9de1241fe34c2.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */  size(200); pair A, B, C, D, O, P, X, Y; A = (-sqrt(106)/2,sqrt(106)/2); B = (-sqrt(106)/2,-sqrt(106)/2); C = (sqrt(106)/2,-sqrt(106)/2); D = (sqrt(106)/2,sqrt(106)/2); O = origin;  path p; p = Circle(O,sqrt(212)/2); draw(p);  P = intersectionpoints(Circle(A,4),p)[1]; X = foot(P,A,C); Y = foot(P,B,D);  draw(A--B--C--D--cycle); draw(P--A--C--cycle,red); draw(P--B--D--cycle,blue); draw(P--X,red+dashed); draw(P--Y,blue+dashed); markscalefactor=0.075; draw(rightanglemark(A,P,C),red); draw(rightanglemark(P,X,C),red); draw(rightanglemark(B,P,D),blue); draw(rightanglemark(P,Y,D),blue); dot(&quot;$A$&quot;, A, 1.5*NW, linewidth(4)); dot(&quot;$B$&quot;, B, 1.5*SW, linewidth(4)); dot(&quot;$C$&quot;, C, 1.5*SE, linewidth(4)); dot(&quot;$D$&quot;, D, 1.5*NE, linewidth(4)); dot(&quot;$P$&quot;, P, 1.5*dir(P), linewidth(4)); dot(&quot;$X$&quot;, X, 1.5*dir(20), linewidth(4)); dot(&quot;$Y$&quot;, Y, 1.5*dir(Y-P), linewidth(4)); dot(&quot;$O$&quot;, O, 1.5*E, linewidth(4)); [/asy]" width="335" height="312" />
+Let the center of the circle be <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" />, and the radius of the circle be <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" />. Since <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> is a rhombus with diagonals <img src="//latex.artofproblemsolving.com/0/a/5/0a5745df50c8607bdc9b8de4968315633a3047dc.png" class="latex" alt="$2r$" width="17" height="12" /> and <img src="//latex.artofproblemsolving.com/0/a/5/0a5745df50c8607bdc9b8de4968315633a3047dc.png" class="latex" alt="$2r$" width="17" height="12" />, its area is <img src="//latex.artofproblemsolving.com/0/8/e/08e894a71b652c223a7672018619da1a850370a5.png" class="latex" alt="$\dfrac{1}{2}(2r)(2r) = 2r^2$" style="vertical-align: -13px" width="128" height="38" />. Since <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" /> and <img src="//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png" class="latex" alt="$BD$" width="29" height="12" /> are diameters of the circle, <img src="//latex.artofproblemsolving.com/1/4/5/14589098013cf51bd13b7d32a5476db3ee28f0cf.png" class="latex" alt="$\triangle APC$" width="58" height="13" /> and <img src="//latex.artofproblemsolving.com/f/4/7/f472fc12f1c5ac19a4de3dd4d35d55f5f77840f7.png" class="latex" alt="$\triangle BPD$" width="60" height="13" /> are right triangles. Let <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" /> and <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" /> be the foot of the altitudes to <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" /> and <img src="//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png" class="latex" alt="$BD$" width="29" height="12" />, respectively. We have
+<img src="//latex.artofproblemsolving.com/3/0/1/301a73952190914782aa07a6343a684a102db3f1.png" class="latexcenter" alt="\[[\triangle APC] = \frac{1}{2}(PA)(PC) = \frac{1}{2}(PX)(AC),\]" width="316" height="37" />
+so <img src="//latex.artofproblemsolving.com/8/6/3/8635b5a86ca03474306a27f2051199b78a401d18.png" class="latex" alt="$PX = \dfrac{(PA)(PC)}{AC} = \dfrac{28}{r}$" style="vertical-align: -13px" width="192" height="40" />. Similarly,
+<img src="//latex.artofproblemsolving.com/5/9/a/59a3666eed11567bd36f1a6d55e249ddb93163d0.png" class="latexcenter" alt="\[[\triangle BPD] = \frac{1}{2}(PB)(PD) = \frac{1}{2}(PY)(PB),\]" width="320" height="37" />
+so <img src="//latex.artofproblemsolving.com/2/9/b/29b48e9eadcd7538f39232ae960e37ee7ab48237.png" class="latex" alt="$PY = \dfrac{(PB)(PD)}{BD} = \dfrac{45}{r}$" style="vertical-align: -13px" width="192" height="40" />. Since <img src="//latex.artofproblemsolving.com/5/0/3/503a02c013eeb61a49e8f62a6c99060e3bce1c00.png" class="latex" alt="$\triangle APX \sim \triangle PCX,$" style="vertical-align: -4px" width="152" height="18" />
+<img src="//latex.artofproblemsolving.com/5/e/e/5eed69ec867b807513f2c0238eb7fd4097c0e023.png" class="latexcenter" alt="\[\frac{AX}{PX} = \frac{PX}{CX}\]" width="90" height="37" />
+<img src="//latex.artofproblemsolving.com/0/0/2/002fe9093d3b959163fa906b321c6b337e267562.png" class="latexcenter" alt="\[\frac{AO - XO}{PX} = \frac{PX}{OC + XO}.\]" width="196" height="39" />
+But <img src="//latex.artofproblemsolving.com/b/0/e/b0ef8ebd3bb8b6b499463d68328e12eaba42da4a.png" class="latex" alt="$PXOY$" width="59" height="12" /> is a rectangle, so <img src="//latex.artofproblemsolving.com/7/1/8/718574324e6d48a1fe4edf022bb282c9d18401a2.png" class="latex" alt="$PY = XO$" style="vertical-align: -1px" width="86" height="14" />, and our equation becomes
+<img src="//latex.artofproblemsolving.com/5/e/a/5ea7e5a8977403b682a58181cecf999772afc1e5.png" class="latexcenter" alt="\[\frac{r - PY}{PX} = \frac{PX}{r + PY}.\]" width="153" height="38" />
+Cross multiplying and rearranging gives us <img src="//latex.artofproblemsolving.com/b/b/9/bb96d047b5233d430c33b945f8a974b4d32bdd2a.png" class="latex" alt="$r^2 = PX^2 + PY^2 = \left(\dfrac{28}{r}\right)^2 + \left(\dfrac{45}{r}\right)^2$" style="vertical-align: -18px" width="297" height="48" />, which rearranges to <img src="//latex.artofproblemsolving.com/d/7/4/d742c91a2ee04e26c9c2fcacb4b3ead07e780793.png" class="latex" alt="$r^4 = 2809$" style="vertical-align: -1px" width="79" height="17" />. Therefore <img src="//latex.artofproblemsolving.com/d/e/f/def5a7fcc7f707c3c6af9f430e8d2cc56e525b1f.png" class="latex" alt="$[ABCD] = 2r^2 = \boxed{106}$" style="vertical-align: -6px" width="182" height="25" />.
+</p><p>~Cantalon
+</p>
+<h2><span id="Solution_4_(Heights_and_Half-Angle_Formula)"></span><span class="mw-headline" id="Solution_4_.28Heights_and_Half-Angle_Formula.29">Solution 4 (Heights and Half-Angle Formula)</span></h2>
+<p>Drop a height from point <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> to line <img src="//latex.artofproblemsolving.com/1/2/5/12517bbc31cb9026c71299b7a0d232d07e60f284.png" class="latex" alt="$\overline{AC}$" style="vertical-align: -1px" width="30" height="18" /> and line <img src="//latex.artofproblemsolving.com/e/3/3/e33fe7d65facd8868f58b6e94ddc7f153a5a3f9f.png" class="latex" alt="$\overline{BC}$" width="29" height="15" />. Call these two points to be <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" /> and <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" />, respectively. Notice that the intersection of the diagonals of <img src="//latex.artofproblemsolving.com/a/1/a/a1a5b0ffb3c773a2d5b723926dab32ede97843ce.png" class="latex" alt="$\square ABCD$" style="vertical-align: -1px" width="74" height="14" /> meets at a right angle at the center of the circumcircle, call this intersection point <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" />.
+</p><p>Since <img src="//latex.artofproblemsolving.com/4/1/a/41a3365561fdd1469bda2b97ed0da3825953f45b.png" class="latex" alt="$OXPY$" style="vertical-align: -1px" width="61" height="14" /> is a rectangle, <img src="//latex.artofproblemsolving.com/4/a/9/4a903f7c677cbaadb6e72741b95730648ab1d442.png" class="latex" alt="$OX$" width="30" height="12" /> is the distance from <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> to line <img src="//latex.artofproblemsolving.com/4/3/7/4373e7b4be983c0315e82e1fda1df66ed34dd7fb.png" class="latex" alt="$\overline{BD}$" width="30" height="15" />. We know that <img src="//latex.artofproblemsolving.com/9/9/c/99c1272c45411c2eb0486ad470348c501b4d27bb.png" class="latex" alt="$\tan{\angle{POX}} = \frac{PX}{XO} = \frac{28}{45}$" style="vertical-align: -13px" width="195" height="39" /> by triangle area and given information. Then, notice that the measure of <img src="//latex.artofproblemsolving.com/3/4/b/34bd74185a0fd38bfc32dfb493f4d9eea8be6c56.png" class="latex" alt="$\angle{OCP}$" style="vertical-align: -1px" width="58" height="14" /> is half of <img src="//latex.artofproblemsolving.com/5/d/3/5d3572f6007b2160037bdee6ef648047200b6724.png" class="latex" alt="$\angle{XOP}$" style="vertical-align: -1px" width="60" height="14" />.
+</p><p>Using the half-angle formula for tangent,
+</p><p><img src="//latex.artofproblemsolving.com/7/e/f/7ef414492158b199361ca3cf69c5c728b2dc6b0e.png" class="latexcenter" alt="\begin{align*} \frac{(2 \cdot \tan{\angle{OCP}})}{(1-\tan^2{\angle{OCP}})} = \tan{\angle{POX}} = \frac{28}{45} \\ 14\tan^2{\angle{OCP}} + 45\tan{\angle{OCP}} - 14 = 0 \end{align*}" width="314" height="66" />
+</p><p>Solving the equation above, we get that <img src="//latex.artofproblemsolving.com/8/8/3/883ec4fa6a60f25047b0c07ede0da17d3131028a.png" class="latex" alt="$\tan{\angle{OCP}} = -7/2$" style="vertical-align: -5px" width="152" height="20" /> or <img src="//latex.artofproblemsolving.com/f/f/c/ffce6d6b648c3d71987ef57d600fb349d5a0e318.png" class="latex" alt="$2/7$" style="vertical-align: -4px" width="27" height="18" />. Since this value must be positive, we pick <img src="//latex.artofproblemsolving.com/7/2/6/726bdcb0779fcb4723bfc790d0f677a9981261a6.png" class="latex" alt="$\frac{2}{7}$" style="vertical-align: -12px" width="11" height="37" />. Then, <img src="//latex.artofproblemsolving.com/5/5/3/5531a1419c79637e1ff04b7471b091d72a1114ab.png" class="latex" alt="$\frac{PA}{PC} = 2/7$" style="vertical-align: -13px" width="86" height="39" /> (since <img src="//latex.artofproblemsolving.com/c/e/4/ce4762abc3bba3fb34a64b4b9721988f553f72fd.png" class="latex" alt="$\triangle CAP$" width="58" height="13" /> is a right triangle with line <img src="//latex.artofproblemsolving.com/1/2/5/12517bbc31cb9026c71299b7a0d232d07e60f284.png" class="latex" alt="$\overline{AC}$" style="vertical-align: -1px" width="30" height="18" /> the diameter of the circumcircle) and <img src="//latex.artofproblemsolving.com/1/1/7/11775a1b86efb93afafc67a911a2d8debfa2f811.png" class="latex" alt="$PA * PC = 56$" style="vertical-align: -1px" width="118" height="14" />. Solving we get <img src="//latex.artofproblemsolving.com/d/f/1/df19cd44e4cccc451392988ced69f1022f6dde5b.png" class="latex" alt="$PA = 4$" style="vertical-align: -1px" width="63" height="14" />, <img src="//latex.artofproblemsolving.com/5/d/a/5da7ca7767bdbd6523b40f1f846dccf840a22021.png" class="latex" alt="$PC = 14$" style="vertical-align: -1px" width="73" height="14" />, giving us a diagonal of length <img src="//latex.artofproblemsolving.com/a/b/0/ab0ca4911f467d2e00e8ca9e423b1f3fce496c43.png" class="latex" alt="$\sqrt{212}$" style="vertical-align: -2px" width="44" height="21" /> and area <img src="//latex.artofproblemsolving.com/1/6/2/16205f44f5f3913332beba1fda4d6954263c78bb.png" class="latex" alt="$\boxed{106}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~<a href="/wiki/index.php?title=Daniel_Zhou%27s_Profile&amp;action=edit&amp;redlink=1" class="new" title="Daniel Zhou&#39;s Profile (page does not exist)">Danielzh</a>
+</p>
+<h2><span id="Solution_5_(Analytic_Geometry)"></span><span class="mw-headline" id="Solution_5_.28Analytic_Geometry.29">Solution 5 (Analytic Geometry)</span></h2>
+<p>Denote by <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> the half length of each side of the square.
+We put the square to the coordinate plane, with <img src="//latex.artofproblemsolving.com/1/1/7/11784369278b0a15a4931feafd6624a139057fc8.png" class="latex" alt="$A = \left( x, x \right)$" style="vertical-align: -5px" width="83" height="20" />, <img src="//latex.artofproblemsolving.com/6/7/1/671b82a2fa86818fc94d1c46e1952d2df1399e0a.png" class="latex" alt="$B = \left( - x , x \right)$" style="vertical-align: -5px" width="98" height="20" />, <img src="//latex.artofproblemsolving.com/d/4/8/d486c80bec09f55434b33f7a63745d6e03f16232.png" class="latex" alt="$C = \left( - x , - x \right)$" style="vertical-align: -5px" width="112" height="20" />, <img src="//latex.artofproblemsolving.com/d/8/6/d86166fe6dfa580431b38aeb2d13ede1460bcbb2.png" class="latex" alt="$D = \left( x , - x \right)$" style="vertical-align: -5px" width="99" height="20" />.
+</p><p>The radius of the circumcircle of <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> is <img src="//latex.artofproblemsolving.com/8/f/0/8f00da36e61b46752790f0769b67a4243932a4c4.png" class="latex" alt="$\sqrt{2} x$" style="vertical-align: -2px" width="36" height="21" />.
+Denote by <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> the argument of point <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> on the circle.
+Thus, the coordinates of <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> are <img src="//latex.artofproblemsolving.com/6/4/e/64ec393ebe5340a3278e2063c05368229b22862b.png" class="latex" alt="$P = \left( \sqrt{2} x \cos \theta , \sqrt{2} x \sin \theta \right)$" style="vertical-align: -12px" width="216" height="34" />.
+</p><p>Thus, the equations <img src="//latex.artofproblemsolving.com/5/a/9/5a9e8b75c7a8cf75704c84700d9af1f9a20480bb.png" class="latex" alt="$PA \cdot PC = 56$" width="111" height="13" /> and <img src="//latex.artofproblemsolving.com/1/8/4/1845632ad1151f786a39bb2e89a736211d4b7433.png" class="latex" alt="$PB \cdot PD = 90$" width="113" height="12" /> can be written as
+<img src="//latex.artofproblemsolving.com/f/3/2/f320b0699a89dc93e5505737f23d596b7859cc23.png" class="latexcenter" alt="\begin{align*} \sqrt{\left( \sqrt{2} x \cos \theta - x \right)^2 + \left( \sqrt{2} x \sin \theta - x \right)^2} \cdot \sqrt{\left( \sqrt{2} x \cos \theta + x \right)^2 + \left( \sqrt{2} x \sin \theta + x \right)^2} &amp; = 56 \\ \sqrt{\left( \sqrt{2} x \cos \theta + x \right)^2 + \left( \sqrt{2} x \sin \theta - x \right)^2} \cdot \sqrt{\left( \sqrt{2} x \cos \theta - x \right)^2 + \left( \sqrt{2} x \sin \theta + x \right)^2} &amp; = 90 \end{align*}" width="670" height="93" />
+</p><p>These equations can be reformulated as
+<img src="//latex.artofproblemsolving.com/d/b/c/dbc40e1bde5fa9a9f236bfcf2f0d26dcb080c626.png" class="latexcenter" alt="\begin{align*} x^4 \left( 4 - 2 \sqrt{2} \left( \cos \theta + \sin \theta \right) \right) \left( 4 + 2 \sqrt{2} \left( \cos \theta + \sin \theta \right) \right) &amp; = 56^2  \\ x^4 \left( 4 + 2 \sqrt{2} \left( \cos \theta - \sin \theta \right) \right) \left( 4 - 2 \sqrt{2} \left( \cos \theta - \sin \theta \right) \right) &amp; = 90^2 \end{align*}" width="464" height="71" />
+</p><p>These equations can be reformulated as
+<img src="//latex.artofproblemsolving.com/1/6/c/16c69f8631e0cc3b573a281b63ae191552e37b02.png" class="latexcenter" alt="\begin{align*} 2 x^4 \left( 1 - 2 \cos \theta  \sin \theta \right) &amp; = 28^2 \hspace{1cm} (1) \\ 2 x^4 \left( 1 + 2 \cos \theta  \sin \theta \right) &amp; = 45^2 \hspace{1cm} (2) \end{align*}" width="279" height="47" />
+</p><p>Taking <img src="//latex.artofproblemsolving.com/e/0/a/e0af9585ac1278e2821c831648197be98a1f1fdc.png" class="latex" alt="$\frac{(1)}{(2)}$" style="vertical-align: -18px" width="29" height="45" />, by solving the equation, we get
+<img src="//latex.artofproblemsolving.com/6/a/d/6ad8d133da44e876b7eac1ae3995fb8823b2d9c0.png" class="latexcenter" alt="\[ 2 \cos \theta \sin \theta = \frac{45^2 - 28^2}{45^2 + 28^2} . \hspace{1cm} (3) \]" width="261" height="41" />
+</p><p>Plugging (3) into (1), we get
+<img src="//latex.artofproblemsolving.com/7/5/5/75567328b37e8f8dc11055449c22257ae283e934.png" class="latexcenter" alt="\begin{align*} {\rm Area} \ ABCD &amp; = \left( 2 x \right)^2 \\ &amp; = 4 \sqrt{\frac{28^2}{2 \left( 1 - 2 \cos \theta \sin \theta \right)}} \\ &amp; = 2 \sqrt{45^2 + 28^2} \\ &amp; = 2 \cdot 53 \\ &amp; = \boxed{\textbf{(106) }} . \end{align*}" width="300" height="173" />
+</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)
+</p>
+<h2><span id="Solution_6_(Law_of_Cosines)"></span><span class="mw-headline" id="Solution_6_.28Law_of_Cosines.29">Solution 6 (Law of Cosines)</span></h2>
+<p>WLOG, let <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> be on minor arc <img src="//latex.artofproblemsolving.com/1/f/d/1fd960ffef2e02cf535f1e3d4f194fb808254742.png" class="latex" alt="$\overarc {AB}$" style="vertical-align: 0px" width="23" height="20" />. Let <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> and <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the radius and center of the circumcircle respectively, and let <img src="//latex.artofproblemsolving.com/1/5/1/151bd774ef6699646969006629586390c4a924f1.png" class="latex" alt="$\theta = \angle AOP$" style="vertical-align: -1px" width="90" height="14" />.  	
+</p><p>By the <a href="/wiki/index.php/Pythagorean_Theorem" title="Pythagorean Theorem">Pythagorean Theorem</a>, the area of the square is <img src="//latex.artofproblemsolving.com/6/c/d/6cdc3bd06d3f13fde4505d5bf487f683e24ad96c.png" class="latex" alt="$2r^2$" width="24" height="15" />. We can use the <a href="/wiki/index.php/Law_of_Cosines" title="Law of Cosines">Law of Cosines</a> on isosceles triangles <img src="//latex.artofproblemsolving.com/0/f/c/0fc054a860012b81e006e6fe7816d26e27c8ac7c.png" class="latex" alt="$\triangle AOP, \, \triangle COP, \, \triangle BOP, \, \triangle DOP$" style="vertical-align: -4px" width="266" height="18" /> to get 
+</p><p><img src="//latex.artofproblemsolving.com/a/6/1/a61c474c62b33f667d293992311fb784ba2d594a.png" class="latexcenter" alt="\begin{align*} 	 PA^2 &amp;= 2r^2(1 - \cos \theta), \\	 PC^2 &amp;= 2r^2(1 - \cos (180  - \theta)) = 2r^2(1 + \cos \theta), \\	 PB^2 &amp;= 2r^2(1 - \cos (90 - \theta)) = 2r^2(1 - \sin \theta), \\	 PD^2 &amp;= 2r^2(1 - \cos (90 + \theta)) = 2r^2(1 + \sin \theta).	 \end{align*}" width="364" height="103" />
+</p><p>Taking the products of the first two and last two equations, respectively, <img src="//latex.artofproblemsolving.com/d/3/a/d3add0d46e73c88206a6cfb84dd9ecf07b8075a8.png" class="latexcenter" alt="\[56^2 = (PA \cdot PC)^2 = 4r^4(1 - \cos \theta)(1 + \cos \theta) = 4r^4(1 - \cos^2 \theta) = 4r^4 \sin^2 \theta,\]" width="558" height="20" /> and <img src="//latex.artofproblemsolving.com/8/e/d/8ed881c05424f85561e1bb91f39a774a6416b88c.png" class="latexcenter" alt="\[90^2 = (PB \cdot PD)^2 = 4r^4(1 - \sin \theta)(1 + \sin \theta) = 4r^4(1 - \sin^2 \theta) = 4r^4 \cos^2 \theta.\]" width="556" height="20" />	
+Adding these equations, <img src="//latex.artofproblemsolving.com/8/d/d/8dd20094940b3de5122d5c3fb89a3ed4f4c1ec93.png" class="latexcenter" alt="\[56^2 + 90^2 = 4r^4,\]" width="126" height="19" /> so  	
+<img src="//latex.artofproblemsolving.com/e/f/7/ef7ef4e0d38b3247096c16a9bdeeb0d9720b0411.png" class="latexcenter" alt="\[2r^2 = \sqrt{56^2+90^2} = 2\sqrt{28^2+45^2} = 2\sqrt{2809} = 2 \cdot 53 = \boxed{106}.\]" width="475" height="23" />	
+~OrangeQuail9
+</p>
+<h2><span id="Solution_7_(Subtended_Chords)"></span><span class="mw-headline" id="Solution_7_.28Subtended_Chords.29">Solution 7 (Subtended Chords)</span></h2>
+<p>First draw a diagram.
+<img src="//latex.artofproblemsolving.com/3/d/3/3d3972e504d775bbe285f49fcb5eb32f3f6db4b3.png" class="latexcenter" alt="[asy] pair A, B, C, D, O, P; A = (0,sqrt(106)); B = (0,0); C = (sqrt(106),0); D = (sqrt(106),sqrt(106)); O = (sqrt(106)/2, sqrt(106)/2); P = intersectionpoint(circle(A, sqrt(212)*sin(atan(28/45)/2)), circle(O, sqrt(212)/2)); draw(A--B--C--D--cycle); draw(circle(O, sqrt(212)/2)); label(&quot;$A$&quot;, A, NW); label(&quot;$B$&quot;, B, SW); label(&quot;$C$&quot;, C, SE); label(&quot;$D$&quot;, D, NE); label(&quot;$P$&quot;, P, NW); label(&quot;$O$&quot;, O, 1.5*S); label(&quot;$\theta$&quot;, O, dir(120)*5); draw(P--A--C--cycle, red); draw(P--B--D--cycle, blue); draw(P--O); draw(anglemark(P,O,A,30)); dot(P); dot(O); [/asy]" width="235" height="252" />
+Let's say that the radius is <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" />. Then the area of the <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> is <img src="//latex.artofproblemsolving.com/7/f/3/7f3b1327a3b5514ead9c322fcb84d68c1bc50899.png" class="latex" alt="$(\sqrt2r)^2 = 2r^2$" style="vertical-align: -5px" width="106" height="24" />
+Using the formula for the length of a chord subtended by an angle, we get
+<img src="//latex.artofproblemsolving.com/d/7/3/d73a198ea7e2a8794b84e8a09b0ebe1f12645ed3.png" class="latexcenter" alt="\[PA = 2r\sin\left(\dfrac{\theta}2\right)\]" width="133" height="43" />
+<img src="//latex.artofproblemsolving.com/d/2/0/d2059d505ecbc31132c42f80f64c3bf15c18b520.png" class="latexcenter" alt="\[PC = 2r\sin\left(\dfrac{180-\theta}2\right) = 2r\sin\left(90 - \dfrac{\theta}2\right) = 2r\cos\left(\dfrac{\theta}2\right)\]" width="445" height="43" />
+Multiplying and simplifying these 2 equations gives
+<img src="//latex.artofproblemsolving.com/c/3/8/c387654af6eef9054e8099fea07545c35262e334.png" class="latexcenter" alt="\[PA \cdot PC = 4r^2 \sin \left(\dfrac{\theta}2 \right) \cos \left(\dfrac{\theta}2 \right) = 2r^2 \sin\left(\theta \right) = 56\]" width="398" height="43" />
+Similarly <img src="//latex.artofproblemsolving.com/4/3/b/43b1375b160fffc5851e1b310664ecc9fd009148.png" class="latex" alt="$PB = 2r\sin\left(\dfrac{90 +\theta}2\right)$" style="vertical-align: -18px" width="181" height="45" /> and <img src="//latex.artofproblemsolving.com/5/0/8/5087076192590e2c142693ec6d6d433e2694e01c.png" class="latex" alt="$PD =2r\sin\left(\dfrac{90 -\theta}2\right)$" style="vertical-align: -18px" width="182" height="45" />. Again, multiplying gives
+<img src="//latex.artofproblemsolving.com/e/5/b/e5bd133c3f857681ed71a51d197beee23330502a.png" class="latexcenter" alt="\[PB \cdot PD = 4r^2 \sin\left(\dfrac{90 +\theta}2\right) \sin\left(\dfrac{90 -\theta}2\right) = 4r^2 \sin\left(90 -\dfrac{90 -\theta}2\right) \sin\left(\dfrac{90 -\theta}2\right)\]" width="631" height="43" />
+<img src="//latex.artofproblemsolving.com/0/c/a/0ca454eb3a3b669ba836cc63314c57dd94deba72.png" class="latexcenter" alt="\[=4r^2 \sin\left(\dfrac{90 -\theta}2\right) \cos\left(\dfrac{90 -\theta}2\right) = 2r^2 \sin\left(90 - \theta \right) = 2r^2 \cos\left(\theta \right) = 90\]" width="547" height="43" />
+Dividing <img src="//latex.artofproblemsolving.com/c/8/d/c8d5d335297a798ba01189153aec1aeab387bad8.png" class="latex" alt="$2r^2 \sin \left(\theta \right)$" style="vertical-align: -5px" width="79" height="21" /> by <img src="//latex.artofproblemsolving.com/9/3/e/93ee0fc9fd8d316ea37ccfdecd33ce5fdc1b8520.png" class="latex" alt="$2r^2 \cos \left( \theta \right)$" style="vertical-align: -5px" width="81" height="21" /> gives <img src="//latex.artofproblemsolving.com/1/5/e/15e9eb96829d601aed6b02a79045ef89d5f55793.png" class="latex" alt="$\tan \left(\theta \right) = \dfrac{28}{45}$" style="vertical-align: -13px" width="101" height="38" />, so <img src="//latex.artofproblemsolving.com/9/9/5/995f6c40ff7fe6a282127773cb70679e5e95ffdd.png" class="latex" alt="$\theta = \tan^{-1} \left(\dfrac{28}{45} \right)$" style="vertical-align: -18px" width="131" height="45" />.
+Pluging this back into one of the equations, gives
+<img src="//latex.artofproblemsolving.com/3/5/2/352d1b973dd4a3b1095b4b16efafe14a2d077548.png" class="latexcenter" alt="\[2r^2 = \dfrac{90}{\cos\left(\tan^{-1}\left(\dfrac{28}{45}\right)\right)}\]" width="200" height="65" />
+If we imagine a <img src="//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png" class="latex" alt="$28$" width="17" height="12" />-<img src="//latex.artofproblemsolving.com/f/2/7/f27da4fca6f3fecb215974023aad210b70ec3857.png" class="latex" alt="$45$" style="vertical-align: 0px" width="17" height="13" />-<img src="//latex.artofproblemsolving.com/1/b/a/1ba318f7385187c693cb1859d9b4b1b587e649d9.png" class="latex" alt="$53$" width="17" height="12" /> right triangle, we see that if <img src="//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png" class="latex" alt="$28$" width="17" height="12" /> is opposite and <img src="//latex.artofproblemsolving.com/f/2/7/f27da4fca6f3fecb215974023aad210b70ec3857.png" class="latex" alt="$45$" style="vertical-align: 0px" width="17" height="13" /> is adjacent, <img src="//latex.artofproblemsolving.com/d/1/8/d18849bbc204f22ac38ebeb6e18e4b476c666167.png" class="latex" alt="$\cos\left(\theta\right) = \dfrac{\text{adj}}{\text{hyp}} = \dfrac{45}{53}$" style="vertical-align: -17px" width="154" height="42" />. Now we see that
+<img src="//latex.artofproblemsolving.com/3/4/7/3470b88bc6df9bc16109faf052815f9662f0149a.png" class="latexcenter" alt="\[2r^2 = \dfrac{90}{\frac{45}{53}} = \boxed{106}.\]" width="137" height="43" />
+~Voldemort101
+</p>
+<h2><span id="Solution_8_(Coordinates_and_Algebraic_Manipulation)"></span><span class="mw-headline" id="Solution_8_.28Coordinates_and_Algebraic_Manipulation.29">Solution 8 (Coordinates and Algebraic Manipulation)</span></h2>
+<p><img src="//latex.artofproblemsolving.com/2/6/3/263dea758bbfbc3b07f5f2e6c4397fd3eead1550.png" class="latexcenter" alt="[asy] pair A,B,C,D,P; A=(-3,3); B=(3,3); C=(3,-3); D=(-3,-3); draw(A--B--C--D--cycle); label(A,&quot;$A$&quot;,NW); label(B,&quot;$B$&quot;,NE); label(C,&quot;$C$&quot;,SE); label(D,&quot;$D$&quot;,SW); draw(circle((0,0),4.24264068712)); P=(-1,4.12310562562); label(P,&quot;$P$&quot;, NW); pen k=red+dashed; draw(P--A,k); draw(P--B,k); draw(P--C,k); draw(P--D,k); dot(P); [/asy]" width="235" height="252" />
+Let <img src="//latex.artofproblemsolving.com/4/8/b/48b3fc4b846b8c85f2ba67f5b28698b773dfbbb7.png" class="latex" alt="$P=(a,b)$" style="vertical-align: -4px" width="76" height="18" /> on the upper quarter of the circle, and let <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> be the side length of the square. Hence, we want to find <img src="//latex.artofproblemsolving.com/0/e/5/0e5c83cc0c639fc2ed843bbe2d3d209fb478b104.png" class="latex" alt="$k^2$" width="16" height="15" />. Let the center of the circle be <img src="//latex.artofproblemsolving.com/f/9/6/f9603ca3089464e548fc6f1366bc474e7efef8d9.png" class="latex" alt="$(0,0)$" style="vertical-align: -4px" width="38" height="18" />.
+The two equations would thus become:
+<img src="//latex.artofproblemsolving.com/c/9/a/c9a90656d3068681df6c5f6cec2775548cf2ab3e.png" class="latexcenter" alt="\[\left(\left(a+\dfrac{k}2\right)^2+\left(b-\dfrac{k}2\right)^2\right)\left(\left(a-\dfrac{k}2\right)^2+\left(b+\dfrac{k}2\right)^2\right)=56^2\]" width="462" height="53" />
+<img src="//latex.artofproblemsolving.com/6/5/6/656e4665596a25573a3b90fab4a052409dd1a5ca.png" class="latexcenter" alt="\[\left(\left(a-\dfrac{k}2\right)^2+\left(b-\dfrac{k}2\right)^2\right)\left(\left(a+\dfrac{k}2\right)^2+\left(b+\dfrac{k}2\right)^2\right)=90^2\]" width="462" height="53" />
+Now, let <img src="//latex.artofproblemsolving.com/6/a/c/6ac5a1643294efe83a46240919c29709bfa57354.png" class="latex" alt="$m=\left(a+\dfrac{k}2\right)^2$" style="vertical-align: -18px" width="121" height="48" />, <img src="//latex.artofproblemsolving.com/b/8/d/b8d1e087c87a39402d9066bbb90b7efecf85be5a.png" class="latex" alt="$n=\left(a-\dfrac{k}2\right)^2$" style="vertical-align: -18px" width="116" height="48" />, <img src="//latex.artofproblemsolving.com/5/7/8/578e0483e90e272c2382d325d5227ea28a554eb7.png" class="latex" alt="$o=\left(b+\dfrac{k}2\right)^2$" style="vertical-align: -18px" width="113" height="48" />, and <img src="//latex.artofproblemsolving.com/4/c/b/4cb3f57cae1b978608f0a39fc288f95a0d56b33b.png" class="latex" alt="$p=\left(b-\dfrac{k}2\right)^2$" style="vertical-align: -18px" width="113" height="48" />. Our equations now change to <img src="//latex.artofproblemsolving.com/a/b/a/aba3fb96815572460584f4724dc2a92a742e4a25.png" class="latex" alt="$(m+p)(n+o)=56^2=mn+op+mo+pn$" style="vertical-align: -5px" width="350" height="21" /> and <img src="//latex.artofproblemsolving.com/7/1/f/71f55f2a57ab2bd445723ada93ea5b3974ce4aa8.png" class="latex" alt="$(n+p)(m+o)=90^2=mn+op+no+pm$" style="vertical-align: -5px" width="350" height="21" />. Subtracting the first from the second, we have <img src="//latex.artofproblemsolving.com/5/b/c/5bc76fa710e91d90ac14ad29d0ef2570bcd9926d.png" class="latex" alt="$pm+no-mo-pn=p(m-n)-o(m-n)=(m-n)(p-o)=34\cdot146$" style="vertical-align: -5px" width="574" height="20" />. Substituting back in and expanding, we have <img src="//latex.artofproblemsolving.com/e/9/8/e98d183621fd912d67e22ed324e5631cdb5eb060.png" class="latex" alt="$2ak\cdot-2bk=34\cdot146$" style="vertical-align: -2px" width="168" height="16" />, so <img src="//latex.artofproblemsolving.com/9/b/6/9b6999ecf69c2ce304e64f2af55eb6a458a7e6a2.png" class="latex" alt="$abk^2=-17\cdot73$" style="vertical-align: -2px" width="125" height="18" />. We now have one of our terms we need (<img src="//latex.artofproblemsolving.com/0/e/5/0e5c83cc0c639fc2ed843bbe2d3d209fb478b104.png" class="latex" alt="$k^2$" width="16" height="15" />). Therefore, we only need to find <img src="//latex.artofproblemsolving.com/e/f/8/ef870ce9fefe09b80a97b05a7b9198414c1b35f7.png" class="latex" alt="$ab$" width="17" height="12" /> to find <img src="//latex.artofproblemsolving.com/0/e/5/0e5c83cc0c639fc2ed843bbe2d3d209fb478b104.png" class="latex" alt="$k^2$" width="16" height="15" />.
+We now write the equation of the circle, which point <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> satisfies: <img src="//latex.artofproblemsolving.com/4/7/6/476d8f31f266d4c511bc2147e1cda89e8fb33673.png" class="latexcenter" alt="\[a^2+b^2=\left(\dfrac{k\sqrt{2}}{2}\right)^2=\dfrac{k^2}2\]" width="195" height="57" />
+We can expand the second equation, yielding <img src="//latex.artofproblemsolving.com/a/6/e/a6ef8f02cec7ee4b7ee7cd48fcc4a1addf25264e.png" class="latexcenter" alt="\[\left(a^2+b^2+\dfrac{k^2}2+(ak+bk)\right)\left(a^2+b^2+\dfrac{k^2}2-(ak+bk)\right)=(k^2+k(a+b))(k^2-k(a+b))=8100.\]" width="731" height="43" />
+Now, with difference of squares, we get <img src="//latex.artofproblemsolving.com/4/4/1/441dc77a82d13531632e87a2efb1b828909a29df.png" class="latex" alt="$k^4-k^2\cdot(a+b)^2=k^2(k^2-(a+b)^2)=8100$" style="vertical-align: -5px" width="351" height="21" />. We can add <img src="//latex.artofproblemsolving.com/1/d/e/1de2f9c65833c28fd86acf3481af82bf47a290a4.png" class="latex" alt="$2abk^2=-17\cdot73\cdot2=-2482$" style="vertical-align: -2px" width="231" height="18" /> to this equation, which we can factor into <img src="//latex.artofproblemsolving.com/7/1/a/71a2522b09b9cae5427af44f8f94f305a06992d5.png" class="latex" alt="$k^2(k^2-(a+b)^2+2ab)=k^2(k^2-(a^2+b^2))=8100-2482$" style="vertical-align: -5px" width="467" height="21" />. We realize that <img src="//latex.artofproblemsolving.com/c/f/6/cf669d58fbd0410ca860758e53606d06425a4d97.png" class="latex" alt="$a^2+b^2$" style="vertical-align: -1px" width="53" height="16" /> is the same as the equation of the circle, so we plug its equation in: <img src="//latex.artofproblemsolving.com/2/2/0/2207895e33f60712e9252f909b06fafe18835a7e.png" class="latex" alt="$k^2\left(k^2-\dfrac{k^2}2\right)=5618$" style="vertical-align: -18px" width="170" height="45" />. We can combine like terms to get <img src="//latex.artofproblemsolving.com/c/6/c/c6c94e38d0cd5b6568f3040b344d6dc68d65dac1.png" class="latex" alt="$k^2\cdot\dfrac{k^2}2=5618$" style="vertical-align: -13px" width="115" height="41" />, so <img src="//latex.artofproblemsolving.com/8/e/a/8ea4a31a85837ab383600a9c087aa37cb7d26b36.png" class="latex" alt="$(k^2)^2=11236$" style="vertical-align: -5px" width="111" height="21" />.
+Since the answer is an integer, we know <img src="//latex.artofproblemsolving.com/b/2/f/b2f185b5aeea0992424f9f47b414086649cba49a.png" class="latex" alt="$11236$" style="vertical-align: 0px" width="44" height="13" /> is a perfect square. Since it is even, it is divisible by <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />, so we can factor <img src="//latex.artofproblemsolving.com/6/5/c/65cda3ab235b9ece6d92c795db7d91e3a2afc0d2.png" class="latex" alt="$11236=2^2\cdot2809$" style="vertical-align: -1px" width="138" height="17" />. With some testing with approximations and last-digit methods, we can find that <img src="//latex.artofproblemsolving.com/d/2/9/d295a82f1b43deed910e43a83169ebea76eb9443.png" class="latex" alt="$53^2=2809$" style="vertical-align: -1px" width="88" height="17" />. Therefore, taking the square root, we find that <img src="//latex.artofproblemsolving.com/0/e/5/0e5c83cc0c639fc2ed843bbe2d3d209fb478b104.png" class="latex" alt="$k^2$" width="16" height="15" />, the area of square <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" />, is <img src="//latex.artofproblemsolving.com/c/8/4/c849c906a6f0bb869b551870280c2a2bff0b35ac.png" class="latex" alt="$2\cdot53=\boxed{106}$" style="vertical-align: -6px" width="105" height="25" />.
+</p><p>~wuwang2002
+</p>
+<h2><span id="Solution_9_(Law_of_Sines)"></span><span class="mw-headline" id="Solution_9_.28Law_of_Sines.29">Solution 9 (Law of Sines)</span></h2>
+<p>WLOG, let <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> be on minor arc <img src="//latex.artofproblemsolving.com/f/3/8/f386fc0035258fe8780a97b973f9ea93679abf16.png" class="latex" alt="$AD.$" width="32" height="13" /> Draw in <img src="//latex.artofproblemsolving.com/e/3/b/e3bb4eeb347e74e025fd175c22f1f7275af0555e.png" class="latex" alt="$AP$" width="27" height="13" />, <img src="//latex.artofproblemsolving.com/f/8/7/f874b39870586f0504f50a667f2bafedddf47904.png" class="latex" alt="$BP$" width="28" height="12" />, <img src="//latex.artofproblemsolving.com/d/1/3/d13fd509f3062449aaea6e10e1040b1d585063f0.png" class="latex" alt="$CP$" width="28" height="12" />, <img src="//latex.artofproblemsolving.com/7/8/3/783d500281f8f46167dff3b071c543d42150e67f.png" class="latex" alt="$DP$" width="29" height="12" /> and let <img src="//latex.artofproblemsolving.com/9/8/2/9821cf703791991d7a20c7a685e61abb481f241c.png" class="latex" alt="$\angle ABP = x.$" style="vertical-align: -1px" width="97" height="14" />  We can see, by the inscribed angle theorem, that <img src="//latex.artofproblemsolving.com/6/d/6/6d605f0a1d23124e66c764d9eee6c2731f41ffd7.png" class="latex" alt="$\angle APB = \angle ACB = 45$" style="vertical-align: -1px" width="179" height="14" />, and <img src="//latex.artofproblemsolving.com/f/8/e/f8e384054ab7bd31f25e9c330adab4e7b203b8f6.png" class="latex" alt="$\angle CPD = \angle CAD = 45.$" style="vertical-align: -1px" width="187" height="14" /> Then, <img src="//latex.artofproblemsolving.com/b/3/7/b372c2cf77b7aea222bacc61b977fcb60c87d712.png" class="latex" alt="$\angle PAB = 135-x$" style="vertical-align: -2px" width="141" height="16" />, <img src="//latex.artofproblemsolving.com/1/e/8/1e81e34e052e9cc44e87c2c16cbfa86319d161d3.png" class="latex" alt="$\angle PCD = \angle PAD = (135-x)-90 = 45-x$" style="vertical-align: -5px" width="353" height="20" />, and <img src="//latex.artofproblemsolving.com/3/f/b/3fbbec20e7cb6fc1e4e401525d7715e7bc01dd3e.png" class="latex" alt="$\angle PDC = 90+x.$" style="vertical-align: -2px" width="139" height="16" /> Letting <img src="//latex.artofproblemsolving.com/c/b/1/cb1a32ffadfb94d905996a9c3109f5020403ba9a.png" class="latex" alt="$(PA, PB, PC, PD, AB) = (a,b,c,d,s)$" style="vertical-align: -5px" width="305" height="20" />, we can use the law of sines on triangles <img src="//latex.artofproblemsolving.com/4/f/5/4f550db59d15933de1a0871aaa917acdd99966af.png" class="latex" alt="$PAB$" width="41" height="13" /> and <img src="//latex.artofproblemsolving.com/f/0/a/f0a0a4554dcbef4be00a35d49eff85301adc911b.png" class="latex" alt="$PCD$" width="43" height="12" /> to get <img src="//latex.artofproblemsolving.com/8/d/2/8d2b0eba74230495b808cd4861e9a06e8111678c.png" class="latexcenter" alt="\[s\sqrt{2} = \frac{a}{\sin(x)} = \frac{b}{\sin(135-x)} = \frac{c}{\sin(90+x)} = \frac{d}{\sin(45-x)}.\]" width="466" height="42" /> Making all the angles in the above equation acute gives <img src="//latex.artofproblemsolving.com/4/9/6/496fc6f1e724b7a8067c3f94339284aa1fcd2437.png" class="latexcenter" alt="\[s\sqrt{2} = \frac{a}{\sin(x)} = \frac{b}{\sin(45+x)} = \frac{c}{\sin(90-x)} = \frac{d}{\sin(45-x)}.\]" width="457" height="42" /> 
+</p><p>Note that we are looking for <img src="//latex.artofproblemsolving.com/d/5/e/d5e462b815e50094fad4c7a43e3d5bcd03c3d717.png" class="latex" alt="$s^{2}.$" style="vertical-align: -1px" width="23" height="17" /> We are given that <img src="//latex.artofproblemsolving.com/7/1/6/716aec42ac111db10d950886231b34ba605d4446.png" class="latex" alt="$ac = 56$" style="vertical-align: -1px" width="62" height="14" /> and <img src="//latex.artofproblemsolving.com/3/9/d/39d44f195f0209dacd72811cb30e0cf6a8cf3ff3.png" class="latex" alt="$bd = 90.$" style="vertical-align: -1px" width="67" height="14" /> This means that
+<img src="//latex.artofproblemsolving.com/a/0/9/a0969f35ae6f220b5b970c332fb56e31ba194837.png" class="latex" alt="$s^{2}\sin(x)\sin(90-x) = 28$" style="vertical-align: -5px" width="200" height="21" /> and <img src="//latex.artofproblemsolving.com/8/e/a/8ea4904d47797582be9a5514eeafb6f934b7f46b.png" class="latex" alt="$s^{2}\sin(45+x)\sin(45-x) = 45.$" style="vertical-align: -5px" width="246" height="21" /> However, <img src="//latex.artofproblemsolving.com/2/f/b/2fb5046c40a9fcf69c664998a39e8b74309dcc29.png" class="latexcenter" alt="\[\sin(x)\sin(90-x) = \sin(x)\cos(x) = \frac{\sin(2x)}{2}\]" width="341" height="38" /> and <img src="//latex.artofproblemsolving.com/9/b/2/9b2072a4a24bbf77cc009a4969e104d4cdd63f72.png" class="latexcenter" alt="\[\sin(45+x)\sin(45-x) = \frac{(\cos(x) + \sin(x))(\cos(x) - \sin(x))}{2} = \frac{\cos^{2}(x) - \sin^{2}(x)}{2} = \frac{\cos(2x)}{2}.\]" width="704" height="41" />  Therefore, <img src="//latex.artofproblemsolving.com/4/b/c/4bc5e507549b727b747a6ba11187c82f596bcc92.png" class="latex" alt="$s^{2}\sin(2x) = 56$" style="vertical-align: -5px" width="119" height="21" /> and <img src="//latex.artofproblemsolving.com/3/e/3/3e3a00dccf22bbd60831524c9f91fd3e6003732a.png" class="latex" alt="$s^{2}\cos(2x) = 90.$" style="vertical-align: -5px" width="126" height="21" /> Therefore, by the Pythagorean Identity, <img src="//latex.artofproblemsolving.com/9/f/6/9f61dc40cc00421ffe3302d69153a7fada8b78cf.png" class="latexcenter" alt="\[s^{2} = \sqrt{(s^{2}\sin(2x))^{2} + (s^{2}\cos(2x))^{2}} = \sqrt{56^{2} + 90^{2}} = \boxed{106}.\]" width="454" height="32" />
+</p><p>~pianoboy
+</p>
+<h2><span id="Solution_10_(Areas_and_Trigonometry)"></span><span class="mw-headline" id="Solution_10_.28Areas_and_Trigonometry.29">Solution 10 (Areas and Trigonometry)</span></h2>
+<p>Similar to Solution 6, let <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> be on minor arc <img src="//latex.artofproblemsolving.com/1/f/d/1fd960ffef2e02cf535f1e3d4f194fb808254742.png" class="latex" alt="$\overarc {AB}$" style="vertical-align: 0px" width="23" height="20" />, <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> and <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the radius and center of the circumcircle respectively, and <img src="//latex.artofproblemsolving.com/1/5/1/151bd774ef6699646969006629586390c4a924f1.png" class="latex" alt="$\theta = \angle AOP$" style="vertical-align: -1px" width="90" height="14" />. Since <img src="//latex.artofproblemsolving.com/1/4/5/14589098013cf51bd13b7d32a5476db3ee28f0cf.png" class="latex" alt="$\triangle APC$" width="58" height="13" /> is a right triangle, <img src="//latex.artofproblemsolving.com/9/9/7/9975930ec10f5f395e2652de6cbe8acf0d20abbc.png" class="latex" alt="$PA \cdot PC$" style="vertical-align: -1px" width="71" height="14" /> equals the hypotenuse, <img src="//latex.artofproblemsolving.com/0/a/5/0a5745df50c8607bdc9b8de4968315633a3047dc.png" class="latex" alt="$2r$" width="17" height="12" />, times its altitude, which can be represented as <img src="//latex.artofproblemsolving.com/0/b/f/0bfe99a22fdff1837142a8fd1e2e92decf013a72.png" class="latex" alt="$r \sin \theta$" style="vertical-align: -1px" width="48" height="14" />. Therefore, <img src="//latex.artofproblemsolving.com/3/2/a/32a5776bf8b957357e86160ef3c8489c66bc1c00.png" class="latex" alt="$2r^2 \sin \theta = 56$" style="vertical-align: -1px" width="107" height="17" />. Applying similar logic to <img src="//latex.artofproblemsolving.com/f/4/7/f472fc12f1c5ac19a4de3dd4d35d55f5f77840f7.png" class="latex" alt="$\triangle BPD$" width="60" height="13" />, we get <img src="//latex.artofproblemsolving.com/c/6/7/c673cbe6da2ec0743a3439687c0e656a014ce0d6.png" class="latex" alt="$2r^2 \sin (90^\circ - \theta) = 2r^2 \cos \theta = 90$" style="vertical-align: -5px" width="255" height="21" />.
+</p><p>Dividing the two equations, we have
+<img src="//latex.artofproblemsolving.com/7/6/3/76305ad0a10985c33f56647a259938fcb23bda8b.png" class="latexcenter" alt="\begin{align*} \frac{\sin \theta}{\cos \theta} &amp;= \frac{56}{90} \\ 56 \cos \theta &amp;= 90 \sin \theta \\ (56 \cos \theta)^2 &amp;= (90 \sin \theta)^2. \end{align*}" width="182" height="90" />
+Adding <img src="//latex.artofproblemsolving.com/c/0/8/c08ea69842af5b855ec8ab8bc0a6a89ac0b16847.png" class="latex" alt="$(56 \sin \theta)^2$" style="vertical-align: -5px" width="79" height="21" /> to both sides allows us to get rid of <img src="//latex.artofproblemsolving.com/c/7/0/c7038458fdc92e1eb1840531bbb58b11dd5ba62e.png" class="latex" alt="$\cos \theta$" width="36" height="13" />:
+<img src="//latex.artofproblemsolving.com/0/d/d/0dd837516b4483739c2342055c822bc2677674d8.png" class="latexcenter" alt="\begin{align*} (56 \cos \theta)^2 + (56 \sin \theta)^2 &amp;= (90 \sin \theta)^2 + (56 \sin \theta)^2 \\ 56^2 &amp;= (90^2 + 56^2)(\sin \theta)^2 \\ \frac{56^2}{90^2 + 56^2} &amp;= (\sin \theta)^2 \\ \frac{28}{53} &amp;= \sin \theta. \end{align*}" width="376" height="139" />
+Therefore, we have <img src="//latex.artofproblemsolving.com/3/0/a/30a991a9cfdf652b3e1cbb4d1c9ae28e6303e212.png" class="latex" alt="$2r^2\left(\frac{28}{53}\right) = 56$" style="vertical-align: -18px" width="121" height="45" />, and since the area of the square can be represented as <img src="//latex.artofproblemsolving.com/6/c/d/6cdc3bd06d3f13fde4505d5bf487f683e24ad96c.png" class="latex" alt="$2r^2$" width="24" height="15" />, the answer is <img src="//latex.artofproblemsolving.com/0/2/3/02320553ed53325085eacd76c16343bb515cdef8.png" class="latex" alt="$56 \cdot \frac{53}{28} = \boxed{106}$" style="vertical-align: -13px" width="118" height="38" />.
+</p><p>~phillipzeng
+</p><p><br />
+</p>
+<h2><span id="Solution_11_(Angle_Chasing_and_Trigonometric_Identities)"></span><span class="mw-headline" id="Solution_11_.28Angle_Chasing_and_Trigonometric_Identities.29">Solution 11 (Angle Chasing and Trigonometric Identities)</span></h2>
+<p>First, we define a few points. Let <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the center of the circle, let <img src="//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png" class="latex" alt="$E$" style="vertical-align: -1px" width="16" height="14" /> be the intersection of diameter <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" /> and chord <img src="//latex.artofproblemsolving.com/b/9/d/b9d6394023b7f71962bce796b61343dcc276679c.png" class="latex" alt="$PD$" width="29" height="12" />, and let <img src="//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png" class="latex" alt="$F$" style="vertical-align: -1px" width="16" height="14" /> be the intersection of diameter <img src="//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png" class="latex" alt="$BD$" width="29" height="12" /> and chord <img src="//latex.artofproblemsolving.com/3/0/e/30e049532148caaf1c48e37658b548a6255c8d59.png" class="latex" alt="$PC$" width="28" height="12" />. We know that <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" />, <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />, <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />, and <img src="//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png" class="latex" alt="$D$" style="vertical-align: -1px" width="17" height="14" /> are four corners of a square. Therefore, the arcs <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" />, <img src="//latex.artofproblemsolving.com/2/7/e/27e525b776c49bbe7d0ae66cfc7ab8f58f40624e.png" class="latex" alt="$DC$" width="29" height="12" />, and <img src="//latex.artofproblemsolving.com/3/e/3/3e3a4ec0df571e719bd3f1d7e00bf71fc55ba2b9.png" class="latex" alt="$CB$" width="28" height="12" /> are all <img src="//latex.artofproblemsolving.com/b/f/c/bfcfee7bd8a5e15e5f6b7881c138de43651572a9.png" class="latex" alt="$90$" width="17" height="12" /> degrees. By inscribed angles, angle <img src="//latex.artofproblemsolving.com/b/e/5/be5705efbd8cadc9f9e150349d31b4f9cf1a24b0.png" class="latex" alt="$APD$" width="43" height="13" />, angle <img src="//latex.artofproblemsolving.com/2/4/8/248253f7faf01eb43b47c408b1aad16d430e52d3.png" class="latex" alt="$DPC$" width="44" height="12" />, and angle <img src="//latex.artofproblemsolving.com/9/1/d/91de931efe9abd9804df10d2d7911cbbf9105410.png" class="latex" alt="$CPB$" style="vertical-align: -1px" width="45" height="14" /> are <img src="//latex.artofproblemsolving.com/f/2/7/f27da4fca6f3fecb215974023aad210b70ec3857.png" class="latex" alt="$45$" style="vertical-align: 0px" width="17" height="13" /> degrees each. Let the measure of angle <img src="//latex.artofproblemsolving.com/0/5/1/05184f01522f8396396f311c0302733fd82fc814.png" class="latex" alt="$PAC$" width="41" height="13" /> be <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />. Similarly, let the measure of angle <img src="//latex.artofproblemsolving.com/b/d/3/bd3ee47d6b5645b4d99b543c16ff1ab79ddcebb2.png" class="latex" alt="$PBD$" width="44" height="12" /> be <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" />. 
+</p><p><br />
+Angle chasing will lead us to the fact that <img src="//latex.artofproblemsolving.com/2/0/d/20d698b269e0925c31c8cf718f9395fd854581f8.png" class="latex" alt="$a + b = 135$" style="vertical-align: -2px" width="93" height="16" />, or rather, <img src="//latex.artofproblemsolving.com/3/7/3/373871e7c3a725db8a1731d334642ddd4d891383.png" class="latex" alt="$b = 135-a$" style="vertical-align: -2px" width="93" height="16" />. Let the diameter of the circle be <img src="//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png" class="latex" alt="$d$" width="9" height="12" />. Given by the problem, <img src="//latex.artofproblemsolving.com/8/b/8/8b8cd83fbaf3485eff8fa8f84691ca49105c34f3.png" class="latex" alt="$d^2\sin a \cos a = 56$" style="vertical-align: -1px" width="139" height="17" />. Also, <img src="//latex.artofproblemsolving.com/1/6/0/160f039324b3bd5a4e0bc7d7e4c2926718890161.png" class="latex" alt="$d^2\sin b \cos b = 90$" style="vertical-align: -1px" width="136" height="17" />. Using the trigonometric identity <img src="//latex.artofproblemsolving.com/0/8/4/08418a863a42b2b0796b98030bfc495918c66654.png" class="latex" alt="$\sin 2x = 2\sin x \cos x$" style="vertical-align: -1px" width="160" height="14" />, we can rewrite these as <img src="//latex.artofproblemsolving.com/1/d/7/1d7e17acea4657039bc5d0c14390dfa6418b8af1.png" class="latex" alt="$d^2\sin 2a = 112$" style="vertical-align: -1px" width="117" height="17" /> and <img src="//latex.artofproblemsolving.com/1/3/7/137651b614ce1ebe9590a30a773680c22db83665.png" class="latex" alt="$d^2\sin 2b = 180$" style="vertical-align: -1px" width="116" height="17" />. Since we determined that <img src="//latex.artofproblemsolving.com/7/d/2/7d27ea2c2bb76871927c4d5ae9abc7138135ae03.png" class="latex" alt="$b = \frac{3\pi}{4}-a$" style="vertical-align: -13px" width="90" height="38" />, this can be substituted into the second equation. Then, we divide the two equations to get <img src="//latex.artofproblemsolving.com/a/d/8/ad89d5e7411a90149bd1844fed2f43a4e543ed9f.png" class="latex" alt="$\frac{\sin (\frac{3\pi}{2}-2a)}{\sin 2a} = \frac{45}{28}$" style="vertical-align: -13px" width="148" height="42" />. By using the trigonometric difference-of-angle identity, this simplifies to <img src="//latex.artofproblemsolving.com/0/9/b/09be4774c49a216a51401051aad7968262b2f054.png" class="latex" alt="$\frac{-\cos 2a}{\sin 2a} = \frac{45}{28}$" style="vertical-align: -13px" width="115" height="38" />. By the definition of the tangent function, <img src="//latex.artofproblemsolving.com/5/7/e/57e46636a16dafa1a759674db4f54cc54d9e2ca7.png" class="latex" alt="$\tan 2a = -\frac{28}{45}$" style="vertical-align: -13px" width="110" height="38" />
+</p><p><br />
+Considering this hypothetical right triangle with legs of <img src="//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png" class="latex" alt="$28$" width="17" height="12" /> and <img src="//latex.artofproblemsolving.com/f/2/7/f27da4fca6f3fecb215974023aad210b70ec3857.png" class="latex" alt="$45$" style="vertical-align: 0px" width="17" height="13" />, the hypotenuse is <img src="//latex.artofproblemsolving.com/2/5/4/2542301bc77b1ce062524461b9754c771ddc8ba9.png" class="latex" alt="$\sqrt{45^2+28^2} = 53$" style="vertical-align: -3px" width="133" height="21" />. Since <img src="//latex.artofproblemsolving.com/8/3/d/83db28364ae04f4fbc71d6b81306e276553131af.png" class="latex" alt="$\sin 2a$" style="vertical-align: -1px" width="46" height="14" /> must be positive (since <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> is acute), <img src="//latex.artofproblemsolving.com/c/b/3/cb304566b0a7770f7418f4cbc33922f7b1a5b7d3.png" class="latex" alt="$\sin 2a = \frac{28}{53}$" style="vertical-align: -13px" width="92" height="38" />. Substituting this into the first of the equations, <img src="//latex.artofproblemsolving.com/3/b/5/3b55f05ed4dc7a0fb7e3f020ea15a28ae9a76e50.png" class="latex" alt="$\frac{28}{53}d^2 = 112$" style="vertical-align: -13px" width="92" height="38" />. From this, <img src="//latex.artofproblemsolving.com/a/5/b/a5b6bfc5dac0fa13ac9ec8034ff94dd3f40bf379.png" class="latex" alt="$d^2 = 212$" style="vertical-align: -1px" width="70" height="17" />. The area of square <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> is half of the square of its diagonal, which is <img src="//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png" class="latex" alt="$d$" width="9" height="12" />. Thus, the answer is <img src="//latex.artofproblemsolving.com/e/9/3/e9321804786779fca039d55f1601fde98fcc8463.png" class="latex" alt="$\frac{d^2}{2} = \boxed{106}$" style="vertical-align: -13px" width="86" height="41" />.
+</p><p>~Curious_crow
+</p>
+<h2><span class="mw-headline" id="Video_Solution_1_by_TheBeautyofMath">Video Solution 1 by TheBeautyofMath</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/JMxOWyF3i20">https://youtu.be/JMxOWyF3i20</a>
+</p><p>~IceMatrix
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2023_AIME_I" title="2023 AIME I">2023 AIME I</a></b> (<b><a href="/wiki/index.php/2023_AIME_I_Problems" title="2023 AIME I Problems">Problems</a></b> • <b><a href="/wiki/index.php/2023_AIME_I_Answer_Key" title="2023 AIME I Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2023">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2023_AIME_I_Problems/Problem_4" title="2023 AIME I Problems/Problem 4">Problem 4</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2023_AIME_I_Problems/Problem_6" title="2023 AIME I Problems/Problem 6">Problem 6</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2023_AIME_I_Problems/Problem_1" title="2023 AIME I Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_2" title="2023 AIME I Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_3" title="2023 AIME I Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_4" title="2023 AIME I Problems/Problem 4">4</a> <b>•</b> <a class="mw-selflink selflink">5</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_6" title="2023 AIME I Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_7" title="2023 AIME I Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_8" title="2023 AIME I Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_9" title="2023 AIME I Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_10" title="2023 AIME I Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_11" title="2023 AIME I Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_12" title="2023 AIME I Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_13" title="2023 AIME I Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_14" title="2023 AIME I Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_I_Problems/Problem_15" title="2023 AIME I Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818181433
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.132 seconds
+Real time usage: 0.136 seconds
+Preprocessor visited node count: 2764/1000000
+Preprocessor generated node count: 6350/1000000
+Post‐expand include size: 1710/2097152 bytes
+Template argument size: 108/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 57723/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.385      1 -total
+ 70.67%    3.099      1 Template:AIME_box
+ 26.64%    1.168      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:23867-0!canonical and timestamp 20250818181433 and revision id 224176
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2023_AIME_I_Problems/Problem_5&amp;oldid=224176">https://artofproblemsolving.com/wiki/index.php?title=2023_AIME_I_Problems/Problem_5&amp;oldid=224176</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Geometry_Problems" title="Category:Intermediate Geometry Problems">Intermediate Geometry Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e89244dae99fb',t:'MTc1ODM0MjA4Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818220218 -->
+</html>
+

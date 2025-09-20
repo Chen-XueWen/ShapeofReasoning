@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2023 AIME II Problems/Problem 15 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2023_AIME_II_Problems/Problem_15","wgTitle":"2023 AIME II Problems/Problem 15","wgCurRevisionId":238378,"wgRevisionId":238378,"wgArticleId":23923,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Number Theory Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2023_AIME_II_Problems/Problem_15","wgRelevantArticleId":23923,"wgRequestId":"019faacc5ab014df509386f0","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2023_AIME_II_Problems_Problem_15 rootpage-2023_AIME_II_Problems_Problem_15 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2023 AIME II Problems/Problem 15																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2023_AIME_II_Problems/Problem_15" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2023_AIME_II_Problems/Problem_15&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2023_AIME_II_Problems/Problem_15&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2023_AIME_II_Problems/Problem_15&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2023_AIME_II_Problems/Problem_15" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2023 AIME II Problems/Problem 15</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28Similar_to_solution_2_but_more_explanation.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (Similar to solution 2 but more explanation)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Binary_Interpretation.2C_Computer_Scientists.27_Playground.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Binary Interpretation, Computer Scientists' Playground)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Video_Solution"><span class="tocnumber">6</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>For each positive integer <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> let <img src="//latex.artofproblemsolving.com/6/f/1/6f1a2b6b7c193f9ba2b2134a59f1da5addcfbc98.png" class="latex" alt="$a_n$" style="vertical-align: -2px" width="17" height="10" /> be the least positive integer multiple of <img src="//latex.artofproblemsolving.com/9/a/1/9a1b2497e7b125cd721bab4c6e2385f954fe35cb.png" class="latex" alt="$23$" width="17" height="12" /> such that <img src="//latex.artofproblemsolving.com/1/d/c/1dcc0454651db1fc4bcf71044a46d1a124125f48.png" class="latex" alt="$a_n \equiv 1 \pmod{2^n}.$" style="vertical-align: -5px" width="140" height="20" /> Find the number of positive integers <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> less than or equal to <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" /> that satisfy <img src="//latex.artofproblemsolving.com/f/a/0/fa0137ab7fd126ff25aa6b5f674174c3a39cd3c4.png" class="latex" alt="$a_n = a_{n+1}.$" style="vertical-align: -5px" width="85" height="14" />
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>Denote <img src="//latex.artofproblemsolving.com/6/9/8/6988048848b68b9dae9a52fc09545255fb726120.png" class="latex" alt="$a_n = 23 b_n$" style="vertical-align: -4px" width="80" height="17" />.
+Thus, for each <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />, we need to find smallest positive integer <img src="//latex.artofproblemsolving.com/f/d/2/fd26dda3f4f507f3fdfaff4fe0b468bee54e7c09.png" class="latex" alt="$k_n$" style="vertical-align: -2px" width="17" height="15" />, such that
+<img src="//latex.artofproblemsolving.com/3/f/f/3ff2ecd44e8f1b568af5b94d60ec5df809ac391d.png" class="latexcenter" alt="\[ 23 b_n = 2^n k_n + 1 . \]" width="130" height="15" />
+</p><p>Thus, we need to find smallest <img src="//latex.artofproblemsolving.com/f/d/2/fd26dda3f4f507f3fdfaff4fe0b468bee54e7c09.png" class="latex" alt="$k_n$" style="vertical-align: -2px" width="17" height="15" />, such that
+<img src="//latex.artofproblemsolving.com/a/4/6/a46ce5dfe715de0c29c95e186d09f4f87a440371.png" class="latexcenter" alt="\[ 2^n k_n \equiv - 1 \pmod{23} . \]" width="178" height="18" />
+</p><p>Now, we find the smallest <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" />, such that <img src="//latex.artofproblemsolving.com/1/e/e/1eec5f1db52e22687ef136048eb5343bed0064ac.png" class="latex" alt="$2^m \equiv 1 \pmod{23}$" style="vertical-align: -5px" width="138" height="20" />.
+By Fermat's Theorem, we must have <img src="//latex.artofproblemsolving.com/1/c/b/1cbaaaa9872923043f88c9016e49d1a12548b13c.png" class="latex" alt="$m | \phi \left( 23 \right)$" style="vertical-align: -5px" width="69" height="20" />. That is, <img src="//latex.artofproblemsolving.com/9/c/9/9c9c1f6f6b71b3a78278b1d7e535e1999be5fb40.png" class="latex" alt="$m | 22$" style="vertical-align: -5px" width="41" height="20" />.
+We find <img src="//latex.artofproblemsolving.com/3/e/9/3e921f405977229521ee7bc3cf5dc0fe3b62cdca.png" class="latex" alt="$m = 11$" style="vertical-align: 0px" width="57" height="12" />.
+</p><p>Therefore, for each <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />, we need to find smallest <img src="//latex.artofproblemsolving.com/f/d/2/fd26dda3f4f507f3fdfaff4fe0b468bee54e7c09.png" class="latex" alt="$k_n$" style="vertical-align: -2px" width="17" height="15" />, such that
+<img src="//latex.artofproblemsolving.com/3/8/c/38cb71fb0b595445b67b4ec8b762909b9c750a89.png" class="latexcenter" alt="\[ 2^{{\rm Rem} \left( n , 11 \right)} k_n \equiv - 1 \pmod{23} . \]" width="232" height="21" />
+</p><p>We have the following results:
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 0\), then \(k_n = 22\) and \(b_n = 1\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 1\), then \(k_n = 11\) and \(b_n = 1\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 2\), then \(k_n = 17\) and \(b_n = 3\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 3\), then \(k_n = 20\) and \(b_n = 7\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 4\), then \(k_n = 10\) and \(b_n = 7\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 5\), then \(k_n = 5\) and \(b_n = 7\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 6\), then \(k_n = 14\) and \(b_n = 39\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 7\), then \(k_n = 7\) and \(b_n = 39\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 8\), then \(k_n = 15\) and \(b_n = 167\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 9\), then \(k_n = 19\) and \(b_n = 423\).
+</p><p>If \({\rm Rem} \left( n , 11 \right) = 10\), then \(k_n = 21\) and \(b_n = 935\).
+</p><p>Therefore, in each cycle, <img src="//latex.artofproblemsolving.com/8/a/0/8a0f791a0ceac21b7aa463a0fb1af4eaeaa0db9a.png" class="latex" alt="$n \in \left\{ 11 l , 11l + 1 , \cdots , 11l + 10 \right\}$" style="vertical-align: -5px" width="248" height="20" />, we have <img src="//latex.artofproblemsolving.com/e/8/3/e83a69efd1fe75a06c409aff4755a8987636ce9b.png" class="latex" alt="$n = 11l$" style="vertical-align: -1px" width="61" height="14" />, <img src="//latex.artofproblemsolving.com/8/b/d/8bd8e49f886dfcd5a8f34d691e3cb7eea93430e2.png" class="latex" alt="$11l + 3$" style="vertical-align: -2px" width="57" height="16" />, <img src="//latex.artofproblemsolving.com/a/8/8/a881cfce0fdf490c387d2b27b7f36f5a23fc5a54.png" class="latex" alt="$11l + 4$" style="vertical-align: -2px" width="57" height="16" />, <img src="//latex.artofproblemsolving.com/6/8/c/68c90364386288f00b278a5566908fc773b45ea4.png" class="latex" alt="$11l + 6$" style="vertical-align: -2px" width="57" height="16" />, such that <img src="//latex.artofproblemsolving.com/3/7/0/37078841f488db55e2093d9c1b8b569083cdfd30.png" class="latex" alt="$b_n = b_{n+1}$" style="vertical-align: -4px" width="72" height="16" />. That is, <img src="//latex.artofproblemsolving.com/f/3/3/f338d75d8f681e303b28f0f0e7f523511ab033aa.png" class="latex" alt="$a_n = a_{n+1}$" style="vertical-align: -5px" width="80" height="14" />.
+At the boundary of two consecutive cycles, <img src="//latex.artofproblemsolving.com/4/e/e/4ee0b30ac9f2ee83a7dcc5d4c09884c7d713c552.png" class="latex" alt="$b_{11L + 10} \neq b_{11 \left(l + 1 \right)}$" style="vertical-align: -6px" width="134" height="20" />.
+</p><p>We have <img src="//latex.artofproblemsolving.com/f/2/f/f2f048902fa5c434cfbac404b31e769f7920306a.png" class="latex" alt="$1000 = 90 \cdot 11 + 10$" style="vertical-align: -2px" width="152" height="15" />.
+Therefore, the number of feasible <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is <img src="//latex.artofproblemsolving.com/8/9/f/89fac6829114c8b24ff875c4e227abcdd7d83292.png" class="latex" alt="$91 \cdot 4 - 1 = \boxed{\textbf{(363) }}$" style="vertical-align: -11px" width="159" height="30" />.
+</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>Observe that if <img src="//latex.artofproblemsolving.com/b/d/4/bd4c5869734e266c094d27c8f7320d6ba643efda.png" class="latex" alt="$a_{n-1} - 1$" style="vertical-align: -5px" width="69" height="18" /> is divisible by <img src="//latex.artofproblemsolving.com/6/c/3/6c36f0b157e8c2fbe0638c2f2b378e08d07695aa.png" class="latex" alt="$2^n$" width="17" height="12" />, <img src="//latex.artofproblemsolving.com/d/b/a/dba11202995dd19bc2fc33a1eb13c972e2f2e7e7.png" class="latex" alt="$a_n = a_{n-1}$" style="vertical-align: -5px" width="80" height="14" />. If not, <img src="//latex.artofproblemsolving.com/3/1/8/3186ef7e589d34273e2642f7c021b1a21d73706b.png" class="latex" alt="$a_n = a_{n-1} + 23 \cdot 2^{n-1}$" style="vertical-align: -5px" width="169" height="21" />.
+</p><p>This encourages us to let <img src="//latex.artofproblemsolving.com/8/d/4/8d4dbf82133fdc57586678119e186e694bd1312e.png" class="latex" alt="$b_n = \frac{a_n - 1}{2^n}$" style="vertical-align: -13px" width="97" height="38" />. Rewriting the above equations, we have
+<img src="//latex.artofproblemsolving.com/a/5/7/a579e97d3601785863907010ec815b67b1c9b8a3.png" class="latexcenter" alt="\[b_n = \begin{cases} \frac{b_{n-1}}{2} &amp; \text{if } 2 \text{ } \vert \text{ } b_{n-1} \\ \frac{b_{n-1}+23}{2} &amp;\text{if } 2 \not\vert \text{ } b_{n-1} \end{cases}\]" width="204" height="53" />
+The first few values of <img src="//latex.artofproblemsolving.com/8/f/f/8ffd01cdc48042ce7c67d8edcd4904809831cfe4.png" class="latex" alt="$b_n$" style="vertical-align: -2px" width="16" height="15" /> are <img src="//latex.artofproblemsolving.com/2/0/f/20fc09cd66d959992abde0865bc7d924d392c55e.png" class="latex" alt="$11, 17, 20, 10, 5, 14, 7, 15, 19, 21,$" style="vertical-align: -4px" width="243" height="17" /> and <img src="//latex.artofproblemsolving.com/1/d/1/1d111a5e00ee5ea6700bb629994dc629874c505b.png" class="latex" alt="$22$" width="17" height="12" />. We notice that <img src="//latex.artofproblemsolving.com/d/f/1/df1bf964d443339d1134ff440d5f7b485b4c56d3.png" class="latex" alt="$b_{12} = b_1 = 11$" style="vertical-align: -4px" width="106" height="17" />, and thus the sequence is periodic with period <img src="//latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" />.
+</p><p>Note that <img src="//latex.artofproblemsolving.com/f/3/3/f338d75d8f681e303b28f0f0e7f523511ab033aa.png" class="latex" alt="$a_n = a_{n+1}$" style="vertical-align: -5px" width="80" height="14" /> if and only if <img src="//latex.artofproblemsolving.com/8/f/f/8ffd01cdc48042ce7c67d8edcd4904809831cfe4.png" class="latex" alt="$b_n$" style="vertical-align: -2px" width="16" height="15" /> is even. This occurs when <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is congruent to <img src="//latex.artofproblemsolving.com/1/e/3/1e3e5a6b3d0dbbe83d967bdcdfe42202b0e50b6b.png" class="latex" alt="$0, 3, 4$" style="vertical-align: -4px" width="45" height="17" /> or <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> mod <img src="//latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" />, giving four solutions for each period.
+</p><p>From <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> to <img src="//latex.artofproblemsolving.com/8/8/8/888c508062c09735bab7ff0e11e7dc80cc7580db.png" class="latex" alt="$1001$" style="vertical-align: 0px" width="35" height="13" /> (which is <img src="//latex.artofproblemsolving.com/4/6/4/4643d1f2cde39533d87f17af4ab599fe62d23b4b.png" class="latex" alt="$91 \times 11$" style="vertical-align: -2px" width="60" height="15" />), there are <img src="//latex.artofproblemsolving.com/8/7/2/872599edbe13465aa247e26c9561022e4e26bff8.png" class="latex" alt="$91 \times 4 = 364$" style="vertical-align: -2px" width="103" height="15" /> values of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. We subtract <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> from the total since <img src="//latex.artofproblemsolving.com/8/8/8/888c508062c09735bab7ff0e11e7dc80cc7580db.png" class="latex" alt="$1001$" style="vertical-align: 0px" width="35" height="13" /> satisfies the criteria but is greater than <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" /> to get a final answer of <img src="//latex.artofproblemsolving.com/c/9/3/c93528fccee89d6c723bdf80e7096219071c8679.png" class="latex" alt="$\fbox{363}$" style="vertical-align: -6px" width="38" height="24" /> .
+~<a href="/wiki/index.php/User:Bxiao31415" title="User:Bxiao31415">Bxiao31415</a>
+</p><p>(small changes by bobjoebilly and <a href="/wiki/index.php/User:Iraevid13" title="User:Iraevid13">IraeVid13</a>)
+</p>
+<h2><span id="Solution_3_(Similar_to_solution_2_but_more_explanation)"></span><span class="mw-headline" id="Solution_3_.28Similar_to_solution_2_but_more_explanation.29">Solution 3 (Similar to solution 2 but more explanation)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/7/6/7/767ded708b2f8704d626b5aa73c3c8ddda697513.png" class="latex" alt="$a_n = 23b_n$" style="vertical-align: -4px" width="80" height="17" />. Note that if
+<img src="//latex.artofproblemsolving.com/1/2/7/127fe5f2b92ac18fafd035f2011bd8fd75197767.png" class="latexcenter" alt="\[23 b_{n+1} \equiv 1 \pmod{2^{n+1}}\]" width="191" height="20" />
+Then
+<img src="//latex.artofproblemsolving.com/1/a/2/1a252c6b3552335e26bed90a74d364217941a797.png" class="latexcenter" alt="\[23 b_{n+1} \equiv 1 \pmod{2^{n}}\]" width="174" height="18" />
+Also
+<img src="//latex.artofproblemsolving.com/3/d/0/3d037dce71f6c9ff7956368acc48073c9c6dd521.png" class="latexcenter" alt="\[23 b_n \equiv 1 \pmod{2^n}\]" width="157" height="18" />
+Therefore
+<img src="//latex.artofproblemsolving.com/6/5/f/65fe65f67c590ab177dee9e1880a75ed3ab1729a.png" class="latexcenter" alt="\[b_n \equiv b_{n+1} \equiv 23^{-1} \pmod{2^n}\]" width="224" height="20" />
+Then
+<img src="//latex.artofproblemsolving.com/3/6/8/368cd04c60c5de78534dd55a2131518eba4d4a4e.png" class="latexcenter" alt="\[b_{n+1} \equiv b_n, b_n + 2^n \pmod{2^{n+1}}\]" width="246" height="20" />
+So
+<img src="//latex.artofproblemsolving.com/3/4/0/3400757a4791a5dbf07efb4bde188b3dafe11570.png" class="latexcenter" alt="\[b_{n+1} = b_n, b_n + 2^n\]" width="138" height="17" />
+Since <img src="//latex.artofproblemsolving.com/9/0/6/906898e836b026332e8421e33ad0145ad7d2e52a.png" class="latex" alt="$0 \le b_n &lt; 2^n$" style="vertical-align: -4px" width="94" height="17" /> and <img src="//latex.artofproblemsolving.com/2/0/f/20f21695b8fe53aa4b4a8fbbbd69bf3a3f9b0647.png" class="latex" alt="$0 \le b_{n+1} &lt; 2^{n+1}$" style="vertical-align: -5px" width="128" height="21" /> as <img src="//latex.artofproblemsolving.com/6/f/1/6f1a2b6b7c193f9ba2b2134a59f1da5addcfbc98.png" class="latex" alt="$a_n$" style="vertical-align: -2px" width="17" height="10" /> is the <i>least</i> positive integer multiple of 23.
+</p><p>Now suppose <img src="//latex.artofproblemsolving.com/c/2/4/c24f287d69bcc14cdc04c23452ce811851b4b3d1.png" class="latex" alt="$b_{n+1} = b_n$" style="vertical-align: -5px" width="77" height="18" />. Define <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> to be the quotient of <img src="//latex.artofproblemsolving.com/4/e/5/4e59153b214ed703e6eb764c2b8f4d73a07facfd.png" class="latex" alt="$23b_n$" style="vertical-align: -4px" width="37" height="17" /> divided by <img src="//latex.artofproblemsolving.com/6/c/3/6c36f0b157e8c2fbe0638c2f2b378e08d07695aa.png" class="latex" alt="$2^n$" width="17" height="12" />. Then
+<img src="//latex.artofproblemsolving.com/9/5/7/9572053f765c23d802ff15a864707e87f9c1a85a.png" class="latexcenter" alt="\[23b_n = 2^n q_n + 1 \text{ and } 23b_{n+1} = 23b_n = 2^{n+1} q_{n+1} + 1 = 2^n q_n + 1 \implies q_{n+1} = \frac{q_n}{2}\]" width="592" height="32" />
+Furthermore if quotient <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> is even then
+<img src="//latex.artofproblemsolving.com/b/0/a/b0a4f3df8dfed4f9575cebdc150b27dd8f84d7ba.png" class="latexcenter" alt="\[23b_n = 2^n q_n +1 = 2^{n+1} \frac{q_n}{2} +1\]" width="236" height="32" />
+Therefore <img src="//latex.artofproblemsolving.com/c/2/4/c24f287d69bcc14cdc04c23452ce811851b4b3d1.png" class="latex" alt="$b_{n+1} = b_n$" style="vertical-align: -5px" width="77" height="18" /> if and only if <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> is even. And, if this is true, then <img src="//latex.artofproblemsolving.com/f/f/0/ff0b9669856b9c4296eb8efa1ad844cbb97bc2d8.png" class="latex" alt="$q_{n+1} = \frac{q_n}{2}$" style="vertical-align: -13px" width="81" height="34" />. Next, if <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> is odd, we must have <img src="//latex.artofproblemsolving.com/a/4/1/a41c8be2abeafb17abcfc605af7c6ade428db011.png" class="latex" alt="$b_{n+1} = b_n + 2^n$" style="vertical-align: -5px" width="117" height="18" />. Solving for <img src="//latex.artofproblemsolving.com/1/3/e/13e055e93bbbdcc443807a55ab50a702450fa413.png" class="latex" alt="$q_{n+1}$" style="vertical-align: -5px" width="36" height="14" />, we have
+<img src="//latex.artofproblemsolving.com/2/8/2/28233a952b6285fc41ceb5e5579564364a1dfcbf.png" class="latexcenter" alt="\[23b_{n+1} = 2^{n+1} q_{n+1} + 1 \implies 23b_n + 23 \cdot 2^n = 2^{n+1} q_{n+1} + 1 \implies 2^n q_n + 1 + 23 = 2^{n+1} q_{n+1} + 1 \implies q_{n+1} = \frac{q_n + 1}{2} + 11\]" width="872" height="37" />
+Therefore, if <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> is odd, <img src="//latex.artofproblemsolving.com/c/e/2/ce268fe3f32312b5a73a20299e5e5c3dc0e80067.png" class="latex" alt="$q_{n+1} = \frac{q_n + 1}{2} + 11$" style="vertical-align: -13px" width="153" height="38" />. In sum, our recursion is 
+<img src="//latex.artofproblemsolving.com/0/2/3/023062d687eb6e6992f2a64ef901d13d3b42bde5.png" class="latexcenter" alt="\[q_n = \begin{cases} \frac{q_{n-1}}{2} &amp; \text{if } 2 \text{ } \vert \text{ } q_{n-1} \\ \frac{q_{n-1}+1}{2} + 11 &amp;\text{if } 2 \not\vert \text{ } q_{n-1} \end{cases}\]" width="239" height="53" />
+Finally, let us list out <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> to find a pattern. Because <img src="//latex.artofproblemsolving.com/f/2/a/f2a97ca4120606ea7de6d29e6ffc875b9e18f484.png" class="latex" alt="$a_1 = 23$" style="vertical-align: -4px" width="61" height="17" />, <img src="//latex.artofproblemsolving.com/9/0/0/900e527e2b62307f825216951122cc491a5d75a6.png" class="latex" alt="$q_1 = 11$" style="vertical-align: -4px" width="60" height="17" />. Through our recursion, we continue like so:
+<img src="//latex.artofproblemsolving.com/b/b/6/bb6f61c10bbc17e0bd4c7f38dc348b9e140e272e.png" class="latexcenter" alt="\[q_1 = 11, q_2 = 17, q_2 = 20, q_3 = 10, q_4 = 5, q_6 = 14, q_7 = 7, q_8 = 15, q_9 = 19, q_{10} = 21, q_{11} = 22, q_{12} = 11, \dots\]" width="813" height="16" />
+Therefore <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> repeats with cycle length <img src="//latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" />. Since <img src="//latex.artofproblemsolving.com/b/9/f/b9f1a207b538acd864bab858c82e53360b46590b.png" class="latex" alt="$a_{n+1} = a_n$" style="vertical-align: -4px" width="77" height="12" /> if and only if <img src="//latex.artofproblemsolving.com/e/d/a/eda9ea657512a902dd9933010fd589bdf6f2c781.png" class="latex" alt="$q_n$" style="vertical-align: -4px" width="19" height="13" /> is even, in each cycle, we have 4 satisfactory values of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. There are <img src="//latex.artofproblemsolving.com/2/b/b/2bb66ed3ae01edf604a9296a09ba22470b99b3f0.png" class="latex" alt="$\frac{1000 - 10}{11} = 90$" style="vertical-align: -13px" width="125" height="38" /> complete cycles. There are 3 extra values in the last incomplete cycle. Therefore we obtain <img src="//latex.artofproblemsolving.com/5/f/2/5f2a02113e862b51c033fa0e82f541330feab6fe.png" class="latex" alt="$90 \cdot 4 + 3 = \fbox{363}$" style="vertical-align: -6px" width="134" height="24" />.
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Crazyvideogamez">CrazyVideoGamez</a>
+</p>
+<h2><span id="Solution_4_(Binary_Interpretation,_Computer_Scientists'_Playground)"></span><span class="mw-headline" id="Solution_4_.28Binary_Interpretation.2C_Computer_Scientists.27_Playground.29">Solution 4 (Binary Interpretation, Computer Scientists' Playground)</span></h2>
+<p>We first check that <img src="//latex.artofproblemsolving.com/3/c/f/3cf4228adc3cfef2775569f2bd6fe33c597f17d0.png" class="latex" alt="$\gcd(23, 2^n) = 1$" style="vertical-align: -5px" width="121" height="20" /> hence we are always seeking a unique modular inverse of <img src="//latex.artofproblemsolving.com/9/a/1/9a1b2497e7b125cd721bab4c6e2385f954fe35cb.png" class="latex" alt="$23$" width="17" height="12" />, <img src="//latex.artofproblemsolving.com/8/f/f/8ffd01cdc48042ce7c67d8edcd4904809831cfe4.png" class="latex" alt="$b_n$" style="vertical-align: -2px" width="16" height="15" />, such that <img src="//latex.artofproblemsolving.com/9/0/8/9089c383098d21d489e1bec676d5b49493c71b28.png" class="latex" alt="$a_n \equiv 23b_n \equiv 1 \mod{2^n}$" style="vertical-align: -4px" width="184" height="17" />.
+</p><p><br />
+Now that we know that <img src="//latex.artofproblemsolving.com/8/f/f/8ffd01cdc48042ce7c67d8edcd4904809831cfe4.png" class="latex" alt="$b_n$" style="vertical-align: -2px" width="16" height="15" /> is unique, we proceed to recast this problem in binary. This is convenient because <img src="//latex.artofproblemsolving.com/4/a/d/4ad814f6ebbd81251cee3cad0eba7918578f6fa7.png" class="latex" alt="$x \mod{2^n}$" style="vertical-align: -1px" width="83" height="14" /> is simply the last <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />-bits of <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> in binary, and if <img src="//latex.artofproblemsolving.com/8/3/e/83e15146315e28f95546e97e1a76410962aafa8b.png" class="latex" alt="$x \equiv 1 \mod{2^n}$" style="vertical-align: -1px" width="117" height="14" />, it means that of the last <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> bits of <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, only the rightmost bit (henceforth <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />th bit) is <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />.
+</p><p>Also, multiplication in binary can be thought of as adding shifted copies of the multiplicand. For example:
+</p><p><img src="//latex.artofproblemsolving.com/1/2/b/12bb013076e432ec960f7706ea5b53b387c1f6f8.png" class="latexcenter" alt="\begin{align} 10111_2 \times 1011_2 &amp;= 10111_2 \times (1000_2 + 10_2 + 1_2) \\               &amp;= 10111000_2 + 101110_2 + 10111_2 \\               &amp;= 11111101_2 \end{align}" width="428" height="67" />
+</p><p>Now note <img src="//latex.artofproblemsolving.com/0/5/e/05e6ae582f080c2e680923060e36d1a35aed61a6.png" class="latex" alt="$23 = 10111_2$" style="vertical-align: -4px" width="97" height="17" />, and recall that our objective is to progressively zero out the <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> leftmost bits of <img src="//latex.artofproblemsolving.com/2/0/9/2092512d84b53175a364ccac45c8d8488e2e117a.png" class="latex" alt="$a_n = 10111_2 \times b_n$" style="vertical-align: -4px" width="137" height="17" /> except for the <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />th bit. 
+</p><p>Write <img src="//latex.artofproblemsolving.com/a/0/a/a0a88eae0251e93fdaa400c585d84e5df80c9604.png" class="latex" alt="$b_n = \underline{c_{n-1}\cdots c_2c_1c_0}_2$" style="vertical-align: -9px" width="157" height="23" />, we note that <img src="//latex.artofproblemsolving.com/0/1/3/0134af18ca53751c9f9ec73d48b7fa0ff8da9ea6.png" class="latex" alt="$c_0$" style="vertical-align: -2px" width="14" height="10" /> uniquely defines the <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />th bit of <img src="//latex.artofproblemsolving.com/6/f/1/6f1a2b6b7c193f9ba2b2134a59f1da5addcfbc98.png" class="latex" alt="$a_n$" style="vertical-align: -2px" width="17" height="10" />, and once we determine <img src="//latex.artofproblemsolving.com/0/1/3/0134af18ca53751c9f9ec73d48b7fa0ff8da9ea6.png" class="latex" alt="$c_0$" style="vertical-align: -2px" width="14" height="10" />, <img src="//latex.artofproblemsolving.com/0/0/3/00322295674c54c5413520f7493470ff32ae3cec.png" class="latex" alt="$c_1$" style="vertical-align: -2px" width="13" height="10" /> uniquely determines the <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />st bit of <img src="//latex.artofproblemsolving.com/6/f/1/6f1a2b6b7c193f9ba2b2134a59f1da5addcfbc98.png" class="latex" alt="$a_n$" style="vertical-align: -2px" width="17" height="10" />, so on and so forth. 
+</p><p>For example, <img src="//latex.artofproblemsolving.com/e/b/e/ebe3aba2cb620a08de0cad367a0d758da9f7018d.png" class="latex" alt="$c_0 = 1$" style="vertical-align: -4px" width="50" height="17" /> satisfies <img src="//latex.artofproblemsolving.com/2/c/d/2cd306d218d19f114a84176a4c55b6f62d83ab98.png" class="latex" alt="$a_1 \equiv10111_2 \times 1_2 \equiv 1 \mod{10_2}$" style="vertical-align: -4px" width="247" height="17" />
+Next, we note that the second bit of <img src="//latex.artofproblemsolving.com/1/a/b/1ab39d761413804680d26d972381f028001562f5.png" class="latex" alt="$a_1$" style="vertical-align: -2px" width="15" height="10" /> is <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />, so we must also have <img src="//latex.artofproblemsolving.com/e/5/0/e50622a437ed869fea40aa757e2fea9fca7cf8c4.png" class="latex" alt="$c_1 = 1$" style="vertical-align: -2px" width="47" height="14" /> in order to zero it out, giving
+</p><p><img src="//latex.artofproblemsolving.com/5/a/1/5a1d1d9ea7a9b4b3732d50c4df147dde5345ee6b.png" class="latexcenter" alt="\[a_2 \equiv 10111_2 \times 11_2 \equiv 101110_2 + a_1 \equiv 1000101_2 \equiv 01_2 \mod{100_2}\]" width="488" height="15" />
+</p><p><img src="//latex.artofproblemsolving.com/6/f/a/6fa3869419e13122be3309ff5d0b09f0fdaa9f63.png" class="latex" alt="$a_{n+1} = a_{n}$" style="vertical-align: -5px" width="80" height="14" /> happens precisely when <img src="//latex.artofproblemsolving.com/7/9/0/790f9e49e5031e603cbf2f35daa960d1a62bb96c.png" class="latex" alt="$c_n = 0$" style="vertical-align: -2px" width="49" height="15" />. In fact we can see this in action by working out <img src="//latex.artofproblemsolving.com/5/7/2/572b65ebc3f438b176b4ca4a890799f2f72564af.png" class="latex" alt="$a_3$" style="vertical-align: -2px" width="15" height="10" />. Note that <img src="//latex.artofproblemsolving.com/5/e/9/5e97a8af68fbc8e357d3ee0eba452022b06c1875.png" class="latex" alt="$a_2$" style="vertical-align: -2px" width="15" height="10" /> has 1 on the <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />nd bit, so we must choose <img src="//latex.artofproblemsolving.com/6/5/b/65badce1628edaaa0028c8a98765bb870e0bdd6f.png" class="latex" alt="$c_2 = 1$" style="vertical-align: -2px" width="47" height="14" />. This gives 
+</p><p><img src="//latex.artofproblemsolving.com/7/0/e/70e638f67cb67dec53d6c7c704c577826b6d6c58.png" class="latexcenter" alt="\[a_3 \equiv 10111_2 \times 111_2 \equiv 1011100_2 + a_2 \equiv 10100001_2 \equiv 001_2 \mod{1000_2}\]" width="533" height="15" />
+</p><p>Note that since the <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />rd and <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />th bit are <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />, <img src="//latex.artofproblemsolving.com/8/0/3/803d4331a1dd46a9c6b0939fa8cc951a4b0ab2fc.png" class="latex" alt="$c_3 = c_4 = 0$" style="vertical-align: -4px" width="90" height="17" />, and this gives <img src="//latex.artofproblemsolving.com/2/9/7/2971bd9030564017f850241cbafd6728a7c51416.png" class="latex" alt="$a_3 = a_4 = a_5$" style="vertical-align: -4px" width="101" height="13" />.
+</p><p><br />
+It may seem that this process will take forever, but note that <img src="//latex.artofproblemsolving.com/0/5/e/05e6ae582f080c2e680923060e36d1a35aed61a6.png" class="latex" alt="$23 = 10111_2$" style="vertical-align: -4px" width="97" height="17" /> has <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> bits behind the leading digit, and in the worst case, the leading digits of <img src="//latex.artofproblemsolving.com/6/f/1/6f1a2b6b7c193f9ba2b2134a59f1da5addcfbc98.png" class="latex" alt="$a_n$" style="vertical-align: -2px" width="17" height="10" /> will have a cycle length of at most <img src="//latex.artofproblemsolving.com/9/a/5/9a5b4928c8fe50ce3c2428da3bee3505e891b788.png" class="latex" alt="$16$" style="vertical-align: 0px" width="17" height="13" />. In fact, we find that the cycle length is <img src="//latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" />, and in the process found that <img src="//latex.artofproblemsolving.com/2/9/7/2971bd9030564017f850241cbafd6728a7c51416.png" class="latex" alt="$a_3 = a_4 = a_5$" style="vertical-align: -4px" width="101" height="13" />, <img src="//latex.artofproblemsolving.com/1/c/c/1cc0360a7ce70fb146506f0a5422e5cb48bbd20f.png" class="latex" alt="$a_6 = a_7$" style="vertical-align: -4px" width="60" height="13" />, and <img src="//latex.artofproblemsolving.com/5/5/e/55eaa55c177532bf94e509bd432aa96e5e1bc763.png" class="latex" alt="$a_{11} = a_{12}$" style="vertical-align: -4px" width="73" height="13" />.
+</p><p>Since we have <img src="//latex.artofproblemsolving.com/b/f/c/bfcfee7bd8a5e15e5f6b7881c138de43651572a9.png" class="latex" alt="$90$" width="17" height="12" /> complete cycles of length <img src="//latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" />, and the last partial cycle yields <img src="//latex.artofproblemsolving.com/2/e/c/2ec5cdce7fb473aec67b902ba8c28d3fd47d5eea.png" class="latex" alt="$a_{993} = a_{994} = a_{995}$" style="vertical-align: -4px" width="141" height="13" /> and <img src="//latex.artofproblemsolving.com/9/5/1/95191330e206743776202371074bd014476b27bb.png" class="latex" alt="$a_{996} = a_{997}$" style="vertical-align: -4px" width="87" height="13" />, we have a total of <img src="//latex.artofproblemsolving.com/a/1/d/a1d19598c1cb2ede8c819fd5a558a38af0018a43.png" class="latex" alt="$90 \times 4 + 3 = \boxed{363}$" style="vertical-align: -6px" width="145" height="25" /> values of <img src="//latex.artofproblemsolving.com/a/7/3/a730c57d195380061aff83b0aab3d0de5288bc84.png" class="latex" alt="$n \le 1000$" style="vertical-align: -3px" width="73" height="16" /> such that <img src="//latex.artofproblemsolving.com/f/3/3/f338d75d8f681e303b28f0f0e7f523511ab033aa.png" class="latex" alt="$a_n = a_{n+1}$" style="vertical-align: -5px" width="80" height="14" />
+</p><p>~ cocoa @ <a rel="nofollow" class="external free" href="https://www.corgillogical.com">https://www.corgillogical.com</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/ujP-V170vvI">https://youtu.be/ujP-V170vvI</a>
+</p><p>~MathProblemSolvingSkills.com
+</p><p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2023_AIME_II" title="2023 AIME II">2023 AIME II</a></b> (<b><a href="/wiki/index.php/2023_AIME_II_Problems" title="2023 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2023_AIME_II_Answer_Key" title="2023 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2023">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2023_AIME_II_Problems/Problem_14" title="2023 AIME II Problems/Problem 14">Problem 14</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b>Last Problem</b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2023_AIME_II_Problems/Problem_1" title="2023 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_2" title="2023 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_3" title="2023 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_4" title="2023 AIME II Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_5" title="2023 AIME II Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_6" title="2023 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_7" title="2023 AIME II Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_8" title="2023 AIME II Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_9" title="2023 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_10" title="2023 AIME II Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_11" title="2023 AIME II Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_12" title="2023 AIME II Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_13" title="2023 AIME II Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_14" title="2023 AIME II Problems/Problem 14">14</a> <b>•</b> <a class="mw-selflink selflink">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818184458
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.107 seconds
+Real time usage: 0.116 seconds
+Preprocessor visited node count: 1481/1000000
+Preprocessor generated node count: 3542/1000000
+Post‐expand include size: 1699/2097152 bytes
+Template argument size: 134/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 28154/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.618      1 -total
+ 70.08%    3.236      1 Template:AIME_box
+ 24.58%    1.135      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:23923-0!canonical and timestamp 20250818184458 and revision id 238378
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2023_AIME_II_Problems/Problem_15&amp;oldid=238378">https://artofproblemsolving.com/wiki/index.php?title=2023_AIME_II_Problems/Problem_15&amp;oldid=238378</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Number_Theory_Problems" title="Category:Intermediate Number Theory Problems">Intermediate Number Theory Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e89947e36f27c',t:'MTc1ODM0MjEwMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818195808 -->
+</html>
+

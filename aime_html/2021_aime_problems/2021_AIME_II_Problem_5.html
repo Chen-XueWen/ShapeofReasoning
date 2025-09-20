@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 AIME II Problems/Problem 5 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_AIME_II_Problems/Problem_5","wgTitle":"2021 AIME II Problems/Problem 5","wgCurRevisionId":185469,"wgRevisionId":185469,"wgArticleId":19876,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_AIME_II_Problems/Problem_5","wgRelevantArticleId":19876,"wgRequestId":"45c65ad84efab8e69dbde638","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_AIME_II_Problems_Problem_5 rootpage-2021_AIME_II_Problems_Problem_5 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 AIME II Problems/Problem 5																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_5" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2021_AIME_II_Problems/Problem_5&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_5&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_5&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2021_AIME_II_Problems/Problem_5" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 AIME II Problems/Problem 5</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.28Inequalities_and_Casework.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (Inequalities and Casework)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4"><span class="tocnumber">5</span> <span class="toctext">Solution 4</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28Circles.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (Circles)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6"><span class="tocnumber">7</span> <span class="toctext">Solution 6</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7"><span class="tocnumber">8</span> <span class="toctext">Solution 7</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_8"><span class="tocnumber">9</span> <span class="toctext">Solution 8</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Video_Solution_by_Interstigation"><span class="tocnumber">10</span> <span class="toctext">Video Solution by Interstigation</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_Also"><span class="tocnumber">11</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>For positive real numbers <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" />, let <img src="//latex.artofproblemsolving.com/7/9/6/796fd2efea8c821b0740238f661aba21bf3db31d.png" class="latex" alt="$\tau(s)$" style="vertical-align: -4px" width="31" height="18" /> denote the set of all obtuse triangles that have area <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> and two sides with lengths <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" />. The set of all <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> for which <img src="//latex.artofproblemsolving.com/7/9/6/796fd2efea8c821b0740238f661aba21bf3db31d.png" class="latex" alt="$\tau(s)$" style="vertical-align: -4px" width="31" height="18" /> is nonempty, but all triangles in <img src="//latex.artofproblemsolving.com/7/9/6/796fd2efea8c821b0740238f661aba21bf3db31d.png" class="latex" alt="$\tau(s)$" style="vertical-align: -4px" width="31" height="18" /> are congruent, is an interval <img src="//latex.artofproblemsolving.com/2/9/0/2905fb4cb148b1dc66f2cf1b1b0cee4353a594af.png" class="latex" alt="$[a,b)$" style="vertical-align: -5px" width="36" height="18" />. Find <img src="//latex.artofproblemsolving.com/c/f/6/cf669d58fbd0410ca860758e53606d06425a4d97.png" class="latex" alt="$a^2+b^2$" style="vertical-align: -1px" width="53" height="16" />.
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>We start by defining a triangle. The two small sides MUST add to a larger sum than the long side. We are given <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> as the sides, so we know that the <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />rd side is between <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/8/2/0/820a20de2847dfdc1bc5cffc8d904933150032bd.png" class="latex" alt="$14$" style="vertical-align: 0px" width="18" height="12" />, exclusive. We also have to consider the word OBTUSE triangles. That means that the two small sides squared is less than the <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />rd side. So the triangles' sides are between <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/6/4/b/64b28c87a69adc7c713a4fe929b9a80f70a43b93.png" class="latex" alt="$\sqrt{84}$" style="vertical-align: -1px" width="33" height="18" /> exclusive, and the larger bound is between <img src="//latex.artofproblemsolving.com/8/d/f/8dfa6c037667124f336edef1f423c5f6673d82b4.png" class="latex" alt="$\sqrt{116}$" style="vertical-align: -1px" width="42" height="18" /> and <img src="//latex.artofproblemsolving.com/8/2/0/820a20de2847dfdc1bc5cffc8d904933150032bd.png" class="latex" alt="$14$" style="vertical-align: 0px" width="18" height="12" />, exclusive. The area of these triangles are from <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> (straight line) to <img src="//latex.artofproblemsolving.com/6/7/6/676b2a4aec4abbcd22fac1c56f11b0f3a50da8a8.png" class="latex" alt="$2\sqrt{84}$" style="vertical-align: -1px" width="42" height="18" /> on the first "small bound" and the larger bound is between <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" />. 
+<img src="//latex.artofproblemsolving.com/7/9/2/7929b54d4f54d9ca738e044ea4b0bf261ce0862c.png" class="latex" alt="$0 &lt; s &lt; 2\sqrt{84}$" style="vertical-align: -1px" width="109" height="18" /> is our first equation, and <img src="//latex.artofproblemsolving.com/6/9/9/6993869b9dca99ca86ea6912b710b002ad341726.png" class="latex" alt="$0 &lt; s &lt; 20$" style="vertical-align: 0px" width="83" height="13" /> is our <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />nd equation. Therefore, the area is between <img src="//latex.artofproblemsolving.com/c/e/2/ce228322510ba33a58617553f0e6a6e239f7a361.png" class="latex" alt="$\sqrt{336}$" style="vertical-align: -1px" width="42" height="18" /> and <img src="//latex.artofproblemsolving.com/1/b/6/1b6757918913620bf3c041f5c59d62ff04cb3047.png" class="latex" alt="$\sqrt{400}$" style="vertical-align: -1px" width="42" height="18" />, so our final answer is <img src="//latex.artofproblemsolving.com/9/5/b/95b84d52ddb967fab39025323517a6e69192c43f.png" class="latex" alt="$\boxed{736}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~ARCTICTURN
+</p>
+<h2><span id="Solution_2_(Inequalities_and_Casework)"></span><span class="mw-headline" id="Solution_2_.28Inequalities_and_Casework.29">Solution 2 (Inequalities and Casework)</span></h2>
+<p>If <img src="//latex.artofproblemsolving.com/f/3/b/f3b28547efd22be1c4a05fa193cd7038fc65d71b.png" class="latex" alt="$a,b,$" style="vertical-align: -3px" width="29" height="16" /> and <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> are the side-lengths of an obtuse triangle with <img src="//latex.artofproblemsolving.com/3/b/e/3be178426af3088883491bab6febe2f66d1e9772.png" class="latex" alt="$a\leq b\leq c,$" style="vertical-align: -3px" width="78" height="16" /> then both of the following must be satisfied:
+</p>
+<ul><li><i>Triangle Inequality Theorem:</i> <img src="//latex.artofproblemsolving.com/3/4/3/343a8ee963a58a46605b3350c32b1a2b2ef4c5db.png" class="latex" alt="$a+b&gt;c$" style="vertical-align: -1px" width="72" height="14" /></li></ul>
+<ul><li><i>Pythagorean Inequality Theorem:</i> <img src="//latex.artofproblemsolving.com/2/f/a/2fac0d953d9ca10d2afcd5195798eee11167cbd4.png" class="latex" alt="$a^2+b^2&lt;c^2$" style="vertical-align: -1px" width="93" height="16" /></li></ul>
+<p>For one such obtuse triangle, let <img src="//latex.artofproblemsolving.com/8/6/f/86f4fbef3551b58884d349a778d00544016447fe.png" class="latex" alt="$4,10,$" style="vertical-align: -3px" width="39" height="16" /> and <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> be its side-lengths and <img src="//latex.artofproblemsolving.com/d/f/b/dfb064112b6c94470339f6571f69d07afc1c024c.png" class="latex" alt="$K$" width="16" height="12" /> be its area. We apply casework to its longest side:
+</p><p><b>Case (1): The longest side has length <img src="//latex.artofproblemsolving.com/7/5/b/75bd239ae8ee36884743e2b34503295292a2003d.png" class="latex" alt="$\boldsymbol{10,}$" style="vertical-align: -3px" width="26" height="16" /> so <img src="//latex.artofproblemsolving.com/c/9/5/c957cd5aec46e3c5eb2468f4e7eaaedbbb3e750d.png" class="latex" alt="$\boldsymbol{0&lt;x&lt;10.}$" style="vertical-align: -1px" width="103" height="14" /></b>
+</p><p>By the Triangle Inequality Theorem, we have <img src="//latex.artofproblemsolving.com/2/4/f/24fb8ee939f113b5c83cefc79e9ff9b3a0ed4ac4.png" class="latex" alt="$4+x&gt;10,$" style="vertical-align: -3px" width="88" height="16" /> from which <img src="//latex.artofproblemsolving.com/7/a/a/7aa3b8f96dd04f83f5409d95cbe946c8239ab5fe.png" class="latex" alt="$x&gt;6.$" style="vertical-align: 0px" width="47" height="13" />
+</p><p>By the Pythagorean Inequality Theorem, we have <img src="//latex.artofproblemsolving.com/7/0/2/7022d521d6b94f9f46c92adbda51b49ce8bb4fa0.png" class="latex" alt="$4^2+x^2&lt;10^2,$" style="vertical-align: -3px" width="110" height="18" /> from which <img src="//latex.artofproblemsolving.com/0/6/2/0626f868e663ef77639304c04a6b3d7b032cba39.png" class="latex" alt="$x&lt;\sqrt{84}.$" style="vertical-align: -1px" width="71" height="18" />
+</p><p>Taking the intersection produces <img src="//latex.artofproblemsolving.com/5/0/c/50ca5b99c826116a4b80974ba2f717083e15a0ed.png" class="latex" alt="$6&lt;x&lt;\sqrt{84}$" style="vertical-align: -1px" width="101" height="18" /> for this case.
+</p><p>At <img src="//latex.artofproblemsolving.com/a/4/4/a4431f9458d26b79099d6db75b1711a2c27d9925.png" class="latex" alt="$x=6,$" style="vertical-align: -4px" width="51" height="17" /> the obtuse triangle degenerates into a straight line with area <img src="//latex.artofproblemsolving.com/1/0/3/1039ccc01797643385b90e09b5959c84d93b563c.png" class="latex" alt="$K=0;$" style="vertical-align: -4px" width="57" height="18" /> at <img src="//latex.artofproblemsolving.com/5/c/3/5c37427f44f651e38c0355cb84c300c7dc63df3a.png" class="latex" alt="$x=\sqrt{84},$" style="vertical-align: -3px" width="72" height="20" /> the obtuse triangle degenerates into a right triangle with area <img src="//latex.artofproblemsolving.com/6/8/5/6857fd33fc188bfd1dbddf86777241debb338f55.png" class="latex" alt="$K=\frac12\cdot4\cdot\sqrt{84}=2\sqrt{84}.$" style="vertical-align: -12px" width="193" height="37" /> Together, we obtain <img src="//latex.artofproblemsolving.com/6/9/8/69834f5a279c8ce3e0749ab19e1cce145c2f9894.png" class="latex" alt="$0&lt;K&lt;2\sqrt{84},$" style="vertical-align: -3px" width="120" height="20" /> or <img src="//latex.artofproblemsolving.com/5/e/7/5e7c3778533edb0d89eaf24603f327fccc6f87cf.png" class="latex" alt="$K\in\left(0,2\sqrt{84}\right).$" style="vertical-align: -11px" width="126" height="32" />
+</p><p><b>Case (2): The longest side has length <img src="//latex.artofproblemsolving.com/8/9/d/89db8bbb90308b012024730b368465b45b985f8e.png" class="latex" alt="$\boldsymbol{x,}$" style="vertical-align: -3px" width="17" height="12" /> so <img src="//latex.artofproblemsolving.com/d/e/5/de567bafb1f049bbf54df23fc09a720da3a31335.png" class="latex" alt="$\boldsymbol{x\geq10.}$" style="vertical-align: -4px" width="65" height="17" /></b>
+</p><p>By the Triangle Inequality Theorem, we have <img src="//latex.artofproblemsolving.com/1/d/e/1de6b7d56ee8618c1ee3e4f88dbeedff48f9cf1e.png" class="latex" alt="$4+10&gt;x,$" style="vertical-align: -3px" width="88" height="16" /> from which <img src="//latex.artofproblemsolving.com/2/2/5/2256063e310045802b5a059b122abdeada39a823.png" class="latex" alt="$x&lt;14.$" style="vertical-align: 0px" width="56" height="12" />
+</p><p>By the Pythagorean Inequality Theorem, we have <img src="//latex.artofproblemsolving.com/a/f/1/af16754bcc5a92938a65e6ad87143c7f62c5d541.png" class="latex" alt="$4^2+10^2&lt;x^2,$" style="vertical-align: -4px" width="113" height="20" /> from which <img src="//latex.artofproblemsolving.com/3/e/c/3ec7cb4bc744edfd390efafc986f49be409e6b96.png" class="latex" alt="$x&gt;\sqrt{116}.$" style="vertical-align: -1px" width="80" height="18" />
+</p><p>Taking the intersection produces <img src="//latex.artofproblemsolving.com/9/6/0/96039ba4ad69d5887aa0bf04538a636811373b3a.png" class="latex" alt="$\sqrt{116}&lt;x&lt;14$" style="vertical-align: -1px" width="119" height="18" /> for this case.
+</p><p>At <img src="//latex.artofproblemsolving.com/f/8/7/f87c3045ed5f34596c23e86b7d303730bed60cf0.png" class="latex" alt="$x=14,$" style="vertical-align: -3px" width="56" height="15" /> the obtuse triangle degenerates into a straight line with area <img src="//latex.artofproblemsolving.com/1/0/3/1039ccc01797643385b90e09b5959c84d93b563c.png" class="latex" alt="$K=0;$" style="vertical-align: -4px" width="57" height="18" /> at <img src="//latex.artofproblemsolving.com/2/6/1/2614d45b06e0a24a177e3f7468338e78be948108.png" class="latex" alt="$x=\sqrt{116},$" style="vertical-align: -3px" width="81" height="20" /> the obtuse triangle degenerates into a right triangle with area <img src="//latex.artofproblemsolving.com/b/f/0/bf03dea654d1e03152373d62e6792159b54f341e.png" class="latex" alt="$K=\frac12\cdot4\cdot10=20.$" style="vertical-align: -12px" width="153" height="37" /> Together, we obtain <img src="//latex.artofproblemsolving.com/0/9/1/0919c6b858f68cf7aadaa2aba473fcb40f6b1577.png" class="latex" alt="$0&lt;K&lt;20,$" style="vertical-align: -3px" width="96" height="16" /> or <img src="//latex.artofproblemsolving.com/1/e/5/1e5e17ac36690dda969dde3352d45debf82b7a06.png" class="latex" alt="$K\in\left(0,20\right).$" style="vertical-align: -4px" width="95" height="18" />
+</p><p><b>Answer</b>
+</p><p>It is possible for noncongruent obtuse triangles to have the same area. Therefore, all such positive real numbers <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> are in exactly one of <img src="//latex.artofproblemsolving.com/e/5/8/e58bc74fd8f742366b60666f5d839bb0b6ce6a09.png" class="latex" alt="$\left(0,2\sqrt{84}\right)$" style="vertical-align: -11px" width="77" height="32" /> or <img src="//latex.artofproblemsolving.com/1/d/f/1df84dd959e933392f34c46acc789f1d9df5ebc1.png" class="latex" alt="$\left(0,20\right).$" style="vertical-align: -4px" width="56" height="18" /> By the exclusive disjunction, the set of all such <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> is <img src="//latex.artofproblemsolving.com/d/e/5/de5d2a406451429962de8300782b587046762d85.png" class="latexcenter" alt="\[[a,b)=\left(0,2\sqrt{84}\right)\oplus\left(0,20\right)=\left[2\sqrt{84},20\right),\]" width="331" height="32" /> from which <img src="//latex.artofproblemsolving.com/5/0/3/5039d6a2cc38798c655e23367cf80a3055a8f0b0.png" class="latex" alt="$a^2+b^2=\boxed{736}.$" style="vertical-align: -5px" width="121" height="23" />
+</p><p>~MRENTHUSIASM
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>We have the diagram below.
+</p><p><img src="//latex.artofproblemsolving.com/6/9/4/6940b758ab02beb075b54be2d68de6be1ceb38ec.png" class="latexcenter" alt="[asy]  draw((0,0)--(1,2*sqrt(3))); draw((1,2*sqrt(3))--(10,0)); draw((10,0)--(0,0)); label(&quot;$A$&quot;,(0,0),SW); label(&quot;$B$&quot;,(1,2*sqrt(3)),N); label(&quot;$C$&quot;,(10,0),SE); label(&quot;$\theta$&quot;,(0,0),NE); label(&quot;$\alpha$&quot;,(1,2*sqrt(3)),SSE); label(&quot;$4$&quot;,(0,0)--(1,2*sqrt(3)),WNW); label(&quot;$10$&quot;,(0,0)--(10,0),S);  [/asy]" width="252" height="115" />
+</p><p>We proceed by taking cases on the angles that can be obtuse, and finding the ranges for <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> that they yield .
+</p><p>If angle <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> is obtuse, then we have that <img src="//latex.artofproblemsolving.com/7/8/1/781365ec31865462ed443763bb88aed261718af4.png" class="latex" alt="$s \in (0,20)$" style="vertical-align: -4px" width="78" height="18" />. This is because <img src="//latex.artofproblemsolving.com/c/7/8/c7853be1bda3df13b6dea38c22fe075264de6dd2.png" class="latex" alt="$s=20$" width="50" height="12" /> is attained at <img src="//latex.artofproblemsolving.com/d/1/d/d1dd299fcc16d94c2710efcc999e6d56fbaeb1ef.png" class="latex" alt="$\theta = 90^{\circ}$" width="57" height="13" />, and the area of the triangle is strictly decreasing as <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> increases beyond <img src="//latex.artofproblemsolving.com/6/a/7/6a7dfa8a2a90d521b2b03f5b82a1fb9f85dce88c.png" class="latex" alt="$90^{\circ}$" width="24" height="13" />. This can be observed from
+<img src="//latex.artofproblemsolving.com/2/7/4/274826a7b134d93d2b14dd6a6d12591b79f05d38.png" class="latexcenter" alt="\[s=\frac{1}{2}(4)(10)\sin\theta\]" width="138" height="37" />by noting that <img src="//latex.artofproblemsolving.com/4/c/c/4cc6cd401ab7d1f6f198d8b36a1e53d6403555e2.png" class="latex" alt="$\sin\theta$" width="34" height="13" /> is decreasing in <img src="//latex.artofproblemsolving.com/d/2/e/d2e7f8b4ea3f1c70ebf02fb7469494538a70959c.png" class="latex" alt="$\theta \in (90^{\circ},180^{\circ})$" style="vertical-align: -4px" width="112" height="18" />.
+</p><p>Then, we note that if <img src="//latex.artofproblemsolving.com/1/0/f/10f32377ac67d94f764f12a15ea987e88c85d3e1.png" class="latex" alt="$\alpha$" style="vertical-align: -1px" width="14" height="10" /> is obtuse, we have <img src="//latex.artofproblemsolving.com/a/e/c/aec751222d04efb2c9d7d0689abb4dbd8bd5341e.png" class="latex" alt="$s \in (0,4\sqrt{21})$" style="vertical-align: -5px" width="106" height="24" />. This is because we get <img src="//latex.artofproblemsolving.com/9/6/3/96305ea3f60075cc21dbdb7509daa3327edeff0e.png" class="latex" alt="$x=\sqrt{10^2-4^2}=\sqrt{84}=2\sqrt{21}$" style="vertical-align: -2px" width="238" height="19" /> when <img src="//latex.artofproblemsolving.com/6/5/1/651332b8c4c81a522222baaf43ecd63568c74544.png" class="latex" alt="$\alpha=90^{\circ}$" width="60" height="13" />, yileding <img src="//latex.artofproblemsolving.com/7/a/9/7a98960152e36e12627aa4768edd031df5ed73f0.png" class="latex" alt="$s=4\sqrt{21}$" style="vertical-align: -1px" width="75" height="18" />. Then, <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> is decreasing as <img src="//latex.artofproblemsolving.com/1/0/f/10f32377ac67d94f764f12a15ea987e88c85d3e1.png" class="latex" alt="$\alpha$" style="vertical-align: -1px" width="14" height="10" /> increases by the same argument as before.
+</p><p><img src="//latex.artofproblemsolving.com/2/a/f/2afe5e921fe329d255e1664bfb290ead78a8e177.png" class="latex" alt="$\angle{ACB}$" width="55" height="13" /> cannot be obtuse since <img src="//latex.artofproblemsolving.com/7/1/0/710ee76bfffd66307d38c12de5c208375390772f.png" class="latex" alt="$AC&gt;AB$" style="vertical-align: 0px" width="79" height="13" />.
+</p><p>Now we have the intervals <img src="//latex.artofproblemsolving.com/7/8/1/781365ec31865462ed443763bb88aed261718af4.png" class="latex" alt="$s \in (0,20)$" style="vertical-align: -4px" width="78" height="18" /> and <img src="//latex.artofproblemsolving.com/a/e/c/aec751222d04efb2c9d7d0689abb4dbd8bd5341e.png" class="latex" alt="$s \in (0,4\sqrt{21})$" style="vertical-align: -5px" width="106" height="24" /> for the cases where <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> and <img src="//latex.artofproblemsolving.com/1/0/f/10f32377ac67d94f764f12a15ea987e88c85d3e1.png" class="latex" alt="$\alpha$" style="vertical-align: -1px" width="14" height="10" /> are obtuse, respectively. We are looking for the <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> that are in exactly one of these intervals, and because <img src="//latex.artofproblemsolving.com/8/d/4/8d4be80c81d151e4bd0ae71dfac6bb5fac0da6c4.png" class="latex" alt="$4\sqrt{21}&lt;20$" style="vertical-align: -1px" width="84" height="18" />, the desired range is
+<img src="//latex.artofproblemsolving.com/d/9/5/d9587b18b765acff96a2ee0683d947af4f30e8b4.png" class="latexcenter" alt="\[s\in [4\sqrt{21},20)\]" width="109" height="22" />giving <img src="//latex.artofproblemsolving.com/5/f/6/5f67342b7048260217606beb2e1fbddcd0dbb2f6.png" class="latexcenter" alt="\[a^2+b^2=\boxed{736}\Box\]" width="129" height="23" />
+</p>
+<h2><span class="mw-headline" id="Solution_4">Solution 4</span></h2>
+<p>Note: Archimedes15 Solution which I added an answer
+here are two cases. Either the <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> are around an obtuse angle or the <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> are around an acute triangle. If they are around the obtuse angle, the area of that triangle is <img src="//latex.artofproblemsolving.com/0/1/3/013fe59707942ccad174a98706f3977c7e9783a8.png" class="latex" alt="$&lt;20$" style="vertical-align: 0px" width="36" height="13" /> as we have <img src="//latex.artofproblemsolving.com/8/7/4/8743ecdf1ab1472d610c403440ce7d09d95aa706.png" class="latex" alt="$\frac{1}{2} \cdot 40 \cdot \sin{\alpha}$" style="vertical-align: -12px" width="94" height="37" /> and <img src="//latex.artofproblemsolving.com/6/f/b/6fb300dacfcde1b57ad070409262b1743e0cd966.png" class="latex" alt="$\sin$" width="22" height="12" /> is at most <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />. Note that for the other case, the side lengths around the obtuse angle must be <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> where we have <img src="//latex.artofproblemsolving.com/e/0/e/e0e689f77d0e6b5bace765fe1064d819475da238.png" class="latex" alt="$16+x^2 &lt; 100 \rightarrow x &lt; 2\sqrt{21}$" style="vertical-align: -1px" width="215" height="18" />. Using the same logic as the other case, the area is at most <img src="//latex.artofproblemsolving.com/8/0/a/80a7212a6c484be1652bd6003cc687b3a662f435.png" class="latex" alt="$4\sqrt{21}$" style="vertical-align: -1px" width="42" height="18" />. Square and add <img src="//latex.artofproblemsolving.com/8/0/a/80a7212a6c484be1652bd6003cc687b3a662f435.png" class="latex" alt="$4\sqrt{21}$" style="vertical-align: -1px" width="42" height="18" /> and <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" /> to get the right answer <img src="//latex.artofproblemsolving.com/b/e/2/be2833bd007cfc1c608765f15b5151772a462911.png" class="latexcenter" alt="\[a^2+b^2= \boxed{736}\Box\]" width="129" height="23" />
+</p>
+<h2><span id="Solution_5_(Circles)"></span><span class="mw-headline" id="Solution_5_.28Circles.29">Solution 5 (Circles)</span></h2>
+<p>For <img src="//latex.artofproblemsolving.com/6/f/8/6f8dcf98ed1b21dbc446aa28d097d4281599c25e.png" class="latex" alt="$\triangle ABC,$" style="vertical-align: -3px" width="62" height="17" /> we fix <img src="//latex.artofproblemsolving.com/6/c/4/6c4b41dd37dcc418b2bd81d72c4d763936a2fc76.png" class="latex" alt="$AB=10$" style="vertical-align: 0px" width="70" height="13" /> and <img src="//latex.artofproblemsolving.com/0/4/b/04b6cf8ad99535aaea976aea45df5adfb7266ecd.png" class="latex" alt="$BC=4.$" style="vertical-align: 0px" width="65" height="13" /> Without the loss of generality, we consider <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> on only one side of <img src="//latex.artofproblemsolving.com/7/f/2/7f2a482b08ddebc962ed9858ddab94a3db7140e8.png" class="latex" alt="$\overline{AB}.$" width="32" height="15" />
+</p><p>As shown below, all locations for <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> at which <img src="//latex.artofproblemsolving.com/8/c/3/8c3a2d2224f7d163b46d702132425d47828bf538.png" class="latex" alt="$\triangle ABC$" style="vertical-align: -4px" width="61" height="18" /> is an obtuse triangle are indicated in red, excluding the endpoints.
+<img src="//latex.artofproblemsolving.com/1/8/e/18e2bd9cca76db19a046b9e4a1594f5a5d3a91d2.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */ size(300); pair A, B, O, P, Q, C1, C2, D; A = origin; B = (10,0); O = midpoint(A--B); P = B - (4,0); Q = B + (4,0); C1 = intersectionpoints(D--D+(100,0),Arc(B,Q,P))[1]; C2 = B + (0,4); D = intersectionpoint(Arc(O,B,A),Arc(B,Q,P));  draw(Arc(O,B,A)^^Arc(B,C2,D)^^A--Q); draw(Arc(B,Q,C2)^^Arc(B,D,P),red);  dot(&quot;$A$&quot;, A, 1.5*S, linewidth(4.5)); dot(&quot;$B$&quot;, B, 1.5*S, linewidth(4.5)); dot(O, linewidth(4.5)); dot(P^^C2^^D^^Q, linewidth(0.8), UnFill);  Label L1 = Label(&quot;$10$&quot;, align=(0,0), position=MidPoint, filltype=Fill(3,0,white)); Label L2 = Label(&quot;$4$&quot;, align=(0,0), position=MidPoint, filltype=Fill(3,0,white)); draw(A-(0,2)--B-(0,2), L=L1, arrow=Arrows(),bar=Bars(15)); draw(B-(0,2)--Q-(0,2), L=L2, arrow=Arrows(),bar=Bars(15));  label(&quot;$\angle C$ obtuse&quot;,(midpoint(Arc(B,D,P)).x,2),2.5*W,red); label(&quot;$\angle B$ obtuse&quot;,(midpoint(Arc(B,Q,C2)).x,2),5*E,red); [/asy]" width="502" height="215" />
+Note that:
+</p>
+<ol style="margin-left: 1.5em;">
+  <li>The region in which <img src="//latex.artofproblemsolving.com/2/9/1/2918f7d23f9ee8c04baabad86100d68023ec03f9.png" class="latex" alt="$\angle B$" width="27" height="12" /> is obtuse is determined by construction.</li><p class="mw-empty-elt">
+  </p><li>The region in which <img src="//latex.artofproblemsolving.com/4/0/5/4056d41f42aa8a00adca0ff5d1209b6bb0e92d6b.png" class="latex" alt="$\angle C$" width="27" height="12" /> is obtuse is determined by the corollaries of the Inscribed Angle Theorem.</li><p class="mw-empty-elt">
+</p></ol>
+<p>For any fixed value of <img src="//latex.artofproblemsolving.com/5/4/7/547263eb631ff2f1ef193c447d92ecb966213e1f.png" class="latex" alt="$s,$" style="vertical-align: -3px" width="12" height="11" /> the height from <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> is fixed. We need obtuse <img src="//latex.artofproblemsolving.com/8/c/3/8c3a2d2224f7d163b46d702132425d47828bf538.png" class="latex" alt="$\triangle ABC$" style="vertical-align: -4px" width="61" height="18" /> to be unique, so there can only be one possible location for <img src="//latex.artofproblemsolving.com/7/9/2/792daa030c96693198f143f9176bf888b7ca25cd.png" class="latex" alt="$C.$" width="17" height="12" /> As shown below, all possible locations for <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> are on minor arc <img src="//latex.artofproblemsolving.com/8/4/e/84ea063f60057fe4343a31a2bbbada7c1fd84bb8.png" class="latex" alt="$\widehat{C_1C_2},$" style="vertical-align: -4px" width="48" height="24" /> including <img src="//latex.artofproblemsolving.com/7/0/b/70b97eb4ad6e4e7a5a97e2547d9ed6e965960d0c.png" class="latex" alt="$C_1$" style="vertical-align: -2px" width="18" height="15" /> but excluding <img src="//latex.artofproblemsolving.com/4/7/b/47b97f75ff19cf530ab5d58805c081503fb6b0e4.png" class="latex" alt="$C_2.$" style="vertical-align: -2px" width="24" height="15" />
+<img src="//latex.artofproblemsolving.com/d/5/8/d5866dc17da756aa17b80a18837c21dd1555de0c.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */ size(250); pair A, B, O, P, Q, C1, C2, D; A = origin; B = (10,0); O = midpoint(A--B); P = B - (4,0); Q = B + (4,0); C2 = B + (0,4); D = intersectionpoint(Arc(O,B,A),Arc(B,Q,P)); C1 = intersectionpoint(D--D+(100,0),Arc(B,Q,C2));  draw(Arc(O,B,A)^^Arc(B,C2,D)^^A--Q); draw(Arc(B,Q,C1)^^Arc(B,D,P),red); draw(Arc(B,C1,C2),green); draw((A.x,D.y)--(Q.x,D.y),dashed);  dot(&quot;$A$&quot;, A, 1.5*S, linewidth(4.5)); dot(&quot;$B$&quot;, B, 1.5*S, linewidth(4.5)); dot(&quot;$D$&quot;, D, 1.5*dir(75), linewidth(0.8), UnFill); dot(&quot;$C_2$&quot;, C2, 1.5*N, linewidth(4.5)); dot(&quot;$C_1$&quot;, C1, 1.5*dir(C1-B), linewidth(4.5)); dot(O, linewidth(4.5)); dot(P^^C2^^Q, linewidth(0.8), UnFill); dot(C1, green+linewidth(4.5));  Label L1 = Label(&quot;$10$&quot;, align=(0,0), position=MidPoint, filltype=Fill(3,0,white)); Label L2 = Label(&quot;$4$&quot;, align=(0,0), position=MidPoint, filltype=Fill(3,0,white)); draw(A-(0,2)--B-(0,2), L=L1, arrow=Arrows(),bar=Bars(15)); draw(B-(0,2)--Q-(0,2), L=L2, arrow=Arrows(),bar=Bars(15)); [/asy]" width="422" height="218" />
+Let the brackets denote areas: 
+</p>
+<ul style="list-style-type:square;">
+  <li>If <img src="//latex.artofproblemsolving.com/6/0/b/60b97e14128710d6015dec76c1f0ae227847af26.png" class="latex" alt="$C=C_1,$" style="vertical-align: -3px" width="63" height="16" /> then <img src="//latex.artofproblemsolving.com/d/3/3/d33cc80fa8f093e155c5be46d2e5d9da3d7e1ef5.png" class="latex" alt="$[ABC]$" style="vertical-align: -5px" width="50" height="18" /> will be minimized (attainable). By the same base and height and the Inscribed Angle Theorem, we have
+<img src="//latex.artofproblemsolving.com/9/2/7/927b1f1b76a8b725a60b4b3904816b98df28d33d.png" class="latexcenter" alt="\begin{align*} [ABC]&amp;=[ABD] \\ &amp;=\frac12\cdot BD\cdot DA \\ &amp;=\frac12\cdot BD\cdot \sqrt{AB^2-BD^2} \\ &amp;=\frac12\cdot 4\cdot \sqrt{10^2-4^2} \\ &amp;=2\sqrt{84}. \end{align*}" width="256" height="174" /></li><p class="mw-empty-elt">
+  </p><li>If <img src="//latex.artofproblemsolving.com/d/7/9/d7932a3e79a64f74036e87d3bb7cf9a71ccde452.png" class="latex" alt="$C=C_2,$" style="vertical-align: -3px" width="63" height="16" /> then <img src="//latex.artofproblemsolving.com/d/3/3/d33cc80fa8f093e155c5be46d2e5d9da3d7e1ef5.png" class="latex" alt="$[ABC]$" style="vertical-align: -5px" width="50" height="18" /> will be maximized (unattainable). For this right triangle, we have
+<img src="//latex.artofproblemsolving.com/e/0/f/e0f25498d2303979005c472c701f20525459cdaa.png" class="latexcenter" alt="\begin{align*} [ABC]&amp;=\frac12\cdot AB\cdot BC \\ &amp;=\frac12\cdot 10\cdot 4 \\ &amp;=20. \end{align*}" width="171" height="100" /></li><p class="mw-empty-elt">
+</p></ul>
+<p>Finally, the set of all such <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> is <img src="//latex.artofproblemsolving.com/c/f/e/cfee7c09574886111f23082fdf62eb6fd0656cb3.png" class="latex" alt="$[a,b)=\left[2\sqrt{84},20\right),$" style="vertical-align: -12px" width="159" height="34" /> from which <img src="//latex.artofproblemsolving.com/5/0/3/5039d6a2cc38798c655e23367cf80a3055a8f0b0.png" class="latex" alt="$a^2+b^2=\boxed{736}.$" style="vertical-align: -5px" width="121" height="23" />
+</p><p>~MRENTHUSIASM (credit given to Snowfan)
+</p>
+<h2><span class="mw-headline" id="Solution_6">Solution 6</span></h2>
+<p>Let a triangle in <img src="//latex.artofproblemsolving.com/7/9/6/796fd2efea8c821b0740238f661aba21bf3db31d.png" class="latex" alt="$\tau(s)$" style="vertical-align: -4px" width="31" height="18" /> be <img src="//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" />, where <img src="//latex.artofproblemsolving.com/7/9/a/79acca1cedca0d43e9d183383ef794ad7932baa1.png" class="latex" alt="$AB = 4$" style="vertical-align: 0px" width="61" height="13" /> and <img src="//latex.artofproblemsolving.com/5/3/6/5369aff2ec3a2e0a3604e4ba2b6a7fa3c3e2bc6e.png" class="latex" alt="$BC = 10$" style="vertical-align: 0px" width="70" height="13" />. We will proceed with two cases:
+</p><p>Case 1: <img src="//latex.artofproblemsolving.com/a/3/a/a3ad57710b6810476e6017ea2c2cc6d41219c218.png" class="latex" alt="$\angle ABC$" style="vertical-align: -1px" width="57" height="14" /> is obtuse. If <img src="//latex.artofproblemsolving.com/a/3/a/a3ad57710b6810476e6017ea2c2cc6d41219c218.png" class="latex" alt="$\angle ABC$" style="vertical-align: -1px" width="57" height="14" /> is obtuse, then, if we imagine <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> as the base of our triangle, the height can be anything in the range <img src="//latex.artofproblemsolving.com/0/c/7/0c73c07f74df46221dd0273f44b001fef277e9fc.png" class="latex" alt="$(0,10)$" style="vertical-align: -4px" width="47" height="18" />; therefore, the area of the triangle will fall in the range of <img src="//latex.artofproblemsolving.com/a/a/a/aaa3159556b04f937ea623ed5e0dc77ddf2dad45.png" class="latex" alt="$(0, 20)$" style="vertical-align: -5px" width="51" height="20" />.
+</p><p>Case 2: <img src="//latex.artofproblemsolving.com/5/8/6/5862947b38a495ec9be80e5b9c7582de6cf0d269.png" class="latex" alt="$\angle BAC$" width="55" height="13" /> is obtuse. Then, if we imagine <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> as the base of our triangle, the height can be anything in the range <img src="//latex.artofproblemsolving.com/7/b/f/7bf969b0d5b7e0ef4771628d161b6d007b37febd.png" class="latex" alt="$\left(0, \sqrt{10^{2} - 4^{2}}\right)$" style="vertical-align: -12px" width="120" height="34" />. Therefore, the area of the triangle will fall in the range of <img src="//latex.artofproblemsolving.com/b/3/3/b33acac338fd7380a7b27ea01eb1508f9eb2b1e4.png" class="latex" alt="$\left(0, 2 \sqrt{84}\right)$" style="vertical-align: -12px" width="83" height="34" />.
+</p><p>If <img src="//latex.artofproblemsolving.com/5/f/d/5fda9d81a64369752a3ebaa169704994f154686a.png" class="latex" alt="$s &lt; 2 \sqrt{84}$" style="vertical-align: -2px" width="77" height="21" />, there will exist two types of triangles in <img src="//latex.artofproblemsolving.com/7/9/6/796fd2efea8c821b0740238f661aba21bf3db31d.png" class="latex" alt="$\tau(s)$" style="vertical-align: -4px" width="31" height="18" /> - one type with <img src="//latex.artofproblemsolving.com/a/3/a/a3ad57710b6810476e6017ea2c2cc6d41219c218.png" class="latex" alt="$\angle ABC$" style="vertical-align: -1px" width="57" height="14" /> obtuse; the other type with <img src="//latex.artofproblemsolving.com/5/8/6/5862947b38a495ec9be80e5b9c7582de6cf0d269.png" class="latex" alt="$\angle BAC$" width="55" height="13" /> obtuse. If <img src="//latex.artofproblemsolving.com/2/7/1/27130ed74b91be16f66f3d2e3dca1d41580caa21.png" class="latex" alt="$s \geq 2 \sqrt{84}$" style="vertical-align: -3px" width="77" height="22" />, as we just found, <img src="//latex.artofproblemsolving.com/5/8/6/5862947b38a495ec9be80e5b9c7582de6cf0d269.png" class="latex" alt="$\angle BAC$" width="55" height="13" /> cannot be obtuse, so therefore, there is only one type of triangle - the one in which <img src="//latex.artofproblemsolving.com/a/3/a/a3ad57710b6810476e6017ea2c2cc6d41219c218.png" class="latex" alt="$\angle ABC$" style="vertical-align: -1px" width="57" height="14" /> is obtuse. Also, if <img src="//latex.artofproblemsolving.com/8/c/1/8c1e2e8276e16ef8cffe4946c3ace38bd3f54e48.png" class="latex" alt="$s &gt; 20$" style="vertical-align: -2px" width="53" height="15" />, no triangle exists with lengths <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" />. Therefore, <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> is in the range <img src="//latex.artofproblemsolving.com/6/c/9/6c97f88e7ab4e9451053dd48f24ef68f6414e674.png" class="latex" alt="$\left[ 2 \sqrt{84}, 20\right)$" style="vertical-align: -12px" width="90" height="34" />, so our answer is <img src="//latex.artofproblemsolving.com/a/2/7/a272b8bd330deecbddbb0a8e4300e4973a7d4a2d.png" class="latex" alt="$\left(2 \sqrt{84}\right)^{2} + 20^{2} = \boxed{736}$" style="vertical-align: -12px" width="184" height="37" />.
+</p><p>Alternatively, refer to Solution 5 for the geometric interpretation.
+</p><p>~ihatemath123
+</p>
+<h2><span class="mw-headline" id="Solution_7">Solution 7</span></h2>
+<div class="floatright"><a href="/wiki/index.php/File:2021_AIME_II_5.png" class="image"><img alt="2021 AIME II 5.png" src="https://wiki-images.artofproblemsolving.com//thumb/8/8d/2021_AIME_II_5.png/400px-2021_AIME_II_5.png" width="400" height="203" srcset="https://wiki-images.artofproblemsolving.com//thumb/8/8d/2021_AIME_II_5.png/600px-2021_AIME_II_5.png 1.5x, https://wiki-images.artofproblemsolving.com//thumb/8/8d/2021_AIME_II_5.png/800px-2021_AIME_II_5.png 2x" /></a></div>
+<p>Let's rephrase the condition. It is required to find such values of the area of an obtuse triangle with sides <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/5/1/7/517151f6f181bc7bcbfe164ac5c211c84abc0e92.png" class="latex" alt="$10,$" style="vertical-align: -3px" width="22" height="16" /> when there is exactly one such obtuse triangle. In the diagram, <img src="//latex.artofproblemsolving.com/7/4/d/74da12dcd80c93edb8d56fe48f5ebc791cb235db.png" class="latex" alt="$AB = 4, AC = 10.$" style="vertical-align: -4px" width="147" height="18" />
+</p><p>The largest area of triangle with sides <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> is <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" /> for a right triangle with legs <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> (<img src="//latex.artofproblemsolving.com/2/2/5/225c88f788a5ebce71eb4cf7a8fdce6f8a46d320.png" class="latex" alt="$AC\perp AB$" width="79" height="13" />).
+</p><p>The diagram shows triangles with equal heights. The yellow triangle <img src="//latex.artofproblemsolving.com/8/f/c/8fcdc6da3c16b5f8163ab97670cbeda6c83fdef1.png" class="latex" alt="$ABC&#39;$" width="46" height="14" /> has the longest side <img src="//latex.artofproblemsolving.com/8/6/2/862df7367673863e39d63afc3f94346a9785cfdf.png" class="latex" alt="$BC&#39;,$" style="vertical-align: -4px" width="41" height="19" /> the blue triangle <img src="//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" /> has the longest side <img src="//latex.artofproblemsolving.com/3/a/0/3a0b75202202b36c2a62a22bba07fc06501bea7d.png" class="latex" alt="$AC.$" width="30" height="13" />
+If <img src="//latex.artofproblemsolving.com/6/6/6/666cf34082da8145ce287a10782f530669b736f7.png" class="latex" alt="$BC\perp AB,$" style="vertical-align: -4px" width="88" height="18" /> then<img src="//latex.artofproblemsolving.com/a/9/8/a98039fabf0da151a6c0bbabd070d6fc801c584e.png" class="latex" alt="$BC = \sqrt {AC^2 – AB^2} = 2 \sqrt{21}$" style="vertical-align: -2px" width="218" height="21" /> the area is equal to <img src="//latex.artofproblemsolving.com/1/1/5/115f098e42840210371ab9fdc9182c68d159a96e.png" class="latex" alt="$4\sqrt{21}.$" style="vertical-align: -2px" width="49" height="21" /> In the interval, the blue triangle <img src="//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" /> is acute-angled, the yellow triangle <img src="//latex.artofproblemsolving.com/8/f/c/8fcdc6da3c16b5f8163ab97670cbeda6c83fdef1.png" class="latex" alt="$ABC&#39;$" width="46" height="14" /> is obtuse-angled. Their heights and areas are equal. The condition is met.
+</p><p>If the area is less than <img src="//latex.artofproblemsolving.com/e/4/e/e4e6e3f134b410544e39783d110a9ee6988b3cf1.png" class="latex" alt="$4\sqrt{21},$" style="vertical-align: -3px" width="46" height="20" /> both triangles are obtuse, not equal, so the condition is not met.
+</p><p>Therefore, <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> is in the range <img src="//latex.artofproblemsolving.com/a/1/1/a11a6649d1c8ff81ec891f87bafccc6bef918032.png" class="latex" alt="$\left[ 4 \sqrt{21}, 20\right)$" style="vertical-align: -12px" width="90" height="34" />, so answer is <img src="//latex.artofproblemsolving.com/3/4/8/348e65b903660c784762447f5311be4ec954c14d.png" class="latex" alt="$\left(4 \sqrt{21}\right)^{2} + 20^{2} = \boxed{736}$" style="vertical-align: -12px" width="184" height="37" />
+</p><p><b>vladimir.shelomovskii@gmail.com, vvsss</b>
+</p>
+<h2><span class="mw-headline" id="Solution_8">Solution 8</span></h2>
+<p>If <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> are the shortest sides and <img src="//latex.artofproblemsolving.com/4/0/5/4056d41f42aa8a00adca0ff5d1209b6bb0e92d6b.png" class="latex" alt="$\angle C$" width="27" height="12" /> is the included angle, then the area is <img src="//latex.artofproblemsolving.com/0/f/b/0fb6d0849e9aea105d8483b82113ad9aac5a5c61.png" class="latexcenter" alt="\[\frac{4\cdot10\cdot\sin\angle C}{2} = 20\sin\angle C.\]" width="208" height="37" />
+Because <img src="//latex.artofproblemsolving.com/1/a/c/1ac811da48f9362da198ce7ed36993874569b7e2.png" class="latex" alt="$0\leq\sin\angle C\leq1$" style="vertical-align: -3px" width="121" height="17" />, the maximum value of <img src="//latex.artofproblemsolving.com/c/e/f/cef7d26e0ca20af78ccf2707fc7ba3bdedd60d2a.png" class="latex" alt="$20\sin\angle C$" style="vertical-align: -1px" width="76" height="14" /> is <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" />, so <img src="//latex.artofproblemsolving.com/8/2/3/823fe6ac7dd393296086f648575365826386095a.png" class="latex" alt="$s\leq20$" style="vertical-align: -3px" width="53" height="16" />.
+</p><p>If <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> is a shortest side and <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> is the longest side, the length of the other short side is <img src="//latex.artofproblemsolving.com/f/7/e/f7ed91e22559728a69019aa0db6397a4dc4c0223.png" class="latex" alt="$4\cos\angle C+2\sqrt{4\cos^2 \angle C+21}$" style="vertical-align: -3px" width="229" height="21" /> by law of cosines, and the area is <img src="//latex.artofproblemsolving.com/2/a/6/2a68eab49aab4ecce34b17027a5d05c96b018879.png" class="latex" alt="$2\left(4\cos\angle C+2\sqrt{4\cos^2\angle C+21}\right)\sqrt{1-\cos\angle C}$" style="vertical-align: -12px" width="367" height="34" />. Because <img src="//latex.artofproblemsolving.com/d/3/b/d3b262ff74a37c78f7b2fd3b5088ce79aa6a6b45.png" class="latex" alt="$-1\le \cos\angle C\le 0$" style="vertical-align: -3px" width="137" height="17" />, this is minimized if <img src="//latex.artofproblemsolving.com/2/a/a/2aadf6c485b317e22ad0427bbfc9afb8069e61b9.png" class="latex" alt="$\cos\angle C=0$" style="vertical-align: -1px" width="90" height="14" />, where <img src="//latex.artofproblemsolving.com/7/a/9/7a98960152e36e12627aa4768edd031df5ed73f0.png" class="latex" alt="$s=4\sqrt{21}$" style="vertical-align: -1px" width="75" height="18" />.
+</p><p>So, the answer is <img src="//latex.artofproblemsolving.com/7/8/4/78476f85d0f13256630881db8979ddaab6cd87ac.png" class="latex" alt="$20^2+\left(4\sqrt{21}\right)^2=\boxed{736}$" style="vertical-align: -12px" width="184" height="37" />.
+</p><p>~ryanbear
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Interstigation">Video Solution by Interstigation</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/ODokTEt3EVA">https://youtu.be/ODokTEt3EVA</a>
+</p><p>~Interstigation
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2021_AIME_II" title="2021 AIME II">2021 AIME II</a></b> (<b><a href="/wiki/index.php/2021_AIME_II_Problems" title="2021 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2021_AIME_II_Answer_Key" title="2021 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2021">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_4" title="2021 AIME II Problems/Problem 4">Problem 4</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_6" title="2021 AIME II Problems/Problem 6">Problem 6</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_1" title="2021 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_2" title="2021 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_3" title="2021 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_4" title="2021 AIME II Problems/Problem 4">4</a> <b>•</b> <a class="mw-selflink selflink">5</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_6" title="2021 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_7" title="2021 AIME II Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_8" title="2021 AIME II Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_9" title="2021 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_10" title="2021 AIME II Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_11" title="2021 AIME II Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_12" title="2021 AIME II Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_13" title="2021 AIME II Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_14" title="2021 AIME II Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_15" title="2021 AIME II Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818181852
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.100 seconds
+Real time usage: 0.104 seconds
+Preprocessor visited node count: 1953/1000000
+Preprocessor generated node count: 4562/1000000
+Post‐expand include size: 1730/2097152 bytes
+Template argument size: 128/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 38066/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.413      1 -total
+ 71.06%    3.136      1 Template:AIME_box
+ 26.67%    1.177      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:19876-0!canonical and timestamp 20250818181852 and revision id 185469
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_5&amp;oldid=185469">https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_5&amp;oldid=185469</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e945d5dfe3914',t:'MTc1ODM0MjU0Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818181852 -->
+</html>
+

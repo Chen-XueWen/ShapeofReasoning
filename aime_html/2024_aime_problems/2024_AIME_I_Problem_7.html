@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2024 AIME I Problems/Problem 7 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2024_AIME_I_Problems/Problem_7","wgTitle":"2024 AIME I Problems/Problem 7","wgCurRevisionId":255604,"wgRevisionId":255604,"wgArticleId":25784,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2024_AIME_I_Problems/Problem_7","wgRelevantArticleId":25784,"wgRequestId":"6562557abdb34f4dfcf96b01","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2024_AIME_I_Problems_Problem_7 rootpage-2024_AIME_I_Problems_Problem_7 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2024 AIME I Problems/Problem 7																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2024_AIME_I_Problems/Problem_7" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2024_AIME_I_Problems/Problem_7&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2024_AIME_I_Problems/Problem_7&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2024_AIME_I_Problems/Problem_7&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2024_AIME_I_Problems/Problem_7" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2024 AIME I Problems/Problem 7</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Video_Solution:_Cauchy.27s_Inequality"><span class="tocnumber">2</span> <span class="toctext">Video Solution: Cauchy's Inequality</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Video_Solution_By_MathTutorZhengFromSG"><span class="tocnumber">3</span> <span class="toctext">Video Solution By MathTutorZhengFromSG</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_1"><span class="tocnumber">4</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_2a_.28Cauchy-Schwartz_and_vector_algebra.29"><span class="tocnumber">5</span> <span class="toctext">Solution 2a (Cauchy-Schwartz and vector algebra)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_2b_.28Simple_Analytic_Geometry.29"><span class="tocnumber">6</span> <span class="toctext">Solution 2b (Simple Analytic Geometry)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_2c_.28Dot_product.29"><span class="tocnumber">7</span> <span class="toctext">Solution 2c (Dot product)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_3"><span class="tocnumber">8</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_4_.28Simple_Quadratic_Discriminant.29"><span class="tocnumber">9</span> <span class="toctext">Solution 4 (Simple Quadratic Discriminant)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Solution_5_.28.22Completing_the_Triangle.22.29"><span class="tocnumber">10</span> <span class="toctext">Solution 5 ("Completing the Triangle")</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Solution_6_.28Cauchy-Schwarz_Inequality_.29_.28Fastest.29"><span class="tocnumber">11</span> <span class="toctext">Solution 6 (Cauchy-Schwarz Inequality ) (Fastest)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Solution_7_.28Geometry.29"><span class="tocnumber">12</span> <span class="toctext">Solution 7 (Geometry)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Solution_8_.28Euler.27s_Formula_and_Trig_Optimization.29"><span class="tocnumber">13</span> <span class="toctext">Solution 8 (Euler's Formula and Trig Optimization)</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Solution_9_.28Calc_semi-bash.29"><span class="tocnumber">14</span> <span class="toctext">Solution 9 (Calc semi-bash)</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Solution_10_.28Lagrange_multipliers.29"><span class="tocnumber">15</span> <span class="toctext">Solution 10 (Lagrange multipliers)</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Solution_11_.28basically_Lagrange_but_easier-ish.29"><span class="tocnumber">16</span> <span class="toctext">Solution 11 (basically Lagrange but easier-ish)</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Solution_12_.28Wave_function.29"><span class="tocnumber">17</span> <span class="toctext">Solution 12 (Wave function)</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Video_Solution_by_MOP_2024"><span class="tocnumber">18</span> <span class="toctext">Video Solution by MOP 2024</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Video_Solution_by_OmegaLearn.org"><span class="tocnumber">19</span> <span class="toctext">Video Solution by OmegaLearn.org</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Video_Solution"><span class="tocnumber">20</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#See_also"><span class="tocnumber">21</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Find the largest possible real part of<img src="//latex.artofproblemsolving.com/8/9/f/89f4e07cc86e94772fd84e963c46fad30e9b51f7.png" class="latexcenter" alt="\[(75+117i)z+\frac{96+144i}{z}\]" width="194" height="37" />where <img src="//latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> is a complex number with <img src="//latex.artofproblemsolving.com/8/4/e/84ef5e8288cf9d83ed345ac49e48fb8a3e82cce5.png" class="latex" alt="$|z|=4$" style="vertical-align: -5px" width="55" height="20" />. Here <img src="//latex.artofproblemsolving.com/d/a/c/dac5dec897250384833e3c1b44639bf91cca823a.png" class="latex" alt="$i = \sqrt{-1}$" style="vertical-align: -2px" width="69" height="18" />.
+</p>
+<h2><span id="Video_Solution:_Cauchy's_Inequality"></span><span class="mw-headline" id="Video_Solution:_Cauchy.27s_Inequality">Video Solution: Cauchy's Inequality</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=ejmrAJ9TpvM&amp;ab_channel=MegaMathChannel">https://www.youtube.com/watch?v=ejmrAJ9TpvM&amp;ab_channel=MegaMathChannel</a>
+MegaMath
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Video_Solution_By_MathTutorZhengFromSG">Video Solution By MathTutorZhengFromSG</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/usEtjiPw9Hc">https://youtu.be/usEtjiPw9Hc</a>
+</p><p>~MathTutorZhengFromSG
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/4/6/b/46b245331cc3cccf7ccaf7e2f6a34fa2131b8b33.png" class="latex" alt="$z=a+bi$" style="vertical-align: -1px" width="79" height="14" /> such that <img src="//latex.artofproblemsolving.com/3/0/7/307b649b8423e80f823716ea61b70b55665cca2f.png" class="latex" alt="$a^2+b^2=4^2=16$" style="vertical-align: -2px" width="140" height="18" />. The expression becomes: 
+</p><p><img src="//latex.artofproblemsolving.com/4/7/5/475e1bec60b42092df1756c67e746dd8e482c223.png" class="latexcenter" alt="\[(75+117i)(a+bi)+\dfrac{96+144i}{a+bi}.\]" width="250" height="38" />
+</p><p>Call this complex number <img src="//latex.artofproblemsolving.com/9/e/e/9ee4b825a2e36ae093ed7be5e4851ef453b34914.png" class="latex" alt="$w$" width="13" height="8" />. We simplify this expression. 
+</p><p>\begin{align*}
+w&amp;=(75+117i)(a+bi)+\dfrac{96+144i}{a+bi} \\
+&amp;=(75a-117b)+(117a+75b)i+48\left(\dfrac{2+3i}{a+bi}\right) \\
+&amp;=(75a-117b)+(117a+75b)i+48\left(\dfrac{(2+3i)(a-bi)}{(a+bi)(a-bi)}\right) \\
+&amp;=(75a-117b)+(117a+75b)i+48\left(\dfrac{2a+3b+(3a-2b)i}{a^2+b^2}\right) \\
+&amp;=(75a-117b)+(117a+75b)i+48\left(\dfrac{2a+3b+(3a-2b)i}{16}\right) \\
+&amp;=(75a-117b)+(117a+75b)i+3\left(2a+3b+(3a-2b)i\right) \\
+&amp;=(75a-117b)+(117a+75b)i+6a+9b+(9a-6b)i \\
+&amp;=(81a-108b)+(125a+69b)i. \\
+\end{align*}
+</p><p>We want to maximize <img src="//latex.artofproblemsolving.com/8/5/0/850a9466a972cc6180946f05a1ab5ab9f1cfd402.png" class="latex" alt="$\text{Re}(w)=81a-108b$" style="vertical-align: -5px" width="158" height="20" />. We can use elementary calculus for this, but to do so, we must put the expression in terms of one variable. Recall that <img src="//latex.artofproblemsolving.com/a/b/3/ab3d626747b39e62d2c26b0d907734deb1143da2.png" class="latex" alt="$a^2+b^2=16$" style="vertical-align: -2px" width="99" height="18" />; thus, <img src="//latex.artofproblemsolving.com/a/a/5/aa53f7c827f82e3eece2c7a1ddd22786e24b9b04.png" class="latex" alt="$b=\pm\sqrt{16-a^2}$" style="vertical-align: -3px" width="121" height="21" />. Notice that we have a <img src="//latex.artofproblemsolving.com/e/2/7/e271a7f6043b32fd5d8a6e6bca3dc53e300880bb.png" class="latex" alt="$-108b$" style="vertical-align: -2px" width="51" height="16" /> in the expression; to maximize the expression, we want <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> to be negative so that <img src="//latex.artofproblemsolving.com/e/2/7/e271a7f6043b32fd5d8a6e6bca3dc53e300880bb.png" class="latex" alt="$-108b$" style="vertical-align: -2px" width="51" height="16" /> is positive and thus contributes more to the expression. We thus let <img src="//latex.artofproblemsolving.com/0/6/a/06a1172bb3256864ad41beabe703f0df67d4c5c1.png" class="latex" alt="$b=-\sqrt{16-a^2}$" style="vertical-align: -3px" width="121" height="21" />. Let <img src="//latex.artofproblemsolving.com/4/0/9/4096beb4db60dde6b57f9265dd55913c69ef12a6.png" class="latex" alt="$f(a)=81a-108b$" style="vertical-align: -5px" width="146" height="20" />. We now know that <img src="//latex.artofproblemsolving.com/c/1/2/c12278e10b171f3c321ebab08394e2b5865f6ac1.png" class="latex" alt="$f(a)=81a+108\sqrt{16-a^2}$" style="vertical-align: -5px" width="211" height="23" />, and can proceed with normal calculus. 
+</p><p>\begin{align*}
+f(a)&amp;=81a+108\sqrt{16-a^2} \\
+&amp;=27\left(3a+4\sqrt{16-a^2}\right) \\
+f'(a)&amp;=27\left(3a+4\sqrt{16-a^2}\right)' \\
+&amp;=27\left(3+4\left(\sqrt{16-a^2}\right)'\right) \\
+&amp;=27\left(3+4\left(\dfrac{-2a}{2\sqrt{16-a^2}}\right)\right) \\
+&amp;=27\left(3-4\left(\dfrac a{\sqrt{16-a^2}}\right)\right) \\
+&amp;=27\left(3-\dfrac{4a}{\sqrt{16-a^2}}\right). \\
+\end{align*}
+</p><p>We want <img src="//latex.artofproblemsolving.com/c/1/b/c1b2b60f586d3ab019c2feb1fc56c1de84e8a140.png" class="latex" alt="$f&#39;(a)$" style="vertical-align: -4px" width="37" height="18" /> to be <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> to find the maximum. 
+</p><p>\begin{align*}
+0&amp;=27\left(3-\dfrac{4a}{\sqrt{16-a^2}}\right) \\
+&amp;=3-\dfrac{4a}{\sqrt{16-a^2}} \\
+3&amp;=\dfrac{4a}{\sqrt{16-a^2}} \\
+4a&amp;=3\sqrt{16-a^2} \\
+16a^2&amp;=9\left(16-a^2\right) \\
+16a^2&amp;=144-9a^2 \\
+25a^2&amp;=144 \\
+a^2&amp;=\dfrac{144}{25} \\
+a&amp;=\dfrac{12}5 \\
+&amp;=2.4. \\
+\end{align*}
+</p><p>We also find that <img src="//latex.artofproblemsolving.com/8/7/2/872012adba750d8f6d64330ea54db98193b3bc13.png" class="latex" alt="$b=-\sqrt{16-2.4^2}=-\sqrt{16-5.76}=-\sqrt{10.24}=-3.2$" style="vertical-align: -3px" width="417" height="22" />. 
+</p><p>Thus, the expression we wanted to maximize becomes <img src="//latex.artofproblemsolving.com/b/1/2/b12f4ce40ef38cc38c0c8fae0faacdd19b06f8a6.png" class="latex" alt="$81\cdot2.4-108(-3.2)=81\cdot2.4+108\cdot3.2=\boxed{540}$" style="vertical-align: -6px" width="385" height="25" />. 
+</p><p>~Technodoggo
+</p>
+<h2><span id="Solution_2a_(Cauchy-Schwartz_and_vector_algebra)"></span><span class="mw-headline" id="Solution_2a_.28Cauchy-Schwartz_and_vector_algebra.29">Solution 2a (Cauchy-Schwartz and vector algebra)</span></h2>
+<p>Simplify rectangular form as in Solution 1 until we get <img src="//latex.artofproblemsolving.com/8/8/f/88f4a10bb0b8dd7162f2bc09f6dbe45d14029c07.png" class="latex" alt="$\text{Re}(w)=81a-108b = 27(3a-4b)$" style="vertical-align: -5px" width="273" height="20" />. 
+</p><p>By Cauchy-Schwartz, to maximize <img src="//latex.artofproblemsolving.com/8/c/4/8c47b33288a14295c978d5d6c9e41752837dca86.png" class="latex" alt="$\text{Re}(w)$" style="vertical-align: -5px" width="49" height="20" />, the vector <img src="//latex.artofproblemsolving.com/d/0/5/d0508969c087efc4d0d3922ae55ce7d8a69b9a11.png" class="latex" alt="$z=[a,b]$" style="vertical-align: -5px" width="71" height="20" /> ( <img src="//latex.artofproblemsolving.com/1/f/2/1f2935843276376641b0a1a8f73c5a97aa39fefb.png" class="latex" alt="$|z| =4$" style="vertical-align: -5px" width="55" height="20" />) is <img src="//latex.artofproblemsolving.com/3/3/a/33a496b04a685ab28d97fd070a1a9e4c2a22ba58.png" class="latex" alt="$\frac{4}{|[3,-4]|}[3,-4]$" style="vertical-align: -18px" width="117" height="43" />. 
+</p><p>We don't need to bash the arithmetic next, because the unit vector <img src="//latex.artofproblemsolving.com/9/a/d/9ad99798ec4c38e165cf517cb9e02b1c9e824103.png" class="latex" alt="$u$" width="10" height="8" />  that maximizes <img src="//latex.artofproblemsolving.com/d/3/7/d3791da42b6618575fd93f8bb9c5fca5f6aa9706.png" class="latex" alt="$v \cdot u$" style="vertical-align: -1px" width="35" height="10" /> is <img src="//latex.artofproblemsolving.com/b/9/6/b969b94c33a47ca25ff348acda1fe9fac1d4c445.png" class="latex" alt="$u=v/|v|$" style="vertical-align: -5px" width="75" height="20" />, so <img src="//latex.artofproblemsolving.com/7/1/6/716d94298436e0e738bd2bc2ae3d30d32d9e98da.png" class="latex" alt="$v \cdot u= v\cdot v = |v|^2/|v| = |v|$" style="vertical-align: -5px" width="215" height="21" />, which here is just <img src="//latex.artofproblemsolving.com/3/a/c/3ac0cbeabd665ab177f1f7c0ab4bd474f7c5557d.png" class="latex" alt="$\sqrt{3^2+(-4)^2} =5$" style="vertical-align: -11px" width="137" height="35" />.
+</p><p>Combining what remains, we get answer <img src="//latex.artofproblemsolving.com/e/7/4/e745e8ff67b069b55558de024792ae577081eed1.png" class="latex" alt="$= 27 |z| |v|  = 27(4)(5)=\boxed{540}$" style="vertical-align: -6px" width="230" height="25" />.
+</p><p>~oinava
+</p>
+<h2><span id="Solution_2b_(Simple_Analytic_Geometry)"></span><span class="mw-headline" id="Solution_2b_.28Simple_Analytic_Geometry.29">Solution 2b (Simple Analytic Geometry)</span></h2>
+<p>Simplify rectangular form as in Solution 1 until we get <img src="//latex.artofproblemsolving.com/3/5/3/353acd5c052c861b76a610a2cb5c8519ee04593c.png" class="latex" alt="$\text{Re}(w)=81x-108y = 27(3x-4y)$" style="vertical-align: -5px" width="278" height="20" />. 
+</p><p>We also know <img src="//latex.artofproblemsolving.com/8/4/e/84ef5e8288cf9d83ed345ac49e48fb8a3e82cce5.png" class="latex" alt="$|z|=4$" style="vertical-align: -5px" width="55" height="20" /> or <img src="//latex.artofproblemsolving.com/0/a/7/0a7b482e55316f03452a98716845c3bd890a6450.png" class="latex" alt="$x^2+y^2=16$" style="vertical-align: -4px" width="101" height="20" />. 
+</p><p>By AM-GM or Cauchy-Schwartz, b = 4a/3, so 
+</p><p>You can also prove this like so:
+We want to find the line <img src="//latex.artofproblemsolving.com/6/f/a/6fa8beb7ff288589486c162803073ffbfe3ef2dd.png" class="latex" alt="$81x-108y=k$" style="vertical-align: -4px" width="124" height="18" /> tangent to circle <img src="//latex.artofproblemsolving.com/0/a/7/0a7b482e55316f03452a98716845c3bd890a6450.png" class="latex" alt="$x^2+y^2=16$" style="vertical-align: -4px" width="101" height="20" />, which is perpendicular to the line connecting tangent point to circle's center <img src="//latex.artofproblemsolving.com/f/9/6/f9603ca3089464e548fc6f1366bc474e7efef8d9.png" class="latex" alt="$(0,0)$" style="vertical-align: -4px" width="38" height="18" />.
+</p><p>Using the formula for (perpendicular) distance from a point to a line: <img src="//latex.artofproblemsolving.com/5/d/6/5d67777d4f203defbd0a2a7da098770cb6fbea1c.png" class="latex" alt="$\frac{|ax+by+c|}{\sqrt{a^2+b^2}}=r$" style="vertical-align: -18px" width="139" height="45" /> we can substitute and get
+<img src="//latex.artofproblemsolving.com/1/2/1/121b49272a9e853960c70ea7335a07c0dc2e6079.png" class="latex" alt="$\frac{|81(0)-108(0)-k|}{\sqrt{81^2+108^2}}=4$" style="vertical-align: -18px" width="196" height="45" />
+<img src="//latex.artofproblemsolving.com/a/a/4/aa4ccc28cc9099e1f6f2ac0c1bfca00260fd6f8a.png" class="latexcenter" alt="\begin{align*} \frac{k}{27\sqrt{3^2+4^2}}&amp;=4 \\\frac{k}{135}&amp;=4 \\k&amp;=\boxed{540} \end{align*}" width="154" height="115" />
+</p><p>~BH2019MV0
+</p>
+<h2><span id="Solution_2c_(Dot_product)"></span><span class="mw-headline" id="Solution_2c_.28Dot_product.29">Solution 2c (Dot product)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/7/6/d/76d3b2fd3055d3a45256fc97b7ccf16f3047c91e.png" class="latex" alt="$z = a + bi.$" style="vertical-align: -2px" width="86" height="16" /> Simplify until we get to maximizing <img src="//latex.artofproblemsolving.com/3/f/9/3f926735c52a22692ae4156dd0ff737549c0edf3.png" class="latex" alt="$81a - 108b$" style="vertical-align: -2px" width="87" height="16" /> given <img src="//latex.artofproblemsolving.com/3/b/9/3b952b633d37aaa5bf6316831201c9b392f6f78e.png" class="latex" alt="$a^2 +b^2 = 16.$" style="vertical-align: -2px" width="104" height="18" /> We can write <img src="//latex.artofproblemsolving.com/3/f/9/3f926735c52a22692ae4156dd0ff737549c0edf3.png" class="latex" alt="$81a - 108b$" style="vertical-align: -2px" width="87" height="16" /> as the <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/Vector?srsltid=AfmBOoqdT29SM62x_yUNcVA7yUtSecmXlpmyOtury4Rl4Y_Bo-6fLXh4">Dot Product</a> of two vectors:  <img src="//latex.artofproblemsolving.com/c/d/9/cd95d6327937b96174e3dcea3021fbf4c2609680.png" class="latexcenter" alt="\[81a - 108b = \langle 81 , -108 \rangle \cdot \langle a, b \rangle.\]" width="247" height="18" /> From this, we have the line <img src="//latex.artofproblemsolving.com/6/e/2/6e23aa9dbe1ddc84920f411c6482d5ab4df0f876.png" class="latex" alt="$b = -\frac{108}{81}a =  -\frac{4}{3}a$" style="vertical-align: -13px" width="150" height="38" /> and the circle <img src="//latex.artofproblemsolving.com/b/7/3/b7319d82f54561771a2e3dd943bd3c3d19af1320.png" class="latex" alt="$a^2 + b^2 = 16.$" style="vertical-align: -2px" width="104" height="18" /> We need to find their intersection <img src="//latex.artofproblemsolving.com/8/e/8/8e8da0aef2d19017da7471378386d61620f288f5.png" class="latex" alt="$(a,b)$" style="vertical-align: -4px" width="38" height="18" /> such that <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> are maximized. The line intersects the circle at two points, but to maximize <img src="//latex.artofproblemsolving.com/3/f/9/3f926735c52a22692ae4156dd0ff737549c0edf3.png" class="latex" alt="$81a - 108b$" style="vertical-align: -2px" width="87" height="16" /> we want <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> to be negative and <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> to be positive. So the point that works has coordinates <img src="//latex.artofproblemsolving.com/9/1/f/91f36871228dbef1ef95b74213d65213c0d68900.png" class="latex" alt="$a = 2.4$" style="vertical-align: -1px" width="59" height="14" /> and <img src="//latex.artofproblemsolving.com/3/9/0/39032949cb500e03a8ad1e843ec54450b9c2e100.png" class="latex" alt="$b = -3.2$" style="vertical-align: -2px" width="71" height="16" />. We get <img src="//latex.artofproblemsolving.com/e/3/e/e3e2fef705626f395c615f08045f9ac621fd554c.png" class="latex" alt="$81\cdot 2.4 + 108 \cdot 3.2 = \boxed{540}.$" style="vertical-align: -6px" width="210" height="25" />
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:grogg007">grogg007</a>
+</p><p><br />
+<a href="/wiki/index.php/File:2024-AIMEI-P7-S12.png" class="image"><img alt="2024-AIMEI-P7-S12.png" src="https://wiki-images.artofproblemsolving.com//thumb/3/3a/2024-AIMEI-P7-S12.png/300px-2024-AIMEI-P7-S12.png" width="300" height="206" srcset="https://wiki-images.artofproblemsolving.com//thumb/3/3a/2024-AIMEI-P7-S12.png/450px-2024-AIMEI-P7-S12.png 1.5x, https://wiki-images.artofproblemsolving.com//thumb/3/3a/2024-AIMEI-P7-S12.png/600px-2024-AIMEI-P7-S12.png 2x" /></a>
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>Follow Solution 1 to get <img src="//latex.artofproblemsolving.com/4/e/b/4eb8bcdac9199691040e4d5fc1d9475ea43fcf25.png" class="latex" alt="$81a-108b$" style="vertical-align: -2px" width="87" height="16" />. We can let <img src="//latex.artofproblemsolving.com/3/1/d/31d1481a4b606549a0eff52543a013561586a41d.png" class="latex" alt="$a=4\cos\theta$" style="vertical-align: -1px" width="84" height="14" /> and <img src="//latex.artofproblemsolving.com/f/1/1/f119617cd63b7c5d27dfef9a0bad8f79693420b6.png" class="latex" alt="$b=4\sin\theta$" style="vertical-align: -1px" width="80" height="14" /> as <img src="//latex.artofproblemsolving.com/8/4/e/84ef5e8288cf9d83ed345ac49e48fb8a3e82cce5.png" class="latex" alt="$|z|=4$" style="vertical-align: -5px" width="55" height="20" />, and thus we have <img src="//latex.artofproblemsolving.com/5/c/a/5ca5296c9b2c3057ec8c18743af620dad0af6316.png" class="latex" alt="$324\cos\theta-432\sin\theta$" style="vertical-align: -2px" width="155" height="16" />. Furthermore, we can ignore the negative sign in front of the second term as we are dealing with sine and cosine, so we finally wish to maximize <img src="//latex.artofproblemsolving.com/f/8/4/f8467efaeed3eec6b87dc555c69aa2837cedad09.png" class="latex" alt="$324\cos\theta+432\sin\theta$" style="vertical-align: -2px" width="155" height="16" /> for obviously positive <img src="//latex.artofproblemsolving.com/d/e/5/de5a3b34841a0696e4e3afc4fda90bda98eead51.png" class="latex" alt="$\cos\theta$" width="36" height="13" /> and <img src="//latex.artofproblemsolving.com/4/c/c/4cc6cd401ab7d1f6f198d8b36a1e53d6403555e2.png" class="latex" alt="$\sin\theta$" width="34" height="13" />.
+</p><p><br />
+Using the previous fact, we can use the <a href="/wiki/index.php/Cauchy-Schwarz_Inequality" title="Cauchy-Schwarz Inequality">Cauchy-Schwarz Inequality</a> to calculate the maximum. By the inequality, we have:
+</p><p><img src="//latex.artofproblemsolving.com/2/0/6/2068df08e8bbf8343a912a8166273a97ab2f9100.png" class="latex" alt="$(324^2+432^2)(\cos^2\theta+\sin^2\theta)\ge(324\cos\theta+432\sin\theta)^2$" style="vertical-align: -5px" width="429" height="22" />
+</p><p><img src="//latex.artofproblemsolving.com/c/8/4/c841503bb5f234ba3fb4fcc5464edee7ff2d3555.png" class="latex" alt="$540^2\cdot1\ge(324\cos\theta+432\sin\theta)^2$" style="vertical-align: -5px" width="258" height="21" />
+</p><p><img src="//latex.artofproblemsolving.com/0/a/6/0a65a0f7af7a2da737888b83933bea7bf01c0751.png" class="latex" alt="$\boxed{540}\ge324\cos\theta+432\sin\theta$" style="vertical-align: -6px" width="218" height="25" />
+</p><p>~eevee9406
+</p>
+<h2><span id="Solution_4_(Simple_Quadratic_Discriminant)"></span><span class="mw-headline" id="Solution_4_.28Simple_Quadratic_Discriminant.29">Solution 4 (Simple Quadratic Discriminant)</span></h2>
+<p>Similar to the solutions above, we find that <img src="//latex.artofproblemsolving.com/4/2/b/42bf7473e747b9e5b74acdccecf5b56b4e2d44cf.png" class="latex" alt="$Re((75+117i)z+\frac{96+144i}{z})=81a-108b=27(3a-4b)$" style="vertical-align: -13px" width="460" height="39" />, where <img src="//latex.artofproblemsolving.com/4/6/b/46b245331cc3cccf7ccaf7e2f6a34fa2131b8b33.png" class="latex" alt="$z=a+bi$" style="vertical-align: -1px" width="79" height="14" />. To maximize this expression, we must maximize <img src="//latex.artofproblemsolving.com/d/f/a/dfaa19c4c25fe2729b72931e01b82d8251d7f079.png" class="latex" alt="$3a-4b$" style="vertical-align: -2px" width="60" height="16" />. Let this value be <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />. Solving for <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> yields <img src="//latex.artofproblemsolving.com/d/e/8/de89772a89523984f480b0e2f561428d3fab06bd.png" class="latex" alt="$a=\frac{x+4b}{3}$" style="vertical-align: -13px" width="89" height="39" />. From the given information we also know that <img src="//latex.artofproblemsolving.com/a/b/3/ab3d626747b39e62d2c26b0d907734deb1143da2.png" class="latex" alt="$a^2+b^2=16$" style="vertical-align: -2px" width="99" height="18" />. Substituting <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> in terms of <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> and <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> gives us <img src="//latex.artofproblemsolving.com/b/c/e/bce2769be532fec3c19ad66cb3e2d8900ac9d03c.png" class="latex" alt="$\frac{x^2+8bx+16b^2}{9}+b^2=16$" style="vertical-align: -13px" width="209" height="41" />. Combining fractions, multiplying, and rearranging, gives <img src="//latex.artofproblemsolving.com/c/1/d/c1d3ada0631f220436ef47ed86ed3e8c96d4ade5.png" class="latex" alt="$25b^2+8xb+(x^2-144)=0$" style="vertical-align: -5px" width="222" height="21" />. This is useful because we want the maximum value of <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> such that this quadratic has real roots which is easy to find using the discriminant. For the roots to be real, <img src="//latex.artofproblemsolving.com/3/8/a/38ac06c91c9676e9de0c1743cdd8e8014cf98fb1.png" class="latex" alt="$(8x)^2-4(25)(x^2-144) \ge 0$" style="vertical-align: -5px" width="221" height="21" />. Now all that is left to do is to solve this inequality. Simplifying this expression, we get <img src="//latex.artofproblemsolving.com/d/4/3/d43abb7bef8815e749e743bc4c4afe21a1b4d496.png" class="latex" alt="$-36x^2+14400 \ge 0$" style="vertical-align: -3px" width="153" height="19" /> which means <img src="//latex.artofproblemsolving.com/d/7/9/d793eb4182bddd504696850bb2dfeabe07427b75.png" class="latex" alt="$x^2 \le 400$" style="vertical-align: -3px" width="71" height="19" /> and <img src="//latex.artofproblemsolving.com/7/3/b/73b00e77cb44d83071b5542824225ca905e7cd8d.png" class="latex" alt="$x \le 20$" style="vertical-align: -3px" width="55" height="16" />. Therefore the maximum value of <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> is <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" /> and <img src="//latex.artofproblemsolving.com/2/5/5/2553c1d89801b04487d31b375d8a5f2049e4e187.png" class="latex" alt="$27 \cdot 20 = \boxed{540}$" style="vertical-align: -6px" width="114" height="25" />
+</p><p>~vsinghminhas
+</p>
+<h2><span id="Solution_5_(&quot;Completing_the_Triangle&quot;)"></span><span class="mw-headline" id="Solution_5_.28.22Completing_the_Triangle.22.29">Solution 5 ("Completing the Triangle")</span></h2>
+<p>First, recognize the relationship between the reciprocal of a complex number <img src="//latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> with its conjugate <img src="//latex.artofproblemsolving.com/f/3/b/f3b8023032c1d94aa923383802ca03df3b4315df.png" class="latex" alt="$\overline{z}$" width="9" height="11" />, namely:
+</p><p><img src="//latex.artofproblemsolving.com/3/f/8/3f8ac0a1405eb34b7c35c486b2abd3a2ff78beb8.png" class="latexcenter" alt="\[\frac{1}{z} \cdot \frac{\overline{z}}{\overline{z}} = \frac{\overline{z}}{|z|^2} = \frac{\overline{z}}{16}\]" width="137" height="41" />
+</p><p>Then, let <img src="//latex.artofproblemsolving.com/d/c/7/dc78b7afa65d3e374ae329019da4186ab97ccdec.png" class="latex" alt="$z = 4(\cos\theta + i\sin\theta)$" style="vertical-align: -5px" width="161" height="20" /> and <img src="//latex.artofproblemsolving.com/8/e/6/8e69fb60da9fed2e96355df9b683a927ab7255d8.png" class="latex" alt="$\overline{z} = 4(\cos\theta - i\sin\theta)$" style="vertical-align: -5px" width="161" height="20" />.
+</p><p><img src="//latex.artofproblemsolving.com/5/a/2/5a23cdc189d0cbf77f5b018a93c071bda8a816a3.png" class="latexcenter" alt="\begin{align*} Re \left ((75+117i)z+\frac{96+144i}{z} \right) &amp;= Re\left ( (75+117i)z + (6+9i)\overline{z}    \right ) \\                                                &amp;= 4 \cdot Re\left ( (75+117i)(\cos\theta + i\sin\theta) + (6+9i)(\cos\theta - i\sin\theta)    \right ) \\                                                &amp;= 4 \cdot (75\cos\theta - 117\sin\theta + 6\cos\theta + 9\sin\theta) \\                                                &amp;= 4 \cdot (81\cos\theta - 108\sin\theta) \\                                                &amp;= 4\cdot 27 \cdot (3\cos\theta - 4\sin\theta) \end{align*}" width="737" height="143" />
+</p><p>Now, recognizing the 3 and 4 coefficients hinting at a 3-4-5 right triangle, we "complete the triangle" by rewriting our desired answer in terms of an angle of that triangle <img src="//latex.artofproblemsolving.com/2/c/1/2c175f60eecef1de7560c3bdea495d69f26f719d.png" class="latex" alt="$\phi$" style="vertical-align: -3px" width="10" height="16" /> where <img src="//latex.artofproblemsolving.com/9/c/9/9c9cdb0c8dca9d3b2e0b56b4a043dbf27d7bb7d0.png" class="latex" alt="$\cos\phi = \frac{3}{5}$" style="vertical-align: -13px" width="77" height="38" /> and <img src="//latex.artofproblemsolving.com/6/1/f/61fd866a65f5cb91f08f3884ce155c2802206697.png" class="latex" alt="$\sin\phi = \frac{4}{5}$" style="vertical-align: -13px" width="75" height="38" />
+</p><p><img src="//latex.artofproblemsolving.com/6/4/8/6485c725caf151b6b8ea949f2cc13f5f92c6da4c.png" class="latexcenter" alt="\begin{align*} 4\cdot 27 \cdot(3\cos\theta - 4\sin\theta) &amp;= 4\cdot 27 \cdot 5 \cdot (\frac{3}{5}\cos\theta - \frac{4}{5}\sin\theta) \\                                                &amp;= 540 \cdot (\cos\phi\cos\theta - \sin\phi\sin\theta) \\                                                &amp;= 540 \cos(\theta + \phi) \end{align*}" width="435" height="87" />
+</p><p>Since the simple trig ratio is bounded above by 1, our answer is <img src="//latex.artofproblemsolving.com/d/3/e/d3e4feb13fa178d346cc438e850a354ea225027e.png" class="latex" alt="$\boxed{540}$" style="vertical-align: -5px" width="39" height="23" />
+</p><p>~ Cocoa @ <a rel="nofollow" class="external free" href="https://www.corgillogical.com/">https://www.corgillogical.com/</a>
+(yes i am a corgi that does math)
+</p>
+<h2><span id="Solution_6_(Cauchy-Schwarz_Inequality_)_(Fastest)"></span><span class="mw-headline" id="Solution_6_.28Cauchy-Schwarz_Inequality_.29_.28Fastest.29">Solution 6 (Cauchy-Schwarz Inequality ) (Fastest)</span></h2>
+<p>Follow as solution 1 would to obtain <img src="//latex.artofproblemsolving.com/a/d/e/adee7c02b9cb49d609899b587e945a348f8e99b1.png" class="latex" alt="$81a + 108\sqrt{16-a^2}.$" style="vertical-align: -3px" width="157" height="21" />
+</p><p>By the Cauchy-Schwarz Inequality, we have
+</p><p><img src="//latex.artofproblemsolving.com/5/4/b/54ba0d23ce5eb359c4e22cf21021e5e9bd5098e3.png" class="latexcenter" alt="\[(a^2 + (\sqrt{16-a^2})^2)(81^2 + 108^2) \geq (81a + 108\sqrt{16-a^2})^2,\]" width="442" height="21" />
+</p><p>so 
+</p><p><img src="//latex.artofproblemsolving.com/7/b/e/7be5503474162492166599d2028b46dcc18a5323.png" class="latexcenter" alt="\[4^2 \cdot 9^2 \cdot 15^2 \geq (81a + 108\sqrt{16-a^2})^2\]" width="279" height="21" />
+</p><p>and we obtain that <img src="//latex.artofproblemsolving.com/a/4/3/a43bc73d8460518a27f3e7cfc533e29ba052966c.png" class="latex" alt="$81a + 108\sqrt{16-a^2} \leq 4 \cdot 9 \cdot 15 = \boxed{540}.$" style="vertical-align: -6px" width="306" height="25" />
+</p><p><br />
+- <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Spectraldragon8">spectraldragon8</a>
+</p>
+<h2><span id="Solution_7_(Geometry)"></span><span class="mw-headline" id="Solution_7_.28Geometry.29">Solution 7 (Geometry)</span></h2>
+<p>Follow solution 2 to get that we want to find the line <img src="//latex.artofproblemsolving.com/0/9/8/0986c5f983dc239330036e792cabaa84051624cb.png" class="latex" alt="$81a-108b=k$" style="vertical-align: -2px" width="121" height="16" /> tangent to circle <img src="//latex.artofproblemsolving.com/a/b/3/ab3d626747b39e62d2c26b0d907734deb1143da2.png" class="latex" alt="$a^2+b^2=16$" style="vertical-align: -2px" width="99" height="18" />. The line turns into <img src="//latex.artofproblemsolving.com/8/0/b/80b0ba06ccebf6d300676baee48aa9af25e3eb3a.png" class="latex" alt="$a=\frac{k}{81}+\frac{4b}{3}$" style="vertical-align: -13px" width="101" height="39" />	
+Connect the center of the circle to the tangency point and the y-intercept of the line. Let the tangency point be <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" />, the y-intercept be <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />, and the center be <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />. Drop the perpendicular from <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> to <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" /> and call it <img src="//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png" class="latex" alt="$D$" style="vertical-align: -1px" width="17" height="14" />. Let <img src="//latex.artofproblemsolving.com/c/1/1/c11cb72bb797eb016e8abe69992ec343214dd9b4.png" class="latex" alt="$AD=3x$" style="vertical-align: -1px" width="75" height="14" />, <img src="//latex.artofproblemsolving.com/4/3/a/43a6bfc575f5b3877cbb5697a5c2f54bd77e5214.png" class="latex" alt="$DC=4x$" style="vertical-align: -1px" width="75" height="14" />. Then, <img src="//latex.artofproblemsolving.com/5/6/6/5662c2dfde65b1489fa261306a242ceb720cbab1.png" class="latex" alt="$BD=\sqrt{AB^2-AD^2}=\sqrt{16-9x^2}$" style="vertical-align: -3px" width="273" height="21" />. By similar triangles, get that <img src="//latex.artofproblemsolving.com/0/e/0/0e03557d7a56b28533e6b3f85e1fb6ccd7a32dab.png" class="latex" alt="$\frac{BD}{AD}=\frac{AD}{DC}$" style="vertical-align: -13px" width="94" height="39" />, so <img src="//latex.artofproblemsolving.com/d/f/d/dfd25158cbd192147c8895207404f3beab2d8116.png" class="latex" alt="$\frac{\sqrt{16-9x^2}}{3x}=\frac{3x}{4x}$" style="vertical-align: -13px" width="136" height="43" />. Solve this to get that <img src="//latex.artofproblemsolving.com/e/4/7/e4778a55d0bd88ced0d4ec383157d740c9f50eb7.png" class="latex" alt="$x=\frac{16}{15}$" style="vertical-align: -13px" width="59" height="38" />, so <img src="//latex.artofproblemsolving.com/d/6/9/d69891a06fdcc83983c2314f3a88b2a92de4311e.png" class="latex" alt="$BC=\frac{20}{3}$" style="vertical-align: -13px" width="77" height="38" /> and <img src="//latex.artofproblemsolving.com/4/d/b/4db11eb73817de13f17c57d372f2e11517ee5488.png" class="latex" alt="$\frac{k}{81}=\frac{20}{3}$" style="vertical-align: -13px" width="70" height="39" />, so <img src="//latex.artofproblemsolving.com/3/b/5/3b547684405aa8821c5ffea7c54888e8baac042f.png" class="latex" alt="$k=\boxed{540}$" style="vertical-align: -6px" width="75" height="25" />
+~ryanbear
+</p>
+<h2><span id="Solution_8_(Euler's_Formula_and_Trig_Optimization)"></span><span class="mw-headline" id="Solution_8_.28Euler.27s_Formula_and_Trig_Optimization.29">Solution 8 (Euler's Formula and Trig Optimization)</span></h2>
+<p>Because <img src="//latex.artofproblemsolving.com/8/4/e/84ef5e8288cf9d83ed345ac49e48fb8a3e82cce5.png" class="latex" alt="$|z|=4$" style="vertical-align: -5px" width="55" height="20" />, we can let <img src="//latex.artofproblemsolving.com/0/d/2/0d2e4aae8bace7dc3245f6c7f5a77ad142fd0da3.png" class="latex" alt="$z=4e^{i\theta}$" style="vertical-align: -1px" width="65" height="17" />. Then, substituting <img src="//latex.artofproblemsolving.com/3/8/d/38d0af8fa19b0570b95fc3d918b85221a715887c.png" class="latex" alt="$i=e^{\frac{i\pi}{2}}$" style="vertical-align: -1px" width="57" height="19" />, we get that the complex number is 
+</p><p>\begin{align*}
+w&amp;=4e^{i\theta}(75+117e^{\frac{i\pi}{2}})+\dfrac{1}{4}e^{-i\theta}(96+144e^{\frac{i\pi}{2}})\\
+&amp;=300e^{i\theta}+468e^{i(\frac{\pi}{2}+\theta)}+24e^{-i\theta}+36e^{i(\frac{\pi}{2}-\theta)}\\
+\end{align*}
+</p><p>We know that the <img src="//latex.artofproblemsolving.com/9/b/9/9b9d35cca219b3025af39b489bec830f26e27cb7.png" class="latex" alt="$\text{Re}(e^{i\alpha})=\cos(\alpha)$" style="vertical-align: -5px" width="133" height="22" /> from Euler's formula, so applying this and then applying trig identities yields
+</p><p>\begin{align*}
+\text{Re}(w)&amp;=300\cos{(\theta)}+468\cos{(\dfrac{\pi}{2}+\theta)}+24\cos{(-\theta)}+36\cos{(\dfrac{\pi}{2}-\theta)}\\
+&amp;=300\cos{(\theta)}-468sin{(\theta)}+24\cos{(\theta)}+36\sin{(\theta)}\\
+&amp;=324\cos{(\theta)}-432\sin{(\theta)}\\
+\implies \dfrac{1}{108}\text{Re}(w)&amp;=3\cos{(\theta)}-4\sin{(\theta)}\\
+\end{align*}
+</p><p>We can see that the right-hand side looks an awful lot like the sum of angles formula for cosine, but 3 and 4 don't satisfy the pythagorean identity. To make them do so, we can divide everything by <img src="//latex.artofproblemsolving.com/a/d/e/adec8876eb83670d3f670496cee668a479a236f0.png" class="latex" alt="$\sqrt{3^2+4^2}=5$" style="vertical-align: -3px" width="106" height="21" /> and set <img src="//latex.artofproblemsolving.com/e/6/4/e643a5d2ffd3955ba72d0e39996f91b8e6d3f88b.png" class="latex" alt="$\cos{(\alpha)}::=\frac{3}{5}$" style="vertical-align: -13px" width="102" height="38" /> and <img src="//latex.artofproblemsolving.com/1/4/2/1422301833c5dd3bfbc4919f37dc61737b9aa31e.png" class="latex" alt="$\sin{(\alpha)}::=\frac{4}{5}$" style="vertical-align: -13px" width="100" height="38" />. Now we have that 
+<img src="//latex.artofproblemsolving.com/c/1/3/c131c9b0024e27c83db0d98db9062f9313d7d359.png" class="latexcenter" alt="\[\dfrac{1}{540}\text{Re}(w)=\cos{(\theta+\alpha)}\]" width="183" height="37" />
+Obviously the maximum value of the right hand side is 1, so the maximum value of the real part is <img src="//latex.artofproblemsolving.com/d/3/e/d3e4feb13fa178d346cc438e850a354ea225027e.png" class="latex" alt="$\boxed{540}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~Mooshiros
+</p>
+<h2><span id="Solution_9_(Calc_semi-bash)"></span><span class="mw-headline" id="Solution_9_.28Calc_semi-bash.29">Solution 9 (Calc semi-bash)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> denote value of the above expression such that <img src="//latex.artofproblemsolving.com/5/6/a/56a639978d53f946e6ed5e26da6592011b958f46.png" class="latex" alt="$\mathsf{Re} (c)$" style="vertical-align: -5px" width="44" height="20" /> is maximized. We write <img src="//latex.artofproblemsolving.com/0/d/2/0d2e4aae8bace7dc3245f6c7f5a77ad142fd0da3.png" class="latex" alt="$z=4e^{i\theta}$" style="vertical-align: -1px" width="65" height="17" /> and multiply the second term in the expression by <img src="//latex.artofproblemsolving.com/9/5/0/950e923721cb686818699383bc821fa3baf02f15.png" class="latex" alt="$\overline{z} = 4e^{-i\theta},$" style="vertical-align: -4px" width="81" height="21" /> turning the expression into
+<img src="//latex.artofproblemsolving.com/1/c/3/1c38e2c8539be8e9f44a7eda4c936d83c69634b5.png" class="latexcenter" alt="\[4e^{i\theta}(75+117i) + \frac{(96 + 144i)\cdot 4e^{-i\theta}}{4e^{i\theta}\cdot 4e^{-i\theta}} = 300e^{i\theta} + 468ie^{i\theta} + (24+ 36i)e^{-i\theta}.\]" width="538" height="39" />
+Now, we write <img src="//latex.artofproblemsolving.com/0/1/e/01e62fce9c87ab7c5cc62ed65793e98fe05c8d5e.png" class="latex" alt="$e^{i\theta} = \cos\theta + i\sin\theta$" style="vertical-align: -2px" width="149" height="19" />. Since <img src="//latex.artofproblemsolving.com/b/b/5/bb5e108fdc4bf4fb6151cb922992f23bc6c35985.png" class="latex" alt="$\cos$" width="24" height="8" /> is even and <img src="//latex.artofproblemsolving.com/6/f/b/6fb300dacfcde1b57ad070409262b1743e0cd966.png" class="latex" alt="$\sin$" width="22" height="12" /> is odd,
+<img src="//latex.artofproblemsolving.com/0/d/c/0dcd1c1f01dafc506d6df6b87b67fa0c213cfcd0.png" class="latexcenter" alt="\begin{align*} &amp;300(\cos\theta + i\sin\theta) +468i + (24+36i)(\cos\theta -i\sin\theta) \\ \iff &amp; \mathsf{Re}(c) = 324\cos\theta -468\sin\theta \end{align*}" width="453" height="43" />
+We want to maximize this expression, so we take its derivative and set it equal to <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> (and quickly check the second derivative for inflection points):
+<img src="//latex.artofproblemsolving.com/f/a/3/fa3d5f267fa9d804b2922cdfebb835f09dbbf0e6.png" class="latexcenter" alt="\begin{align*}     &amp;\mathsf{Re}(c) = 108\left(3\cos\theta - 4\sin\theta\right)\\     \frac{d}{d\theta} &amp;\mathsf{Re}(c) = -324\sin\theta -468\cos\theta = 0, \end{align*}" width="291" height="63" />
+so <img src="//latex.artofproblemsolving.com/9/8/f/98fc8ba052d5fad3a913414606b82b055a234fb3.png" class="latex" alt="$\tan\theta = -\dfrac{468}{324} = -\dfrac{4}{3},$" style="vertical-align: -13px" width="166" height="38" /> which is reminiscent of a <img src="//latex.artofproblemsolving.com/a/f/1/af1a2cb4ff1720f169ddde1726c1a5a1ab816ae0.png" class="latex" alt="$3-4-5$" style="vertical-align: -2px" width="74" height="15" /> right triangle in the fourth quadrant (side lengths of <img src="//latex.artofproblemsolving.com/c/2/d/c2d452a255f6f7f920cf6b7aa26c0022c1e56c1e.png" class="latex" alt="$3, -4, 5$" style="vertical-align: -4px" width="59" height="17" />). Since <img src="//latex.artofproblemsolving.com/f/4/7/f476a6cccf298062720fea8ba058016390a5f6ac.png" class="latex" alt="$\tan\theta = -\frac{4}{3},$" style="vertical-align: -13px" width="97" height="38" /> we quickly see that <img src="//latex.artofproblemsolving.com/f/5/d/f5dabe1a12a76d35e08345cfe3aee15285b00956.png" class="latex" alt="$\sin\theta = -\dfrac{4}{5}$" style="vertical-align: -13px" width="88" height="38" /> and <img src="//latex.artofproblemsolving.com/5/7/4/57421122dfdd63a6a2acc345041a119dd8cc0bab.png" class="latex" alt="$\cos\theta = \dfrac{3}{5}.$" style="vertical-align: -13px" width="81" height="38" /> Therefore,
+<img src="//latex.artofproblemsolving.com/c/e/5/ce55e0c0e3f76736cf73ffba9bf53b5310edc99e.png" class="latexcenter" alt="\begin{align*}  \mathsf{Re}(c) &amp;= 108\left(3\cos\theta - 4\sin\theta \right) =  108\left(\frac{9}{5} + \frac{16}{5} \right)  = 108\cdot 5 = \boxed{\textbf{(540)}} \end{align*}" width="517" height="43" />
+</p><p>-Benedict T (countmath1)
+</p>
+<h2><span id="Solution_10_(Lagrange_multipliers)"></span><span class="mw-headline" id="Solution_10_.28Lagrange_multipliers.29">Solution 10 (Lagrange multipliers)</span></h2>
+<p>With <img src="//latex.artofproblemsolving.com/d/8/9/d89ca41a7488a1fa1812ed9802275c78d2c7a2b1.png" class="latex" alt="$z = a + bi$" style="vertical-align: -1px" width="79" height="14" /> such that <img src="//latex.artofproblemsolving.com/1/4/c/14c96fad3efc9c4910dc60569081c49ee438805a.png" class="latex" alt="$a^2 + b^2 = 16,$" style="vertical-align: -4px" width="104" height="20" /> we have 
+<img src="//latex.artofproblemsolving.com/7/2/8/728a78b78f3d5906fb37a5c0faa6d70073d567a6.png" class="latexcenter" alt="\begin{align*} (75 +117i)(a + bi) + \frac{48}{a + bi}  (2 + 3i) &amp;= 75a + 75bi + 117ai - 117b + \frac{48}{a + bi}(2 + 3i) \\ &amp;= 75a - 117b + (117a + 75b)i + 48 (2 + 3i) \cdot \frac{a - bi}{16} \\ &amp;= 75a - 117b + (117a + 75b)i + 3 (2 + 3i)(a - bi) \end{align*}" width="679" height="107" />
+where we use <img src="//latex.artofproblemsolving.com/8/3/4/834745196b8f6e579e62fa037882706d5290b1c7.png" class="latex" alt="$z^{-1} = \frac{\bar z}{|z|^2}.$" style="vertical-align: -18px" width="89" height="41" /> With <img src="//latex.artofproblemsolving.com/3/1/6/316022d5b82455a17b4a33dccfddac07d935e9f4.png" class="latex" alt="$3 (2 + 3i)(a - bi) = 3 [2a - 2bi + 3ai + 3b] = 6a +9b +9ai-6bi,$" style="vertical-align: -5px" width="505" height="20" /> the expression becomes <img src="//latex.artofproblemsolving.com/c/0/9/c090f130a87b32c26119e59e1154d9ba01d91f3f.png" class="latex" alt="$81a-108b+ (126a + 69b)i$" style="vertical-align: -5px" width="215" height="20" /> and we would like to maximize <img src="//latex.artofproblemsolving.com/1/1/5/1159c20c06c7ce1658cf1b5390b190d756a7af7b.png" class="latex" alt="$81a - 108b = 9(9a - 12b) = 27(3a - 4b)$" style="vertical-align: -5px" width="316" height="20" /> with <img src="//latex.artofproblemsolving.com/b/7/3/b7319d82f54561771a2e3dd943bd3c3d19af1320.png" class="latex" alt="$a^2 + b^2 = 16.$" style="vertical-align: -2px" width="104" height="18" />
+With <img src="//latex.artofproblemsolving.com/f/f/c/ffc9591465fcdde8411cf1a8e6c8216bc062d660.png" class="latex" alt="$f(a, b) = 3a - 4b$" style="vertical-align: -5px" width="134" height="20" /> and <img src="//latex.artofproblemsolving.com/3/6/1/361f748c290702d86670a25293051d964f576158.png" class="latex" alt="$g(a, b) = a^2 + b^2 = 16,$" style="vertical-align: -5px" width="177" height="21" /> we have 
+<img src="//latex.artofproblemsolving.com/7/1/6/71612474783d122632680a4a49b075459478766d.png" class="latexcenter" alt="\begin{align*} 3 = 2\lambda a, \quad -4 = 2\lambda b \implies -\frac{3}{4} = \frac ab \implies -3b = 4a \implies b = -\frac 43 a\end{align*}" width="518" height="37" />
+so 
+<img src="//latex.artofproblemsolving.com/5/4/b/54b64d1862a6b0c47f9497ee5616c1a0167ab93e.png" class="latexcenter" alt="\[a^2 + \frac{16}{9}a^2 = \frac{25}{9}a^2 = 16 \implies \frac{5}{3}a = 4 \implies a = \frac {12}5, b = -\frac{16}{5}\]" width="469" height="38" />
+and we have <img src="//latex.artofproblemsolving.com/3/2/3/323805f44ab8e9180e8b05f162962a37d38783f1.png" class="latex" alt="$3a - 4b = \frac{36}{5} + \frac{64}{5} = 20,$" style="vertical-align: -13px" width="198" height="38" /> so the maximum is <img src="//latex.artofproblemsolving.com/f/5/9/f591d6bcb1878e7b1883be5da80141eaaa9191f3.png" class="latex" alt="$27 \cdot 20 = \boxed{540}.$" style="vertical-align: -6px" width="119" height="25" />
+-centslordm
+</p>
+<h2><span id="Solution_11_(basically_Lagrange_but_easier-ish)"></span><span class="mw-headline" id="Solution_11_.28basically_Lagrange_but_easier-ish.29">Solution 11 (basically Lagrange but easier-ish)</span></h2>
+<p>Proceeding as with Solution 10, we aim to maximize <img src="//latex.artofproblemsolving.com/7/a/5/7a52e55e4c93ee7f9407008c0ac4d5d73499d7df.png" class="latex" alt="$27(3a-4b)$" style="vertical-align: -5px" width="92" height="20" /> under the constraint <img src="//latex.artofproblemsolving.com/4/8/2/48299a4864fbc849aaeaa85f4909e33356c48d46.png" class="latex" alt="$a^2+b^2-16=0$" style="vertical-align: -2px" width="130" height="18" />. It is a well-known result of Lagrange multipliers that a linear function is maximized under a circle when the values of the variables are proportional to their coefficients; that is, in our case, <img src="//latex.artofproblemsolving.com/7/7/6/776485b0a132cde44ffa957abbe39dd129d30a6a.png" class="latex" alt="$a=3x$" width="53" height="12" /> and <img src="//latex.artofproblemsolving.com/e/e/4/ee463b2fc7be918ddc7a2e4541893d444f9001cb.png" class="latex" alt="$b=-4x$" style="vertical-align: -2px" width="68" height="16" />. (Technically <img src="//latex.artofproblemsolving.com/1/1/1/111a36100cd4c2fdd9e9315f727128c07a7e4a5f.png" class="latex" alt="$a=27\cdot3x$" style="vertical-align: -1px" width="86" height="14" /> and <img src="//latex.artofproblemsolving.com/d/c/2/dc266403d12c3394ac4d7159124e08640f474686.png" class="latex" alt="$b=27(-4)x$" style="vertical-align: -5px" width="100" height="20" />, but it's easier to use <img src="//latex.artofproblemsolving.com/7/7/6/776485b0a132cde44ffa957abbe39dd129d30a6a.png" class="latex" alt="$a=3x$" width="53" height="12" /> and <img src="//latex.artofproblemsolving.com/e/e/4/ee463b2fc7be918ddc7a2e4541893d444f9001cb.png" class="latex" alt="$b=-4x$" style="vertical-align: -2px" width="68" height="16" />.) 
+</p><p>Then, <img src="//latex.artofproblemsolving.com/d/1/4/d14ea7841189a1f6169b5022f6145836248ad590.png" class="latex" alt="$(3x)^2+(-4x)^2=25x^2=16$" style="vertical-align: -5px" width="223" height="21" />, so <img src="//latex.artofproblemsolving.com/e/7/2/e72474d69828614ebfcbc64c287dcac5d59c1d36.png" class="latex" alt="$x=\dfrac45$" style="vertical-align: -13px" width="50" height="38" /> and we have <img src="//latex.artofproblemsolving.com/2/4/b/24b33cb4b8282b7be0a293ada7f8224e35b9c7c8.png" class="latex" alt="$a=\dfrac{12}5$" style="vertical-align: -13px" width="58" height="38" /> and <img src="//latex.artofproblemsolving.com/4/9/4/494bd015c002f36fe4e4c69d47db1cf4284202e4.png" class="latex" alt="$b=-\dfrac{16}5$" style="vertical-align: -13px" width="70" height="38" />. This yields 
+</p><p><img src="//latex.artofproblemsolving.com/3/8/7/387cd96fd8ca53d3bee6ccbdbb1fd71fa7db80dd.png" class="latexcenter" alt="\[27\left(3\left(\dfrac{12}5\right)-4\left(-\dfrac{16}5\right)\right)=27\left(\dfrac{36}5+\dfrac{64}5\right)=27\cdot\dfrac{100}5=\boxed{540}~.\]" width="501" height="43" /> 
+</p><p>QED. <img src="//latex.artofproblemsolving.com/c/1/2/c12dda010ebddef028cda1ec9d14986f4a26d07e.png" class="latex" alt="$\Box$" style="vertical-align: -1px" width="12" height="11" />
+</p><p>~Technodoggo
+</p>
+<h2><span id="Solution_12_(Wave_function)"></span><span class="mw-headline" id="Solution_12_.28Wave_function.29">Solution 12 (Wave function)</span></h2>
+<p>Note that we can scale down the expression by a factor of <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />, namely, we compute the maximum possible real part of <img src="//latex.artofproblemsolving.com/b/7/2/b721b543fe569338522d24ae94ffbfb72a33569a.png" class="latex" alt="${25+39i}z+{32+48i\over z}$" style="vertical-align: -13px" width="167" height="39" /> for <img src="//latex.artofproblemsolving.com/8/4/e/84ef5e8288cf9d83ed345ac49e48fb8a3e82cce5.png" class="latex" alt="$|z|=4$" style="vertical-align: -5px" width="55" height="20" /> and multiply this result by 3. Write <img src="//latex.artofproblemsolving.com/0/d/f/0df1eed6933db03d5c4fdcbe52d46ad657e64477.png" class="latex" alt="$z=4(\cos t+i\sin t)$" style="vertical-align: -5px" width="156" height="20" /> we have \begin{align}(25+39i)z+{32+48i\over z}\\=4(25+39i)(\cos t+i\sin t)+{32+48i\over 4(\cos t+i\sin t)\\}=(100+156i)(\cos t+i\sin t)+(8+12i)(\cos t-i\sin t)\end{align}
+</p><p>The real part of <img src="//latex.artofproblemsolving.com/e/b/3/eb3e494f6676ab08913322fb80d9395440121db9.png" class="latex" alt="$(100+156i)(\cos t+i\sin t)+(8+12i)(\cos t-i\sin t)$" style="vertical-align: -5px" width="414" height="20" /> is then <img src="//latex.artofproblemsolving.com/2/5/b/25b78bbdb6b128f51233774d3c28ede3522ed05b.png" class="latexcenter" alt="\[108\cos t-144\sin t=36(3\cos t-4\sin t)\]" width="314" height="18" />
+</p><p>The function <img src="//latex.artofproblemsolving.com/4/b/b/4bbfff73bdc8632c0f3779ac91e09c879548a91a.png" class="latex" alt="$3\cos t-4\sin t$" style="vertical-align: -2px" width="114" height="15" /> oscillates with amplitude <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" />, so the maximum value of the scaled-down expression is <img src="//latex.artofproblemsolving.com/1/f/8/1f83c5d42a691cc8371157f6f72a702a33807663.png" class="latex" alt="$36\cdot 5=180$" style="vertical-align: -1px" width="94" height="14" />. Hence, our requested answer is <img src="//latex.artofproblemsolving.com/2/5/d/25d0187c28b37a17daeda618cd3e51cf4397d3ba.png" class="latex" alt="$180\cdot 3=\boxed{540}$" style="vertical-align: -6px" width="114" height="25" />.
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_MOP_2024">Video Solution by MOP 2024</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=nH7dUh0HghA">https://www.youtube.com/watch?v=nH7dUh0HghA</a>
+</p><p>~r00tsOfUnity
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_OmegaLearn.org">Video Solution by OmegaLearn.org</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/fErzDCu_utY">https://youtu.be/fErzDCu_utY</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/fC6CPlQIRB8">https://youtu.be/fC6CPlQIRB8</a> 
+</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2024_AIME_I" title="2024 AIME I">2024 AIME I</a></b> (<b><a href="/wiki/index.php/2024_AIME_I_Problems" title="2024 AIME I Problems">Problems</a></b> • <b><a href="/wiki/index.php/2024_AIME_I_Answer_Key" title="2024 AIME I Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2024">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2024_AIME_I_Problems/Problem_6" title="2024 AIME I Problems/Problem 6">Problem 6</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2024_AIME_I_Problems/Problem_8" title="2024 AIME I Problems/Problem 8">Problem 8</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2024_AIME_I_Problems/Problem_1" title="2024 AIME I Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_2" title="2024 AIME I Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_3" title="2024 AIME I Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_4" title="2024 AIME I Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_5" title="2024 AIME I Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_6" title="2024 AIME I Problems/Problem 6">6</a> <b>•</b> <a class="mw-selflink selflink">7</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_8" title="2024 AIME I Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_9" title="2024 AIME I Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_10" title="2024 AIME I Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_11" title="2024 AIME I Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_12" title="2024 AIME I Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_13" title="2024 AIME I Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_14" title="2024 AIME I Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_I_Problems/Problem_15" title="2024 AIME I Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818182703
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.138 seconds
+Real time usage: 0.144 seconds
+Preprocessor visited node count: 1820/1000000
+Preprocessor generated node count: 4218/1000000
+Post‐expand include size: 1710/2097152 bytes
+Template argument size: 108/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 36341/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.699      1 -total
+ 73.59%    3.458      1 Template:AIME_box
+ 23.24%    1.092      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:25784-0!canonical and timestamp 20250818182703 and revision id 255604
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2024_AIME_I_Problems/Problem_7&amp;oldid=255604">https://artofproblemsolving.com/wiki/index.php?title=2024_AIME_I_Problems/Problem_7&amp;oldid=255604</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e794739d45774',t:'MTc1ODM0MTQzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818182703 -->
+</html>
+

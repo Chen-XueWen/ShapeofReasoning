@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 AIME II Problems/Problem 13 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_AIME_II_Problems/Problem_13","wgTitle":"2021 AIME II Problems/Problem 13","wgCurRevisionId":252705,"wgRevisionId":252705,"wgArticleId":20941,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_AIME_II_Problems/Problem_13","wgRelevantArticleId":20941,"wgRequestId":"fa41794a91e3578091d56dff","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_AIME_II_Problems_Problem_13 rootpage-2021_AIME_II_Problems_Problem_13 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 AIME II Problems/Problem 13																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_13" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2021_AIME_II_Problems/Problem_13&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_13&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_13&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2021_AIME_II_Problems/Problem_13" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 AIME II Problems/Problem 13</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28Chinese_Remainder_Theorem_and_Binomial_Theorem.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (Chinese Remainder Theorem and Binomial Theorem)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Minimal_Computation.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Minimal Computation)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28STEP_by_step_transform.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (STEP by step transform)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6_.28Art_of_Enumeration.29"><span class="tocnumber">7</span> <span class="toctext">Solution 6 (Art of Enumeration)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Note"><span class="tocnumber">8</span> <span class="toctext">Note</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Video_Solution"><span class="tocnumber">9</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Video_Solution_by_Interstigation"><span class="tocnumber">10</span> <span class="toctext">Video Solution by Interstigation</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_Also"><span class="tocnumber">11</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Find the least positive integer <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> for which <img src="//latex.artofproblemsolving.com/d/1/0/d10bf0bf2ca63e9a824f820317893b8afa1a0f94.png" class="latex" alt="$2^n + 5^n - n$" style="vertical-align: -1px" width="91" height="14" /> is a multiple of <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" />.
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>Recall that <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" /> divides this expression if <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" /> and <img src="//latex.artofproblemsolving.com/b/8/2/b829a6f0810a25e9ca9f85d690f2bafd0f2c1773.png" class="latex" alt="$125$" style="vertical-align: 0px" width="26" height="13" /> both divide it. It should be fairly obvious that <img src="//latex.artofproblemsolving.com/4/9/e/49e6a2d706867d6652d7edadccc3fd034130bd98.png" class="latex" alt="$n \geq 3$" style="vertical-align: -2px" width="43" height="15" />; so we may break up the initial condition into two sub-conditions.
+</p><p>(1) <img src="//latex.artofproblemsolving.com/9/d/d/9dd09a718a114358493c8cf1d7632e288b54e914.png" class="latex" alt="$5^n \equiv n \pmod{8}$" style="vertical-align: -4px" width="124" height="18" />. Notice that the square of any odd integer is <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> modulo <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" /> (proof by plugging in <img src="//latex.artofproblemsolving.com/3/6/4/364742a954cfdf6f5b74b1273386607392f501ee.png" class="latex" alt="$1^2,3^2,5^2,7^2$" style="vertical-align: -4px" width="92" height="20" /> into modulo <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" />), so the LHS of this expression goes <img src="//latex.artofproblemsolving.com/f/5/4/f546d81e92e978c20dedde2aa312be7922070482.png" class="latex" alt="$5,1,5,1,\ldots$" style="vertical-align: -4px" width="92" height="17" />, while the RHS goes <img src="//latex.artofproblemsolving.com/8/c/1/8c1e017597f343ecbc536eb1a7614263ce4fd317.png" class="latex" alt="$1,2,3,4,5,6,7,8,1,\ldots$" style="vertical-align: -4px" width="178" height="17" />. The cycle length of the LHS is <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />, RHS is <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" />, so the cycle length of the solution is <img src="//latex.artofproblemsolving.com/3/e/e/3ee4499d37c1bf29ea04566ffcbe4388eb25f950.png" class="latex" alt="$\operatorname{lcm}(2,8)=8$" style="vertical-align: -5px" width="104" height="20" />. Indeed, the <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> that solve this congruence are exactly those such that <img src="//latex.artofproblemsolving.com/d/0/7/d078bf47d59d4b3e4218a9ac4ac38dcc5fb9bd7d.png" class="latex" alt="$n \equiv 5 \pmod{8}$" style="vertical-align: -4px" width="115" height="18" />.
+</p><p>(2) <img src="//latex.artofproblemsolving.com/c/5/b/c5b8a99d28cc94f60522ee2ee0bc24e7685c2d3f.png" class="latex" alt="$2^n \equiv n \pmod{125}$" style="vertical-align: -4px" width="142" height="18" />. This is extremely computationally intensive if we try to calculate all <img src="//latex.artofproblemsolving.com/0/8/8/088a46fc9ff08e1ab4b0689e9d4f97ee12cf21f1.png" class="latex" alt="$2^1,2^2,\ldots,2^{100} \pmod{125}$" style="vertical-align: -5px" width="204" height="21" />, so we take a divide-and-conquer approach instead. In order for this expression to be true, <img src="//latex.artofproblemsolving.com/9/e/9/9e998c3c935d1db2ef54e90c11fefca7ed588eab.png" class="latex" alt="$2^n \equiv n \pmod{5}$" style="vertical-align: -4px" width="124" height="18" /> is necessary; it shouldn't take too long for us to go through the <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" /> possible LHS-RHS combinations, considering that <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> must be odd. We only need to test <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> values of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and obtain <img src="//latex.artofproblemsolving.com/8/d/5/8d5eb7ca7bde72762aa353dfe8581fc4270452f5.png" class="latex" alt="$n \equiv 3 \pmod{20}$" style="vertical-align: -4px" width="124" height="18" /> or <img src="//latex.artofproblemsolving.com/4/8/f/48f715f34de89653fe8ca5744516ad9a8c0d61dd.png" class="latex" alt="$n \equiv 17 \pmod{20}$" style="vertical-align: -4px" width="133" height="18" />.
+</p><p>With this in mind we consider <img src="//latex.artofproblemsolving.com/b/b/a/bba4eedb56a9681272fc7ef3d9353924c6e5733d.png" class="latex" alt="$2^n \equiv n \pmod{25}$" style="vertical-align: -5px" width="136" height="20" />. By the Generalized Fermat's Little Theorem, <img src="//latex.artofproblemsolving.com/3/e/7/3e719691df58470972cce8d27d08f30f803d90bd.png" class="latex" alt="$2^{20} \equiv 1 \pmod{25}$" style="vertical-align: -4px" width="136" height="19" />, but we already have <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> modulo <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" />. Our calculation is greatly simplified. The LHS's cycle length is <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" /> and the RHS's cycle length is <img src="//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png" class="latex" alt="$25$" width="17" height="12" />, from which their least common multiple is <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" />. In this step we need to test all the numbers between <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> to <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" /> that <img src="//latex.artofproblemsolving.com/8/d/5/8d5eb7ca7bde72762aa353dfe8581fc4270452f5.png" class="latex" alt="$n \equiv 3 \pmod{20}$" style="vertical-align: -4px" width="124" height="18" /> or <img src="//latex.artofproblemsolving.com/4/8/f/48f715f34de89653fe8ca5744516ad9a8c0d61dd.png" class="latex" alt="$n \equiv 17 \pmod{20}$" style="vertical-align: -4px" width="133" height="18" />. In the case that <img src="//latex.artofproblemsolving.com/8/d/5/8d5eb7ca7bde72762aa353dfe8581fc4270452f5.png" class="latex" alt="$n \equiv 3 \pmod{20}$" style="vertical-align: -4px" width="124" height="18" />, the RHS goes <img src="//latex.artofproblemsolving.com/2/8/7/28715df446274c15e632f5cdf057b4c957fc99ba.png" class="latex" alt="$3,23,43,63,83$" style="vertical-align: -4px" width="116" height="17" />, and we need <img src="//latex.artofproblemsolving.com/a/4/6/a4634990015afe3116e8d9303732212899373015.png" class="latex" alt="$2^n \equiv n \equiv 2^3 \pmod{25}$" style="vertical-align: -5px" width="177" height="21" />; clearly <img src="//latex.artofproblemsolving.com/5/8/f/58fbdaaaac600f69490db13e4629f12c7138f8ff.png" class="latex" alt="$n \equiv 83 \pmod{100}$" style="vertical-align: -4px" width="142" height="18" />. In the case that <img src="//latex.artofproblemsolving.com/4/8/f/48f715f34de89653fe8ca5744516ad9a8c0d61dd.png" class="latex" alt="$n \equiv 17 \pmod{20}$" style="vertical-align: -4px" width="133" height="18" />, by a similar argument, <img src="//latex.artofproblemsolving.com/b/7/8/b78e12e9dfb6cb9909a1bf79f8e9d4345ab15893.png" class="latex" alt="$n \equiv 97 \pmod{100}$" style="vertical-align: -4px" width="142" height="18" />. 
+</p><p>In the final step, we need to calculate <img src="//latex.artofproblemsolving.com/6/d/2/6d2d7c8507f5d7a82958aba0f1b08f7b447bc4cd.png" class="latex" alt="$2^{97}$" width="22" height="15" /> and <img src="//latex.artofproblemsolving.com/3/c/d/3cdd4ca5050876067f7e11bd9cc05755d2fb7eb0.png" class="latex" alt="$2^{83}$" width="21" height="15" /> modulo <img src="//latex.artofproblemsolving.com/b/8/2/b829a6f0810a25e9ca9f85d690f2bafd0f2c1773.png" class="latex" alt="$125$" style="vertical-align: 0px" width="26" height="13" />:
+</p><p>Note that <img src="//latex.artofproblemsolving.com/a/2/c/a2cdf95fa91d74e98df8238cc5d7985b20799182.png" class="latex" alt="$2^{97}\equiv2^{-3}$" style="vertical-align: -1px" width="76" height="17" />; because <img src="//latex.artofproblemsolving.com/5/0/2/5022317cea24ebbde871c175f7d09c4c7729be0b.png" class="latex" alt="$8\cdot47=376\equiv1\pmod{125},$" style="vertical-align: -5px" width="223" height="20" /> we get <img src="//latex.artofproblemsolving.com/d/9/8/d9873fc4c744f6c497e7acccea63ffb847d510ec.png" class="latex" alt="$2^{97} \equiv 47\pmod{125}$" style="vertical-align: -5px" width="158" height="21" />. 
+</p><p>Note that <img src="//latex.artofproblemsolving.com/3/c/d/3cdd4ca5050876067f7e11bd9cc05755d2fb7eb0.png" class="latex" alt="$2^{83}$" width="21" height="15" /> is <img src="//latex.artofproblemsolving.com/e/8/e/e8ed8a28e5ca8863f4811310c7ab6464ff3fc87f.png" class="latex" alt="$2^{-17}=2^{-16}\cdot2^{-1}$" style="vertical-align: -1px" width="133" height="17" />. We have
+<img src="//latex.artofproblemsolving.com/9/9/a/99a9ce1b15f3ab550e109696fff007b6684fa30a.png" class="latexcenter" alt="\begin{align*} 2^{-1}&amp;\equiv63, \\ 2^{-2}&amp;\equiv63^2=3969\equiv-31, \\ 2^{-4}&amp;\equiv(-31)^2=961\equiv-39, \\ 2^{-8}&amp;\equiv1521\equiv21, \\ 2^{-16}&amp;\equiv441, \\ 2^{-17}&amp;\equiv63\cdot441\equiv7\cdot(-31)=-217\equiv33. \end{align*}" width="320" height="158" /> 
+This time, LHS cycle is <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" />, RHS cycle is <img src="//latex.artofproblemsolving.com/b/8/2/b829a6f0810a25e9ca9f85d690f2bafd0f2c1773.png" class="latex" alt="$125$" style="vertical-align: 0px" width="26" height="13" />, so we need to figure out <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> modulo <img src="//latex.artofproblemsolving.com/a/3/9/a39b14023c98c943554d150561aacc188c4ce26d.png" class="latex" alt="$500$" style="vertical-align: -1px" width="29" height="14" />. It should be <img src="//latex.artofproblemsolving.com/5/f/b/5fb33f92034f6759971fff21af6561e8a706a5c6.png" class="latex" alt="$n \equiv 283,297 \pmod{500}$" style="vertical-align: -4px" width="186" height="18" />.
+</p><p>Put everything together. By the second subcondition, the only candidates less than <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" /> are <img src="//latex.artofproblemsolving.com/b/8/f/b8fd5439c525c240b6b9ea36aebfb5f96b3aef1a.png" class="latex" alt="$283,297,783,797$" style="vertical-align: -4px" width="135" height="17" />. Apply the first subcondition, <img src="//latex.artofproblemsolving.com/8/e/2/8e2f6e1da947bd6ba9b987d630e9a830447e30d5.png" class="latex" alt="$n=\boxed{797}$" style="vertical-align: -6px" width="76" height="25" /> is the desired answer.
+</p><p>~Ross Gao (Solution)
+</p><p>~MRENTHUSIASM (Minor Reformatting)
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>We have that <img src="//latex.artofproblemsolving.com/2/e/7/2e74ae93cb410a2b763c1889462ae3f35d32af07.png" class="latex" alt="$2^n + 5^n \equiv n\pmod{1000}$" style="vertical-align: -4px" width="191" height="18" />, or <img src="//latex.artofproblemsolving.com/2/8/0/2800887e02fb522e0032c06007e6f0f8a5c214dd.png" class="latex" alt="$2^n + 5^n \equiv n \pmod{8}$" style="vertical-align: -4px" width="164" height="18" /> and <img src="//latex.artofproblemsolving.com/b/0/4/b04ad293035dad328bded5f9f31bf6d4a9ab3a48.png" class="latex" alt="$2^n + 5^n \equiv n \pmod{125}$" style="vertical-align: -4px" width="182" height="18" /> by CRT. It is easy to check <img src="//latex.artofproblemsolving.com/1/d/0/1d01f44ee1d877ef6df79dac11f9cc3a1ca986a5.png" class="latex" alt="$n &lt; 3$" style="vertical-align: 0px" width="43" height="13" /> don't work, so we have that <img src="//latex.artofproblemsolving.com/4/9/e/49e6a2d706867d6652d7edadccc3fd034130bd98.png" class="latex" alt="$n \geq 3$" style="vertical-align: -2px" width="43" height="15" />. Then, <img src="//latex.artofproblemsolving.com/5/5/3/553de8d0b6a8111693403b4d072b47990380171f.png" class="latex" alt="$2^n \equiv 0 \pmod{8}$" style="vertical-align: -4px" width="122" height="18" /> and <img src="//latex.artofproblemsolving.com/b/3/0/b30c3c1ebb0f94ccb01c5550fce332623244b644.png" class="latex" alt="$5^n \equiv 0 \pmod{125}$" style="vertical-align: -4px" width="140" height="18" />, so we just have <img src="//latex.artofproblemsolving.com/9/d/d/9dd09a718a114358493c8cf1d7632e288b54e914.png" class="latex" alt="$5^n \equiv n \pmod{8}$" style="vertical-align: -4px" width="124" height="18" /> and <img src="//latex.artofproblemsolving.com/c/5/b/c5b8a99d28cc94f60522ee2ee0bc24e7685c2d3f.png" class="latex" alt="$2^n \equiv n \pmod{125}$" style="vertical-align: -4px" width="142" height="18" />. Let us consider both of these congruences separately.
+</p><p>First, we look at <img src="//latex.artofproblemsolving.com/9/d/d/9dd09a718a114358493c8cf1d7632e288b54e914.png" class="latex" alt="$5^n \equiv n \pmod{8}$" style="vertical-align: -4px" width="124" height="18" />. By Euler's Totient Theorem (ETT), we have <img src="//latex.artofproblemsolving.com/6/2/d/62d24fe3e0e0268459b87e31dc0e090a8e60462b.png" class="latex" alt="$5^4 \equiv 1 \pmod{8}$" style="vertical-align: -4px" width="120" height="19" />, so <img src="//latex.artofproblemsolving.com/b/f/7/bf7fc8bc5bcc3bbc88180439fb9960451ee35a96.png" class="latex" alt="$5^5 \equiv 5 \pmod{8}$" style="vertical-align: -4px" width="120" height="19" />. On the RHS of the congruence, the possible values of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> are all nonnegative integers less than <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" /> and on the RHS the only possible values are <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />. However, for <img src="//latex.artofproblemsolving.com/5/b/2/5b216498b4cb64f29f3bfdfa60736dc769f06c7d.png" class="latex" alt="$5^n$" width="17" height="12" /> to be <img src="//latex.artofproblemsolving.com/5/4/6/546b1d3e14b1967b249b9ab8d55c7efa425d084c.png" class="latex" alt="$1 \pmod{8}$" style="vertical-align: -4px" width="79" height="18" /> we must have <img src="//latex.artofproblemsolving.com/9/2/f/92fdee5c0b144a68bc505893aa7f578b570e2e04.png" class="latex" alt="$n \equiv 0 \pmod{4}$" style="vertical-align: -4px" width="115" height="18" />, a contradiction. So, the only possible values of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> are when <img src="//latex.artofproblemsolving.com/3/a/a/3aa4da9f672fc97a81f6e825b326dbf12ea88cac.png" class="latex" alt="$n \equiv 5 \pmod{8} \implies n = 8k+5$" style="vertical-align: -4px" width="251" height="18" />.
+</p><p>Now we look at <img src="//latex.artofproblemsolving.com/c/5/b/c5b8a99d28cc94f60522ee2ee0bc24e7685c2d3f.png" class="latex" alt="$2^n \equiv n \pmod{125}$" style="vertical-align: -4px" width="142" height="18" />. Plugging in <img src="//latex.artofproblemsolving.com/9/9/0/990d34c1e34fee53c067c9583f52d750b49b3bd4.png" class="latex" alt="$n = 8k+5$" style="vertical-align: -1px" width="85" height="14" />, we get <img src="//latex.artofproblemsolving.com/2/3/b/23b78a38848ec3956bf2b5223595bbe8fd86a9c3.png" class="latex" alt="$2^{8k+5} \equiv 8k+5 \pmod{125} \implies 2^{8k} \cdot 32 \equiv 8k+5 \pmod{125}$" style="vertical-align: -4px" width="473" height="20" />. Note, for <img src="//latex.artofproblemsolving.com/8/4/1/841a8b897767930026ffffd00cef4f53b8b24bea.png" class="latex" alt="$2^n \equiv n\pmod{125}$" style="vertical-align: -5px" width="146" height="20" /> to be satisfied, we must have <img src="//latex.artofproblemsolving.com/9/e/9/9e998c3c935d1db2ef54e90c11fefca7ed588eab.png" class="latex" alt="$2^n \equiv n \pmod{5}$" style="vertical-align: -4px" width="124" height="18" /> and <img src="//latex.artofproblemsolving.com/d/c/2/dc25a6adbb537d7243f5c51a39912dcd54a0a97c.png" class="latex" alt="$2^n \equiv n\pmod{25}$" style="vertical-align: -4px" width="133" height="18" />. Since <img src="//latex.artofproblemsolving.com/0/7/d/07d5fe7d1e417ffec21478a5d395d0e06b1e218e.png" class="latex" alt="$2^{8k} \equiv 1\pmod{5}$" style="vertical-align: -4px" width="128" height="20" /> as <img src="//latex.artofproblemsolving.com/7/4/2/742bcf8433170c04490c2ffe6d03d7f95f67263a.png" class="latex" alt="$8k \equiv 0\pmod{4}$" style="vertical-align: -4px" width="123" height="18" />, we have <img src="//latex.artofproblemsolving.com/5/b/2/5b2478cacb651921563a05420ab52a68e64b0169.png" class="latex" alt="$2 \equiv -2k \pmod{5} \implies k = 5m-1$" style="vertical-align: -4px" width="278" height="18" />. Then, <img src="//latex.artofproblemsolving.com/b/3/1/b3115b3e71859ea480140076dd2589c9d8ab7d0a.png" class="latex" alt="$n = 8(5m-1) + 5 = 40m-3$" style="vertical-align: -4px" width="235" height="18" />. Now, we get <img src="//latex.artofproblemsolving.com/e/d/b/edb6c8d4b53f31dc7deca996f3302babb1fa3ce2.png" class="latex" alt="$2^{40m-3} \equiv 40m-3 \pmod{125}$" style="vertical-align: -4px" width="230" height="19" />. Using the fact that <img src="//latex.artofproblemsolving.com/d/c/2/dc25a6adbb537d7243f5c51a39912dcd54a0a97c.png" class="latex" alt="$2^n \equiv n\pmod{25}$" style="vertical-align: -4px" width="133" height="18" />, we get <img src="//latex.artofproblemsolving.com/4/2/b/42b9e6c60025493a5eae3132f27459f9e270a6c8.png" class="latex" alt="$2^{-3} \equiv 15m-3 \pmod{25}$" style="vertical-align: -5px" width="200" height="21" />. The inverse of <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> modulo <img src="//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png" class="latex" alt="$25$" width="17" height="12" /> is obviously <img src="//latex.artofproblemsolving.com/0/3/0/030e19e4e2f1c074127cb50581e8496470c5419f.png" class="latex" alt="$13$" style="vertical-align: 0px" width="17" height="13" />, so <img src="//latex.artofproblemsolving.com/1/2/2/122adaccc63947fa2469ca765b081f1ad9487f5c.png" class="latex" alt="$2^{-3} \equiv 13^3 \equiv 22 \pmod{25}$" style="vertical-align: -4px" width="199" height="19" />, so <img src="//latex.artofproblemsolving.com/2/c/b/2cbf00d6edff74b4da4f49982b63bedbd6048c6a.png" class="latex" alt="$15m \equiv 0 \pmod{25} \implies m = 5s$" style="vertical-align: -4px" width="255" height="18" />. Plugging in <img src="//latex.artofproblemsolving.com/5/b/e/5be8f2acc45db3e7dfa83ed29c16f98ade07a0a4.png" class="latex" alt="$m = 5s$" width="57" height="12" />, we get <img src="//latex.artofproblemsolving.com/5/5/6/5562c583b183461cae14eff20bd310a0059343a5.png" class="latex" alt="$n = 200s - 3$" width="101" height="12" />.
+</p><p>Now, we are finally ready to plug <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> into the congruence modulo <img src="//latex.artofproblemsolving.com/b/8/2/b829a6f0810a25e9ca9f85d690f2bafd0f2c1773.png" class="latex" alt="$125$" style="vertical-align: 0px" width="26" height="13" />. Plugging in, we get <img src="//latex.artofproblemsolving.com/0/c/2/0c2bfaf0eec7d9a5f8dce9654bb5de162d863b14.png" class="latex" alt="$2^{200s-3} \equiv 200s - 3 \pmod{125}$" style="vertical-align: -4px" width="233" height="19" />. By ETT, we get <img src="//latex.artofproblemsolving.com/8/8/9/889831c27cfc86d212f29d0d7854aabf5172047b.png" class="latex" alt="$2^{100} \equiv 1 \pmod{125}$" style="vertical-align: -4px" width="151" height="19" />, so <img src="//latex.artofproblemsolving.com/b/a/0/ba07615f7629cc95a3f426ab617864522d2cf1e9.png" class="latex" alt="$2^{200s- 3} \equiv 2^{-3} \equiv 47 \pmod{125}$" style="vertical-align: -4px" width="235" height="19" />. Then, <img src="//latex.artofproblemsolving.com/5/2/1/5211dab3102a51d67f8de8bfa18c35efe6d5ec66.png" class="latex" alt="$200s \equiv 50 \pmod{125} \implies s \equiv 4 \pmod{5} \implies s = 5y+4$" style="vertical-align: -4px" width="464" height="18" />. Plugging this in, we get <img src="//latex.artofproblemsolving.com/9/d/a/9da9643c065c78d182154c0701184f3f28e49ce8.png" class="latex" alt="$n = 200(5y+4) - 3 = 1000y+797$" style="vertical-align: -4px" width="277" height="18" />, implying the smallest value of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is simply <img src="//latex.artofproblemsolving.com/3/6/3/3637f490b285cf7f58999c717a70278de640138f.png" class="latex" alt="$\boxed{797}$" style="vertical-align: -5px" width="39" height="23" />. 
+</p><p>~rocketsri
+</p>
+<h2><span id="Solution_3_(Chinese_Remainder_Theorem_and_Binomial_Theorem)"></span><span class="mw-headline" id="Solution_3_.28Chinese_Remainder_Theorem_and_Binomial_Theorem.29">Solution 3 (Chinese Remainder Theorem and Binomial Theorem)</span></h2>
+<p>We wish to find the least positive integer <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> for which <img src="//latex.artofproblemsolving.com/f/1/c/f1c5a56183739e0843bd450d4a498dc81c0c3340.png" class="latex" alt="$2^n+5^n-n\equiv0\pmod{1000}.$" style="vertical-align: -4px" width="227" height="18" /> Rearranging gives <img src="//latex.artofproblemsolving.com/9/a/2/9a20192088e94ac3969fa07daf4a278e77613769.png" class="latexcenter" alt="\[2^n+5^n\equiv n\pmod{1000}.\]" width="205" height="18" /> Applying the Chinese Remainder Theorem, we get the following system of congruences:
+<img src="//latex.artofproblemsolving.com/3/c/1/3c17730b8e46c871235f16b0d19938ab3eb47754.png" class="latexcenter" alt="\begin{align*} 2^n+5^n &amp;\equiv n \pmod{8}, \\ 2^n+5^n &amp;\equiv n \pmod{125}. \end{align*}" width="196" height="43" />
+It is clear that <img src="//latex.artofproblemsolving.com/3/e/a/3ea143bd804d6331bd6ca02fc238dfaf7c5e1976.png" class="latex" alt="$n\geq3,$" style="vertical-align: -3px" width="48" height="16" /> from which we simplify to 
+<img src="//latex.artofproblemsolving.com/e/9/b/e9b38b724a9d62539cbfcafc9f6ae29fc7335704.png" class="latexcenter" alt="\begin{align*} 5^n &amp;\equiv n \pmod{8}, \hspace{15mm} &amp;(1) \\ 2^n &amp;\equiv n \pmod{125}. &amp;(2) \end{align*}" width="314" height="43" />
+We solve each congruence separately:
+</p>
+<ol style="margin-left: 1.5em;">
+  <li>For <img src="//latex.artofproblemsolving.com/5/c/e/5ce77ffde63857d062fad3bcfaca1ed8f545af6e.png" class="latex" alt="$(1),$" style="vertical-align: -4px" width="27" height="18" /> quick inspections produce that <img src="//latex.artofproblemsolving.com/d/5/d/d5ddc5cfab56a6b439b4ee87dd0915865da4c31c.png" class="latex" alt="$5^1,5^2,5^3,5^4,\ldots$" style="vertical-align: -4px" width="122" height="20" /> are congruent to <img src="//latex.artofproblemsolving.com/f/5/4/f546d81e92e978c20dedde2aa312be7922070482.png" class="latex" alt="$5,1,5,1,\ldots$" style="vertical-align: -4px" width="92" height="17" /> modulo <img src="//latex.artofproblemsolving.com/1/2/a/12a9fb4c5b23667e57f28d844ad99715f18ba3fa.png" class="latex" alt="$8,$" style="vertical-align: -3px" width="13" height="16" /> respectively. More generally, <img src="//latex.artofproblemsolving.com/a/6/5/a65af752232bfad3e623060740eab7d59f44c7be.png" class="latex" alt="$5^n \equiv 5 \pmod{8}$" style="vertical-align: -5px" width="126" height="20" /> if <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is odd, and <img src="//latex.artofproblemsolving.com/c/6/6/c66de2a5eb577b9140307ca8a3e20165d0573b48.png" class="latex" alt="$5^n \equiv 1 \pmod{8}$" style="vertical-align: -4px" width="122" height="18" /> if <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is even. As <img src="//latex.artofproblemsolving.com/5/b/2/5b216498b4cb64f29f3bfdfa60736dc769f06c7d.png" class="latex" alt="$5^n$" width="17" height="12" /> is always odd (so is <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />), we must have <img src="//latex.artofproblemsolving.com/b/2/7/b2704bbd0c0f798c5d62f921439185aae5b920f8.png" class="latex" alt="$n\equiv5\pmod{8}.$" style="vertical-align: -4px" width="120" height="18" /> <p>
+<i><b>That is, <img src="//latex.artofproblemsolving.com/7/e/f/7efab9d1763b132e0be070ed94c7b82a3916eb58.png" class="latex" alt="$\boldsymbol{n=8r+5}$" style="vertical-align: -2px" width="96" height="15" /> for some nonnegative integer <img src="//latex.artofproblemsolving.com/5/7/8/578dbe63e58d03f5a22e74e15fd1ff4084454f46.png" class="latex" alt="$\boldsymbol{r.}$" width="13" height="8" /></b></i></p></li><p class="mw-empty-elt">
+  </p><li>For <img src="//latex.artofproblemsolving.com/e/d/f/edfab0dd6bac5131ab929c8459a0de0c4486dd27.png" class="latex" alt="$(2),$" style="vertical-align: -4px" width="27" height="18" /> we substitute the result from <img src="//latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> and simplify:</li>
+<p><img src="//latex.artofproblemsolving.com/4/3/e/43e4b2e5cfac5bd19c1eef69bf0da745dd442137.png" class="latexcenter" alt="\begin{align*} 2^{8r+5}&amp;\equiv8r+5\pmod{125} \\ \left(2^8\right)^r\cdot2^5&amp;\equiv8r+5\pmod{125} \\ 256^r\cdot32&amp;\equiv8r+5\pmod{125} \\ 6^r\cdot32&amp;\equiv8r+5\pmod{125}. \end{align*}" width="244" height="100" />
+Note that <img src="//latex.artofproblemsolving.com/e/3/a/e3a3f26200911534c37a95b55a5baba4d3d4a113.png" class="latex" alt="$5^3=125$" style="vertical-align: 0px" width="67" height="15" /> and <img src="//latex.artofproblemsolving.com/f/1/6/f1627344dfa520f70f949550447dca3a9629203f.png" class="latex" alt="$6=5+1,$" style="vertical-align: -3px" width="77" height="16" /> so we apply the Binomial Theorem to the left side:
+<img src="//latex.artofproblemsolving.com/c/b/8/cb81428cffd27f4267ff8670ea3351ff3cdade6f.png" class="latexcenter" alt="\begin{align*} (5+1)^r\cdot32&amp;\equiv8r+5\pmod{125} \\ \Biggl[\binom{r}{0}5^0+\binom{r}{1}5^1+\binom{r}{2}5^2+\phantom{ }\underbrace{\binom{r}{3}5^3+\cdots+\binom{r}{r}5^r}_{0\pmod{125}}\phantom{ }\Biggr]\cdot32&amp;\equiv8r+5\pmod{125} \\ \left[1+5r+\frac{25r(r-1)}{2}\right]\cdot32&amp;\equiv8r+5\pmod{125} \\ 32+160r+400r(r-1)&amp;\equiv8r+5\pmod{125} \\ 32+35r+25r(r-1)&amp;\equiv8r+5\pmod{125} \\ 25r^2+2r+27&amp;\equiv0\phantom{r+5}\pmod{125}. \hspace{15mm} (*) \end{align*}" width="725" height="235" />
+Since <img src="//latex.artofproblemsolving.com/5/f/c/5fc35b19ec5115da51b40cafc3e1b7d3a08abc14.png" class="latex" alt="$125\equiv0\pmod{5},$" style="vertical-align: -4px" width="136" height="18" /> it follows that
+<img src="//latex.artofproblemsolving.com/e/a/7/ea7d7102a0b4034a9a4d87f4bd8707a00294bc8b.png" class="latexcenter" alt="\begin{align*} 25r^2+2r+27&amp;\equiv0\pmod{5} \\ 2r+2&amp;\equiv0\pmod{5} \\ r&amp;\equiv4\pmod{5}. \end{align*}" width="233" height="69" />
+</p>
+<i><b>That is, <img src="//latex.artofproblemsolving.com/7/5/f/75f5b3b1c9f7b524ccdfd2471b0d473a60fe1567.png" class="latex" alt="$\boldsymbol{r=5s+4}$" style="vertical-align: -2px" width="93" height="15" /> for some nonnegative integer <img src="//latex.artofproblemsolving.com/b/c/9/bc9ff6f1810b9af8c4faac07244012d98b5cfb31.png" class="latex" alt="$\boldsymbol{s.}$" width="14" height="8" /></b></i><p>
+Substituting this back into <img src="//latex.artofproblemsolving.com/6/3/f/63fc5c700c9ef6c6097f086c2d1db5db8e9d3f65.png" class="latex" alt="$(*),$" style="vertical-align: -4px" width="27" height="18" /> we get
+<img src="//latex.artofproblemsolving.com/1/2/f/12faf50ac17b63f996487d63a7c55f8c183661b2.png" class="latexcenter" alt="\begin{align*} 25(5s+4)^2+2(5s+4)+27&amp;\equiv0\pmod{125} \\ 625s^2+1010s+435&amp;\equiv0\pmod{125} \\ 10s+60&amp;\equiv0\pmod{125} \\ 10(s+6)&amp;\equiv0\pmod{125}. \end{align*}" width="359" height="97" />
+As <img src="//latex.artofproblemsolving.com/d/5/a/d5abffdb3ebe52db54b6725efb23bb6c064a3d1d.png" class="latex" alt="$10(s+6)$" style="vertical-align: -4px" width="70" height="18" /> is a multiple of <img src="//latex.artofproblemsolving.com/e/f/3/ef35fa6169ebdc4a156ffc357f72cd8c624be699.png" class="latex" alt="$125,$" style="vertical-align: -3px" width="31" height="16" /> it has at least three factors of <img src="//latex.artofproblemsolving.com/b/8/3/b835f2c6c592edc4583ce996f86bcc0d07ca8da5.png" class="latex" alt="$5.$" width="12" height="12" /> Since <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> contributes one factor, <img src="//latex.artofproblemsolving.com/0/c/a/0ca3cd6012fee65cf3359e2cbdc4d27365caceb7.png" class="latex" alt="$s+6$" style="vertical-align: -1px" width="39" height="14" /> contributes at least two factors, or <img src="//latex.artofproblemsolving.com/0/c/a/0ca3cd6012fee65cf3359e2cbdc4d27365caceb7.png" class="latex" alt="$s+6$" style="vertical-align: -1px" width="39" height="14" /> must be a multiple of <img src="//latex.artofproblemsolving.com/6/7/b/67bc7bd42e6cb90851b324c8f2955a8d3021b6cb.png" class="latex" alt="$25.$" width="21" height="12" /> Therefore, the least such nonnegative integer <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> is <img src="//latex.artofproblemsolving.com/a/e/b/aeb45c8359d7e646a579268e0a2d40569dddb229.png" class="latex" alt="$19.$" style="vertical-align: -1px" width="25" height="14" />
+</p></ol>
+<p>Finally, combining the two results from above (bolded) generates the least such positive integer <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> at <img src="//latex.artofproblemsolving.com/f/f/3/ff30bf9431c33a43a7b2e3f11acd7398a201b7af.png" class="latex" alt="$s=19:$" style="vertical-align: 0px" width="59" height="13" />
+<img src="//latex.artofproblemsolving.com/0/7/5/07585927b16d35954a66acf2407d7fbd9c1394d7.png" class="latexcenter" alt="\begin{align*} n&amp;=8r+5 \\ &amp;=8(5s+4)+5 \\ &amp;=40s+37 \\ &amp;=\boxed{797}. \end{align*}" width="137" height="98" />
+~MRENTHUSIASM (inspired by Math Jams's <b>2021 AIME II Discussion</b>)
+</p>
+<h2><span id="Solution_4_(Minimal_Computation)"></span><span class="mw-headline" id="Solution_4_.28Minimal_Computation.29">Solution 4 (Minimal Computation)</span></h2>
+<p><img src="//latex.artofproblemsolving.com/d/f/e/dfe062a6806781a4ce42db0ba83ce7c638731ec6.png" class="latexcenter" alt="\[5^n \equiv n \pmod{8}\]" width="133" height="18" />
+Note that <img src="//latex.artofproblemsolving.com/2/1/1/211d2f1bfa122a6e460e71c13a4ffee664ca5f7e.png" class="latex" alt="$5^n \equiv 5,1,5,1,...$" style="vertical-align: -3px" width="124" height="16" /> and <img src="//latex.artofproblemsolving.com/c/a/e/caea9c45b19402dd6e097d53c215368427fa5ea6.png" class="latex" alt="$n \equiv 0,..,7$" style="vertical-align: -3px" width="79" height="16" /> so <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is periodic every <img src="//latex.artofproblemsolving.com/b/5/8/b588aadaab2fe0f7efaf982043e05582fdc8cee2.png" class="latex" alt="$[2,8]=8$" style="vertical-align: -5px" width="69" height="18" />. Easy to check that only <img src="//latex.artofproblemsolving.com/f/6/e/f6e606920770cfde85c815cbda13bd58e669ae92.png" class="latex" alt="$n\equiv 5 \pmod{8}$" style="vertical-align: -4px" width="115" height="18" /> satisfy. Let <img src="//latex.artofproblemsolving.com/3/6/2/36219c6872a089828bc4792acdbfa7b31ce2cfc2.png" class="latex" alt="$n=8a+5$" style="vertical-align: -1px" width="84" height="14" />. Note that by binomial theorem, 
+<img src="//latex.artofproblemsolving.com/5/f/c/5fc64ca5ce2ddfaeefd40e6b24a3e2dfa96e249f.png" class="latexcenter" alt="\[2^{8a+5}=32\cdot 2^{8a} \equiv 7(1+15)^{2a} \equiv 7(1+30a)\pmod{25}\]" width="427" height="19" />
+So we have <img src="//latex.artofproblemsolving.com/2/9/e/29ecf076ac38deb0753b29e90f0b120e192cac17.png" class="latex" alt="$7(1+30a) \equiv 8a+5\pmod{25} \implies 202a \equiv 23 \implies 2a \equiv 23+25 \implies a \equiv 24 \pmod{25}$" style="vertical-align: -4px" width="699" height="18" />.
+Combining <img src="//latex.artofproblemsolving.com/7/6/1/7612c705b544c350920e8a642e0f7e7db39aee33.png" class="latex" alt="$a\equiv 24\pmod{25}$" style="vertical-align: -4px" width="131" height="18" /> with <img src="//latex.artofproblemsolving.com/d/0/7/d078bf47d59d4b3e4218a9ac4ac38dcc5fb9bd7d.png" class="latex" alt="$n \equiv 5 \pmod{8}$" style="vertical-align: -4px" width="115" height="18" /> gives that <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is in the form of <img src="//latex.artofproblemsolving.com/2/3/6/2367d52456cd1a2a05b8ec7edb206f635839b06f.png" class="latex" alt="$197+200k$" style="vertical-align: -1px" width="86" height="14" />, <img src="//latex.artofproblemsolving.com/b/a/7/ba77c13fd1a83d639fedf6982afb681af5a894a7.png" class="latex" alt="$n=197,397,597,797$" style="vertical-align: -3px" width="168" height="16" />. Note that since <img src="//latex.artofproblemsolving.com/d/5/8/d58da5a3fbf46964351a0fa92e8c9f368a2a0452.png" class="latex" alt="$\phi(125)=100$" style="vertical-align: -4px" width="103" height="18" />
+<img src="//latex.artofproblemsolving.com/a/6/8/a68ee9ffd52e190c819f4ac684a20623563d1385.png" class="latexcenter" alt="\[2^{197+200k} \equiv 2^{197} \equiv 2^{-3} \equiv \underbrace{47}_{\text{Extended Euclidean Algorithm}}\pmod{125}\]" width="474" height="40" />
+Easy to check that only <img src="//latex.artofproblemsolving.com/8/c/4/8c43e04fd37178041e8d4f9d91f2853d0675cc4a.png" class="latex" alt="$\boxed{797}\equiv 47\pmod{125},{1797}\equiv 47\pmod{125},{2797}\equiv 47\pmod{125},...$" style="vertical-align: -6px" width="551" height="25" />
+</p><p>~Afo
+</p>
+<h2><span id="Solution_5_(STEP_by_step_transform)"></span><span class="mw-headline" id="Solution_5_.28STEP_by_step_transform.29">Solution 5 (STEP by step transform)</span></h2>
+<p>1. The desired <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> has the form  <img src="//latex.artofproblemsolving.com/7/d/6/7d67971ac593152567ae4a483ed7a5d8c8576613.png" class="latex" alt="$n = m + 20l + 100p,$" style="vertical-align: -4px" width="163" height="18" /> where  <img src="//latex.artofproblemsolving.com/a/2/6/a26a4d64457594be176ab04a66521005463302ab.png" class="latex" alt="$m, l, p$" style="vertical-align: -4px" width="49" height="18" /> are integers and <img src="//latex.artofproblemsolving.com/1/7/1/171a99fd6c8579bb883e3ef3c4d2bf80f231f93a.png" class="latex" alt="$m &lt; 20.$" style="vertical-align: -2px" width="65" height="15" />
+</p><p>Really: <img src="//latex.artofproblemsolving.com/d/4/6/d46ec6d4a90b01d5297534f8a8888de6f8c31ffd.png" class="latexcenter" alt="\[(2^{m+ 20} – (m + 20)) – (2^m – m) =  (2^{m+ 20} – 2^m) – 20.\]" width="352" height="20" /> 
+The first term is a multiple of <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" />(<i><b>Claim</b></i>).
+</p><p>We denote <i><b>step</b></i> an increase in <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> by 20. At each <i><b>step</b></i>, the divisibility by <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> is preserved, the number of tens is reduced by <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />.
+</p><p><img src="//latex.artofproblemsolving.com/6/4/2/642f06941a19c3423cdefb12c4835b716de9c3ae.png" class="latexcenter" alt="\[(2^{m+ 100} – (m + 100)) – (2^m – m) =  (2^{m+ 100} – 2^m) – 100.\]" width="384" height="20" /> 
+We denote <i><b>STEP</b></i> an increase in <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> by <img src="//latex.artofproblemsolving.com/5/1/2/5121aafc33f20a7ad4df93a0f7bc7b63077a5bc6.png" class="latex" alt="$100.$" style="vertical-align: 0px" width="30" height="13" /> At each <i><b>STEP</b></i>, the first term is a multiple of <img src="//latex.artofproblemsolving.com/5/d/3/5d357c2ec1bbc5f9f3b5562a24549f1f23a1a340.png" class="latex" alt="$1000,$" style="vertical-align: -3px" width="40" height="16" /> which means that at each <i><b>STEP</b></i> the divisibility by <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" /> is preserved, the number of hundreds decreases by <img src="//latex.artofproblemsolving.com/6/c/d/6cdd1b53e5faf7a118222e4b7571d1e9afa0cf56.png" class="latex" alt="$1.$" style="vertical-align: 0px" width="12" height="12" />
+</p><p>2. If the expression <img src="//latex.artofproblemsolving.com/7/2/e/72e20cf67b8c67f3560d5ea1d646ebfcac480c90.png" class="latex" alt="$2^n + 5^n – n$" style="vertical-align: -2px" width="81" height="16" /> is a multiple of <img src="//latex.artofproblemsolving.com/5/d/3/5d357c2ec1bbc5f9f3b5562a24549f1f23a1a340.png" class="latex" alt="$1000,$" style="vertical-align: -3px" width="40" height="16" /> the number <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is odd (<img src="//latex.artofproblemsolving.com/6/c/3/6c36f0b157e8c2fbe0638c2f2b378e08d07695aa.png" class="latex" alt="$2^n$" width="17" height="12" /> is even, <img src="//latex.artofproblemsolving.com/5/b/2/5b216498b4cb64f29f3bfdfa60736dc769f06c7d.png" class="latex" alt="$5^n$" width="17" height="12" /> is odd), which means that <img src="//latex.artofproblemsolving.com/5/b/2/5b216498b4cb64f29f3bfdfa60736dc769f06c7d.png" class="latex" alt="$5^n$" width="17" height="12" /> ends in <img src="//latex.artofproblemsolving.com/2/1/4/214f2b60a5b2eeaaeefb9c8e24e4a26255190a60.png" class="latex" alt="$125.$" style="vertical-align: 0px" width="30" height="13" /> Therefore, the number <img src="//latex.artofproblemsolving.com/c/d/0/cd08268474ea491eccb4b2ced85718c06eef90d3.png" class="latex" alt="$2^n – n$" style="vertical-align: -1px" width="40" height="14" /> ends in <img src="//latex.artofproblemsolving.com/8/c/b/8cb59a8ba63b5e2fd0d11b0aa8dd088c90009531.png" class="latex" alt="$875.$" width="30" height="12" />
+</p><p>3. <img src="//latex.artofproblemsolving.com/e/5/4/e54400a9ea06d459f7a3c560e7154ca1eee16424.png" class="latex" alt="$2^3 – 3 = 8 – 3 = 5.$" style="vertical-align: -1px" width="126" height="17" /> The tens digit is even <img src="//latex.artofproblemsolving.com/4/1/4/414d42360f68e81587bef433988218291a64917f.png" class="latex" alt="$(0),$" style="vertical-align: -4px" width="27" height="18" /> it cannot be transformed into <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> in several steps, since at each <i><b>step</b></i> this digit changes by <img src="//latex.artofproblemsolving.com/e/4/7/e4797950b5e812b65381cbc5fc33ad2db5f57aff.png" class="latex" alt="$2.$" width="12" height="12" />
+</p><p><img src="//latex.artofproblemsolving.com/c/9/6/c967f78ff13087c44f641feaeebb3a46007a5686.png" class="latex" alt="$17 = 20 – 3,$" style="vertical-align: -4px" width="86" height="17" /> so <img src="//latex.artofproblemsolving.com/b/e/3/be30262c73c3bf363f233451d7363838678c6029.png" class="latex" alt="$2^{17} + 2^3$" style="vertical-align: -2px" width="64" height="18" /> is a multiple of <img src="//latex.artofproblemsolving.com/5/1/7/517151f6f181bc7bcbfe164ac5c211c84abc0e92.png" class="latex" alt="$10,$" style="vertical-align: -3px" width="22" height="16" />  <img src="//latex.artofproblemsolving.com/c/a/6/ca606f2b26a331ebdaa79d8951bf81bddf936867.png" class="latex" alt="$(2^{17} – 17) + (2^3 – 3) = 2^{17} + 2^3 – 20$" style="vertical-align: -5px" width="251" height="21" /> is a multiple of <img src="//latex.artofproblemsolving.com/b/8/3/b833a70e5b34465a7e1cc445231d569f21b81da4.png" class="latex" alt="$10.$" style="vertical-align: 0px" width="21" height="13" /> 
+<img src="//latex.artofproblemsolving.com/6/3/4/6345c3a699c1a0fc956ecc04c0fbb8c85c754bf3.png" class="latexcenter" alt="\[2^{17} \pmod {100} = ((2^{10} \pmod {100}) \cdot (2^7 \pmod {100})) \pmod {100} = (24 \cdot 28) \pmod {100} = 72.\]" width="762" height="20" />
+<img src="//latex.artofproblemsolving.com/8/1/4/814fd55e50154e8e4aef7a78757bb4eed69f7e52.png" class="latexcenter" alt="\[(2^{17} – 17 ) \pmod {100}  = 55.\]" width="209" height="20" />
+The tens digit <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> is odd, subtracting <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> at each <i><b>step</b></i> in <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> <i><b>steps</b></i> of <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" /> will turn it into <img src="//latex.artofproblemsolving.com/b/1/7/b17ce6fcb2994d4241d780dd5311d828db133411.png" class="latex" alt="$7.$" width="12" height="12" />
+So <img src="//latex.artofproblemsolving.com/b/b/e/bbedd95ecebaca07b98dffd0460ef9ae16d4cb35.png" class="latexcenter" alt="\[(2^{97} – 97 ) \pmod {100} = 75.\]" width="209" height="20" />
+<img src="//latex.artofproblemsolving.com/8/c/3/8c31cde44a714daaedb95fc033885b05e852f59f.png" class="latexcenter" alt="\[2^{97} \pmod {1000} =  ((2^{49} \pmod {1000}) \cdot 2^7) \pmod {1000} =  672.\]" width="503" height="20" /> 
+<img src="//latex.artofproblemsolving.com/a/9/d/a9d68253791158b47a8ced60490c5085b3bd66f2.png" class="latexcenter" alt="\[(2^{97} – 97 ) \pmod {1000} = 575.\]" width="227" height="20" />
+We transform <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> into <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" /> in <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />   <i><b>STEPS</b></i>, so  <img src="//latex.artofproblemsolving.com/3/9/3/3933b7cf1270526a77ff7cc8f9f6ba9651d2f0b2.png" class="latexcenter" alt="\[(2^{797} – 797 ) \pmod {1000} = 875.\]" width="243" height="20" />
+<img src="//latex.artofproblemsolving.com/5/a/0/5a06a06e30a9d338da32891ea401d3fdd4157992.png" class="latexcenter" alt="\[(5^{797} + 2^{797} – 797 ) \pmod {1000} = 0.\]" width="277" height="20" />
+Note, that for <img src="//latex.artofproblemsolving.com/4/8/d/48d0abd4b324e9050393aba75c29ed5d64e44285.png" class="latex" alt="$n = 797 + 1000k, k$" style="vertical-align: -4px" width="151" height="18" /> is an integer, the expression <img src="//latex.artofproblemsolving.com/7/2/e/72e20cf67b8c67f3560d5ea1d646ebfcac480c90.png" class="latex" alt="$2^n + 5^n – n$" style="vertical-align: -2px" width="81" height="16" /> is a multiple of <img src="//latex.artofproblemsolving.com/6/b/4/6b434ebc2071e706df740975a3c90aad3cfa1455.png" class="latex" alt="$1000.$" style="vertical-align: 0px" width="39" height="13" />
+</p><p><i><b>Claim</b></i>
+</p><p>The numbers  <img src="//latex.artofproblemsolving.com/a/6/d/a6d50897cc625f358546e0443da849f40b59d7ee.png" class="latex" alt="$2^{n+2\cdot 5^k}+2^n=2^n(2^{2\cdot 5^k}+1)$" style="vertical-align: -5px" width="217" height="25" /> and <img src="//latex.artofproblemsolving.com/b/0/c/b0c5a5532db6b5d6ad43a81a08bf9edca54b6eab.png" class="latex" alt="$2^{n+4\cdot 5^k}-2^n=2^n(2^{4\cdot 5^k}-1)$" style="vertical-align: -5px" width="217" height="25" /> 
+</p><p>are a multiple of <img src="//latex.artofproblemsolving.com/b/5/4/b547b8deee6418a1a826daefb1a58bbab70fd0c3.png" class="latex" alt="$10^{k+1}$" style="vertical-align: 0px" width="41" height="16" /> for any <img src="//latex.artofproblemsolving.com/2/5/8/258f341522a07d90c6764135a658189a6d9ac0fd.png" class="latex" alt="$n &gt; k$" style="vertical-align: 0px" width="44" height="13" />, where <img src="//latex.artofproblemsolving.com/f/b/2/fb2af5612dc77dfaf32a4f5a1cc3b9db320da58c.png" class="latex" alt="$n,k$" style="vertical-align: -3px" width="28" height="16" /> are an integer.
+</p><p><i><b>Proof</b></i>
+</p><p>First, if <img src="//latex.artofproblemsolving.com/e/6/8/e6871e91503f13956a6b93a90f962aad5ad6cea8.png" class="latex" alt="$m \pmod{10} \equiv 4,$" style="vertical-align: -5px" width="137" height="20" /> then  <img src="//latex.artofproblemsolving.com/0/c/9/0c9420bb64fe24dd6ec4c3cc7e00024c77b94dad.png" class="latex" alt="$(m^4 – m^3 + m^2 – m + 1) \pmod{10} \equiv 6 – 4 + 6 – 4 + 1 = 5.$" style="vertical-align: -5px" width="427" height="21" />
+</p><p><img src="//latex.artofproblemsolving.com/2/3/3/233c555a2023da7d2cd57ddc2f9441e811fb3b21.png" class="latex" alt="$2^{4n+2}\pmod{10} \equiv 4.$" style="vertical-align: -5px" width="163" height="21" /> So, if the number  <img src="//latex.artofproblemsolving.com/0/2/a/02a31313fe2df0de7186e90a9d2f87551653b2d2.png" class="latex" alt="$2^{4n+2}  + 1$" style="vertical-align: -2px" width="75" height="18" /> is a multiple of <img src="//latex.artofproblemsolving.com/0/3/c/03c7460f306d602e2f80605cb2d7cd4f63c52399.png" class="latex" alt="$5^k$" width="16" height="15" />, then <img src="//latex.artofproblemsolving.com/6/4/1/6415a89b8f354b88c38eb83756e4b213d28bfb14.png" class="latex" alt="$2^{20n+10} + 1$" style="vertical-align: -2px" width="88" height="18" /> is a multiple of <img src="//latex.artofproblemsolving.com/c/9/b/c9bd179e5a0fa035fd41f1d53a7c634a326d5fa7.png" class="latex" alt="$5^{k +1}.$" style="vertical-align: -1px" width="41" height="17" />
+</p><p>Really, denote <img src="//latex.artofproblemsolving.com/6/5/f/65fbba93c46249eec00533653c2a5076e024cb55.png" class="latex" alt="$m =  2^{4n+2},$" style="vertical-align: -4px" width="89" height="20" /> then,  <img src="//latex.artofproblemsolving.com/9/5/e/95e845581ce5c5a25cd3fd57be5041ca67780017.png" class="latex" alt="$2^{20n+10} + 1 =  m^5 + 1 = (m + 1)\cdot (m^4 – m^3 + m^2 – m + 1).$" style="vertical-align: -5px" width="444" height="21" />
+</p><p>The first factor is a multiple of <img src="//latex.artofproblemsolving.com/0/3/c/03c7460f306d602e2f80605cb2d7cd4f63c52399.png" class="latex" alt="$5^k$" width="16" height="15" />, the second factor is a multiple of <img src="//latex.artofproblemsolving.com/b/8/3/b835f2c6c592edc4583ce996f86bcc0d07ca8da5.png" class="latex" alt="$5.$" width="12" height="12" /> 
+Their product is a multiple of  <img src="//latex.artofproblemsolving.com/c/9/b/c9bd179e5a0fa035fd41f1d53a7c634a326d5fa7.png" class="latex" alt="$5^{k +1}.$" style="vertical-align: -1px" width="41" height="17" />
+</p><p>For odd <img src="//latex.artofproblemsolving.com/c/5/4/c54e7152acd659788861f0453ac195c635e0a005.png" class="latex" alt="$n,$" style="vertical-align: -3px" width="15" height="11" /> using Newton's binomial for <img src="//latex.artofproblemsolving.com/6/c/7/6c78734258d2d82aeb28c1631e8f1798154c888d.png" class="latex" alt="$4^n$" style="vertical-align: 0px" width="17" height="13" />, we get <img src="//latex.artofproblemsolving.com/f/0/f/f0f952d4fa6500afed161b48ca321d4469500c48.png" class="latex" alt="$2^{2n} + 1$" style="vertical-align: -2px" width="58" height="18" /> is a multiple of <img src="//latex.artofproblemsolving.com/b/8/3/b835f2c6c592edc4583ce996f86bcc0d07ca8da5.png" class="latex" alt="$5.$" width="12" height="12" /> 
+<img src="//latex.artofproblemsolving.com/2/e/8/2e8042fd801ad5682db50f896cf15f47959b2597.png" class="latexcenter" alt="\begin{align*} 2^{2n} + 1 = 4^n + 1 = (5 - 1)^n + 1 = 5^n -n\cdot 5^{n-1} +...+5n\end{align*}" width="451" height="20" />
+If <img src="//latex.artofproblemsolving.com/b/c/2/bc2c26b533295450d004abd26c05e77fdf2a3850.png" class="latex" alt="$n = 5^k,$" style="vertical-align: -4px" width="59" height="21" /> then <img src="//latex.artofproblemsolving.com/9/4/2/9425dab707eae427b44f72b19dd282e35759681d.png" class="latex" alt="$n &gt; k,$" style="vertical-align: -3px" width="49" height="16" /> each term is  a multiple of <img src="//latex.artofproblemsolving.com/2/9/9/29962900263bfdff81c6e189ffd4ff48247fccd4.png" class="latex" alt="$5n$" width="19" height="12" />.
+</p><p>Therefore, the number <img src="//latex.artofproblemsolving.com/6/3/8/6382b5dd9b4fa07130092c3159ea764a071a03be.png" class="latex" alt="$4^{5^k}+1$" style="vertical-align: -2px" width="57" height="22" /> is  a multiple of <img src="//latex.artofproblemsolving.com/8/a/d/8adbb33487cc40a7050470ae8dab9e2e09cbdc48.png" class="latex" alt="$5^{k+1}$" width="32" height="15" /> and  <img src="//latex.artofproblemsolving.com/f/b/2/fb2279f807f26966a85a567650b8770d40f8b9ba.png" class="latex" alt="$2^{k+1} (2^{2\cdot 5^k}+1)$" style="vertical-align: -5px" width="116" height="25" /> is  a multiple of <img src="//latex.artofproblemsolving.com/b/5/4/b547b8deee6418a1a826daefb1a58bbab70fd0c3.png" class="latex" alt="$10^{k+1}$" style="vertical-align: 0px" width="41" height="16" />.
+</p><p>The difference <img src="//latex.artofproblemsolving.com/c/c/5/cc5aff033f55439615106c5843e7235c91cbb5ff.png" class="latexcenter" alt="\[2^{n+4\cdot 5^k}-2^n=2^n(2^{4\cdot 5^k}-1) = 2^n(2^{2\cdot 5^k}-1)(2^{2\cdot 5^k}+1)\]" width="415" height="23" /> is a multiple of <img src="//latex.artofproblemsolving.com/9/c/5/9c57448d8b125da26956f5e02f3f0605eddff823.png" class="latex" alt="$10^{k+1}.$" style="vertical-align: -1px" width="50" height="17" />
+</p><p><b>vladimir.shelomovskii@gmail.com, vvsss</b>
+</p>
+<h2><span id="Solution_6_(Art_of_Enumeration)"></span><span class="mw-headline" id="Solution_6_.28Art_of_Enumeration.29">Solution 6 (Art of Enumeration)</span></h2>
+<p>Problem require us to find minimum <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> where <img src="//latex.artofproblemsolving.com/d/1/0/d10bf0bf2ca63e9a824f820317893b8afa1a0f94.png" class="latex" alt="$2^n + 5^n - n$" style="vertical-align: -1px" width="91" height="14" /> is a multiple of <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" />.
+</p><p>Since we already know that multiplication does not affect mod,we can simply just focus on enumerating and hope to find some pattern.
+</p><p>The pattern of <img src="//latex.artofproblemsolving.com/5/b/2/5b216498b4cb64f29f3bfdfa60736dc769f06c7d.png" class="latex" alt="$5^n$" width="17" height="12" /> is pretty simple, it starts with 5,25, and then repeat the pattern 125,625, in other words, <img src="//latex.artofproblemsolving.com/0/5/7/0573494bbd1287cffb304447c2c54a7c81f9c771.png" class="latex" alt="$5^n\equiv 125 \mod{1000}$" style="vertical-align: -1px" width="161" height="14" /> when n is odd, and <img src="//latex.artofproblemsolving.com/6/e/1/6e1bf3a68ba96325dfcda553c41bcb331f0727be.png" class="latex" alt="$5^n\equiv 625 \mod{1000}$" style="vertical-align: -1px" width="161" height="14" /> when n is even if we ignore <img src="//latex.artofproblemsolving.com/1/d/9/1d96ecc15129c5631ba4a2c6578e91e3d13e3baf.png" class="latex" alt="$n=1$" style="vertical-align: 0px" width="43" height="12" /> and <img src="//latex.artofproblemsolving.com/6/c/b/6cb7ae00764b56ee2adf59e78a1ffde9685b80db.png" class="latex" alt="$n=2$" width="43" height="12" />.
+</p><p>The pattern of <img src="//latex.artofproblemsolving.com/6/c/3/6c36f0b157e8c2fbe0638c2f2b378e08d07695aa.png" class="latex" alt="$2^n$" width="17" height="12" />, however, is quite long. In fact, it happens when <img src="//latex.artofproblemsolving.com/e/8/a/e8a43f4849e90d3f03f3f323aacca84a65b7ae8d.png" class="latex" alt="$n=103$" style="vertical-align: -1px" width="64" height="14" />, where <img src="//latex.artofproblemsolving.com/2/2/a/22a4f6e89d3811c570788d269b5808b9e9fd3e07.png" class="latex" alt="$2^{103} \equiv 008 \mod{1000}$" style="vertical-align: -1px" width="173" height="17" />. More specifically, the pattern starts with <img src="//latex.artofproblemsolving.com/5/6/3/5635737307f5f0651cced8ee2e6558a426fd27b5.png" class="latex" alt="$n=3$" width="43" height="12" />, which means for every 100 n, <img src="//latex.artofproblemsolving.com/a/2/3/a23f4cda7ea13701feab41e33b173a009fca8c31.png" class="latex" alt="$2^n \mod 1000$" style="vertical-align: -1px" width="109" height="14" /> will repeat in a loop: 
+</p><p><img src="//latex.artofproblemsolving.com/5/6/a/56a5822c04c508f2776b3448f4d2cf90df04fb89.png" class="latex" alt="$008{,}016{,}032{,}064{,}128{,}256{,}512{,}024{,}048{,}096{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/2/2/3/2230995123b0f3389b3f7e3518e7d3c43c6d67d9.png" class="latex" alt="$192{,}384{,}768{,}536{,}072{,}144{,}288{,}576{,}152{,}304{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/c/1/d/c1d443c61df6b0092db3f2b438d677b5f3bd8c83.png" class="latex" alt="$608{,}216{,}432{,}864{,}728{,}456{,}912{,}824{,}648{,}296{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/c/b/3/cb3201b53e4d53b638b5128e163070ba7ece2c84.png" class="latex" alt="$592{,}184{,}368{,}736{,}472{,}944{,}888{,}776{,}552{,}104{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/d/b/9/db9aefd4b1a969b4d69155baebbb25d233c7cdf6.png" class="latex" alt="$208{,}416{,}832{,}664{,}328{,}656{,}312{,}624{,}248{,}496{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/7/9/c/79c121daa2cfa9f7d9dbc355caf88a66befc4f9d.png" class="latex" alt="$992{,}984{,}968{,}936{,}872{,}744{,}488{,}976{,}952{,}904{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/8/7/5/875707b4ae821436af8d01a208da5391db9d6ac2.png" class="latex" alt="$808{,}616{,}232{,}464{,}928{,}856{,}712{,}424{,}848{,}696{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/2/2/c/22c8394c0a67d71706330c1e2e53cfa74d357570.png" class="latex" alt="$392{,}784{,}568{,}136{,}272{,}544{,}088{,}176{,}352{,}704{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/6/f/8/6f80bac351a0e6bbed4859b00458403804bfc91a.png" class="latex" alt="$408{,}816{,}632{,}264{,}528{,}056{,}112{,}224{,}448{,}896{,}$" style="vertical-align: -4px" width="325" height="17" />
+<img src="//latex.artofproblemsolving.com/1/c/9/1c9eaad3e31bb9489dd0801a8412d295231e4aa3.png" class="latex" alt="$792{,}584{,}168{,}336{,}672{,}344{,}688{,}376{,}752{,}504$" style="vertical-align: -4px" width="320" height="17" />
+</p><p>Moreover, we might found that for every 20 consequtive integer, <img src="//latex.artofproblemsolving.com/b/d/f/bdfe3df581f3fce213db7ad2ca7e3a2acee4d58b.png" class="latex" alt="$2^n \mod 100$" style="vertical-align: -1px" width="100" height="14" /> will repeat in a loop. Thus, by adding <img src="//latex.artofproblemsolving.com/5/b/2/5b216498b4cb64f29f3bfdfa60736dc769f06c7d.png" class="latex" alt="$5^n$" width="17" height="12" /> to first twenty element, which is <img src="//latex.artofproblemsolving.com/5/6/3/5635737307f5f0651cced8ee2e6558a426fd27b5.png" class="latex" alt="$n=3$" width="43" height="12" /> to <img src="//latex.artofproblemsolving.com/6/d/5/6d535c87e35958984ff5b6ac1ba12b874e670d62.png" class="latex" alt="$n=22$" width="52" height="12" />, we can get a pattern of last two digit of <img src="//latex.artofproblemsolving.com/0/1/f/01fae13ed9e531da4dbfc2e5d8d4510ceaf93f91.png" class="latex" alt="$2^n + 5^n \mod{1000}$" style="vertical-align: -2px" width="150" height="16" />, which is 
+</p><p><img src="//latex.artofproblemsolving.com/6/9/2/692cbc01b3fb16d95bddfddd794e44b3e1316c5e.png" class="latex" alt="$33{,}41{,}57{,}89{,}53{,}$" style="vertical-align: -4px" width="118" height="17" />
+</p><p><img src="//latex.artofproblemsolving.com/2/7/d/27d2163001f316db99cca30f27ed2407e259bc08.png" class="latex" alt="$81{,}37{,}49{,}73{,}21{,}$" style="vertical-align: -4px" width="118" height="17" />
+</p><p><img src="//latex.artofproblemsolving.com/a/6/a/a6a1717f167c841a3c9b4de69145ff0659a6bf1e.png" class="latex" alt="$17{,}09{,}93{,}61{,}97{,}$" style="vertical-align: -4px" width="118" height="17" />
+</p><p><img src="//latex.artofproblemsolving.com/3/d/a/3daf79dfd9469bad52a88c7d91cedd0b1b1aea05.png" class="latex" alt="$69{,}13{,}01{,}77{,}29$" style="vertical-align: -4px" width="113" height="17" />
+</p><p>By subtracting n, we can also get following sequence:
+</p><p><img src="//latex.artofproblemsolving.com/a/b/b/abb9c68a73ac1bf5afd1a782eace5efecd478713.png" class="latex" alt="$30{,}37{,}52{,}83{,}46{,}$" style="vertical-align: -4px" width="118" height="17" />
+</p><p><img src="//latex.artofproblemsolving.com/c/f/0/cf0767ba1d3fda23f97601e17e8fd0b89b32f463.png" class="latex" alt="$73{,}28{,}39{,}62{,}09{,}$" style="vertical-align: -4px" width="118" height="17" />
+</p><p><img src="//latex.artofproblemsolving.com/b/8/e/b8e3964e9d30b229d5ce978e5f77c51ea6f124be.png" class="latex" alt="$04{,}95{,}78{,}45{,}80{,}$" style="vertical-align: -4px" width="118" height="17" />
+</p><p><img src="//latex.artofproblemsolving.com/4/6/f/46fdb9f587c124ad3070e3fe79070f79358aa446.png" class="latex" alt="$51{,}94{,}81{,}56{,}07$" style="vertical-align: -4px" width="113" height="17" />
+</p><p>Noticing that only when <img src="//latex.artofproblemsolving.com/5/6/3/5635737307f5f0651cced8ee2e6558a426fd27b5.png" class="latex" alt="$n=3$" width="43" height="12" /> and <img src="//latex.artofproblemsolving.com/3/0/e/30e5a50f89eb87941facbb1e7b1ae91777fa10f5.png" class="latex" alt="$n=17$" style="vertical-align: 0px" width="53" height="12" />, <img src="//latex.artofproblemsolving.com/2/2/f/22f83ca0571802ecc5b4a06e3921d6fb6c2f6011.png" class="latex" alt="$2^n+5^n-n \equiv 0 \mod{10}$" style="vertical-align: -2px" width="198" height="16" />, so <img src="//latex.artofproblemsolving.com/a/a/7/aa7e15eac90c2e8353c95dea699f5b0d64df2c6d.png" class="latex" alt="$n=3+20k$" style="vertical-align: -2px" width="97" height="16" /> and <img src="//latex.artofproblemsolving.com/8/d/6/8d60233c147049dc033158d83a9ece9255b69c85.png" class="latex" alt="$17+20k$" style="vertical-align: -2px" width="70" height="16" /> are our possible candidates. However, since the length of our pattern is 20, we know that <img src="//latex.artofproblemsolving.com/a/a/7/aa7e15eac90c2e8353c95dea699f5b0d64df2c6d.png" class="latex" alt="$n=3+20k$" style="vertical-align: -2px" width="97" height="16" /> is definetely not answer, which only left us <img src="//latex.artofproblemsolving.com/2/3/8/238a153166bfa240461f62b0015bd0bfb3c0be7b.png" class="latex" alt="$n=17+20k$" style="vertical-align: -2px" width="106" height="16" />.
+</p><p>Now, we calculate the last three digit of <img src="//latex.artofproblemsolving.com/1/f/7/1f71037899e5990d84793f2a1eb26e9e0a58010a.png" class="latex" alt="$2^n+5^n-n$" style="vertical-align: -2px" width="93" height="16" /> at <img src="//latex.artofproblemsolving.com/c/0/b/c0bb00f47dece00733ad4f3a1cf8e5dbce54b123.png" class="latex" alt="$n=17, n=37, n=57, n=77, n=97$" style="vertical-align: -4px" width="301" height="17" />, which is <img src="//latex.artofproblemsolving.com/0/9/c/09ca0a1e840b40fa9d61601a85a4f5308a87d956.png" class="latex" alt="$180{,}560{,}940{,}320{,}700$" style="vertical-align: -4px" width="158" height="17" />.
+</p><p>Since the pattern will repeat for every 100 consequtive integer, the only thing that could possibly change last three digit is -n, noticing that only when <img src="//latex.artofproblemsolving.com/1/b/d/1bdee9fb80fb747c1ffb74890edba0489ad7b4f4.png" class="latex" alt="$n=97$" width="53" height="12" />, <img src="//latex.artofproblemsolving.com/1/1/0/1104ac8f7ec837686b437f0428c62455034bbf33.png" class="latex" alt="$2^n+5^n-n \equiv 0 \mod 100$" style="vertical-align: -2px" width="207" height="16" />. So the answer only could be <img src="//latex.artofproblemsolving.com/1/e/0/1e078bf5e00136943301565ad6b257d77c89a7b1.png" class="latex" alt="$n=97+100k_2$" style="vertical-align: -4px" width="122" height="17" />, by subtracting 700, which means adding 700 to n, we can get our final answer <img src="//latex.artofproblemsolving.com/8/e/2/8e2f6e1da947bd6ba9b987d630e9a830447e30d5.png" class="latex" alt="$n=\boxed{797}$" style="vertical-align: -6px" width="76" height="25" />.
+</p><p>Also, by this method we can ensure that <img src="//latex.artofproblemsolving.com/1/4/8/14810e37980aea2e7a06828e61036bb6b06fabf3.png" class="latex" alt="$\frac{2^n+5^n-n}{1000}$" style="vertical-align: -13px" width="97" height="38" /> is an integer only if <img src="//latex.artofproblemsolving.com/b/4/c/b4c61a4f58db7fad0f054892fbea5009387082a9.png" class="latex" alt="$n=797+1000k$" style="vertical-align: -2px" width="133" height="16" />, all the calculation can be done without a calculator (about 15 minutes or so), need some patience though.
+</p><p>If you are wondering, <img src="//latex.artofproblemsolving.com/7/0/b/70ba916d6b99c1902ee38856128e67a1fc733003.png" class="latex" alt="$2^{103} = 10{,}141{,}204{,}801{,}825{,}835{,}211{,}973{,}625{,}643{,}008$" style="vertical-align: -4px" width="397" height="20" />.
+</p><p>~henry_in_out
+</p>
+<h2><span class="mw-headline" id="Note">Note</span></h2>
+<p>If you are wondering, <img src="//latex.artofproblemsolving.com/2/b/9/2b965955baefb45da5ca5024ca8d94e10beeee6b.png" class="latex" alt="$\frac{2^{797}+5^{797}-797}{1000}$" style="vertical-align: -13px" width="137" height="41" /> is equal to the following <img src="//latex.artofproblemsolving.com/1/8/1/181d6fc16f24009bc0e0fad537c49c1386be2a52.png" class="latex" alt="$555$" width="26" height="12" />-digit number:
+</p><p><img src="//latex.artofproblemsolving.com/4/1/6/416b7c3671f3f98940089249ea5856d5ac549c1e.png" class="latex" alt="$119{,}975{,}745{,}111{,}650{,}476{,}385{,}411{,}555{,}010{,}245{,}228{,}283{,}196{,}935{,}699{,}128{,}663{,}834{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/4/f/4/4f4ac5957a6cba7c5b0103cb424281c76d99a79b.png" class="latex" alt="$986{,}755{,}809{,}416{,}868{,}468{,}175{,}224{,}221{,}677{,}450{,}271{,}793{,}186{,}899{,}399{,}171{,}810{,}240{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/5/6/3/563c739fdea95cb13ef03b3cf88d5b9741f37f2e.png" class="latex" alt="$468{,}879{,}630{,}691{,}320{,}210{,}517{,}618{,}332{,}910{,}064{,}430{,}017{,}422{,}410{,}572{,}497{,}874{,}327{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/9/4/4/944fa1b907fa303445fea90d70566a4fbc6d5079.png" class="latex" alt="$116{,}662{,}273{,}049{,}144{,}209{,}532{,}072{,}513{,}248{,}821{,}826{,}125{,}454{,}909{,}131{,}367{,}242{,}561{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/6/d/4/6d441b4a2f2cbd9270adbcb3ae25611f2cb27599.png" class="latex" alt="$087{,}064{,}439{,}357{,}641{,}814{,}942{,}784{,}478{,}465{,}638{,}163{,}997{,}895{,}630{,}266{,}780{,}260{,}171{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/d/5/a/d5a3d3301af4b7cc55f4b765b86973e005eb3473.png" class="latex" alt="$070{,}180{,}244{,}384{,}687{,}160{,}174{,}154{,}618{,}815{,}254{,}719{,}975{,}476{,}350{,}789{,}415{,}969{,}908{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/5/7/d/57d8c5e13ffaad54751ee218a842babb1c062844.png" class="latex" alt="$281{,}131{,}044{,}034{,}581{,}864{,}573{,}596{,}962{,}567{,}993{,}948{,}922{,}431{,}587{,}652{,}735{,}290{,}158{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/3/5/b/35bfa4715225c3c12e42f831854b66c43b3aa9e1.png" class="latex" alt="$293{,}666{,}986{,}616{,}531{,}419{,}688{,}663{,}485{,}548{,}648{,}995{,}509{,}247{,}893{,}796{,}528{,}146{,}109{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/2/e/8/2e8c89bae0d7f4e6a3c48f36daebd5e7ef5c2266.png" class="latex" alt="$144{,}143{,}744{,}650{,}882{,}271{,}050{,}771{,}309{,}301{,}498{,}467{,}898{,}226{,}649{,}089{,}924{,}520{,}539{,}$" style="vertical-align: -4px" width="616" height="17" />
+<img src="//latex.artofproblemsolving.com/2/8/4/284f3c1aec848c072104322c0a6e06fc8cb1dc30.png" class="latex" alt="$820{,}344{,}035{,}886{,}481{,}987{,}499{,}589{,}845{,}734{,}228{,}834{,}491{,}187.$" style="vertical-align: -4px" width="454" height="17" />
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external text" href="https://youtu.be/8ceUNssqSoA?si=KTnXITproEaIBuy2">2021 AIME II #13</a>
+</p><p><a rel="nofollow" class="external text" href="https://mathproblemsolvingskills.wordpress.com/">MathProblemSolvingSkills.com</a>
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Interstigation">Video Solution by Interstigation</span></h2>
+<p>Did not use any advanced method, easily understandable:
+</p><p><a rel="nofollow" class="external free" href="https://youtu.be/ThF67J8iaS0">https://youtu.be/ThF67J8iaS0</a>
+</p><p>~Interstigation
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2021_AIME_II" title="2021 AIME II">2021 AIME II</a></b> (<b><a href="/wiki/index.php/2021_AIME_II_Problems" title="2021 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2021_AIME_II_Answer_Key" title="2021 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2021">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_12" title="2021 AIME II Problems/Problem 12">Problem 12</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_14" title="2021 AIME II Problems/Problem 14">Problem 14</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_1" title="2021 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_2" title="2021 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_3" title="2021 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_4" title="2021 AIME II Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_5" title="2021 AIME II Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_6" title="2021 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_7" title="2021 AIME II Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_8" title="2021 AIME II Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_9" title="2021 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_10" title="2021 AIME II Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_11" title="2021 AIME II Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_12" title="2021 AIME II Problems/Problem 12">12</a> <b>•</b> <a class="mw-selflink selflink">13</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_14" title="2021 AIME II Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_15" title="2021 AIME II Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818203247
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.192 seconds
+Real time usage: 0.197 seconds
+Preprocessor visited node count: 2978/1000000
+Preprocessor generated node count: 6840/1000000
+Post‐expand include size: 1734/2097152 bytes
+Template argument size: 132/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 59759/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.993      1 -total
+ 68.33%    4.095      1 Template:AIME_box
+ 29.02%    1.739      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:20941-0!canonical and timestamp 20250818203247 and revision id 252705
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_13&amp;oldid=252705">https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_13&amp;oldid=252705</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e9475688b916d',t:'MTc1ODM0MjU0Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818214334 -->
+</html>
+

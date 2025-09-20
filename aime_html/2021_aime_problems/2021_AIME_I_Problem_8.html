@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 AIME I Problems/Problem 8 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_AIME_I_Problems/Problem_8","wgTitle":"2021 AIME I Problems/Problem 8","wgCurRevisionId":240881,"wgRevisionId":240881,"wgArticleId":19350,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Algebra Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_AIME_I_Problems/Problem_8","wgRelevantArticleId":19350,"wgRequestId":"48b873fd900f1940c8f3517d","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_AIME_I_Problems_Problem_8 rootpage-2021_AIME_I_Problems_Problem_8 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 AIME I Problems/Problem 8																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2021_AIME_I_Problems/Problem_8" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2021_AIME_I_Problems/Problem_8&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2021_AIME_I_Problems/Problem_8&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2021_AIME_I_Problems/Problem_8&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2021_AIME_I_Problems/Problem_8" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 AIME I Problems/Problem 8</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1_.28Piecewise_Function:_Analysis_and_Graph.29"><span class="tocnumber">2</span> <span class="toctext">Solution 1 (Piecewise Function: Analysis and Graph)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.28Graphing.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (Graphing)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28Graphing.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (Graphing)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Algebra.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Algebra)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Remark"><span class="tocnumber">6</span> <span class="toctext">Remark</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Video_Solution"><span class="tocnumber">7</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_Also"><span class="tocnumber">8</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Find the number of integers <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> such that the equation <img src="//latex.artofproblemsolving.com/1/3/b/13b10a3d88db47a7d7dc0b6c5b26b32aac2e94e3.png" class="latexcenter" alt="\[\left||20|x|-x^2|-c\right|=21\]" width="169" height="22" />has <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> distinct real solutions.
+</p>
+<h2><span id="Solution_1_(Piecewise_Function:_Analysis_and_Graph)"></span><span class="mw-headline" id="Solution_1_.28Piecewise_Function:_Analysis_and_Graph.29">Solution 1 (Piecewise Function: Analysis and Graph)</span></h2>
+<p>We take cases for the outermost absolute value, then rearrange: <img src="//latex.artofproblemsolving.com/5/f/7/5f7ff936bc1efa460cb60cd0e89204c19c39419d.png" class="latexcenter" alt="\[\left|20|x|-x^2\right|=c\pm21.\]" width="164" height="22" />
+Let <img src="//latex.artofproblemsolving.com/c/1/b/c1b45d4cecf8f2c2604f759bafdfffa2ccc41c6f.png" class="latex" alt="$f(x)=\left|20|x|-x^2\right|.$" style="vertical-align: -6px" width="156" height="22" /> We rewrite <img src="//latex.artofproblemsolving.com/c/9/6/c96dd6ec1dc4ad7520fbdc78fcdbec9edd068d0c.png" class="latex" alt="$f(x)$" style="vertical-align: -4px" width="34" height="18" /> as a piecewise function without using absolute values:
+<img src="//latex.artofproblemsolving.com/a/5/8/a582536815a665c1495b906ababc042dcaf6e37d.png" class="latexcenter" alt="\[f(x) = \begin{cases} \left|-20x-x^2\right| &amp; \mathrm{if} \ x \le 0  \begin{cases} 20x+x^2 &amp; \mathrm{if} \ x\le-20 \\ -20x-x^2 &amp; \mathrm{if} \ -20&lt;x\leq0 \end{cases} \\ \left|20x-x^2\right| &amp; \mathrm{if} \ x &gt; 0 \begin{cases} 20x-x^2 &amp; \mathrm{if} \ 0&lt;x\leq20 \\ -20x+x^2 &amp; \mathrm{if} \ x&gt;20 \end{cases} \end{cases}.\]" width="499" height="107" />
+We graph <img src="//latex.artofproblemsolving.com/9/7/e/97eded22ccc3e54189a8f157c4e81f36fe034a26.png" class="latex" alt="$y=f(x)$" style="vertical-align: -4px" width="67" height="18" /> with all extremum points labeled, as shown below. The fact that <img src="//latex.artofproblemsolving.com/c/9/6/c96dd6ec1dc4ad7520fbdc78fcdbec9edd068d0c.png" class="latex" alt="$f(x)$" style="vertical-align: -4px" width="34" height="18" /> is an even function (<img src="//latex.artofproblemsolving.com/1/5/e/15ecc7adaba484954946c18ad202a289eae6809a.png" class="latex" alt="$f(x)=f(-x)$" style="vertical-align: -4px" width="107" height="18" /> holds for all real numbers <img src="//latex.artofproblemsolving.com/6/d/0/6d0382f3585219947b495ac2262a81b7b0c40db2.png" class="latex" alt="$x,$" style="vertical-align: -3px" width="14" height="11" /> so the graph of <img src="//latex.artofproblemsolving.com/9/7/e/97eded22ccc3e54189a8f157c4e81f36fe034a26.png" class="latex" alt="$y=f(x)$" style="vertical-align: -4px" width="67" height="18" /> is symmetric about the <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />-axis) should facilitate the process of graphing.
+<img src="//latex.artofproblemsolving.com/4/8/5/48503ab7aa27c5858d43d018cc0f91c669b8ee93.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */ size(1200,300);   real xMin = -65; real xMax = 65; real yMin = -50; real yMax = 125;  draw((xMin,0)--(xMax,0),black+linewidth(1.5),EndArrow(5)); draw((0,yMin)--(0,yMax),black+linewidth(1.5),EndArrow(5)); label(&quot;$x$&quot;,(xMax,0),(2,0)); label(&quot;$y$&quot;,(0,yMax),(0,2));  real f(real x) { return abs(20*abs(x)-x^2); } real g(real x) { return 21; } real h(real x) { return -21; } draw(graph(f,-25,25),red,&quot;$y=\left|20|x|-x^2\right|$&quot;); draw(graph(g,-65,65),blue,&quot;$y=\pm21$&quot;); draw(graph(h,-65,65),blue);  pair A[]; A[0] = (-20,0); A[1] = (-10,100); A[2] = (0,0); A[3] = (10,100); A[4] = (20,0);  for(int i = 0; i &lt;= 4; ++i) { dot(A[i],red+linewidth(4.5));  }  label(&quot;$(-20,0)$&quot;,A[0],(-1.5,-1.5),red,UnFill); label(&quot;$(-10,100)$&quot;,A[1],(-1.5,1.5),red); label(&quot;$(0,0)$&quot;,A[2],(0,-1.5),red,UnFill); label(&quot;$(10,100)$&quot;,A[3],(1.5,1.5),red); label(&quot;$(20,0)$&quot;,A[4],(1.5,-1.5),red,UnFill);  add(legend(),point(E),40E,UnFill); [/asy]" width="678" height="502" />
+Since <img src="//latex.artofproblemsolving.com/a/4/8/a48f6dc55891156675c1ba2d390f27be32ee8f11.png" class="latex" alt="$f(x)=c\pm21$" style="vertical-align: -5px" width="110" height="20" /> has <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> distinct real solutions, it is clear that each case has <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> distinct real solutions geometrically. We shift the graphs of <img src="//latex.artofproblemsolving.com/b/1/c/b1cab5989cb9cccd3e3109b25c5b5d574ade0d4f.png" class="latex" alt="$y=\pm21$" style="vertical-align: -4px" width="68" height="17" /> up <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> units, where <img src="//latex.artofproblemsolving.com/d/e/c/dec468aa5866edc73304535b21b7bc8e102750d3.png" class="latex" alt="$c\geq0:$" style="vertical-align: -2px" width="50" height="15" />
+</p>
+<ul><li>For <img src="//latex.artofproblemsolving.com/9/7/a/97a27d21ab87f2ec62a5207209832f0a36f3a37e.png" class="latex" alt="$f(x)=c+21$" style="vertical-align: -5px" width="110" height="20" /> to have <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> distinct real solutions, we need <img src="//latex.artofproblemsolving.com/e/a/6/ea611d53bd24bb118f2f0e5a470425116a6f17ac.png" class="latex" alt="$0\leq c&lt;79.$" style="vertical-align: -2px" width="87" height="15" /></li></ul>
+<ul><li>For <img src="//latex.artofproblemsolving.com/c/0/1/c01fb23845acf973c0dd580acfb9f2429132ec22.png" class="latex" alt="$f(x)=c-21$" style="vertical-align: -4px" width="106" height="18" /> to have <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> distinct real solutions, we need <img src="//latex.artofproblemsolving.com/1/b/4/1b4b4839afb3532905088be06a2c78132496a5a7.png" class="latex" alt="$21&lt;c&lt;121.$" style="vertical-align: 0px" width="105" height="12" /></li></ul>
+<p>Taking the intersection of these two cases gives <img src="//latex.artofproblemsolving.com/c/7/d/c7dee88897ae47dd01c957759766cdf9e2834fb2.png" class="latex" alt="$21&lt;c&lt;79,$" style="vertical-align: -3px" width="96" height="16" /> from which there are <img src="//latex.artofproblemsolving.com/8/e/f/8efb5737dc876e3e57168b0ecab0e4c8393f59b6.png" class="latex" alt="$79-21-1=\boxed{057}$" style="vertical-align: -5px" width="153" height="23" /> such integers <img src="//latex.artofproblemsolving.com/2/0/1/201a2eef545643b50b07fed5c09e894bcced5c58.png" class="latex" alt="$c.$" width="11" height="8" />
+</p><p>~MRENTHUSIASM
+</p>
+<h2><span id="Solution_2_(Graphing)"></span><span class="mw-headline" id="Solution_2_.28Graphing.29">Solution 2 (Graphing)</span></h2>
+<p>Graph <img src="//latex.artofproblemsolving.com/f/e/3/fe332497d54334e32722973fe0ef2488b24830f0.png" class="latex" alt="$y=|20|x|-x^2|$" style="vertical-align: -4px" width="120" height="19" /> (If you are having trouble, look at the description in the next two lines and/or the diagram in Solution 1). Notice that we want this to be equal to <img src="//latex.artofproblemsolving.com/a/d/3/ad36609ff5314d7d3748122b7e9f6015b74c4949.png" class="latex" alt="$c-21$" style="vertical-align: -2px" width="50" height="15" /> and <img src="//latex.artofproblemsolving.com/b/c/5/bc5d19d504a21d8688357ac6ad7988ce63bbb78d.png" class="latex" alt="$c+21$" style="vertical-align: -1px" width="47" height="13" />.
+</p><p>We see that from left to right, the graph first dips from very positive to <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> at <img src="//latex.artofproblemsolving.com/2/7/d/27d98445b749e2d24fad986a665b750f93699b0d.png" class="latex" alt="$x=-20$" width="66" height="12" />, then rebounds up to <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" /> at <img src="//latex.artofproblemsolving.com/1/7/0/17059fbed4499b422fc8cb388e92c20e457edf97.png" class="latex" alt="$x=-10$" style="vertical-align: 0px" width="66" height="13" />, then falls back down to <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> at <img src="//latex.artofproblemsolving.com/3/4/e/34ea5b6f6de584d56d19a89cc4923a9d9a5cfa41.png" class="latex" alt="$x=0$" width="43" height="12" />.
+</p><p>The positive <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> are symmetric, so the graph re-ascends to <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" /> at <img src="//latex.artofproblemsolving.com/e/c/1/ec186fd1809357d1f530bee2334ceb59d405b4f6.png" class="latex" alt="$x=10$" style="vertical-align: 0px" width="52" height="13" />, falls back to <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> at <img src="//latex.artofproblemsolving.com/e/c/1/ec186fd1809357d1f530bee2334ceb59d405b4f6.png" class="latex" alt="$x=10$" style="vertical-align: 0px" width="52" height="13" />, and rises to arbitrarily large values afterwards.
+</p><p>Now we analyze the <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> (varied by <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" />) values. At <img src="//latex.artofproblemsolving.com/8/a/5/8a58dc80839ca93d0749124afaea7681ae478b9d.png" class="latex" alt="$y=k&lt;0$" style="vertical-align: -3px" width="76" height="16" />, we will have no solutions, as the line <img src="//latex.artofproblemsolving.com/e/2/7/e27c522cab00176729dcb425293b1be0276f6b21.png" class="latex" alt="$y=k$" style="vertical-align: -3px" width="43" height="16" /> will have no intersections with our graph.
+</p><p>At <img src="//latex.artofproblemsolving.com/e/c/8/ec89f09c84538ec43930ca5d8e5e0957e2000822.png" class="latex" alt="$y=0$" style="vertical-align: -3px" width="42" height="16" />, we will have exactly <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> solutions for the three zeroes.
+</p><p>At <img src="//latex.artofproblemsolving.com/1/3/8/1389e2659f2768e57520a30bfad43ab342fa8d5b.png" class="latex" alt="$y=n$" style="vertical-align: -3px" width="44" height="11" /> for any <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> strictly between <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" class="latex" alt="$100$" style="vertical-align: 0px" width="26" height="13" />, we will have exactly <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> solutions.
+</p><p>At <img src="//latex.artofproblemsolving.com/b/e/a/beade0a93199527f8d91f3d69c4045b199268ea7.png" class="latex" alt="$y=100$" style="vertical-align: -3px" width="60" height="16" />, we will have <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> solutions, because local maxima are reached at <img src="//latex.artofproblemsolving.com/c/5/b/c5bf6fd4efa7e4845d580cb91fc23428b7465bd9.png" class="latex" alt="$x= \pm 10$" style="vertical-align: 0px" width="66" height="13" />.
+</p><p>At <img src="//latex.artofproblemsolving.com/9/c/2/9c2221242e688931114bb23b8c785b0b95dff9a7.png" class="latex" alt="$y=m&gt;100$" style="vertical-align: -3px" width="100" height="16" />, we will have exactly <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> solutions.
+</p><p>To get <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> distinct solutions for <img src="//latex.artofproblemsolving.com/d/5/f/d5fa1e02c5735667a1992af05afcfdc271d97588.png" class="latex" alt="$y=|20|x|-x^2|=c \pm 21$" style="vertical-align: -4px" width="194" height="19" />, both <img src="//latex.artofproblemsolving.com/c/6/3/c63eb48fc42209c13b9622cce5c31bb8dce4b3a0.png" class="latex" alt="$c +21$" style="vertical-align: -1px" width="47" height="13" /> and <img src="//latex.artofproblemsolving.com/a/d/3/ad36609ff5314d7d3748122b7e9f6015b74c4949.png" class="latex" alt="$c-21$" style="vertical-align: -2px" width="50" height="15" /> must produce <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> solutions.
+</p><p>Thus <img src="//latex.artofproblemsolving.com/9/1/b/91b31800ef8e365fb9191d9a0455c330eea2659e.png" class="latex" alt="$0&lt;c-21$" style="vertical-align: 0px" width="80" height="13" /> and <img src="//latex.artofproblemsolving.com/c/5/2/c52cdfed552c6a811343e8205d61db1b81e4c88d.png" class="latex" alt="$c+21&lt;100$" style="vertical-align: -1px" width="99" height="14" />, so <img src="//latex.artofproblemsolving.com/7/4/c/74c580b0876f6a8c2b5b276515829bdc3bd1b5b0.png" class="latex" alt="$c \in \{ 22, 23, \dots , 77, 78 \}$" style="vertical-align: -4px" width="176" height="18" /> is required.
+</p><p>It is easy to verify that all of these choices of <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> produce <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> distinct solutions (none overlap), so our answer is <img src="//latex.artofproblemsolving.com/4/b/2/4b2ff12404524ee07bca13d0aae660df80a2eb3a.png" class="latex" alt="$\boxed{057}$" style="vertical-align: -5px" width="39" height="23" />.
+</p>
+<h2><span id="Solution_3_(Graphing)"></span><span class="mw-headline" id="Solution_3_.28Graphing.29">Solution 3 (Graphing)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/6/0/8/60892eb0f812b664996878290648437bed93797d.png" class="latex" alt="$y = |x|.$" style="vertical-align: -4px" width="58" height="18" /> Then the equation becomes <img src="//latex.artofproblemsolving.com/4/c/8/4c8e8324826264c68bae64af8574b15222afd4fd.png" class="latex" alt="$\left|\left|20y-y^2\right|-c\right| = 21$" style="vertical-align: -6px" width="162" height="22" />, or <img src="//latex.artofproblemsolving.com/8/0/3/8031a252a415f3541d56739ec401c972d39b659e.png" class="latex" alt="$\left|y^2-20y\right| = c \pm 21$" style="vertical-align: -6px" width="150" height="22" />. Note that since <img src="//latex.artofproblemsolving.com/1/0/8/1088ea966adc3199481765ec5227eed20173cf52.png" class="latex" alt="$y = |x|$" style="vertical-align: -5px" width="56" height="20" />, <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> is nonnegative, so we only care about nonnegative solutions in <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />. Notice that each positive solution in <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> gives two solutions in <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> (<img src="//latex.artofproblemsolving.com/4/6/3/46351223dc154e9ccfaee76b939c91bf3140ec28.png" class="latex" alt="$x = \pm y$" style="vertical-align: -3px" width="57" height="15" />), whereas if <img src="//latex.artofproblemsolving.com/7/a/0/7a06334068417b1781d14e8b28af827907961eb3.png" class="latex" alt="$y = 0$" style="vertical-align: -3px" width="42" height="16" /> is a solution, this only gives one solution in <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="//latex.artofproblemsolving.com/2/d/3/2d348bde3e15456e71734dc2c56fc7425c95927f.png" class="latex" alt="$x = 0$" width="43" height="12" />. Since the total number of solutions in <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> is even, <img src="//latex.artofproblemsolving.com/7/a/0/7a06334068417b1781d14e8b28af827907961eb3.png" class="latex" alt="$y = 0$" style="vertical-align: -3px" width="42" height="16" /> must not be a solution. Hence, we require that <img src="//latex.artofproblemsolving.com/8/0/3/8031a252a415f3541d56739ec401c972d39b659e.png" class="latex" alt="$\left|y^2-20y\right| = c \pm 21$" style="vertical-align: -6px" width="150" height="22" /> has exactly <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> positive solutions and is not solved by <img src="//latex.artofproblemsolving.com/7/9/1/7917cfec5119aab77bad2dc6754225400bdfd50f.png" class="latex" alt="$y = 0.$" style="vertical-align: -3px" width="46" height="16" />
+</p><p>If <img src="//latex.artofproblemsolving.com/1/6/4/16434c0b60482b218128c7c11db64191eae96b74.png" class="latex" alt="$c &lt; 21$" style="vertical-align: 0px" width="49" height="12" />, then <img src="//latex.artofproblemsolving.com/a/c/b/acb335299681e7b35789b5f758d2a9e0873660ae.png" class="latex" alt="$c - 21$" style="vertical-align: -2px" width="50" height="15" /> is negative, and therefore cannot be the absolute value of <img src="//latex.artofproblemsolving.com/3/5/6/356439396721fd71bb1790b3e6fb272c1f7bca0b.png" class="latex" alt="$y^2 - 20y$" style="vertical-align: -3px" width="66" height="18" />. This means the equation's only solutions are in <img src="//latex.artofproblemsolving.com/2/1/4/21494576263fb186241467f8b333bb6482f84ae4.png" class="latex" alt="$\left|y^2-20y\right| = c + 21$" style="vertical-align: -6px" width="150" height="22" />. There is no way for this equation to have <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> solutions, since the quadratic <img src="//latex.artofproblemsolving.com/2/2/6/2261f26e0fc2e7ff83fea565c90c4ef0e8d87df6.png" class="latex" alt="$y^2-20y$" style="vertical-align: -3px" width="66" height="18" /> can only take on each of the two values <img src="//latex.artofproblemsolving.com/0/f/b/0fb6ab13baf714a7ab6dd2eb0c5fa6eb0250e66a.png" class="latex" alt="$\pm(c + 21)$" style="vertical-align: -4px" width="75" height="18" /> at most twice, yielding at most <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> solutions. Hence, <img src="//latex.artofproblemsolving.com/0/f/4/0f448347c277e5eb0dc829665e9049370f56d96c.png" class="latex" alt="$c \ge 21$" style="vertical-align: -2px" width="49" height="14" />. <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> also can't equal <img src="//latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" />, since this would mean <img src="//latex.artofproblemsolving.com/7/a/0/7a06334068417b1781d14e8b28af827907961eb3.png" class="latex" alt="$y = 0$" style="vertical-align: -3px" width="42" height="16" /> would solve the equation. Hence, <img src="//latex.artofproblemsolving.com/0/5/8/05888dc1d0d92db8915ccac5fc7ecaa98d5afef7.png" class="latex" alt="$c &gt; 21.$" style="vertical-align: 0px" width="53" height="12" />
+</p><p>At this point, the equation <img src="//latex.artofproblemsolving.com/c/a/b/cab41167a74f3921276f44e6ddac9abf18af28e6.png" class="latex" alt="$y^2-20y = c \pm 21$" style="vertical-align: -3px" width="138" height="18" /> will always have exactly <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> positive solutions, since <img src="//latex.artofproblemsolving.com/2/2/6/2261f26e0fc2e7ff83fea565c90c4ef0e8d87df6.png" class="latex" alt="$y^2-20y$" style="vertical-align: -3px" width="66" height="18" /> takes on each positive value exactly once when <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> is restricted to positive values (graph it to see this), and <img src="//latex.artofproblemsolving.com/3/6/b/36b724053dca2b4dabd32a143491b8406975c68f.png" class="latex" alt="$c \pm 21$" style="vertical-align: 0px" width="47" height="12" /> are both positive. Therefore, we just need <img src="//latex.artofproblemsolving.com/9/7/6/976fd40d62836a96b6deec1a2d928af24d8fec12.png" class="latex" alt="$y^2-20y = -(c \pm 21)$" style="vertical-align: -4px" width="166" height="19" /> to have the remaining <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> solutions exactly. This means the horizontal lines at <img src="//latex.artofproblemsolving.com/8/3/1/831a16dacb57b6174c6eeb9e5a3d62ecfe525fdd.png" class="latex" alt="$-(c \pm 21)$" style="vertical-align: -4px" width="75" height="18" /> each intersect the parabola <img src="//latex.artofproblemsolving.com/3/5/6/356439396721fd71bb1790b3e6fb272c1f7bca0b.png" class="latex" alt="$y^2 - 20y$" style="vertical-align: -3px" width="66" height="18" /> in two places. This occurs when the two lines are above the parabola's vertex <img src="//latex.artofproblemsolving.com/6/8/9/68905f768f59a814b412bd914517df3392f8e0d3.png" class="latex" alt="$(10,-100)$" style="vertical-align: -4px" width="80" height="18" />. Hence we have
+<img src="//latex.artofproblemsolving.com/b/9/2/b92de30a93a54d2860525f70e29388d85a41e733.png" class="latexcenter" alt="\begin{align*} -(c + 21) &amp;&gt; -100 \\ c + 21 &amp;&lt; 100 \\ c &amp;&lt; 79. \end{align*}" width="139" height="64" />
+Hence, the integers <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> satisfying the conditions are those satisfying <img src="//latex.artofproblemsolving.com/c/8/c/c8c00cdf0fef64a50bc8e4c3bc304373d00a9bd4.png" class="latex" alt="$21 &lt; c &lt; 79.$" style="vertical-align: 0px" width="96" height="13" /> There are <img src="//latex.artofproblemsolving.com/4/b/2/4b2ff12404524ee07bca13d0aae660df80a2eb3a.png" class="latex" alt="$\boxed{057}$" style="vertical-align: -5px" width="39" height="23" /> such integers.
+</p><p>Note: Be careful of counting at the end, you may mess up and get <img src="//latex.artofproblemsolving.com/a/f/e/afe61e5b80572ad5a200a0d9cd354ce12a8c7800.png" class="latex" alt="$59$" style="vertical-align: -1px" width="20" height="14" />.
+</p>
+<h2><span id="Solution_4_(Algebra)"></span><span class="mw-headline" id="Solution_4_.28Algebra.29">Solution 4 (Algebra)</span></h2>
+<p>Removing the absolute value bars from the equation successively, we get
+<img src="//latex.artofproblemsolving.com/f/f/f/fffdbe4fb0afddf7ef8bf63e2aeedc2a6024b8d9.png" class="latexcenter" alt="\begin{align*} \left|\left|20|x|-x^2\right|-c\right|&amp;=21 \\ \left|20|x|-x^2\right|&amp;= c \pm21 \\ 20|x|-x^2 &amp;= \pm c \pm 21 \\ x^2 \pm 20x \pm c \pm21 &amp;= 0. \end{align*}" width="224" height="99" />
+The discriminant of this equation is
+<img src="//latex.artofproblemsolving.com/d/1/0/d10a2a5919655517de0dd7e6519ec41450447dd2.png" class="latexcenter" alt="\[\sqrt{400-4(\pm c \pm 21)}.\]" width="155" height="32" />
+Equating the discriminant to <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />, we see that there will be two distinct solutions to each of the possible quadratics above only in the interval <img src="//latex.artofproblemsolving.com/3/1/f/31f7c20a3676c61720ca55287e5e659eab8fb309.png" class="latex" alt="$-79 &lt; c &lt; 79$" style="vertical-align: 0px" width="106" height="13" />. However, the number of zeros the equation <img src="//latex.artofproblemsolving.com/0/d/6/0d695abd65942ca73e25ea4cc16fada6b32fd4cf.png" class="latex" alt="$ax^2+b|x|+k$" style="vertical-align: -4px" width="109" height="19" /> has is determined by where <img src="//latex.artofproblemsolving.com/a/2/f/a2ff4c7f1f82267c9ff123cb9d8de09d6e999d21.png" class="latex" alt="$ax^2+bx+k$" style="vertical-align: -2px" width="102" height="18" /> and <img src="//latex.artofproblemsolving.com/e/0/9/e0974c2843c614f0129302a1b0c29a0896eba97d.png" class="latex" alt="$ax^2-bx+k$" style="vertical-align: -1px" width="99" height="16" /> intersect, namely at <img src="//latex.artofproblemsolving.com/c/0/6/c0658fa5f64bbe8fbe318420d63186079e262dc2.png" class="latex" alt="$(0,k)$" style="vertical-align: -4px" width="40" height="18" />. When <img src="//latex.artofproblemsolving.com/6/7/e/67e6630318d8cb28de2723180b6d359b972489c9.png" class="latex" alt="$k&gt;0$" style="vertical-align: 0px" width="43" height="13" />, <img src="//latex.artofproblemsolving.com/4/c/2/4c28242522f23e896074dc89612847f8317911d7.png" class="latex" alt="$a&gt;0$" style="vertical-align: 0px" width="42" height="13" />, <img src="//latex.artofproblemsolving.com/0/d/6/0d695abd65942ca73e25ea4cc16fada6b32fd4cf.png" class="latex" alt="$ax^2+b|x|+k$" style="vertical-align: -4px" width="109" height="19" /> will have only <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> solutions, and when <img src="//latex.artofproblemsolving.com/f/0/b/f0b043119262a2beb49176cb4beb5c50ec1915a2.png" class="latex" alt="$k&lt;0$" style="vertical-align: 0px" width="43" height="13" />, <img src="//latex.artofproblemsolving.com/4/c/2/4c28242522f23e896074dc89612847f8317911d7.png" class="latex" alt="$a&gt;0$" style="vertical-align: 0px" width="42" height="13" />, then there will be <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> real solutions, if they exist at all.
+In order to have <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> solutions here, we thus need to ensure <img src="//latex.artofproblemsolving.com/f/f/e/ffecfa0d2fc4098513c5fff87080a3de90071828.png" class="latex" alt="$-c+21&lt;0$" style="vertical-align: -1px" width="95" height="14" />, so that exactly <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> out of the <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> possible equations of the form <img src="//latex.artofproblemsolving.com/0/d/6/0d695abd65942ca73e25ea4cc16fada6b32fd4cf.png" class="latex" alt="$ax^2+b|x|+k$" style="vertical-align: -4px" width="109" height="19" /> given above have y-intercepts below <img src="//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> and only <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> real solutions, while the remaining <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> equations have <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> solutions. This occurs when <img src="//latex.artofproblemsolving.com/6/5/2/652269ab74c0e0fb384b1ac19af460bf462cf6b7.png" class="latex" alt="$c&gt;21$" style="vertical-align: 0px" width="49" height="12" />, so our final bounds are <img src="//latex.artofproblemsolving.com/9/f/f/9ff6852a91cb90c5bf4637755511898e0903a13e.png" class="latex" alt="$21&lt;c&lt;79$" style="vertical-align: -2px" width="95" height="15" />, giving us <img src="//latex.artofproblemsolving.com/4/b/2/4b2ff12404524ee07bca13d0aae660df80a2eb3a.png" class="latex" alt="$\boxed{057}$" style="vertical-align: -5px" width="39" height="23" /> valid values of <img src="//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" />.
+</p>
+<h2><span class="mw-headline" id="Remark">Remark</span></h2>
+<p>The graphs of <img src="//latex.artofproblemsolving.com/7/b/6/7b6658679cc5bf8b3b2e75f0418e1b770c362f83.png" class="latex" alt="$F(x)=\left||20|x|-x^2|-c\right|$" style="vertical-align: -6px" width="191" height="22" /> and <img src="//latex.artofproblemsolving.com/6/1/6/616636bda6ca5508030a41deed662ce3a39be8bf.png" class="latex" alt="$G(x)=21$" style="vertical-align: -4px" width="80" height="18" /> are shown here in Desmos: <a rel="nofollow" class="external free" href="https://www.desmos.com/calculator/i6l98lxwpp">https://www.desmos.com/calculator/i6l98lxwpp</a>
+</p><p>Move the slider around for <img src="//latex.artofproblemsolving.com/9/f/f/9ff6852a91cb90c5bf4637755511898e0903a13e.png" class="latex" alt="$21&lt;c&lt;79$" style="vertical-align: -2px" width="95" height="15" /> to observe how they intersect for <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> times.
+</p><p>~MRENTHUSIASM
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/6k-uR71_jg0">https://youtu.be/6k-uR71_jg0</a>
+~mathproblemsolvingskills.com
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2021_AIME_I" title="2021 AIME I">2021 AIME I</a></b> (<b><a href="/wiki/index.php/2021_AIME_I_Problems" title="2021 AIME I Problems">Problems</a></b> • <b><a href="/wiki/index.php/2021_AIME_I_Answer_Key" title="2021 AIME I Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2021">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_I_Problems/Problem_7" title="2021 AIME I Problems/Problem 7">Problem 7</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_I_Problems/Problem_9" title="2021 AIME I Problems/Problem 9">Problem 9</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2021_AIME_I_Problems/Problem_1" title="2021 AIME I Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_2" title="2021 AIME I Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_3" title="2021 AIME I Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_4" title="2021 AIME I Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_5" title="2021 AIME I Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_6" title="2021 AIME I Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_7" title="2021 AIME I Problems/Problem 7">7</a> <b>•</b> <a class="mw-selflink selflink">8</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_9" title="2021 AIME I Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_10" title="2021 AIME I Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_11" title="2021 AIME I Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_12" title="2021 AIME I Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_13" title="2021 AIME I Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_14" title="2021 AIME I Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_I_Problems/Problem_15" title="2021 AIME I Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818201546
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.081 seconds
+Real time usage: 0.086 seconds
+Preprocessor visited node count: 1417/1000000
+Preprocessor generated node count: 3386/1000000
+Post‐expand include size: 1710/2097152 bytes
+Template argument size: 108/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 26611/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.870      1 -total
+ 71.34%    3.474      1 Template:AIME_box
+ 26.61%    1.296      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:19350-0!canonical and timestamp 20250818201546 and revision id 240881
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_I_Problems/Problem_8&amp;oldid=240881">https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_I_Problems/Problem_8&amp;oldid=240881</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Algebra_Problems" title="Category:Intermediate Algebra Problems">Intermediate Algebra Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e9414de06aa2d',t:'MTc1ODM0MjUzMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250819010922 -->
+</html>
+
