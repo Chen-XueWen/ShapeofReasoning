@@ -8,6 +8,8 @@ import time
 from pathlib import Path
 from typing import Any, List
 
+import re
+
 import requests
 from tqdm import tqdm
 
@@ -87,6 +89,16 @@ SYS_PROMPT_WITHOUT_ANSWER = (
 )
 
 
+FINAL_ANSWER_PATTERN = re.compile(r"Final Answer:\s*([^\n\r]+)", re.IGNORECASE)
+
+
+def extract_final_answer(text: str) -> str | None:
+    matches = FINAL_ANSWER_PATTERN.findall(text)
+    if not matches:
+        return None
+    return matches[-1].strip()
+
+
 def build_prompt(statement: str, final_answer: str | None, include_final_answer: bool) -> str:
     if include_final_answer:
         if final_answer is None or str(final_answer).strip() == "":
@@ -108,11 +120,14 @@ def build_prompt(statement: str, final_answer: str | None, include_final_answer:
 def main() -> None:
     ap = argparse.ArgumentParser(description="Generate reasoning traces per problem via Ollama")
     ap.add_argument("--aime", default="data/aime_json/aime2024.json", help="AIME JSON input")
-    ap.add_argument("--out", default="data/aime_json/traces_aime2024.jsonl", help="Output JSONL")
+    ap.add_argument("--out", default="data/aime_traces/gptoss20b/traces_aime2024.jsonl", help="Output JSONL")
     ap.add_argument("--model", default="gpt-oss:20b", help="Ollama model name/tag")
     ap.add_argument("--host", default="http://localhost:11434", help="Ollama host")
     ap.add_argument("--seed", type=int, default=42, help="Random seed (for reproducibility)")
     ap.add_argument("--max_tokens", type=int, default=4096, help="Max tokens to generate")
+    #ap.add_argument("--think-level", 
+    #                default="medium", 
+    #                help="think_level for qwen3/deepseek-r1 models must be True or False, for gpt-oss models must be one of 'low', 'medium', 'high'")
     ap.add_argument(
         "--include-final-answer",
         action="store_true",
@@ -147,6 +162,7 @@ def main() -> None:
             resp = ollama_generate(args.model, prompt, options=options, host=args.host)
         except Exception as e:
             resp = f"<ERROR: {e}>"
+        pred_answer = extract_final_answer(resp)
         row = {
             "id": pid,
             "statement": statement,
@@ -156,6 +172,7 @@ def main() -> None:
             "trace": resp,
             "timestamp": int(time.time()),
         }
+        row["pred_answer"] = pred_answer
         if final_answer is not None:
             row["given_answer"] = str(final_answer)
         if ex.get("solution"):
