@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2025 AIME I Problems/Problem 15 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2025_AIME_I_Problems/Problem_15","wgTitle":"2025 AIME I Problems/Problem 15","wgCurRevisionId":255545,"wgRevisionId":255545,"wgArticleId":28166,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2025_AIME_I_Problems/Problem_15","wgRelevantArticleId":28166,"wgRequestId":"4052879b089185da2358602f","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2025_AIME_I_Problems_Problem_15 rootpage-2025_AIME_I_Problems_Problem_15 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2025 AIME I Problems/Problem 15																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2025_AIME_I_Problems/Problem_15" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2025_AIME_I_Problems/Problem_15&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2025_AIME_I_Problems/Problem_15&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2025_AIME_I_Problems/Problem_15&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2025_AIME_I_Problems/Problem_15" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2025 AIME I Problems/Problem 15</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution"><span class="tocnumber">2</span> <span class="toctext">Solution</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.5BNote:_I_think_this_solution_has_a_critical_flaw.5D"><span class="tocnumber">3</span> <span class="toctext">Solution 2 [<i>Note: I think this solution has a critical flaw</i>]</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" class="latex" alt="$N$" width="16" height="12" /> denote the number of ordered triples of positive integers <img src="//latex.artofproblemsolving.com/d/8/0/d80414f2f94f70731e91b6e12c4e6934c8fa65de.png" class="latex" alt="$(a, b, c)$" style="vertical-align: -4px" width="54" height="18" /> such that <img src="//latex.artofproblemsolving.com/f/4/6/f46754c99fa52b98837f384d3d62a93f82e48ae6.png" class="latex" alt="$a, b, c \leq 3^6$" style="vertical-align: -4px" width="84" height="20" /> and <img src="//latex.artofproblemsolving.com/9/a/7/9a70858379029b66b2607e3f0fccbd8c76f1d648.png" class="latex" alt="$a^3 + b^3 + c^3$" style="vertical-align: -1px" width="91" height="16" /> is a multiple of <img src="//latex.artofproblemsolving.com/b/0/7/b07648d6e77e40902829c261a2e6d8e1a897e4bb.png" class="latex" alt="$3^7$" width="15" height="15" />. Find the remainder when <img src="//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" class="latex" alt="$N$" width="16" height="12" /> is divided by <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" />.
+</p>
+<h2><span class="mw-headline" id="Solution">Solution</span></h2>
+<p>First, state the LTE Lemma for <img src="//latex.artofproblemsolving.com/e/8/d/e8dd6ada7945404d0b6fd516822b2f9768b55898.png" class="latex" alt="$p = 3, n = 3$" style="vertical-align: -4px" width="97" height="17" />, which we might use.
+</p><p><br />
+</p>
+<pre>   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> <img src="//latex.artofproblemsolving.com/1/2/1/12116ca6cc28cd9e406d9d6c1018a96d0eee6123.png" class="latex" alt="$\nu_3(n) = \begin{cases}         \max \{k&#160;: 3^k \mid n\} &amp;n\neq 0\\         \infty &amp;n=0     \end{cases}$" style="vertical-align: -23px" width="265" height="55" />
+</pre>
+<pre>   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> If <img src="//latex.artofproblemsolving.com/4/2/e/42e6a8fe9dfa26ba7c7495bc0a3ac059892d38a3.png" class="latex" alt="$3 \nmid x, 3\nmid y, 3\mid x+y$" style="vertical-align: -5px" width="153" height="20" />, then <img src="//latex.artofproblemsolving.com/c/7/3/c73fd67444e43c32ed408272fd85e3be1a70f3d3.png" class="latex" alt="$\nu_3(x^3+y^3) = \nu_3(x+y) + \nu_3(3) = \nu_3(x+y) + 1$" style="vertical-align: -5px" width="377" height="21" />
+   
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> If <img src="//latex.artofproblemsolving.com/8/c/1/8c1c9faad0bbddb5f9c7a864a8347e579526e32e.png" class="latex" alt="$3 \nmid x, 3\nmid y, 3\mid x-y$" style="vertical-align: -5px" width="153" height="20" />, then <img src="//latex.artofproblemsolving.com/2/c/4/2c4a04d3925a1b86e60d51d223da32a43ee11593.png" class="latex" alt="$\nu_3(x^3-y^3) = \nu_3(x-y) + \nu_3(3) = \nu_3(x-y) + 1$" style="vertical-align: -5px" width="377" height="21" />
+   
+</pre>
+<p>Then we classify all cube numbers <img src="//latex.artofproblemsolving.com/3/6/9/369e512c31b815d8f91658cb2cf6283dcbe7060a.png" class="latex" alt="$\mod{3^7}$" style="vertical-align: -1px" width="71" height="17" />
+</p><p><br />
+</p>
+<pre>   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> <img src="//latex.artofproblemsolving.com/7/d/0/7d0992c0ccaaa524326adc74c7d6dc80b1652d23.png" class="latex" alt="$A = \{a&#160;: 1\leq a \leq 3^6, 9\mid a\}$" style="vertical-align: -5px" width="208" height="21" />
+</pre>
+<pre>   We can write <img src="//latex.artofproblemsolving.com/9/0/8/9080ac6a88c4376c51e36dbf9076b2a49674f700.png" class="latex" alt="$A = \{a: a=9k, 1\leq k \leq 3^4\}$" style="vertical-align: -5px" width="228" height="21" />, so <img src="//latex.artofproblemsolving.com/b/3/7/b379db0b4508ddc984c7c8e998dcb4141e8cd469.png" class="latex" alt="$|A| = 3^4$" style="vertical-align: -5px" width="66" height="21" />.
+   
+       <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> If <img src="//latex.artofproblemsolving.com/d/a/0/da09bce9030ae9e0122b5f18fa1087e8500b08fa.png" class="latex" alt="$k \equiv 0 \mod{3}$" style="vertical-align: -1px" width="107" height="14" />, <img src="//latex.artofproblemsolving.com/3/d/c/3dc04ad129a547f8fbed4e587a51ef1d99bcf583.png" class="latex" alt="$k^3 \equiv 0 \mod{3}, a^3 \equiv 3^6k^3 \equiv 0 \mod{3^7}$" style="vertical-align: -4px" width="301" height="20" />, there are 27 roots.
+       <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> If <img src="//latex.artofproblemsolving.com/4/6/f/46fd62a8279cfe188b353e72044d9f97a727ef65.png" class="latex" alt="$k \equiv 1 \mod{3}$" style="vertical-align: -1px" width="107" height="14" />, <img src="//latex.artofproblemsolving.com/1/6/c/16c2ba61406f1905bd6cc001741804fd7c3f849c.png" class="latex" alt="$k^3 \equiv 1 \mod{3}, a^3 \equiv 3^6k^3 \equiv 3^6 \mod{3^7}$" style="vertical-align: -4px" width="309" height="20" />, there are 27 roots.
+       <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> If <img src="//latex.artofproblemsolving.com/c/5/8/c58dcdf822da0f5471f234e93744f67836ee3f73.png" class="latex" alt="$k \equiv 2 \mod{3}$" style="vertical-align: -1px" width="107" height="14" />, <img src="//latex.artofproblemsolving.com/4/3/5/435d2e61888078298fd5354b67d2f73a72b431ce.png" class="latex" alt="$k^3 \equiv 2 \mod{3}, a^3 \equiv 3^6k^3 \equiv 2\times 3^6 \mod{3^7}$" style="vertical-align: -4px" width="340" height="20" />, there are 27 roots.
+   
+   
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> <img src="//latex.artofproblemsolving.com/f/6/9/f6908577a284dd266ed46e8df8826af05198d460.png" class="latex" alt="$B = \{a&#160;: 1\leq a \leq 3^6, 3\mid a, 9 \nmid a\}$" style="vertical-align: -5px" width="251" height="21" />
+</pre>
+<pre>   We can write <img src="//latex.artofproblemsolving.com/e/1/8/e183c0123aa15f2ff5bac240f688c3f8238b043c.png" class="latex" alt="$B = \{a: a=9k+3 \text{ or }a=9k+6, 0\leq k &lt; 3^4\}$" style="vertical-align: -5px" width="370" height="21" />, so <img src="//latex.artofproblemsolving.com/6/9/b/69b1022835264ce8a04250b350140dfb05efbd5b.png" class="latex" alt="$|B| = 2 \times 3^4$" style="vertical-align: -5px" width="99" height="21" />. 
+</pre>
+<pre>   For <img src="//latex.artofproblemsolving.com/a/d/c/adc4570e80a00a0448e830cb324d56db98e87977.png" class="latex" alt="$x,y \in \{a: a=9k+3, 0\leq k &lt; 3^4\}$" style="vertical-align: -5px" width="272" height="21" />, let <img src="//latex.artofproblemsolving.com/2/3/6/2369bc1aa19ebaebf888db48c47e6e8f098bc32b.png" class="latex" alt="$x = 3a, y= 3b$" style="vertical-align: -4px" width="114" height="18" /> and hence <img src="//latex.artofproblemsolving.com/7/8/5/78575c94c31e0b85df061fd6212562f9a7c819bd.png" class="latex" alt="$3 \nmid a, 3\nmid b, 3\mid a-b$" style="vertical-align: -5px" width="148" height="20" />.
+   
+       <img src="//latex.artofproblemsolving.com/7/c/8/7c85fadc941a43f44068735b6cbbe03add8da30b.png" class="latex" alt="$(3a)^3 - (3b)^3 \equiv 0 \mod{3^7}$" style="vertical-align: -5px" width="206" height="21" />
+       <img src="//latex.artofproblemsolving.com/c/5/8/c58645ca53e4b14ebd33640c0c3693142eb4185b.png" class="latex" alt="$\iff a^3 - b^3 \equiv 0 \mod{3^4}$" style="vertical-align: -2px" width="208" height="18" />
+       <img src="//latex.artofproblemsolving.com/f/3/5/f35fb3a1689d1b6b57c2b5ca1de66adf5d41ebba.png" class="latex" alt="$\iff \nu(a^3-b^3) \geq 4$" style="vertical-align: -5px" width="162" height="21" />
+       <img src="//latex.artofproblemsolving.com/e/f/4/ef44a5658868fd8b0017b25890f7640ec8e48340.png" class="latex" alt="$\iff \nu(a-b) \geq 3$" style="vertical-align: -5px" width="148" height="20" />
+       <img src="//latex.artofproblemsolving.com/5/6/b/56b24c729ec3a9765a5ea9c0dcee7947c2dcc202.png" class="latex" alt="$\iff a - b\equiv 0 \mod{3^3}$" style="vertical-align: -2px" width="193" height="18" />
+       <img src="//latex.artofproblemsolving.com/f/e/2/fe29731a9a7fa2c068990ce9c3e55bbcc599cff3.png" class="latex" alt="$\iff x - y\equiv 0 \mod{3^4}$" style="vertical-align: -4px" width="195" height="20" />
+   
+   For <img src="//latex.artofproblemsolving.com/8/f/1/8f1183dcac255046e1c3bf5168a1ba66afd9cfff.png" class="latex" alt="$k = 0, ..., 8$" style="vertical-align: -4px" width="86" height="18" />, each has 9 roots.
+   
+   Since <img src="//latex.artofproblemsolving.com/c/9/3/c93e38c4eda55e5659d0d0744d4164131652b06f.png" class="latex" alt="$(9k+3)^3 \equiv 3^6k^3+3^6k^2+3^5k + 3^3 \equiv 3^5m + 3^3 \mod{3^7}$" style="vertical-align: -5px" width="441" height="21" />, <img src="//latex.artofproblemsolving.com/4/1/7/4178a1564c40fc92eb3ba36c301a8ad585aca585.png" class="latex" alt="$0\leq m \leq 8$" style="vertical-align: -3px" width="84" height="16" />. They are the corresponding classes.
+</pre>
+<pre>   Same apply to <img src="//latex.artofproblemsolving.com/7/4/0/74006d0f80759b74cd30e42c1d44a9aa3d93a306.png" class="latex" alt="$x,y \in \{a: a=9k+6, 0\leq k &lt; 3^4\}$" style="vertical-align: -5px" width="272" height="21" />. For <img src="//latex.artofproblemsolving.com/8/f/1/8f1183dcac255046e1c3bf5168a1ba66afd9cfff.png" class="latex" alt="$k = 0, ..., 8$" style="vertical-align: -4px" width="86" height="18" />, each has 9 roots.
+</pre>
+<pre>   Since <img src="//latex.artofproblemsolving.com/c/d/a/cda7e2f9878c30c45335f19f34cab67cc620d8b3.png" class="latex" alt="$(9k+6)^3 \equiv 3^6k^3+2\times3^6k^2+4\times3^5k + 8\times3^3 \equiv 3^5m - 3^3 \mod{3^7}$" style="vertical-align: -5px" width="535" height="21" />, <img src="//latex.artofproblemsolving.com/4/1/7/4178a1564c40fc92eb3ba36c301a8ad585aca585.png" class="latex" alt="$0\leq m \leq 8$" style="vertical-align: -3px" width="84" height="16" />. They are the corresponding classes.
+</pre>
+<pre>   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> <img src="//latex.artofproblemsolving.com/d/6/5/d6553e8fd58c32bbd01ff2bcb46029a8658b5b9c.png" class="latex" alt="$C = \{a&#160;: 1\leq a \leq 3^6, 3\nmid a\}$" style="vertical-align: -5px" width="209" height="21" />
+</pre>
+<pre>   We write <img src="//latex.artofproblemsolving.com/1/c/e/1ce57e8566db44eb2f155cddac25a855f417f088.png" class="latex" alt="$C = \{a: a=3k+1 \text{ or }a=3k+2, 0\leq k &lt; 3^5\}$" style="vertical-align: -5px" width="370" height="21" />, so <img src="//latex.artofproblemsolving.com/b/1/c/b1cd57f5ef08d6e421371d1b6518b96a961bdb84.png" class="latex" alt="$|C| = 2 \times 3^5$" style="vertical-align: -5px" width="98" height="21" />.
+</pre>
+<pre>   For <img src="//latex.artofproblemsolving.com/f/9/8/f98c3c411973fc70f3d30c266ab0ac5d406a4914.png" class="latex" alt="$a,b \in \{a: a=3k+1, 0\leq k &lt; 3^5\}$" style="vertical-align: -5px" width="269" height="21" />, then <img src="//latex.artofproblemsolving.com/7/8/5/78575c94c31e0b85df061fd6212562f9a7c819bd.png" class="latex" alt="$3 \nmid a, 3\nmid b, 3\mid a-b$" style="vertical-align: -5px" width="148" height="20" />.
+   
+       <img src="//latex.artofproblemsolving.com/6/9/2/6929916dc2bf9357b20e02bad0f63729ce268296.png" class="latex" alt="$a^3 - b^3 \equiv 0 \mod{3^7}$" style="vertical-align: -2px" width="159" height="18" />
+       <img src="//latex.artofproblemsolving.com/c/c/5/cc585a85e3c3a32e1abad9b1faab82ae80d507bc.png" class="latex" alt="$\iff \nu(a^3-b^3) \geq 7$" style="vertical-align: -5px" width="162" height="21" />
+       <img src="//latex.artofproblemsolving.com/8/a/7/8a7fa001a82acfc8873a81e43fb3a4f6c280f51f.png" class="latex" alt="$\iff \nu(a-b) \geq 6$" style="vertical-align: -5px" width="148" height="20" />
+       <img src="//latex.artofproblemsolving.com/3/e/3/3e35810fd55714ba60abac8b69715a364a73cf16.png" class="latex" alt="$\iff a - b\equiv 0 \mod{3^6}$" style="vertical-align: -2px" width="193" height="18" />
+   For <img src="//latex.artofproblemsolving.com/d/b/0/db0cb41658fe8411656502384bc85fa32ded6c5d.png" class="latex" alt="$k = 0, ..., 3^5-1$" style="vertical-align: -4px" width="124" height="20" />, 1 root each.
+   
+   <img src="//latex.artofproblemsolving.com/3/5/6/356b104f1fde579a12af263eae2ac8df0964f6f1.png" class="latex" alt="$(3k+1)^3 \equiv 3^3k^3+3^3k^2+3^2k + 1 \equiv 3^2m + 1 \mod{3^7}$" style="vertical-align: -5px" width="426" height="21" />, <img src="//latex.artofproblemsolving.com/3/2/2/3229f79d799416eb050a0c13485881c957e7635b.png" class="latex" alt="$0\leq m &lt; 3^5$" style="vertical-align: -3px" width="92" height="19" />. They are the corresponding classes.
+</pre>
+<pre>   Same apply to <img src="//latex.artofproblemsolving.com/f/5/4/f54465f44e7c138cc72c475a2a5ece1e1df1922d.png" class="latex" alt="$x,y \in \{a: a=3k+2, 0\leq k &lt; 3^5\}$" style="vertical-align: -5px" width="272" height="21" />. For <img src="//latex.artofproblemsolving.com/d/b/0/db0cb41658fe8411656502384bc85fa32ded6c5d.png" class="latex" alt="$k = 0, ..., 3^5-1$" style="vertical-align: -4px" width="124" height="20" />, 1 root each.
+</pre>
+<pre>   <img src="//latex.artofproblemsolving.com/1/2/5/1252eafa51eb30067aa5b31dc7c25045c399b1fb.png" class="latex" alt="$(3k+2)^3 \equiv 3^3k^3+2\times3^3k^2+4\times3^2k + 8 \equiv 3^2m - 1 \mod{3^7}$" style="vertical-align: -5px" width="489" height="21" />, <img src="//latex.artofproblemsolving.com/3/2/2/3229f79d799416eb050a0c13485881c957e7635b.png" class="latex" alt="$0\leq m &lt; 3^5$" style="vertical-align: -3px" width="92" height="19" />. They are the corresponding classes.
+</pre>
+<p><br />
+Summarized the results:
+</p>
+<pre>   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" />: If <img src="//latex.artofproblemsolving.com/b/6/0/b60ba752d455e687ddd28f9b4fb25da74ea5716e.png" class="latex" alt="$x \equiv 0, 3^6, 2\times3^6 \mod{3^7}$" style="vertical-align: -4px" width="196" height="20" />, then <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> has 27 roots. <img src="//latex.artofproblemsolving.com/b/3/7/b379db0b4508ddc984c7c8e998dcb4141e8cd469.png" class="latex" alt="$|A| = 3^4$" style="vertical-align: -5px" width="66" height="21" />.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />: If <img src="//latex.artofproblemsolving.com/0/2/3/023aa5bbfed930ba11eb9fd65fb03a0d3567807d.png" class="latex" alt="$x \equiv 3^5m \pm 3^3 \mod{3^7}$" style="vertical-align: -2px" width="177" height="18" />, then <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> has 9 roots. <img src="//latex.artofproblemsolving.com/a/a/1/aa175e3e2c145ba7b581e206fbc8b8ffdd1ea9fc.png" class="latex" alt="$|B| = 2\times3^4$" style="vertical-align: -5px" width="99" height="21" />.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />: If <img src="//latex.artofproblemsolving.com/a/a/3/aa3067f21114c40d77910f331dd824306a5cbefe.png" class="latex" alt="$x \equiv 3^2m \pm 1 \mod{3^7}$" style="vertical-align: -2px" width="170" height="18" />, then <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> has 1 root. <img src="//latex.artofproblemsolving.com/9/2/9/929b4335ed9b84cbe55de0336e790fae00bc1f09.png" class="latex" alt="$|C| = 2\times3^5$" style="vertical-align: -5px" width="98" height="21" />.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Otherwise, <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> has no roots.
+</pre>
+<p><br />
+We do the final combinatorial problem.
+</p><p><br />
+</p>
+<pre>   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case: <img src="//latex.artofproblemsolving.com/b/1/d/b1d9ccb5d3ebbaa004ea01775f32341532883ef3.png" class="latex" alt="$A,A,A$" style="vertical-align: -4px" width="59" height="18" />: <img src="//latex.artofproblemsolving.com/8/a/4/8a480b6a2767e16e24894432b0b0b4a1caee76ee.png" class="latex" alt="$|A| \times |A| \times 27 = \boxed{3 \times 3^{10}}$" style="vertical-align: -8px" width="202" height="29" />
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case <img src="//latex.artofproblemsolving.com/e/8/1/e81b6e1164c0b521b334402bd9e139796b18280d.png" class="latex" alt="$A,A,B$" style="vertical-align: -4px" width="60" height="18" />: No solution.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case <img src="//latex.artofproblemsolving.com/1/e/2/1e210d163c1fe6db2f53a850e17521de27e5705d.png" class="latex" alt="$A,A,C$" style="vertical-align: -4px" width="60" height="18" />: No solution.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case: <img src="//latex.artofproblemsolving.com/3/9/5/3958747e27e93f1a1ac14d5b1dfee8d8af80e236.png" class="latex" alt="$A,B,B$" style="vertical-align: -4px" width="61" height="18" />: <img src="//latex.artofproblemsolving.com/4/2/a/42abed571495aa2a792afc138d9fa6c0249f356f.png" class="latex" alt="$3 \times |A| \times |B| \times 9 = \boxed{6 \times 3^{10}}$" style="vertical-align: -8px" width="225" height="29" />
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case <img src="//latex.artofproblemsolving.com/e/8/1/e81b6e1164c0b521b334402bd9e139796b18280d.png" class="latex" alt="$A,A,B$" style="vertical-align: -4px" width="60" height="18" />: No solution.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case: <img src="//latex.artofproblemsolving.com/4/3/d/43d37206d668990e958ef3d5e060a0619831298b.png" class="latex" alt="$A,C,C$" style="vertical-align: -4px" width="59" height="18" />: <img src="//latex.artofproblemsolving.com/f/7/b/f7b4eb73f29300d6062620a38a8a1104c3d11f3b.png" class="latex" alt="$3 \times |A| \times |C| \times 1 = \boxed{2 \times 3^{10}}$" style="vertical-align: -8px" width="225" height="29" />
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case <img src="//latex.artofproblemsolving.com/2/7/d/27d4b95224951410791c2d4d3fd115d2c7b648f0.png" class="latex" alt="$B,B,C$" style="vertical-align: -4px" width="62" height="18" />: No solution.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case <img src="//latex.artofproblemsolving.com/1/1/6/116eb71664f174c3e67b1c017c333b2c7ccca17f.png" class="latex" alt="$B,B,B$" style="vertical-align: -4px" width="62" height="18" />: No solution.
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case <img src="//latex.artofproblemsolving.com/9/8/3/983f20d62732d3394e2968720a4d1a27401e1cf8.png" class="latex" alt="$B,C,C$" style="vertical-align: -4px" width="60" height="18" />: <img src="//latex.artofproblemsolving.com/4/3/f/43f575ed2da3086fea9b912e94e450dbeb5f4ed2.png" class="latex" alt="$3 \times |B| \times |C| \times 1 = \boxed{4 \times 3^{10}}$" style="vertical-align: -8px" width="226" height="29" />
+   <img src="//latex.artofproblemsolving.com/d/5/3/d534b942086dae501cbdce030206adb87567bb07.png" class="latex" alt="$\bullet$" style="vertical-align: 1px" width="8" height="7" /> Case <img src="//latex.artofproblemsolving.com/2/7/d/27d10cf5b2fd9d5eefb2d3a8dd02a8bfd9e69247.png" class="latex" alt="$C,C,C$" style="vertical-align: -4px" width="59" height="18" />: No solution.    
+</pre>
+<p>Total is <img src="//latex.artofproblemsolving.com/c/b/0/cb0f93e156edd247544280c04282f1626a8f050e.png" class="latex" alt="$(3+6+2+4)3^{10}=15\times 3^{10}$" style="vertical-align: -5px" width="230" height="21" />.
+</p><p><img src="//latex.artofproblemsolving.com/b/5/e/b5efa9b61440057b02d3aa84c3526a7a2467ee46.png" class="latex" alt="$3^5 = 243 \equiv 43 \mod{200},43^2=1600+240+9\equiv49\mod{200}$" style="vertical-align: -4px" width="490" height="20" />
+</p><p>Hence <img src="//latex.artofproblemsolving.com/a/b/e/abe605164898ab55832fa9b64df300fdcd1dddbe.png" class="latex" alt="$15\times3^{10}\equiv15\times49\equiv735\mod{1000}$" style="vertical-align: -2px" width="289" height="18" />
+</p><p>Answer is <img src="//latex.artofproblemsolving.com/9/7/0/970dbde6c1628dee1774fa47c7c5fb4708ebe8a8.png" class="latex" alt="$\boxed{735}$" style="vertical-align: -6px" width="40" height="25" />.
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Rakko12">Rakko12</a>
+</p>
+<h2><span id="Solution_2_[Note:_I_think_this_solution_has_a_critical_flaw]"></span><span class="mw-headline" id="Solution_2_.5BNote:_I_think_this_solution_has_a_critical_flaw.5D">Solution 2 [<i>Note: I think this solution has a critical flaw</i>]</span></h2>
+<p>We are given that
+<img src="//latex.artofproblemsolving.com/2/1/7/217c010adf3b0df9ee9d36fbf7c0c013793c30b5.png" class="latex" alt="$N = \#\{(a,b,c) \in [1,3^6]^3&#160;: 3^7 \mid (a^3+b^3+c^3)\},$" style="vertical-align: -5px" width="363" height="21" />
+and we wish to compute the remainder when \(N\) is divided by 1000.
+</p><p>Since \(3^6=729\) and \(3^7=2187\), the variables \(a\), \(b\), and \(c\) range over the set \(\{1,2,\dots,729\}\).
+</p><p>A standard approach is to use exponential sums to detect the divisibility condition. For any integer \(n\) we have the identity
+<img src="//latex.artofproblemsolving.com/9/4/5/945b8abce4863555d884beee0007a80444e9b2d2.png" class="latex" alt="$\frac{1}{3^7}\sum_{t=0}^{3^7-1} e^{\frac{2\pi i\,t\,n}{3^7}} = \begin{cases} 1, &amp; \text{if } 3^7\mid n,\\[1mm] 0, &amp; \text{otherwise.} \end{cases}$" style="vertical-align: -23px" width="249" height="58" />
+<img src="//latex.artofproblemsolving.com/5/7/f/57f1406b65f9f2e6a365b7356da731780b42cceb.png" class="latexcenter" alt="\[\]" />Thus, we can write
+<img src="//latex.artofproblemsolving.com/2/8/9/28983adb87e1c57460b65b01196478b84ed73276.png" class="latex" alt="$N = \frac{1}{3^7}\sum_{t=0}^{3^7-1} \sum_{a=1}^{3^6} e^{\frac{2\pi i\,t\,a^3}{3^7}} \sum_{b=1}^{3^6} e^{\frac{2\pi i\,t\,b^3}{3^7}} \sum_{c=1}^{3^6} e^{\frac{2\pi i\,t\,c^3}{3^7}}.$" style="vertical-align: -23px" width="351" height="59" />
+Define
+<img src="//latex.artofproblemsolving.com/5/3/5/535e06316d28b327eaed52e179fcadfc9ff2312e.png" class="latex" alt="$S(t)=\sum_{a=1}^{3^6} e^{\frac{2\pi i\,t\,a^3}{3^7}}.$" style="vertical-align: -23px" width="145" height="58" />
+Then,
+<img src="//latex.artofproblemsolving.com/f/3/f/f3f5a62059c376630ebcabb25970a6410d933deb.png" class="latex" alt="$N=\frac{1}{3^7}\sum_{t=0}^{3^7-1} \bigl(S(t)\bigr)^3.$" style="vertical-align: -23px" width="158" height="58" />
+</p><p><img src="//latex.artofproblemsolving.com/d/2/8/d280bdb1fffc8e3d529026c20fcb3a21960feed1.png" class="latex" alt="$\medskip$" style="vertical-align: -1px" width="1052" height="12" />
+</p><p>Notice that when \(t=0\) we have
+<img src="//latex.artofproblemsolving.com/c/0/a/c0ab4000cee5fcada8836527c1e73c91cdd6c247.png" class="latex" alt="$S(0)=\sum_{a=1}^{3^6} 1=3^6.$" style="vertical-align: -23px" width="145" height="58" />
+Thus, the \(t=0\) term contributes
+<img src="//latex.artofproblemsolving.com/2/0/a/20afaf4b14301aac6b017020fbdac73ce4b06e83.png" class="latex" alt="$\frac{1}{3^7}(3^6)^3 = \frac{3^{18}}{3^7}=3^{11}.$" style="vertical-align: -13px" width="164" height="41" />
+</p><p>It turns out that for \(t\not\equiv 0\pmod{3^7}\), one can show (using properties of cubic residues modulo \(3^7\)) that
+<img src="//latex.artofproblemsolving.com/c/c/a/cca455ad3ef3e093d80ad219fdd76240fabfa211.png" class="latex" alt="$S(t)=0.$" style="vertical-align: -5px" width="73" height="20" /> [<b>Note: I don't believe this is true.  Try it manually for the modulo <img src="//latex.artofproblemsolving.com/8/1/9/819068968ed60608a91d0c3921d6296964660e9d.png" class="latex" alt="$3^2$" width="15" height="15" /> case.</b>]
+</p><p>Therefore, only the \(t=0\) term contributes to the sum, and we obtain
+<img src="//latex.artofproblemsolving.com/a/e/4/ae47c6ed7079217fee3b8e9656e4ddd4932f7127.png" class="latex" alt="$N=3^{11}.$" style="vertical-align: -1px" width="71" height="17" />
+</p><p>Since
+<img src="//latex.artofproblemsolving.com/0/0/d/00db09873511d801ba737aed3040b715118159b9.png" class="latex" alt="$3^{11}=177147,$" style="vertical-align: -4px" width="109" height="20" />
+we compute
+<img src="//latex.artofproblemsolving.com/f/a/b/fab839424f6afd180904d427646fd5e76ad79ac4.png" class="latex" alt="$(5 \cdot 177147) \mod 1000 = 735.$" style="vertical-align: -5px" width="239" height="20" /> [<i>Note: The multiplication by 5 isn't justified. The computed <img src="//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" class="latex" alt="$N$" width="16" height="12" /> above is simply wrong by a factor of 5. Unfortunately, I don't know how to fix this approach.</i>]
+(context: he chat gptd the solution like recently after the test was finished so we didnt know what the real answer was. i bashed with a simple program and determined his solution was off by a factor of 5 so he just did that at the end&#160;;-;)
+~shreyan.chethan
+</p><p>~hashbrown2009
+</p><p>~ <a href="/wiki/index.php/User:Zhenghua" title="User:Zhenghua">zhenghua</a> for minor <img src="//latex.artofproblemsolving.com/latex.png" class="latex" alt="$\LaTeX$" style="vertical-align: -4px" width="46" height="15" /> fixes
+</p><p>~jrr for Notes on the flaw in the solution
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>For <img src="//latex.artofproblemsolving.com/1/d/2/1d2b237f5a4222e6aee542a93cadcd980f53c7bd.png" class="latex" alt="$3^{7} \mid a^{3} + b^{3} + c^{3}$" style="vertical-align: -5px" width="126" height="21" /> to happen, we need <img src="//latex.artofproblemsolving.com/f/d/f/fdf1951f39c6155013ed6c3568a0791d6e24ab3f.png" class="latex" alt="$3 \mid a^{3} + b^{3} + c^{3}$" style="vertical-align: -5px" width="118" height="21" />. So we can define classes:
+</p><p><img src="//latex.artofproblemsolving.com/e/0/3/e03c10dffae2b96ac8d1a47dce1d960c19b51949.png" class="latex" alt="$a,b,c \equiv 0\mod 3 \hspace{1 cm} \textbf{(1)}$" style="vertical-align: -5px" width="210" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/6/a/c/6ac8e9c5791d46093d6a80d4add10c88e52bcc32.png" class="latex" alt="$a,b,c \equiv 1\mod 3 \hspace{1 cm} \textbf{(2)}$" style="vertical-align: -5px" width="210" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/b/f/e/bfe63b157db833278c99342d1a6347ac488f797b.png" class="latex" alt="$a,b,c \equiv 2\mod 3 \hspace{1 cm} \textbf{(3)}$" style="vertical-align: -5px" width="210" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/5/a/3/5a333958b8e34d7c19375268e1ccd0643a62734f.png" class="latex" alt="$a \equiv 0\mod 3, b \equiv 1\mod 3, c \equiv 2\mod 3 \hspace{1 cm} \textbf{(4)}$" style="vertical-align: -5px" width="401" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/f/5/b/f5bce4c57a7f51dce7c877e485977fe5d079d95e.png" class="latex" alt="$a \equiv 0\mod 3, b \equiv 2\mod 3, c \equiv 1\mod 3 \hspace{1 cm} \textbf{(5)}$" style="vertical-align: -5px" width="401" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/4/3/7/43770aff176927b0c02bb723265284d10de7d3b2.png" class="latex" alt="$a \equiv 1\mod 3, b \equiv 0\mod 3, c \equiv 2\mod 3 \hspace{1 cm} \textbf{(6)}$" style="vertical-align: -5px" width="401" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/4/3/b/43b669f477b824a404f23ec54e9fb32a6720c55f.png" class="latex" alt="$a \equiv 1\mod 3, b \equiv 2\mod, c \equiv 0\mod 3 \hspace{1 cm} \textbf{(7)}$" style="vertical-align: -5px" width="392" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/5/e/f/5ef2c2dd2ef01cfc0b4fb2ca08a885de2deda092.png" class="latex" alt="$a \equiv 2\mod 3, b \equiv 0\mod 3, c \equiv 1\mod 3 \hspace{1 cm} \textbf{(8)}$" style="vertical-align: -5px" width="401" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/7/1/1/711a3f74763f07672eb54bbb8455b01ea3ac86dd.png" class="latex" alt="$a \equiv 2\mod 3, b \equiv 1\mod 3, c \equiv 0\mod 3 \hspace{1 cm} \textbf{(9)}$" style="vertical-align: -5px" width="401" height="18" />
+</p><p>If we consider class (1), we have <img src="//latex.artofproblemsolving.com/2/6/f/26f1abbca3c2d3a7c5a0c81fd57e99b9dc2a10fd.png" class="latex" alt="$a = 3a&#39;$" style="vertical-align: -1px" width="59" height="16" /> and the others homogeneously. Then <img src="//latex.artofproblemsolving.com/0/3/2/03277894618a5f6edece9420bcb0580ad571223a.png" class="latex" alt="$a&#39;, b&#39;, c&#39; \leq 3^{5}$" style="vertical-align: -4px" width="98" height="20" /> and <img src="//latex.artofproblemsolving.com/2/b/9/2b9efbeb8e08dd6c12dc97dbe0e945d5e2640330.png" class="latex" alt="$3^{7} \mid 3^{3}(a&#39;^{3} + b&#39;^{3} + c&#39;^{3})$" style="vertical-align: -5px" width="168" height="21" />. So <img src="//latex.artofproblemsolving.com/d/a/a/daa9c5fb0185ebbeeaffd8e7bf582ef3bb202d95.png" class="latex" alt="$3^{4} \mid a&#39;^{3} + b&#39;^{3} + c&#39;^{3}$" style="vertical-align: -5px" width="137" height="21" />. Then we need to choose another class so we choose class (1) again. Then <img src="//latex.artofproblemsolving.com/3/c/5/3c5a999f967f104cdc131261b19ba0dd76716822.png" class="latex" alt="$a = 3a&#39;&#39;$" style="vertical-align: -1px" width="63" height="16" /> and the other homogeneously. Then <img src="//latex.artofproblemsolving.com/d/1/4/d14f72c6585fb45956bb55f158bf557adcaf569d.png" class="latex" alt="$a&#39;&#39;, b&#39;&#39;, c&#39;&#39; \leq 3^{4}$" style="vertical-align: -4px" width="110" height="20" /> and <img src="//latex.artofproblemsolving.com/5/b/c/5bc43e5ac36883481a5c81d4bc7500ddf556800e.png" class="latex" alt="$3 \mid a&#39;&#39;^{3} + b&#39;&#39;^{3} + c&#39;&#39;^{3}$" style="vertical-align: -5px" width="141" height="21" />. If we choose class (1) again, we would have satisfied the inequality and it would just be a number of multiples of <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> between <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> and <img src="//latex.artofproblemsolving.com/8/7/e/87edbdda753b32453027dc7cab023c0743b6b243.png" class="latex" alt="$81$" style="vertical-align: 0px" width="17" height="13" /> so <img src="//latex.artofproblemsolving.com/e/3/e/e3e3b70470658f5dc22e04eeb5cb8f5093887a06.png" class="latex" alt="$27^{3} = 3^{9}$" style="vertical-align: -1px" width="68" height="17" /> triples. Then we choose class (2) to get the number of numbers that are 1(mod 3) between <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> and <img src="//latex.artofproblemsolving.com/8/7/e/87edbdda753b32453027dc7cab023c0743b6b243.png" class="latex" alt="$81$" style="vertical-align: 0px" width="17" height="13" /> which is also <img src="//latex.artofproblemsolving.com/e/3/e/e3e3b70470658f5dc22e04eeb5cb8f5093887a06.png" class="latex" alt="$27^{3} = 3^{9}$" style="vertical-align: -1px" width="68" height="17" />. In fact, we would just have <img src="//latex.artofproblemsolving.com/a/6/7/a67efcea6c41c195419b80855927cdf461079ef1.png" class="latex" alt="$3^{9}$" style="vertical-align: -1px" width="18" height="17" /> triples for each of the classes so <img src="//latex.artofproblemsolving.com/6/8/6/686da263d672a56b00a3fe3bf745c7b213891f56.png" class="latex" alt="$9(3^{9}) = 3^{11}$" style="vertical-align: -5px" width="89" height="21" /> triples for this case for (1)-(1) classes. 
+</p><p>Now, if we choose class (1) again, then we would have <img src="//latex.artofproblemsolving.com/d/a/a/daa9c5fb0185ebbeeaffd8e7bf582ef3bb202d95.png" class="latex" alt="$3^{4} \mid a&#39;^{3} + b&#39;^{3} + c&#39;^{3}$" style="vertical-align: -5px" width="137" height="21" /> and <img src="//latex.artofproblemsolving.com/0/3/2/03277894618a5f6edece9420bcb0580ad571223a.png" class="latex" alt="$a&#39;, b&#39;, c&#39; \leq 3^{5}$" style="vertical-align: -4px" width="98" height="20" />. But if we choose class (2) this time, then we would have <img src="//latex.artofproblemsolving.com/8/e/7/8e7c1b2b94cb33e5cdcd474fc563dd4158c3c5aa.png" class="latex" alt="$a&#39; = 3a&#39;&#39; + 1$" style="vertical-align: -2px" width="99" height="17" /> and the others. Then <img src="//latex.artofproblemsolving.com/0/4/e/04ea5adda909730edd89c75df0228b6cf677c858.png" class="latex" alt="$a&#39;&#39;, b&#39;&#39;, c&#39;&#39; \leq 80$" style="vertical-align: -4px" width="111" height="19" />. If we expand and simplify, we would have <img src="//latex.artofproblemsolving.com/b/b/3/bb3333fb75c091058f0182ca41964a350583c769.png" class="latex" alt="$3^{3}$" width="15" height="15" /> divides a number that is 1(mod 3) which is clearly impossible. Same thing for (1)-(3) class arrangement. So we can skip to (1)-(4) class. 
+</p><p>So we start with <img src="//latex.artofproblemsolving.com/d/a/a/daa9c5fb0185ebbeeaffd8e7bf582ef3bb202d95.png" class="latex" alt="$3^{4} \mid a&#39;^{3} + b&#39;^{3} + c&#39;^{3}$" style="vertical-align: -5px" width="137" height="21" /> and <img src="//latex.artofproblemsolving.com/0/3/2/03277894618a5f6edece9420bcb0580ad571223a.png" class="latex" alt="$a&#39;, b&#39;, c&#39; \leq 3^{5}$" style="vertical-align: -4px" width="98" height="20" />. Choosing class (4) gives <img src="//latex.artofproblemsolving.com/4/2/2/42226d4b03720bf3dca288a29ec73ff0e5f6931c.png" class="latex" alt="$a&#39; = 3a&#39;&#39;, b&#39; = 3b&#39;&#39; + 1, c&#39; = 3c&#39;&#39; - 1$" style="vertical-align: -4px" width="271" height="19" />. Expanding and simplifying we would need <img src="//latex.artofproblemsolving.com/b/2/e/b2edafea143209262cfc038e141a6b93546044ae.png" class="latex" alt="$3^{2} \mid a&#39;&#39;^{3} + b&#39;&#39;^{3} + c&#39;&#39;^{3} + b&#39;&#39;^{2} - c&#39;&#39;^{2} + b&#39;&#39; + c&#39;&#39;$" style="vertical-align: -5px" width="316" height="21" />. Now, we would just need to do all <img src="//latex.artofproblemsolving.com/e/6/d/e6d74f5295caa34e45a9c9b6830212530fc7b109.png" class="latex" alt="$a&#39;&#39;, b&#39;&#39;, c&#39;&#39;$" style="vertical-align: -4px" width="69" height="19" /> residues modular 3 such that 3 divides the expression. We can classify them as:
+</p><p><img src="//latex.artofproblemsolving.com/1/a/4/1a4bd729ebe2e21114289534dae7654840ac197c.png" class="latex" alt="$a,b,c \equiv 0\mod 3$" style="vertical-align: -4px" width="139" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/c/6/e/c6e514583fca08a31e1272d1d57be14e42a4b3c8.png" class="latex" alt="$a,c \equiv 0\mod 3, b \equiv 1\mod 3$" style="vertical-align: -4px" width="234" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/a/8/a/a8aa96ac1c950da5c059344c7f2d0f003a6493cb.png" class="latex" alt="$a \equiv 0\mod 3, b \equiv 1\mod 3, c \equiv 2\mod 3$" style="vertical-align: -4px" width="330" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/5/c/5/5c58214be55ba40271b53fdb5b7d325f8a1261ae.png" class="latex" alt="$a \equiv 0\mod 3, b \equiv 2\mod 3, c \equiv 1\mod 3$" style="vertical-align: -4px" width="330" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/5/e/5/5e5e4de43514fd3797ecca701ea6e3037a972345.png" class="latex" alt="$a,b \equiv 0\mod 3, c \equiv 2\mod 3$" style="vertical-align: -4px" width="234" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/e/7/c/e7c4cf2404c1a4ef95a083a316cf5b4f8783ba7d.png" class="latex" alt="$a \equiv 1\mod 3, b \equiv 2\mod 3, c \equiv 0\mod 3$" style="vertical-align: -4px" width="330" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/0/d/d/0ddd7a0b7085991ba2cf8cc891e503f815608c59.png" class="latex" alt="$a \equiv 1\mod 3, b,c \equiv 2\mod 3$" style="vertical-align: -4px" width="234" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/a/d/e/ade80c8cf62594f119536a28f5394ec755f2e2b0.png" class="latex" alt="$a \equiv 2\mod 3, b \equiv 0\mod 3, c \equiv 1\mod 3$" style="vertical-align: -4px" width="330" height="18" />
+</p><p><img src="//latex.artofproblemsolving.com/b/1/9/b1940c4842d06eb5f8883800f9477ef73a3275e7.png" class="latex" alt="$a \equiv 2\mod 3, b,c \equiv 1\mod 3$" style="vertical-align: -4px" width="234" height="18" />
+</p><p>If we consider the first case, then we have <img src="//latex.artofproblemsolving.com/b/a/7/ba79dbf13dc0611ef568a4d839aadd3ef8af2fb3.png" class="latex" alt="$a&#39;&#39; = 3a&#39;&#39;&#39;$" style="vertical-align: -1px" width="75" height="16" /> and the others. Notice <img src="//latex.artofproblemsolving.com/b/4/d/b4daf08aa80b16812d63397e30a5d6ba88c1aa9a.png" class="latex" alt="$1 \leq a&#39;&#39;&#39; \leq 27, 0 \leq b&#39;&#39;&#39; \leq 26, 1 \leq c&#39;&#39;&#39; \leq 27$" style="vertical-align: -4px" width="307" height="19" />. If we simplify with this knowledge and plug it into the original expression, we just need <img src="//latex.artofproblemsolving.com/f/d/f/fdf61ad3e3b13a47cc31fc8ef9178b655ab2324c.png" class="latex" alt="$3 \mid b&#39;&#39;&#39; + c&#39;&#39;&#39;$" style="vertical-align: -5px" width="89" height="20" />. Then, we would have <img src="//latex.artofproblemsolving.com/2/e/8/2e8490a5e2f3b6c4d763f8b3283b87b161e02b1c.png" class="latex" alt="$b&#39;&#39;&#39;, c&#39;&#39;&#39; \equiv 0\mod 3$" style="vertical-align: -4px" width="146" height="19" /> to get <img src="//latex.artofproblemsolving.com/e/b/4/eb4688cff66719c227d5ba661d50c4fe875cf31b.png" class="latex" alt="$9(9) = 3^{4}$" style="vertical-align: -5px" width="75" height="21" /> solutions. We can keep going for <img src="//latex.artofproblemsolving.com/2/0/6/206b1aacd222ae21bd51d0345bec0917a58eac23.png" class="latex" alt="$b&#39;&#39;&#39; \equiv 1\mod 3$" style="vertical-align: -1px" width="117" height="16" /> and <img src="//latex.artofproblemsolving.com/7/c/8/7c8f461ef1bb8e62d2f760a0896a8c6d994d1846.png" class="latex" alt="$c&#39;&#39;&#39; \equiv 2\mod 3$" style="vertical-align: -1px" width="117" height="16" /> to get another <img src="//latex.artofproblemsolving.com/e/b/4/eb4688cff66719c227d5ba661d50c4fe875cf31b.png" class="latex" alt="$9(9) = 3^{4}$" style="vertical-align: -5px" width="75" height="21" /> solutions. In total, we have <img src="//latex.artofproblemsolving.com/1/2/a/12ab7cd6bfcf68dd20d02fdc18f127fd60af6c03.png" class="latex" alt="$3(3^{4}) = 3^{5}$" style="vertical-align: -5px" width="82" height="21" /> solutions after considering all <img src="//latex.artofproblemsolving.com/3/a/7/3a79663b70695132561bca3138970ba7eaf5b32d.png" class="latex" alt="$b&#39;&#39;&#39;$" style="vertical-align: -1px" width="22" height="16" /> and <img src="//latex.artofproblemsolving.com/d/6/f/d6f5e34b98ffbcc1ab8339841e3b43b02df2f502.png" class="latex" alt="$c&#39;&#39;&#39;$" style="vertical-align: -1px" width="22" height="16" /> residues mod 3. But the value of <img src="//latex.artofproblemsolving.com/5/b/1/5b1e465744efe7ece63f69530791c82d79e1099d.png" class="latex" alt="$a&#39;&#39;&#39;$" style="vertical-align: -1px" width="24" height="16" /> doesn't matter so that generates another <img src="//latex.artofproblemsolving.com/7/6/9/769d6adacfddce5589b8704a0d5ab6efb33cf30f.png" class="latex" alt="$27 = 3^{3}$" style="vertical-align: -1px" width="61" height="17" /> solutions. In total, we have <img src="//latex.artofproblemsolving.com/e/a/7/ea726aa0e0c2b3abccbf8c3afab9f5d4c0aff6f6.png" class="latex" alt="$3^{3} \cdot 3^{5} = 3^{8}$" style="vertical-align: -1px" width="89" height="17" /> solutions. Now, we move on to the next case. Choosing this case will give that <img src="//latex.artofproblemsolving.com/9/8/4/984e456d758f1ae6fc5ed23a1e1c7c81cee72a93.png" class="latex" alt="$a&#39;&#39; = 3a&#39;&#39;&#39;, b&#39;&#39; = 3b&#39;&#39;&#39; + 1, c&#39;&#39; = 3c&#39;&#39;&#39;$" style="vertical-align: -4px" width="262" height="19" /> where <img src="//latex.artofproblemsolving.com/b/4/d/b4daf08aa80b16812d63397e30a5d6ba88c1aa9a.png" class="latex" alt="$1 \leq a&#39;&#39;&#39; \leq 27, 0 \leq b&#39;&#39;&#39; \leq 26, 1 \leq c&#39;&#39;&#39; \leq 27$" style="vertical-align: -4px" width="307" height="19" />. So we need <img src="//latex.artofproblemsolving.com/a/4/7/a47495db8400fd363b94d566b6db2edf5e8de3a7.png" class="latex" alt="$3^{2} \mid 3^{3} a&#39;&#39;&#39;^{3} + 3^{3} b&#39;&#39;&#39;^{3} + 3^{3} b&#39;&#39;&#39;^{2} + 3^{2} b&#39;&#39;&#39; + 1 + 3^{3} c&#39;&#39;&#39;^{3} + 3^{2} b&#39;&#39;&#39;^{2} + 2 \cdot 3 \cdot b&#39;&#39;&#39; + 1 - 3^{2} c&#39;&#39;&#39;^{2} + 3b&#39;&#39;&#39; + 1 + 3c&#39;&#39;&#39;$" style="vertical-align: -5px" width="749" height="21" />. Then simplifying gives <img src="//latex.artofproblemsolving.com/2/b/c/2bc896b9611b0b13e679d7f2ef044ad14cf25fcc.png" class="latex" alt="$3^{2} \mid 2 \cdot 3 \cdot b&#39;&#39;&#39; + 3 + 3b&#39;&#39;&#39; + c&#39;&#39;&#39;$" style="vertical-align: -5px" width="223" height="21" />. This yields <img src="//latex.artofproblemsolving.com/b/7/8/b789e78ece865b446b1db320155580822b8fe147.png" class="latex" alt="$3 \mid 2b&#39;&#39;&#39; + 1 + b&#39;&#39;&#39; + c&#39;&#39;&#39;$" style="vertical-align: -5px" width="171" height="20" /> which gives <img src="//latex.artofproblemsolving.com/2/e/f/2efd4c600c319ac6c3e58139542241ef656cac17.png" class="latex" alt="$3 \mid c&#39;&#39;&#39; + 1$" style="vertical-align: -5px" width="78" height="20" /> so <img src="//latex.artofproblemsolving.com/7/c/8/7c8f461ef1bb8e62d2f760a0896a8c6d994d1846.png" class="latex" alt="$c&#39;&#39;&#39; \equiv 2\mod 3$" style="vertical-align: -1px" width="117" height="16" />. So <img src="//latex.artofproblemsolving.com/5/b/1/5b1e465744efe7ece63f69530791c82d79e1099d.png" class="latex" alt="$a&#39;&#39;&#39;$" style="vertical-align: -1px" width="24" height="16" /> and <img src="//latex.artofproblemsolving.com/3/a/7/3a79663b70695132561bca3138970ba7eaf5b32d.png" class="latex" alt="$b&#39;&#39;&#39;$" style="vertical-align: -1px" width="22" height="16" /> don't really matter for this case so we have <img src="//latex.artofproblemsolving.com/9/6/b/96b5e34cbc4a20cbd1d932db7cf6b43d10a4ba1e.png" class="latex" alt="$27(27) = 3^{6}$" style="vertical-align: -5px" width="93" height="21" /> possible pairs for <img src="//latex.artofproblemsolving.com/e/0/0/e00b0f3c833037a00eb664774d4cc0bf326f3c2d.png" class="latex" alt="$a&#39;&#39;&#39;, b&#39;&#39;&#39;$" style="vertical-align: -4px" width="52" height="19" />. Then we need to count the number of numbers that are 2(mod 3) between 1 and 27 inclusive which is 9. So we have <img src="//latex.artofproblemsolving.com/f/a/0/fa03cad13c4548658331cb6f53d971df788a083a.png" class="latex" alt="$9(3^{6}) = 3^{8}$" style="vertical-align: -5px" width="82" height="21" /> total triples for case 2. The next case yields <img src="//latex.artofproblemsolving.com/a/6/7/a67efcea6c41c195419b80855927cdf461079ef1.png" class="latex" alt="$3^{9}$" style="vertical-align: -1px" width="18" height="17" /> solutions following similar logic. In fact, all the remaining classes each give <img src="//latex.artofproblemsolving.com/7/b/7/7b7cc722384bddd7f77ed4b1bc06d599a39639e1.png" class="latex" alt="$3^{8}$" style="vertical-align: -1px" width="18" height="17" /> solutions for a total of <img src="//latex.artofproblemsolving.com/f/9/0/f90cf292af14eb662a664563c919a6a42cdd5351.png" class="latex" alt="$8(3^{8}) + 3^{9} = 11 \cdot 3^{8}$" style="vertical-align: -5px" width="152" height="21" />. But this is just for the class (1)-(4). Since classes (5),...,(9) are the same thing except it is just permutations of class (4), we will still generate the same number of solutions as (1)-(4) arrangement. So we would have <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> classes each giving <img src="//latex.artofproblemsolving.com/0/1/6/01616c5043b4d41a38725effcd183d78f928d782.png" class="latex" alt="$11(3^{8})$" style="vertical-align: -5px" width="51" height="21" /> solutions for a total of <img src="//latex.artofproblemsolving.com/0/1/c/01c4b050d987815eb3963ece4c3e55dbe2e06c76.png" class="latex" alt="$22(3^{9})$" style="vertical-align: -5px" width="51" height="21" /> solutions.
+</p><p>So we have completed all class (1) cases. Now we proceed to class (2). So if we start with class (2), then we have <img src="//latex.artofproblemsolving.com/c/0/5/c0579b10522d4557d998e8eb297e75d709286c9b.png" class="latex" alt="$a = 3a&#39; + 1$" style="vertical-align: -2px" width="90" height="17" /> and homogeneously the others. Then, we have <img src="//latex.artofproblemsolving.com/2/2/8/2289d5ef6445fb4c3b9fe8f1dd2e704f68cec608.png" class="latex" alt="$3^{6} \mid 3^{2}(a&#39;^{3} + b&#39;^{3} + c&#39;^{3}) + 3^{2}(a&#39;^{2} + b&#39;^{2} + c&#39;^{2}) + 3(a&#39; + b&#39; + c&#39;) + 1$" style="vertical-align: -5px" width="485" height="21" /> which is clearly impossible the <img src="//latex.artofproblemsolving.com/b/c/e/bce8abde383c6b16b5635f15f24e3dcf988a94ad.png" class="latex" alt="$RHS$" width="42" height="12" /> expression is 1(mod 3). So we cannot begin with class (2). Similarly, we cannot begin with class (3). So we must proceed to class (4).
+</p><p>Starting with class (4) gives us that <img src="//latex.artofproblemsolving.com/e/4/9/e491b475d21496319e71f06108087771250b915f.png" class="latex" alt="$a = 3a&#39;, b = 3b&#39; + 1, c = 3c&#39; - 1$" style="vertical-align: -4px" width="245" height="19" />. So <img src="//latex.artofproblemsolving.com/0/1/b/01b3a65ea2c3a4bb0fd4bd202cdc159f5a0a253c.png" class="latex" alt="$a&#39;, c&#39; \leq 3^{5}$" style="vertical-align: -4px" width="77" height="20" /> and <img src="//latex.artofproblemsolving.com/3/b/e/3be76cfe50828dfa6735aeb0e8e328b779d1b24f.png" class="latex" alt="$b&#39; \leq 242$" style="vertical-align: -3px" width="66" height="18" />. We would get <img src="//latex.artofproblemsolving.com/8/9/e/89e43e2434505971d38197ada2f29c51b6950c34.png" class="latex" alt="$3^{5} \mid 3(a&#39;^{3} + b&#39;^{3} + c&#39;^{3}) + 3(b&#39;^{2} - c&#39;^{2}) + b&#39; + c&#39;$" style="vertical-align: -5px" width="336" height="21" />. So we need <img src="//latex.artofproblemsolving.com/9/e/2/9e29dfbe9adb3ceef7ea14f379675d7911623548.png" class="latex" alt="$3 \mid b&#39; + c&#39;$" style="vertical-align: -5px" width="73" height="20" /> at first. Following our logic by building on residues mod 3, we have:
+</p><p><img src="//latex.artofproblemsolving.com/b/1/3/b13b22c20ca12900f933e75728ccdcbb695968c4.png" class="latex" alt="$b&#39;, c&#39; \equiv 0\mod 3$" style="vertical-align: -4px" width="130" height="19" />
+</p><p><img src="//latex.artofproblemsolving.com/d/0/d/d0dc4eaac3a9e12fd7465586a65d1506d9238f7e.png" class="latex" alt="$b&#39; \equiv 1\mod 3, c&#39; \equiv 2\mod 3$" style="vertical-align: -4px" width="226" height="19" />
+</p><p><img src="//latex.artofproblemsolving.com/4/b/e/4bee3a1e16831a851a3148dc2cd3945d1b259932.png" class="latex" alt="$b&#39; \equiv 2\mod 3, c&#39; \equiv 1\mod 3$" style="vertical-align: -4px" width="226" height="19" />
+</p><p>Following case 1, we have <img src="//latex.artofproblemsolving.com/2/e/6/2e600492e45f733ed0ded86afdd7c7b98672f77b.png" class="latex" alt="$b&#39; = 3b&#39;&#39;, c&#39; = 3c&#39;&#39;$" style="vertical-align: -4px" width="134" height="19" />. This part in essence is basically all the casework bash we did for class (1) arrangements except this time, the powers of 3 are higher. We have to substitute and consider classes mod 3 yet again(I won't go through all the steps here because it's pretty much similar to how we found the above cases). We end with <img src="//latex.artofproblemsolving.com/a/6/7/a67efcea6c41c195419b80855927cdf461079ef1.png" class="latex" alt="$3^{9}$" style="vertical-align: -1px" width="18" height="17" /> total cases. This would happen for all classes (4),...,(9) so we have to multiply this by 6 to get <img src="//latex.artofproblemsolving.com/f/0/0/f00fc42600503b114e78db66ee5302b75dc150c3.png" class="latex" alt="$6 \cdot 3^{9}$" style="vertical-align: -1px" width="41" height="17" /> cases. The casework we did here was based on (4)-(5) class arrangements, I didn't actually consider (4)-{(1),(2),(3)} class arrangements. Doing the casework for all those classes, we end up with <img src="//latex.artofproblemsolving.com/b/5/d/b5d19bbefc09b168bfe8fcdb68803b9db0cfc86b.png" class="latex" alt="$8(3^{9})$" style="vertical-align: -5px" width="42" height="21" /> cases(I won't repeat the steps here because it's practically the same thing, bashing all modular residues mod 3. Essentially we would get another copy of the <img src="//latex.artofproblemsolving.com/2/9/a/29aac2c57c016ee60c449250ff8b05e959f25ef2.png" class="latex" alt="$6(3^{9})$" style="vertical-align: -5px" width="42" height="21" /> and then doing the casework for (4)-(2) and (4)-(3), we would get <img src="//latex.artofproblemsolving.com/0/9/9/09985a583001fb4433a5747853e597fe96ef05bb.png" class="latex" alt="$6(3^{8})$" style="vertical-align: -5px" width="42" height="21" /> options for a total of <img src="//latex.artofproblemsolving.com/b/5/d/b5d19bbefc09b168bfe8fcdb68803b9db0cfc86b.png" class="latex" alt="$8(3^{9})$" style="vertical-align: -5px" width="42" height="21" /> triples). Thus, we actually have <img src="//latex.artofproblemsolving.com/3/7/d/37d52ffc828eccf473951e63ab4f88e20a36c606.png" class="latex" alt="$6(3^{9}) + 8(3^{9}) = 14(3^{9})$" style="vertical-align: -5px" width="177" height="21" /> total cases for these subclasses. And finally, we are ready to add these all up.
+</p><p>We have <img src="//latex.artofproblemsolving.com/b/d/6/bd66075a26de470fc194e67a65f865ce53a57dd7.png" class="latex" alt="$3^{11}$" width="21" height="15" /> total from class (1) trivial arrangements. Then, we have <img src="//latex.artofproblemsolving.com/0/1/c/01c4b050d987815eb3963ece4c3e55dbe2e06c76.png" class="latex" alt="$22(3^{9})$" style="vertical-align: -5px" width="51" height="21" /> total cases from the (1)-(4) arrangements e.t.c. And finally, we have <img src="//latex.artofproblemsolving.com/0/a/7/0a7fc97bc966642d4cf06880d545a399e7942a83.png" class="latex" alt="$14(3^{9})$" style="vertical-align: -5px" width="51" height="21" /> cases from the (4)-{(5)...(9)} classes. We have <img src="//latex.artofproblemsolving.com/3/2/4/3246dc182ed6c01fa8f4ae65d23a314772f60a6e.png" class="latex" alt="$3^{11} + 22(3^{9}) + 14(3^{9}) = 3^{11} + 36(3^{9}) = 3^{11} + 4(3^{11}) = 5(3^{11})$" style="vertical-align: -5px" width="472" height="21" />. We can calculate this mod 1000 by simply noting <img src="//latex.artofproblemsolving.com/d/0/a/d0a8dcff6262a82a2cb2c44d97f6a87473dbb9f7.png" class="latex" alt="$3^{10} \equiv 49\mod 1000$" style="vertical-align: -1px" width="157" height="17" /> because <img src="//latex.artofproblemsolving.com/6/1/5/6159c1554ba60a23ee87120a3790ad9c8ba52328.png" class="latex" alt="$3^{10} \equiv 243^{2}\mod 1000$" style="vertical-align: -1px" width="173" height="17" /> which tells us that the answer is just <img src="//latex.artofproblemsolving.com/7/f/3/7f366071be659202181dc774693cccc179d718d6.png" class="latex" alt="$5 \cdot 3 \cdot 49 = \boxed{735}$" style="vertical-align: -6px" width="127" height="25" />.
+</p><p>~ilikemath247365
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2025_AIME_I" title="2025 AIME I">2025 AIME I</a></b> (<b><a href="/wiki/index.php/2025_AIME_I_Problems" title="2025 AIME I Problems">Problems</a></b> • <b><a href="/wiki/index.php/2025_AIME_I_Answer_Key" title="2025 AIME I Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2025">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2025_AIME_I_Problems/Problem_14" title="2025 AIME I Problems/Problem 14">Problem 14</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b>Last Problem</b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2025_AIME_I_Problems/Problem_1" title="2025 AIME I Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_2" title="2025 AIME I Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_3" title="2025 AIME I Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_4" title="2025 AIME I Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_5" title="2025 AIME I Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_6" title="2025 AIME I Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_7" title="2025 AIME I Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_8" title="2025 AIME I Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_9" title="2025 AIME I Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_10" title="2025 AIME I Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_11" title="2025 AIME I Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_12" title="2025 AIME I Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_13" title="2025 AIME I Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2025_AIME_I_Problems/Problem_14" title="2025 AIME I Problems/Problem 14">14</a> <b>•</b> <a class="mw-selflink selflink">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818180316
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 4.274 seconds
+Preprocessor visited node count: 2166/1000000
+Preprocessor generated node count: 5074/1000000
+Post‐expand include size: 1680/2097152 bytes
+Template argument size: 115/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 46381/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.641      1 -total
+ 69.92%    3.245      1 Template:AIME_box
+ 27.71%    1.286      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:28166-0!canonical and timestamp 20250818180311 and revision id 255545
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2025_AIME_I_Problems/Problem_15&amp;oldid=255545">https://artofproblemsolving.com/wiki/index.php?title=2025_AIME_I_Problems/Problem_15&amp;oldid=255545</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981deb67cabf82d8',t:'MTc1ODMzNTYyMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818183512 -->
+</html>
+

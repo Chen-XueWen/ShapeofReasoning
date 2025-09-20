@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2022 AIME I Problems/Problem 11 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2022_AIME_I_Problems/Problem_11","wgTitle":"2022 AIME I Problems/Problem 11","wgCurRevisionId":239213,"wgRevisionId":239213,"wgArticleId":21789,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Geometry Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2022_AIME_I_Problems/Problem_11","wgRelevantArticleId":21789,"wgRequestId":"6324857fae4c0b02c1254bf4","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2022_AIME_I_Problems_Problem_11 rootpage-2022_AIME_I_Problems_Problem_11 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2022 AIME I Problems/Problem 11																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_11" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2022_AIME_I_Problems/Problem_11&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2022_AIME_I_Problems/Problem_11&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2022_AIME_I_Problems/Problem_11&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2022_AIME_I_Problems/Problem_11" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2022 AIME I Problems/Problem 11</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1_.28No_trig.29"><span class="tocnumber">2</span> <span class="toctext">Solution 1 (No trig)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4"><span class="tocnumber">5</span> <span class="toctext">Solution 4</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5"><span class="tocnumber">6</span> <span class="toctext">Solution 5</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6_.28Short_and_Sweet.29"><span class="tocnumber">7</span> <span class="toctext">Solution 6 (Short and Sweet)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7_.28Intuitive.2C_no_trig.2C_no_weird_auxiliary_lines.29"><span class="tocnumber">8</span> <span class="toctext">Solution 7 (Intuitive, no trig, no weird auxiliary lines)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_8_.28Ptolemy.27s_Theorem_.2B_Power_of_Point_.2B_Pythagorean_Theorem.29"><span class="tocnumber">9</span> <span class="toctext">Solution 8 (Ptolemy's Theorem + Power of Point + Pythagorean Theorem)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Solution_9"><span class="tocnumber">10</span> <span class="toctext">Solution 9</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Video_Solution"><span class="tocnumber">11</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Video_Solution_2_.28Mathematical_Dexterity.29"><span class="tocnumber">12</span> <span class="toctext">Video Solution 2 (Mathematical Dexterity)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Video_Solution_3_by_OmegaLearn"><span class="tocnumber">13</span> <span class="toctext">Video Solution 3 by OmegaLearn</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#See_Also"><span class="tocnumber">14</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> be a parallelogram with <img src="//latex.artofproblemsolving.com/e/9/3/e93e244cf8509202e8c6c70eb84e84e785d03429.png" class="latex" alt="$\angle BAD &lt; 90^\circ.$" style="vertical-align: -2px" width="114" height="16" /> A circle tangent to sides <img src="//latex.artofproblemsolving.com/7/a/f/7af6b80669b5ed740c0aef3fab0456e164cc7367.png" class="latex" alt="$\overline{DA},$" style="vertical-align: -3px" width="33" height="19" /> <img src="//latex.artofproblemsolving.com/4/f/6/4f694ab8315c055ae7dd5d9fe5ba57a1a7c97a99.png" class="latex" alt="$\overline{AB},$" style="vertical-align: -3px" width="32" height="19" /> and <img src="//latex.artofproblemsolving.com/e/3/3/e33fe7d65facd8868f58b6e94ddc7f153a5a3f9f.png" class="latex" alt="$\overline{BC}$" width="29" height="15" /> intersects diagonal <img src="//latex.artofproblemsolving.com/1/2/5/12517bbc31cb9026c71299b7a0d232d07e60f284.png" class="latex" alt="$\overline{AC}$" style="vertical-align: -1px" width="30" height="18" /> at points <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> and <img src="//latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> with <img src="//latex.artofproblemsolving.com/4/0/0/400f47f62c6e05ae855d01a0d879170a21ff05ff.png" class="latex" alt="$AP &lt; AQ,$" style="vertical-align: -4px" width="87" height="18" /> as shown. Suppose that <img src="//latex.artofproblemsolving.com/2/c/e/2ce4c557b2cca33ad8e1c72782dceaa93c599a70.png" class="latex" alt="$AP=3,$" style="vertical-align: -4px" width="68" height="18" /> <img src="//latex.artofproblemsolving.com/2/a/8/2a8141b1e60a12e792143d9c9eec640beafe1394.png" class="latex" alt="$PQ=9,$" style="vertical-align: -4px" width="69" height="18" /> and <img src="//latex.artofproblemsolving.com/1/2/3/1235b62c2bd8df4119fc6a4ddecb29770ab2447d.png" class="latex" alt="$QC=16.$" style="vertical-align: -4px" width="78" height="18" /> Then the area of <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> can be expressed in the form <img src="//latex.artofproblemsolving.com/0/8/1/081616d766104aaa57b46ec6b0aba54721d15648.png" class="latex" alt="$m\sqrt{n},$" style="vertical-align: -3px" width="46" height="18" /> where <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> and <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> are positive integers, and <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is not divisible by the square of any prime. Find <img src="//latex.artofproblemsolving.com/5/d/b/5db26f75f6218a382840f0ed34f5d36bcff61d33.png" class="latex" alt="$m+n.$" style="vertical-align: -1px" width="52" height="12" />
+</p><p><img src="//latex.artofproblemsolving.com/9/4/7/9471215d85465568eba3e615c0538a62e755bcf8.png" class="latexcenter" alt="[asy] defaultpen(linewidth(0.6)+fontsize(11)); size(8cm); pair A,B,C,D,P,Q; A=(0,0); label(&quot;$A$&quot;, A, SW); B=(6,15); label(&quot;$B$&quot;, B, NW); C=(30,15); label(&quot;$C$&quot;, C, NE); D=(24,0); label(&quot;$D$&quot;, D, SE); P=(5.2,2.6); label(&quot;$P$&quot;, (5.8,2.6), N); Q=(18.3,9.1); label(&quot;$Q$&quot;, (18.1,9.7), W); draw(A--B--C--D--cycle); draw(C--A); draw(Circle((10.95,7.45), 7.45)); dot(A^^B^^C^^D^^P^^Q); [/asy]" width="378" height="208" />
+</p>
+<h2><span id="Solution_1_(No_trig)"></span><span class="mw-headline" id="Solution_1_.28No_trig.29">Solution 1 (No trig)</span></h2>
+<p>Let's redraw the diagram, but extend some helpful lines.
+</p><p><img src="//latex.artofproblemsolving.com/b/c/2/bc2747ce1e7dd67b2d85c4d479229147297153d6.png" class="latexcenter" alt="[asy] size(10cm); pair A,B,C,D,EE,F,P,Q,O; A=(0,0); EE = (24,15); F = (30,0); O = (10.5,7.5); label(&quot;$A$&quot;, A, SW); B=(6,15); label(&quot;$B$&quot;, B, NW); C=(30,15); label(&quot;$C$&quot;, C, NE); D=(24,0); label(&quot;$D$&quot;, D, SE); P=(5.2,2.6); label(&quot;$P$&quot;, (5.8,2.6), N); Q=(18.3,9.1); label(&quot;$Q$&quot;, (18.1,9.7), W); draw(A--B--C--D--cycle); draw(C--A); draw(Circle((10.95,7.45), 7.45)); dot(A^^B^^C^^D^^P^^Q); dot(O); label(&quot;$O$&quot;,O,W); draw((10.5,15)--(10.5,0)); draw(D--(24,15),dashed); draw(C--(30,0),dashed); draw(D--(30,0)); dot(EE); dot(F);  label(&quot;$3$&quot;, midpoint(A--P), S); label(&quot;$9$&quot;, midpoint(P--Q), S); label(&quot;$16$&quot;, midpoint(Q--C), S); label(&quot;$x$&quot;, (5.5,13.75), W); label(&quot;$20$&quot;, (20.25,15), N); label(&quot;$6$&quot;, (5.25,0), S); label(&quot;$6$&quot;, (1.5,3.75), W); label(&quot;$x$&quot;, (8.25,15),N); label(&quot;$14+x$&quot;, (17.25,0), S); label(&quot;$6-x$&quot;, (27,15), N); label(&quot;$6+x$&quot;, (27,7.5), S); label(&quot;$6\sqrt{3}$&quot;, (30,7.5), E); label(&quot;$T_1$&quot;, (10.5,15), N); label(&quot;$T_2$&quot;, (10.5,0), S); label(&quot;$T_3$&quot;, (4.5,11.25), W); label(&quot;$E$&quot;, EE, N); label(&quot;$F$&quot;, F, S);  [/asy]" width="475" height="255" />
+</p><p>We obviously see that we must use power of a point since they've given us lengths in a circle and there are intersection points. Let <img src="//latex.artofproblemsolving.com/c/7/0/c70fa015976fe3d5575e06f237e9cecf663579eb.png" class="latex" alt="$T_1, T_2, T_3$" style="vertical-align: -4px" width="72" height="18" /> be our tangents from the circle to the parallelogram. By the secant power of a point, the power of <img src="//latex.artofproblemsolving.com/c/7/7/c774b3cb27d27d51ec1eec3017830669ed602be7.png" class="latex" alt="$A = 3 \cdot (3+9) = 36$" style="vertical-align: -5px" width="159" height="20" />. Then <img src="//latex.artofproblemsolving.com/c/6/6/c66793f5f3370960a169a86de2246ce0ea5623a5.png" class="latex" alt="$AT_2  = AT_3 = \sqrt{36} = 6$" style="vertical-align: -4px" width="180" height="22" />. Similarly, the power of <img src="//latex.artofproblemsolving.com/7/4/e/74e4d07c5a04ecc96a318b598fafa8ffe80ccf05.png" class="latex" alt="$C = 16 \cdot (16+9) = 400$" style="vertical-align: -5px" width="187" height="20" /> and  <img src="//latex.artofproblemsolving.com/9/c/f/9cf5a1ed5470158862a17984bfdf84e7ddaca34f.png" class="latex" alt="$CT_1 = \sqrt{400} = 20$" style="vertical-align: -4px" width="143" height="22" />. We let <img src="//latex.artofproblemsolving.com/f/8/3/f83bd4589138de248c5e29494b344b8960609ae4.png" class="latex" alt="$BT_3 = BT_1 = x$" style="vertical-align: -4px" width="126" height="17" /> and label the diagram accordingly.
+</p><p>Notice that because <img src="//latex.artofproblemsolving.com/2/d/f/2df6a6481bcfe431c57aa0b3a12278aacfa24bea.png" class="latex" alt="$BC = AD, 20+x = 6+DT_2 \implies DT_2 = 14+x$" style="vertical-align: -4px" width="390" height="18" />. Let <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the center of the circle. Since <img src="//latex.artofproblemsolving.com/6/7/6/676f2f2e66e84bb6c96bf2d02c2fdcaf896d6733.png" class="latex" alt="$OT_1$" style="vertical-align: -2px" width="30" height="15" /> and <img src="//latex.artofproblemsolving.com/5/b/f/5bf5f427ddbb76a653e242d352a67f7d7bdb34ea.png" class="latex" alt="$OT_2$" style="vertical-align: -4px" width="34" height="17" /> intersect <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" /> and <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" />, respectively, at right angles, we have <img src="//latex.artofproblemsolving.com/2/6/8/2680852cebb97a28558f63560386ccc7750542d7.png" class="latex" alt="$T_2T_1CD$" style="vertical-align: -4px" width="68" height="17" /> is a right-angled trapezoid and more importantly, the diameter of the circle is the height of the triangle. Therefore, we can drop an altitude from <img src="//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png" class="latex" alt="$D$" style="vertical-align: -1px" width="17" height="14" /> to <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" /> and <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> to <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" />, and both are equal to <img src="//latex.artofproblemsolving.com/0/a/5/0a5745df50c8607bdc9b8de4968315633a3047dc.png" class="latex" alt="$2r$" width="17" height="12" />. Since <img src="//latex.artofproblemsolving.com/9/7/3/973879ddd9e2d753b21b41e4f76d7901ee3fd80b.png" class="latex" alt="$T_1E = T_2D$" style="vertical-align: -4px" width="92" height="17" />, <img src="//latex.artofproblemsolving.com/0/1/0/0103d5d59e35c0b16a63ab2b96db51378a1bdb0d.png" class="latex" alt="$20 - CE = 14+x \implies CE = 6-x$" style="vertical-align: -2px" width="290" height="16" />. Since <img src="//latex.artofproblemsolving.com/d/b/5/db5d0a712b0acfdc515584c72cb66d3a4d6da0e4.png" class="latex" alt="$CE = DF, DF = 6-x$" style="vertical-align: -4px" width="186" height="18" /> and <img src="//latex.artofproblemsolving.com/2/8/0/280d4476223787b109f7fe56c626da0659a08e36.png" class="latex" alt="$AF = 6+14+x+6-x = 26$" style="vertical-align: -2px" width="242" height="16" />. We can now use Pythagorean theorem on <img src="//latex.artofproblemsolving.com/2/2/b/22bbdaf51a8a1faae81886d50358cbaf053ae08d.png" class="latex" alt="$\triangle ACF$" width="58" height="13" />; we have <img src="//latex.artofproblemsolving.com/8/4/c/84c84d647049a196440198669dc44a2f702899d0.png" class="latex" alt="$26^2 + (2r)^2 = (3+9+16)^2 \implies 4r^2 = 784-676 \implies 4r^2 = 108 \implies 2r = 6\sqrt{3}$" style="vertical-align: -5px" width="643" height="24" /> and <img src="//latex.artofproblemsolving.com/1/0/b/10b8966e572e86974d56f7ceaa2d6213ba546ae1.png" class="latex" alt="$r^2 = 27$" style="vertical-align: -1px" width="60" height="17" />.
+</p><p>We know that <img src="//latex.artofproblemsolving.com/1/5/f/15fd15d25c0d355298003f494efe398faef16729.png" class="latex" alt="$CD = 6+x$" style="vertical-align: -2px" width="98" height="16" /> because <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> is a parallelogram. Using Pythagorean theorem on <img src="//latex.artofproblemsolving.com/1/9/e/19e631603c8b1dbb8cf049e3963e2a9bb35f0c44.png" class="latex" alt="$\triangle CDF$" width="60" height="13" />, <img src="//latex.artofproblemsolving.com/8/1/6/81668fcfce904c150129d240721480de7eb8257d.png" class="latex" alt="$(6+x)^2 = (6-x)^2 + 108 \implies (6+x)^2-(6-x)^2 = 108 \implies 12 \cdot 2x = 108 \implies 2x = 9 \implies x = \frac{9}{2}$" style="vertical-align: -13px" width="803" height="38" />. Therefore, base <img src="//latex.artofproblemsolving.com/8/8/2/8821392f96992361980717c0321856cb88988fcd.png" class="latex" alt="$BC = 20 + \frac{9}{2} = \frac{49}{2}$" style="vertical-align: -13px" width="155" height="38" />. Thus the area of the parallelogram is the base times the height, which is <img src="//latex.artofproblemsolving.com/1/6/9/16924f11dac0df8a1117951b7e908ab242fe273f.png" class="latex" alt="$\frac{49}{2} \cdot 6\sqrt{3} = 147\sqrt{3}$" style="vertical-align: -13px" width="146" height="38" /> and the answer is <img src="//latex.artofproblemsolving.com/4/6/4/4649b1f9c320291995474a6d45af1bf004dc433f.png" class="latex" alt="$\boxed{150}$" style="vertical-align: -5px" width="39" height="23" />
+</p><p><br />
+~KingRavi
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>Let the circle tangent to <img src="//latex.artofproblemsolving.com/d/6/3/d63212c137749b1bd279d7c3bf715f5c07a18612.png" class="latex" alt="$BC,AD,AB$" style="vertical-align: -4px" width="104" height="18" /> at <img src="//latex.artofproblemsolving.com/a/2/e/a2e7e26f916bfd354f03284a4bcc3d3263e3ed72.png" class="latex" alt="$P,Q,M$" style="vertical-align: -4px" width="64" height="18" /> separately, denote that <img src="//latex.artofproblemsolving.com/9/a/2/9a2554f2271e86e0815ed79f2a4543bca627da73.png" class="latex" alt="$\angle{ABC}=\angle{D}=\alpha$" style="vertical-align: -1px" width="146" height="14" />
+</p><p>Using POP, it is very clear that <img src="//latex.artofproblemsolving.com/3/3/3/333bca88ab9dbcbbb1bb8c7a6023131575e24b04.png" class="latex" alt="$PC=20,AQ=AM=6$" style="vertical-align: -4px" width="200" height="18" />, let <img src="//latex.artofproblemsolving.com/5/1/2/512ebc8d740cb6dff9a72bfc4b1f7190b9f10ce7.png" class="latex" alt="$BM=BP=x,QD=14+x$" style="vertical-align: -4px" width="237" height="18" />, using LOC in <img src="//latex.artofproblemsolving.com/9/3/e/93e21688b2f6b32cf5f441880b86d52c10c21a29.png" class="latex" alt="$\triangle{ABP}$" width="58" height="13" />,<img src="//latex.artofproblemsolving.com/1/4/9/149f75a872b373da2a8519d955e3159f4ee026fa.png" class="latex" alt="$x^2+(x+6)^2-2x(x+6)\cos\alpha=36+PQ^2$" style="vertical-align: -5px" width="346" height="21" />, similarly, use LOC in <img src="//latex.artofproblemsolving.com/6/4/9/6492b0ba32c76a51b51c9715af3bdfe8401a4371.png" class="latex" alt="$\triangle{DQC}$" style="vertical-align: -3px" width="60" height="17" />, getting that <img src="//latex.artofproblemsolving.com/1/9/9/199c959e0603962528b26d6c19f04125c7d88358.png" class="latex" alt="$(14+x)^2+(6+x)^2-2(6+x)(14+x)\cos\alpha=400+PQ^2$" style="vertical-align: -5px" width="464" height="21" />. We use the second equation to minus the first equation, getting that <img src="//latex.artofproblemsolving.com/c/4/d/c4d4ebed89c9eb1518ba72b4b06bda419661b156.png" class="latex" alt="$28x+196-(2x+12)\times14\times\cos\alpha=364$" style="vertical-align: -5px" width="329" height="20" />, we can get <img src="//latex.artofproblemsolving.com/f/5/e/f5e495301f5c827b1ff4468699a5a5a34b01cbb4.png" class="latex" alt="$\cos\alpha=\frac{2x-12}{2x+12}$" style="vertical-align: -15px" width="129" height="40" />.
+</p><p>Now applying LOC in <img src="//latex.artofproblemsolving.com/8/6/e/86e64c54cb966e2c0cd008ac8ce27b258fa5ff53.png" class="latex" alt="$\triangle{ADC}$" width="59" height="13" />, getting <img src="//latex.artofproblemsolving.com/2/b/8/2b82d1245e7c42d5a4d2f21368eade16149010ef.png" class="latex" alt="$(6+x)^2+(20+x)^2-2(6+x)\times(20+x)\times\frac{2x-12}{2x+12}=(3+9+16)^2$" style="vertical-align: -15px" width="547" height="40" />, solving this equation to get <img src="//latex.artofproblemsolving.com/3/b/c/3bc372c6f41073f91f40b83acd58cb72b7ebeae8.png" class="latex" alt="$x=\frac{9}{2}$" style="vertical-align: -12px" width="46" height="37" />, then <img src="//latex.artofproblemsolving.com/1/b/f/1bf6907c5318b0b5bc25c2884463d64b4b5faf20.png" class="latex" alt="$\cos\alpha=-\frac{1}{7}$" style="vertical-align: -13px" width="92" height="38" />, <img src="//latex.artofproblemsolving.com/2/9/3/2933e29a81a6995566f9c110e602bc5623b5ddc1.png" class="latex" alt="$\sin\alpha=\frac{4\sqrt{3}}{7}$" style="vertical-align: -13px" width="100" height="43" />, the area is <img src="//latex.artofproblemsolving.com/b/b/8/bb8f5db543991af663d08bd8ecb471344c20830b.png" class="latex" alt="$\frac{21}{2}\cdot\frac{49}{2}\cdot\frac{4\sqrt{3}}{7}=147\sqrt{3}$" style="vertical-align: -13px" width="186" height="43" /> leads to <img src="//latex.artofproblemsolving.com/4/6/4/4649b1f9c320291995474a6d45af1bf004dc433f.png" class="latex" alt="$\boxed{150}$" style="vertical-align: -5px" width="39" height="23" />
+</p><p>~bluesoul,HarveyZhang
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>Denote by <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> the center of the circle. Denote by <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> the radius of the circle.
+Denote by <img src="//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png" class="latex" alt="$E$" style="vertical-align: -1px" width="16" height="14" />, <img src="//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png" class="latex" alt="$F$" style="vertical-align: -1px" width="16" height="14" />, <img src="//latex.artofproblemsolving.com/6/e/2/6e28ce12d49d39f160d5a0ef54077fc98e4b9d2b.png" class="latex" alt="$G$" width="14" height="12" /> the points that the circle meets <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />, <img src="//latex.artofproblemsolving.com/0/9/4/0948661e822f2a953c43a57ac9e40b2734476de4.png" class="latex" alt="$CD$" width="29" height="12" />, <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" /> at, respectively.
+</p><p>Because the circle is tangent to <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" />, <img src="//latex.artofproblemsolving.com/3/e/3/3e3a4ec0df571e719bd3f1d7e00bf71fc55ba2b9.png" class="latex" alt="$CB$" width="28" height="12" />, <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />, <img src="//latex.artofproblemsolving.com/1/b/7/1b767af3ca9e9b4167842ec63bcdfc58693cda30.png" class="latex" alt="$OE = OF = OG = r$" style="vertical-align: -1px" width="169" height="14" />, <img src="//latex.artofproblemsolving.com/3/a/3/3a36f5174f3c875039f835ce13bc85916c263d20.png" class="latex" alt="$OE \perp AD$" style="vertical-align: -1px" width="84" height="14" />, <img src="//latex.artofproblemsolving.com/4/2/6/4262ee4a454b2af3157f9fe073278eca5f2b0be4.png" class="latex" alt="$OF \perp CB$" style="vertical-align: -1px" width="84" height="14" />, <img src="//latex.artofproblemsolving.com/1/a/a/1aa686f18d96f1b3a728efdcb07b7bae769c5300.png" class="latex" alt="$OG \perp AB$" width="80" height="13" />.
+</p><p>Because <img src="//latex.artofproblemsolving.com/4/4/c/44ca742f7696020b7c7eb4c3026ea897d74acea0.png" class="latex" alt="$AD \parallel CB$" style="vertical-align: -5px" width="76" height="19" />, <img src="//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png" class="latex" alt="$E$" style="vertical-align: -1px" width="16" height="14" />, <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" />, <img src="//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png" class="latex" alt="$F$" style="vertical-align: -1px" width="16" height="14" /> are collinear. 
+</p><p>Following from the power of a point, <img src="//latex.artofproblemsolving.com/0/d/c/0dc101b91cea281dc4d51dfa1a03bb51e18b97f3.png" class="latex" alt="$AG^2 = AE^2 = AP \cdot AQ$" style="vertical-align: -4px" width="190" height="20" />. Hence, <img src="//latex.artofproblemsolving.com/1/7/0/17078eb4fbdc641e01638e22d404a072fa38c5ff.png" class="latex" alt="$AG = AE = 6$" style="vertical-align: -1px" width="115" height="14" />.
+</p><p>Following from the power of a point, <img src="//latex.artofproblemsolving.com/f/2/7/f27903dd8c70d555ee4dcdf701e0359a9ae70c67.png" class="latex" alt="$CF^2 = CQ \cdot CP$" style="vertical-align: -4px" width="132" height="20" />. Hence, <img src="//latex.artofproblemsolving.com/d/a/9/da97a138a05f15bea9247f927da4728ccc4a7247.png" class="latex" alt="$CF = 20$" width="70" height="12" />.
+</p><p>Denote <img src="//latex.artofproblemsolving.com/6/9/1/69169a29ef334e2a4b42730004c7999a2942fe83.png" class="latex" alt="$BG = x$" width="63" height="12" />. Because <img src="//latex.artofproblemsolving.com/e/a/f/eaf9409044fef7f3966027eec40b2cced52eb16c.png" class="latex" alt="$DG$" width="29" height="12" /> and <img src="//latex.artofproblemsolving.com/c/7/3/c7387ef3aa3162cea3e516216d4ed946506bd30d.png" class="latex" alt="$DF$" width="29" height="12" /> are tangents to the circle, <img src="//latex.artofproblemsolving.com/0/b/7/0b762846b891a0a03b921278841051c4536edb20.png" class="latex" alt="$BF = x$" style="vertical-align: -1px" width="65" height="14" />.
+</p><p>Because <img src="//latex.artofproblemsolving.com/d/7/a/d7ac6f2266b5b33b61cb74fe7f3966926b2fef29.png" class="latex" alt="$AEFB$" width="56" height="13" /> is a right trapezoid, <img src="//latex.artofproblemsolving.com/9/f/e/9feebe5c4a30881aad25c11d082900a86ee10f62.png" class="latex" alt="$AB^2 = EF^2 + \left( AE - BF \right)^2$" style="vertical-align: -5px" width="221" height="23" />.
+Hence, <img src="//latex.artofproblemsolving.com/d/5/4/d5479d698e3a5ba7c596c1cbb912f65486597b69.png" class="latex" alt="$\left( 6 + x \right)^2 = 4 r^2 + \left( 6 - x \right)^2$" style="vertical-align: -5px" width="200" height="23" />.
+This can be simplified as 
+<img src="//latex.artofproblemsolving.com/b/d/2/bd2b79d7176be6c8de3d75054cdb879270135cdc.png" class="latexcenter" alt="\[ 6 x = r^2 . \hspace{1cm} (1) \]" width="133" height="20" />
+</p><p>In <img src="//latex.artofproblemsolving.com/e/5/1/e5170b3a48d96da708932026f0e94194f415b0b3.png" class="latex" alt="$\triangle ACB$" width="58" height="13" />, by applying the law of cosines, we have
+<img src="//latex.artofproblemsolving.com/d/c/5/dc5e5062f5038b0e451e59bf30deba45e0f67a3d.png" class="latexcenter" alt="\begin{align*} AC^2 &amp; = AB^2 + CB^2 - 2 AB \cdot CB \cos B \\ &amp; = AB^2 + CB^2 + 2 AB \cdot CB \cos A \\ &amp; = AB^2 + CB^2 + 2 AB \cdot CB \cdot \frac{AE - BF}{AB} \\ &amp; = AB^2 + CB^2 + 2 CB \left( AE - BF \right) \\ &amp; = \left( 6 + x \right)^2 + \left( 20 + x \right)^2 + 2 \left( 20 + x \right) \left( 6 - x \right) \\ &amp; = 24 x + 676 . \end{align*}" width="374" height="170" />
+</p><p>Because <img src="//latex.artofproblemsolving.com/1/4/1/141dbabf564620e76d92fb7fd4cbb3ee9cff6a36.png" class="latex" alt="$AC = AP + PQ + QC = 28$" style="vertical-align: -4px" width="226" height="18" />, we get <img src="//latex.artofproblemsolving.com/a/f/4/af4c79280488bd17a2c3c4b81daec6f0c33308ed.png" class="latex" alt="$x = \frac{9}{2}$" style="vertical-align: -13px" width="50" height="38" />.
+Plugging this into Equation (1), we get <img src="//latex.artofproblemsolving.com/7/e/f/7efd56da983431d973ad698860c4d75b8a7398e4.png" class="latex" alt="$r = 3 \sqrt{3}$" style="vertical-align: -2px" width="68" height="21" />.
+</p><p>Therefore,
+<img src="//latex.artofproblemsolving.com/6/b/a/6ba167e278498285c17dd2e7a749aa7d4a68e83f.png" class="latexcenter" alt="\begin{align*} {\rm Area} \ ABCD &amp; = CB \cdot EF \\ &amp; = \left( 20 + x \right) \cdot 2r \\ &amp; = 147 \sqrt{3} . \end{align*}" width="220" height="69" />
+</p><p>Therefore, the answer is <img src="//latex.artofproblemsolving.com/0/0/3/003bd85987fcf3ee7f923cf5b4ddfe61723df006.png" class="latex" alt="$147 + 3 = \boxed{\textbf{(150) }}$" style="vertical-align: -11px" width="146" height="30" />.
+</p><p>~Steven Chen (www.professorchenedu.com)
+</p>
+<h2><span class="mw-headline" id="Solution_4">Solution 4</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" /> be the circle, let <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> be the radius of <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" />, and let the points at which <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" /> is tangent to <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />, <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />, and <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" /> be <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" />, <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" />, and <img src="//latex.artofproblemsolving.com/3/e/a/3ead47fb9fb4a4c273feee398f72ff2a09702b84.png" class="latex" alt="$Z$" width="13" height="12" />, respectively. Note that PoP on <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> with respect to <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" /> yields <img src="//latex.artofproblemsolving.com/f/a/f/faf87138041bb5ce954a62cb9bddfb459010cf13.png" class="latex" alt="$AX=6$" width="63" height="13" /> and <img src="//latex.artofproblemsolving.com/9/0/5/905f3d980bb041606a897156cc33e1c2ad003eef.png" class="latex" alt="$CY=20$" width="70" height="12" />. We can compute the area of <img src="//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" /> in two ways:
+</p><p>1. By the half-base-height formula, <img src="//latex.artofproblemsolving.com/4/2/8/4284eab36549846434910f4d2a03d15f5be5e7fc.png" class="latex" alt="$[ABC]=r(20+BX)$" style="vertical-align: -5px" width="173" height="20" />.
+</p><p>2. We can drop altitudes from the center <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> of <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" /> to <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />, <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />, and <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" />, which have lengths <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" />, <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" />, and <img src="//latex.artofproblemsolving.com/f/9/3/f93cee22788221b320c11b9820f4274c4960b36d.png" class="latex" alt="$\sqrt{r^2-\frac{81}{4}}$" style="vertical-align: -15px" width="80" height="45" />. Thus, <img src="//latex.artofproblemsolving.com/6/0/f/60f0465ed3346132e098808e860f2cfa2e67c021.png" class="latex" alt="$[ABC]=[OAB]+[OBC]+[OAC]=r(BX+13)+14\sqrt{r^2-\frac{81}{4}}$" style="vertical-align: -15px" width="519" height="45" />.
+</p><p>Equating the two expressions for <img src="//latex.artofproblemsolving.com/d/3/3/d33cc80fa8f093e155c5be46d2e5d9da3d7e1ef5.png" class="latex" alt="$[ABC]$" style="vertical-align: -5px" width="50" height="18" /> and solving for <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> yields <img src="//latex.artofproblemsolving.com/1/5/d/15d42c791753103dcb8654740ac3f67f43e61be9.png" class="latex" alt="$r=3\sqrt{3}$" style="vertical-align: -1px" width="66" height="18" />. 
+</p><p>Let <img src="//latex.artofproblemsolving.com/8/1/b/81bc065782d6e2156471bce71e281ab0b823e93f.png" class="latex" alt="$BX=BY=a$" style="vertical-align: -1px" width="120" height="14" />. By the Parallelogram Law, <img src="//latex.artofproblemsolving.com/2/b/d/2bd4119875fa6e2ec92c43a2bfccf7d64d4cdace.png" class="latex" alt="$(a+6)^2+(a+20)^2=38^2$" style="vertical-align: -5px" width="208" height="21" />. Solving for <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> yields <img src="//latex.artofproblemsolving.com/7/9/c/79cf01b11eb1c08c8f22e410018d1a61fa7a92e5.png" class="latex" alt="$a=9/2$" style="vertical-align: -4px" width="60" height="18" />. Thus, <img src="//latex.artofproblemsolving.com/d/5/1/d518bd99e51326a4bfa1466fc96ff04929ce2c95.png" class="latex" alt="$[ABCD]=2[ABC]=2r(20+a)=147\sqrt{3}$" style="vertical-align: -5px" width="338" height="24" />, for a final answer of <img src="//latex.artofproblemsolving.com/4/6/4/4649b1f9c320291995474a6d45af1bf004dc433f.png" class="latex" alt="$\boxed{150}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~ Leo.Euler
+</p>
+<h2><span class="mw-headline" id="Solution_5">Solution 5</span></h2>
+<div class="floatright"><a href="/wiki/index.php/File:AIME-I-2022-11.png" class="image"><img alt="AIME-I-2022-11.png" src="https://wiki-images.artofproblemsolving.com//thumb/3/39/AIME-I-2022-11.png/530px-AIME-I-2022-11.png" width="530" height="226" srcset="https://wiki-images.artofproblemsolving.com//thumb/3/39/AIME-I-2022-11.png/795px-AIME-I-2022-11.png 1.5x, https://wiki-images.artofproblemsolving.com//3/39/AIME-I-2022-11.png 2x" /></a></div>
+<p>Let <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" /> be the circle, let <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> be the radius of <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" />, and let the points at which <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" /> is tangent to <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />, <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />, and <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" /> be <img src="//latex.artofproblemsolving.com/b/1/9/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png" class="latex" alt="$H$" width="16" height="12" />, <img src="//latex.artofproblemsolving.com/d/f/b/dfb064112b6c94470339f6571f69d07afc1c024c.png" class="latex" alt="$K$" width="16" height="12" />, and <img src="//latex.artofproblemsolving.com/2/5/5/2554b6496c3b678897e9b060ef00aa9f0a7d7ece.png" class="latex" alt="$T$" width="13" height="12" />, respectively. PoP on <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> with respect to <img src="//latex.artofproblemsolving.com/5/4/d/54d7d48553f4d9e7ab418118607ea324cbfddfda.png" class="latex" alt="$\omega$" width="11" height="8" /> yields <img src="//latex.artofproblemsolving.com/9/f/1/9f19359780da8fbd22a344ba840f60e96811a4c0.png" class="latexcenter" alt="\[AT=6, CK=20.\]" width="144" height="16" />
+</p><p>Let <img src="//latex.artofproblemsolving.com/e/a/5/ea57629fc56b502537f57a30278ea9d4b9c637f2.png" class="latex" alt="$TG = AC, CG||AT.$" style="vertical-align: -5px" width="158" height="20" />
+</p><p>In  <img src="//latex.artofproblemsolving.com/a/c/d/acdf583f405b820b717c5ad29b0b39051dbebdf4.png" class="latex" alt="$\triangle KGT$" style="vertical-align: -4px" width="62" height="18" />  <img src="//latex.artofproblemsolving.com/7/6/9/769589a22e618c0a85de7f8bd7175a52abaa5dc4.png" class="latex" alt="$KT \perp BC,$" style="vertical-align: -4px" width="89" height="18" />
+<img src="//latex.artofproblemsolving.com/8/6/8/8680e676e29c463862acc8b3be70a4038aa9b4eb.png" class="latex" alt="$KT = \sqrt{GT^2 – (KC + AT)^2} = 6 \sqrt{3}=2r.$" style="vertical-align: -11px" width="323" height="35" /> 
+</p><p><img src="//latex.artofproblemsolving.com/1/c/f/1cf9fb3edc7d9b1ca36d7777be5b17e194c2a10e.png" class="latex" alt="$\angle AOB = 90^{\circ}, OH \perp AB,  OH = r = \frac{KT}{2},$" style="vertical-align: -13px" width="334" height="39" />
+<img src="//latex.artofproblemsolving.com/4/2/d/42d54f3e47aa7b663e26f04aabd0a351c242780d.png" class="latexcenter" alt="\[OH^2 = AH \cdot BH \implies  BH = \frac {9}{2}.\]" width="258" height="37" />
+</p><p>Area is <img src="//latex.artofproblemsolving.com/b/6/3/b63cd88f70c3358afe2ebb75a8a945c7ef5460ef.png" class="latexcenter" alt="\[(BK + KC) \cdot KT = (BH + KC) \cdot 2r = \frac{49}{2} \cdot 6\sqrt{3} = 147 \sqrt{3} \implies 147+3 = \boxed{\textbf{150}}.\]" width="590" height="37" />
+</p><p><b>vladimir.shelomovskii@gmail.com, vvsss</b>
+</p>
+<h2><span id="Solution_6_(Short_and_Sweet)"></span><span class="mw-headline" id="Solution_6_.28Short_and_Sweet.29">Solution 6 (Short and Sweet)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the center of the circle. Let points <img src="//latex.artofproblemsolving.com/e/c/0/ec00004a5113b974f70a8e26c3781261e56464e8.png" class="latex" alt="$M, N$" style="vertical-align: -3px" width="43" height="16" /> and <img src="//latex.artofproblemsolving.com/8/5/9/859ccf4cd60c7bc6b8fa1afc9a42dc811a826d6f.png" class="latex" alt="$L$" width="12" height="12" /> be the tangent points of lines <img src="//latex.artofproblemsolving.com/d/d/0/dd0278207ad901076509b4d70514d779f3d3496e.png" class="latex" alt="$BC, AD$" style="vertical-align: -4px" width="67" height="18" /> and <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> respectively to the circle. By Power of a Point, <img src="//latex.artofproblemsolving.com/4/7/d/47df80b20c54640f872f38e7fd0972634e138b78.png" class="latex" alt="$({MC})^2=16\cdot{25} \Longrightarrow MC=20$" style="vertical-align: -5px" width="247" height="21" />. Similarly, <img src="//latex.artofproblemsolving.com/5/b/8/5b813b67e328ae8de1169e2f3518622695450927.png" class="latex" alt="$({AL})^2=3\cdot{12} \Longrightarrow AL=6$" style="vertical-align: -5px" width="213" height="21" />. Notice that <img src="//latex.artofproblemsolving.com/4/0/5/405f1e57fb691c83535a8f2ee10fe49c8e85bcc6.png" class="latex" alt="$AL=AN=6$" style="vertical-align: -1px" width="116" height="14" /> since quadrilateral <img src="//latex.artofproblemsolving.com/0/a/0/0a023c74d05937e7d2cb2fb950afdb797d648870.png" class="latex" alt="$LONA$" style="vertical-align: -1px" width="59" height="14" /> is symmetrical. Let <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" /> intersect <img src="//latex.artofproblemsolving.com/b/b/c/bbcfabd65745f2b759dea1840f9a0753b2f992e8.png" class="latex" alt="$MN$" width="36" height="12" /> at <img src="//latex.artofproblemsolving.com/0/2/7/027f4a11d6090f9eac0ce2488df6384dad1263ea.png" class="latex" alt="$I$" width="9" height="12" />. Then, <img src="//latex.artofproblemsolving.com/c/0/9/c09ba82fbdc213b0adedf7ac36b03fd8a67c1f89.png" class="latex" alt="$\bigtriangleup{IMC}$" style="vertical-align: -4px" width="61" height="18" /> is similar to <img src="//latex.artofproblemsolving.com/0/1/6/016e80ae6640dca42fc3f1817f141bde175bdc0d.png" class="latex" alt="$\bigtriangleup{AIN}$" style="vertical-align: -4px" width="58" height="18" />. Therefore, <img src="//latex.artofproblemsolving.com/1/b/5/1b5be49e81fd70136ade548f420792f5aa9b1e27.png" class="latex" alt="$\frac{CI}{MC}=\frac{AI}{AN}$" style="vertical-align: -13px" width="98" height="39" />. Let the length of <img src="//latex.artofproblemsolving.com/c/a/6/ca6f3a9fe9a91de7e9d7ef589804d108bf8ff264.png" class="latex" alt="$PI=l$" style="vertical-align: -1px" width="55" height="14" />, then <img src="//latex.artofproblemsolving.com/6/5/9/65913c1894dd17d21a62224d01536b6c51825e69.png" class="latex" alt="$\frac{25-l}{20}=\frac{3+l}{6}$" style="vertical-align: -13px" width="117" height="39" />. Solving we get <img src="//latex.artofproblemsolving.com/0/b/3/0b322011b43e5a9f9a00108615ee668da8257e4e.png" class="latex" alt="$l=\frac{45}{13}$" style="vertical-align: -13px" width="54" height="38" />. Doing the Pythagorean theorem on triangles <img src="//latex.artofproblemsolving.com/1/e/1/1e11afb00b9c7887f248a16af42360360404cc2c.png" class="latex" alt="$IMC$" style="vertical-align: -1px" width="45" height="14" /> and <img src="//latex.artofproblemsolving.com/b/f/9/bf93e9fd4dbdc0f7e37897213914e49fe0325248.png" class="latex" alt="$AIN$" style="vertical-align: -1px" width="41" height="14" /> for sides <img src="//latex.artofproblemsolving.com/9/f/8/9f8b950130c97ec7c7108c4bec05210d170e89e7.png" class="latex" alt="$MI$" width="29" height="12" /> and <img src="//latex.artofproblemsolving.com/8/1/b/81b8d3fcfed31a22d1bbff8f9b45b592e27e6eb2.png" class="latex" alt="$IN$" style="vertical-align: -1px" width="28" height="14" /> respectively, we obtain the equation <img src="//latex.artofproblemsolving.com/3/0/8/3088d89834d4472bf6e8c5551acc6f4f213cc96e.png" class="latex" alt="$\sqrt{(\frac{280}{13})^2-400} +\sqrt{(\frac{84}{13})^2-36}=MN=2r_1$" style="vertical-align: -15px" width="356" height="45" /> where <img src="//latex.artofproblemsolving.com/a/d/c/adc143c3f887fa7e92fd80d91bb22af51b4abd77.png" class="latex" alt="$r_1$" style="vertical-align: -4px" width="17" height="13" /> denotes the radius of the circle. Solving, we get <img src="//latex.artofproblemsolving.com/b/1/a/b1ab74b0794422a6a6a81cd7bd056df1fc670cb0.png" class="latex" alt="$MN=6\sqrt{3}$" style="vertical-align: -2px" width="96" height="21" />. Additionally, quadrilateral <img src="//latex.artofproblemsolving.com/4/8/c/48c0cbd4e98ff61a302aeff7671e40800dba0a3b.png" class="latex" alt="$OLBM$" style="vertical-align: -1px" width="63" height="14" /> is symmetrical so <img src="//latex.artofproblemsolving.com/2/0/0/2005c4628e7e0510da28eb904aa76a7b4c39ff41.png" class="latex" alt="$OL=OM$" style="vertical-align: -1px" width="87" height="14" />. Let <img src="//latex.artofproblemsolving.com/b/d/2/bd2d6e07a4a986d900c935a2bb94d3740614638c.png" class="latex" alt="$OL=OM=x$" style="vertical-align: -1px" width="121" height="14" /> and extend a perpendicular foot from <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> to <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" /> and call it <img src="//latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png" class="latex" alt="$R$" width="14" height="12" />. Then, <img src="//latex.artofproblemsolving.com/3/9/7/397148dfa17a9d5b0310213bd0674203527b1830.png" class="latex" alt="$\bigtriangleup{ABR}$" style="vertical-align: -4px" width="60" height="18" /> is right with <img src="//latex.artofproblemsolving.com/c/a/d/cad1e203423d875df5f0df5557eb79eb77e14b33.png" class="latex" alt="$AR=6-x$" style="vertical-align: -2px" width="95" height="16" />, <img src="//latex.artofproblemsolving.com/f/a/a/faa4a958d5691f3dbf800b78b08b2ddf841f24c9.png" class="latex" alt="$AB=6+x$" style="vertical-align: -2px" width="96" height="16" />, and <img src="//latex.artofproblemsolving.com/2/0/4/204a3b795c0f322fb48b35a529f681f3a08d2bec.png" class="latex" alt="$RB=2r_1=MN=6\sqrt{3}$" style="vertical-align: -4px" width="197" height="22" />. Taking the difference of squares, we get <img src="//latex.artofproblemsolving.com/a/b/9/ab9eeb048bcf03d1618b233cbac7d143218ecb55.png" class="latex" alt="$108=24x \Longrightarrow x=\frac{9}{2}$" style="vertical-align: -13px" width="169" height="38" />. The area of <img src="//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png" class="latex" alt="$ABCD$" width="57" height="13" /> is <img src="//latex.artofproblemsolving.com/c/9/6/c96afc99444f050fcbf185601a2aee62d9300be4.png" class="latex" alt="$MN\cdot{BC}=(20+x)\cdot{MN} \Longrightarrow \frac{49}{2}\cdot{6\sqrt{3}}=147\sqrt{3}$" style="vertical-align: -13px" width="402" height="38" />. Therefore, the answer is <img src="//latex.artofproblemsolving.com/0/4/b/04b140a780fe921f5222193a097af7c7a93a022c.png" class="latex" alt="$147+3=\boxed{150}$" style="vertical-align: -6px" width="123" height="25" />
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Magnetoninja">Magnetoninja</a>
+</p>
+<h2><span id="Solution_7_(Intuitive,_no_trig,_no_weird_auxiliary_lines)"></span><span class="mw-headline" id="Solution_7_.28Intuitive.2C_no_trig.2C_no_weird_auxiliary_lines.29">Solution 7 (Intuitive, no trig, no weird auxiliary lines)</span></h2>
+<p>Say that <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" /> is tangent to the circle at <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" /> and <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" /> tangent at <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" />. Also, <img src="//latex.artofproblemsolving.com/b/1/9/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png" class="latex" alt="$H$" width="16" height="12" /> is the intersection of <img src="//latex.artofproblemsolving.com/2/c/7/2c7774174993ffa29a38cf577ae34d8e0a3a63cb.png" class="latex" alt="$XY$" width="30" height="12" /> (diameter) and <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" /> (diagonal). Then by power of a point with given info on <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> we get that <img src="//latex.artofproblemsolving.com/1/4/7/14716a5f68a808da07688f0ea98e0225b6b68d57.png" class="latex" alt="$AY=6$" style="vertical-align: -1px" width="63" height="14" /> and <img src="//latex.artofproblemsolving.com/6/4/d/64d777f7b7b2c2f62abca6681dabb1dd47eb8bd7.png" class="latex" alt="$CX=20$" style="vertical-align: -1px" width="75" height="14" />. Note that <img src="//latex.artofproblemsolving.com/7/2/4/724f0c1615095de4fa660708052c23ed813de2a8.png" class="latex" alt="$HAY \sim HCX$" style="vertical-align: -1px" width="118" height="14" />, and since <img src="//latex.artofproblemsolving.com/5/8/8/5880b365e1c41a5e28be95110de604d40b9a2197.png" class="latex" alt="$\frac{AY}{CX}=\frac{3}{10}$" style="vertical-align: -13px" width="83" height="39" /> we note that <img src="//latex.artofproblemsolving.com/4/d/6/4d696ae32c9757e9c95f5ea7146f0e5f3d43afc2.png" class="latexcenter" alt="\[\frac{AH}{CH} = \frac{AP+PH}{CQ+QH} = \frac{3+PH}{16+QH} =\frac{AY}{CX}=\frac{3}{10}\]" width="346" height="41" />. Since <img src="//latex.artofproblemsolving.com/6/c/b/6cb57bae7432f9c6f284548f4c0b6cb0134778bd.png" class="latex" alt="$PH+HQ=9$" style="vertical-align: -4px" width="119" height="18" />, we get that <img src="//latex.artofproblemsolving.com/d/1/8/d1810e5ba4ec312149ba02e535a17225b266b3aa.png" class="latex" alt="$PH=\frac{45}{13}$" style="vertical-align: -13px" width="79" height="38" /> and <img src="//latex.artofproblemsolving.com/3/8/d/38d9ab7be3dc38813b53be8cdb4c4bc273bffed1.png" class="latex" alt="$QH=\frac{72}{13}$" style="vertical-align: -13px" width="79" height="38" />. This is the length information within the circle.
+The same triangle similarity also means that <img src="//latex.artofproblemsolving.com/6/f/c/6fc727838c0e67a5e84fce1bbb12b9ffbefdc3dc.png" class="latex" alt="$\frac{YH}{XH}=\frac{3}{10}$" style="vertical-align: -13px" width="85" height="39" />, so if the radius of the circle is <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> then we have <img src="//latex.artofproblemsolving.com/b/e/a/bea601c43ee208859a06f6921b4d1dee1ef3d3c6.png" class="latex" alt="$XH=\frac{20}{13}r$" style="vertical-align: -13px" width="90" height="38" /> and <img src="//latex.artofproblemsolving.com/d/b/5/db52c3b1d74c014dc6158ca81667f4ebc0de7bd4.png" class="latex" alt="$YH = \frac{6}{13}r$" style="vertical-align: -13px" width="88" height="38" />. 
+By power of a point on H, we can figure out <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" />:
+<img src="//latex.artofproblemsolving.com/1/b/9/1b9f55888bb58ea36f9a0523d4c7ed76cdce6eaf.png" class="latexcenter" alt="\[XH\cdot YH = PH \cdot QG\]" width="174" height="16" />
+<img src="//latex.artofproblemsolving.com/e/4/5/e45e95faa34dd518c8bf64010415b5a19785534d.png" class="latexcenter" alt="\[\frac{20}{13}r \cdot \frac{6}{13}r = \frac{45}{13} \cdot \frac{72}{13}\]" width="153" height="38" />
+and we get that <img src="//latex.artofproblemsolving.com/d/7/6/d761c7965bc1a5e7ca1ebeb3b62698b1c35fe664.png" class="latex" alt="$r = 3 \sqrt 3$" style="vertical-align: -2px" width="68" height="21" />. Thus, we have that the height of the parallelogram is <img src="//latex.artofproblemsolving.com/f/b/d/fbd8e4cc993fa5975fa3d557e16f05ed0d216b72.png" class="latex" alt="$2r=6 \sqrt 3$" style="vertical-align: -2px" width="77" height="21" /> and we want to find <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />. If <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> is tangent to the circle at <img src="//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png" class="latex" alt="$E$" style="vertical-align: -1px" width="16" height="14" />, then set <img src="//latex.artofproblemsolving.com/1/d/5/1d52e1b919f50e687daefe182b1eb74c1025daeb.png" class="latex" alt="$a = BX = BE$" style="vertical-align: -1px" width="120" height="14" />. Using pythagorean theorem, <img src="//latex.artofproblemsolving.com/d/a/b/dabbb75a9d6a26efa4e97e2a37480193d206f4d2.png" class="latex" alt="$AO^2+BO^2=AB^2$" style="vertical-align: -2px" width="156" height="18" /> and we can plug in diagram values: <img src="//latex.artofproblemsolving.com/8/f/6/8f6ad42e9fa5dc2089ab2c6e8f5fdcbc4a0bcfb5.png" class="latexcenter" alt="\[(AY^2+OY^2)+(BX^2+OX)^2=AB^2\]" width="301" height="20" /> <img src="//latex.artofproblemsolving.com/f/4/3/f43847790d7a57ed7c5562b768bda88136be7ec4.png" class="latexcenter" alt="\[(6^2+(3 \sqrt 3)^2) + (a^2+(3 \sqrt 3)^2)=(a+6)^2.\]" width="327" height="21" /> Solving, we get <img src="//latex.artofproblemsolving.com/2/8/2/282e158af113c32b698411d805e8fef50e44abf3.png" class="latex" alt="$a=\frac{9}{2}$" style="vertical-align: -13px" width="49" height="38" /> 
+Finally, we have <img src="//latex.artofproblemsolving.com/2/8/5/2850c0872cd42606c807ed972aa18eefb13f985d.png" class="latex" alt="$[ABCD]=XY \cdot BC = 6 \sqrt 3 \cdot (20+\frac{9}{2}) \rightarrow \boxed{150}$" style="vertical-align: -13px" width="373" height="38" />
+</p><p>~ Brocolimanx
+</p>
+<h2><span id="Solution_8_(Ptolemy's_Theorem_+_Power_of_Point_+_Pythagorean_Theorem)"></span><span class="mw-headline" id="Solution_8_.28Ptolemy.27s_Theorem_.2B_Power_of_Point_.2B_Pythagorean_Theorem.29">Solution 8 (Ptolemy's Theorem + Power of Point + Pythagorean Theorem)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png" class="latex" alt="$E$" style="vertical-align: -1px" width="16" height="14" />, <img src="//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png" class="latex" alt="$F$" style="vertical-align: -1px" width="16" height="14" />, <img src="//latex.artofproblemsolving.com/6/e/2/6e28ce12d49d39f160d5a0ef54077fc98e4b9d2b.png" class="latex" alt="$G$" width="14" height="12" /> be the circle's point of tangency with sides <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" />, <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />, and <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />, respectively. Let <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the center of the inscribed circle.
+</p><p>By Power of a Point, <img src="//latex.artofproblemsolving.com/a/a/7/aa752665270e369f945b7c71d38e8d5dfb5e9677.png" class="latex" alt="$AE^2 = AP \cdot AQ = 3(3+9) = 36$" style="vertical-align: -5px" width="261" height="21" />, so <img src="//latex.artofproblemsolving.com/a/5/8/a58ef1a0b89bdd01d9afe0e65f59fbdf3e144198.png" class="latex" alt="$AE = 6$" style="vertical-align: -1px" width="63" height="14" />. Similarly, <img src="//latex.artofproblemsolving.com/f/c/3/fc33af93c7c571aa5c2d1c29ce1d2b72623d2b9b.png" class="latex" alt="$GC^2 = CQ \cdot CP = 16(16+9) = 400$" style="vertical-align: -5px" width="290" height="21" />, so <img src="//latex.artofproblemsolving.com/e/0/6/e06943ccebbde1e26366b547c673c6e8d13b5b3e.png" class="latex" alt="$GC = 20$" style="vertical-align: -1px" width="73" height="14" />.
+</p><p>Construct <img src="//latex.artofproblemsolving.com/e/1/9/e195ed4818e368e25b7cb6e335e24d0613ba50ca.png" class="latex" alt="$GE$" width="28" height="12" />, and let <img src="//latex.artofproblemsolving.com/0/2/7/027f4a11d6090f9eac0ce2488df6384dad1263ea.png" class="latex" alt="$I$" width="9" height="12" /> be the point of intersection of <img src="//latex.artofproblemsolving.com/e/1/9/e195ed4818e368e25b7cb6e335e24d0613ba50ca.png" class="latex" alt="$GE$" width="28" height="12" /> and <img src="//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png" class="latex" alt="$AC$" style="vertical-align: -1px" width="30" height="14" />. <img src="//latex.artofproblemsolving.com/c/3/7/c3747e22417918a191300c85d408ece59a82af30.png" class="latex" alt="$GE \perp BC$" style="vertical-align: -1px" width="84" height="14" /> and <img src="//latex.artofproblemsolving.com/5/9/5/5958cbccbb4c90fd9c198bf014d138807c49a7a3.png" class="latex" alt="$GE \perp AD$" style="vertical-align: -1px" width="84" height="14" />. By AA, <img src="//latex.artofproblemsolving.com/5/8/c/58c15427d9b7b7e53ba1fd925a55d311f36ae7a1.png" class="latex" alt="$\triangle IGC \sim \triangle IEA$" style="vertical-align: -4px" width="134" height="18" />, and we have <img src="//latex.artofproblemsolving.com/5/f/f/5ff51400532cc65cfe623fe60bbefee84c1ea2f8.png" class="latex" alt="$\frac{AI}{IC} = \frac{AE}{GC} = \frac{3}{10}$" style="vertical-align: -13px" width="133" height="39" />. We also know <img src="//latex.artofproblemsolving.com/6/2/5/62588f1e8c409b0483b5edafd78c3d75f211217d.png" class="latex" alt="$AI + IC = AC = 28$" style="vertical-align: -2px" width="165" height="16" />, so <img src="//latex.artofproblemsolving.com/b/e/4/be42d1e319f8a6d81a85091f0761d6ff1958f798.png" class="latex" alt="$AI = \frac{84}{13}$" style="vertical-align: -13px" width="71" height="38" /> and <img src="//latex.artofproblemsolving.com/4/d/5/4d5b958bfae1617a49d882eb56a8d138849197ba.png" class="latex" alt="$IC = \frac{280}{13}$" style="vertical-align: -13px" width="81" height="38" />.
+</p><p>Using Pythagorean Theorem on <img src="//latex.artofproblemsolving.com/0/e/8/0e84aa69cb24722084c24dfdfa93fae629c2aa87.png" class="latex" alt="$\triangle IEA$" style="vertical-align: -4px" width="56" height="18" /> and <img src="//latex.artofproblemsolving.com/5/a/3/5a3c7e4ceec3fccdaa9fdd6f69baf3057d5c2d7c.png" class="latex" alt="$\triangle CIG$" style="vertical-align: -4px" width="56" height="18" />, we find that <img src="//latex.artofproblemsolving.com/c/d/d/cdd323363b2d27ca775b73441942b0fd8e2922c6.png" class="latex" alt="$EI = \frac{18\sqrt{3}}{13}$" style="vertical-align: -13px" width="96" height="43" /> and <img src="//latex.artofproblemsolving.com/a/7/9/a79b6f4df53865379afe803cbe5c7618c4d0824a.png" class="latex" alt="$IG = \frac{60\sqrt{3}}{13}$" style="vertical-align: -13px" width="96" height="43" />. Thus, <img src="//latex.artofproblemsolving.com/3/e/a/3ea6b7086b749559925cf0bb7595be7267a3d1d7.png" class="latex" alt="$GE = EI + IG = 6\sqrt{3}$" style="vertical-align: -2px" width="182" height="21" />, and the radius of the circle is <img src="//latex.artofproblemsolving.com/4/f/7/4f7e99b6a177dd82046ee2ae91b50c143a72b417.png" class="latex" alt="$3\sqrt{3}$" style="vertical-align: -1px" width="33" height="18" />.
+</p><p>Construct <img src="//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png" class="latex" alt="$EF$" width="28" height="12" />, <img src="//latex.artofproblemsolving.com/3/9/5/3951902c11a1cd39a091ea15f0f06cbc79095de4.png" class="latex" alt="$FG$" width="28" height="12" />. <img src="//latex.artofproblemsolving.com/a/d/3/ad3c5c88f5932a78d4500a6a6b44a27f6cd6a274.png" class="latex" alt="$\angle AFO = \angle AEO = 90^{\circ}$" style="vertical-align: -1px" width="186" height="15" />, so <img src="//latex.artofproblemsolving.com/3/1/a/31ac1bc026df4f96cd73dcce7d868423ecddd16a.png" class="latex" alt="$AEOF$" style="vertical-align: -1px" width="59" height="14" /> is cyclic. Similarly, <img src="//latex.artofproblemsolving.com/c/6/c/c6c99aef0be0976dccdf06c9ff6ddff517cd1146.png" class="latex" alt="$BFOG$" style="vertical-align: -1px" width="59" height="14" /> is cyclic.
+</p><p>Now, we attempt to set up Ptolemy. Using Pythagorean Theorem on <img src="//latex.artofproblemsolving.com/6/9/d/69d950cd766423161832d5ec77ff122040fcd8fd.png" class="latex" alt="$\triangle AEO$" style="vertical-align: -4px" width="60" height="18" />, we find that <img src="//latex.artofproblemsolving.com/1/4/1/141b26211409b9e92b7143c96f07791e3dcb76aa.png" class="latex" alt="$AO = 3\sqrt{7}$" style="vertical-align: -2px" width="87" height="21" />. By Ptolemy's Theorem, <img src="//latex.artofproblemsolving.com/6/b/0/6b0e99b1537b606bcc481368a8bf2d3c24868314.png" class="latex" alt="$(AE)(FO) + (AF)(EO) = (AO)(FE)$" style="vertical-align: -5px" width="303" height="20" />, from which we have <img src="//latex.artofproblemsolving.com/4/e/6/4e653e70e4c0ddef9ae3e179ff25abee37aecdc3.png" class="latex" alt="$(6)(3\sqrt{3}) + (6)(3\sqrt{3}) = (3\sqrt{7})(FE)$" style="vertical-align: -5px" width="280" height="24" /> and <img src="//latex.artofproblemsolving.com/d/c/c/dcc339180a4e2d1bb7b1db62bff91fddb7862163.png" class="latex" alt="$FE = 12\frac{\sqrt{3}}{\sqrt{7}}$" style="vertical-align: -18px" width="101" height="48" />. From Thales' Circle, <img src="//latex.artofproblemsolving.com/0/d/9/0d963673d1e87e1828cca1d25106dc56b9a608b7.png" class="latex" alt="$\triangle FGE$" width="59" height="13" /> is a right triangle, and <img src="//latex.artofproblemsolving.com/f/3/f/f3fdff3b0e1d13df3b2810a6c1778570719f8a7d.png" class="latex" alt="$EF^2 + FG^2 = GE^2$" style="vertical-align: -2px" width="157" height="18" />, so <img src="//latex.artofproblemsolving.com/d/c/5/dc58f25cca6eb9de47f115be95bdc15490f8d7ad.png" class="latex" alt="$FG = \frac{18}{\sqrt{7}}$" style="vertical-align: -18px" width="83" height="43" />.
+</p><p>Set <img src="//latex.artofproblemsolving.com/c/2/0/c20268c6f8646751880675bc13a1e0c974d8b155.png" class="latex" alt="$BF = BG = s$" style="vertical-align: -1px" width="117" height="14" />. <img src="//latex.artofproblemsolving.com/a/1/f/a1f2b8a0b4a8bafcc16537e63c48cab3b09cab44.png" class="latex" alt="$BO = \sqrt{s^2 + (3\sqrt{3})^2} = \sqrt{s^2+27}$" style="vertical-align: -9px" width="262" height="35" />, so by Ptolemy's Theorem on <img src="//latex.artofproblemsolving.com/c/6/c/c6c99aef0be0976dccdf06c9ff6ddff517cd1146.png" class="latex" alt="$BFOG$" style="vertical-align: -1px" width="59" height="14" />, we have
+</p><p><img src="//latex.artofproblemsolving.com/4/7/f/47f846d8521a21936c6281eaee88030a8b8013af.png" class="latexcenter" alt="\[(BF)(GO) + (BG)(FO) = (FG)(BO)\]" width="301" height="18" />
+<img src="//latex.artofproblemsolving.com/7/7/2/772a385a8ac8002b848ae1c3c8b9892e5aae9025.png" class="latexcenter" alt="\[(3\sqrt{3})(s) + (3\sqrt{3})(s) = (\frac{18}{\sqrt{7}})(\sqrt{s^2+27})\]" width="312" height="41" />
+Solving yields <img src="//latex.artofproblemsolving.com/b/e/6/be6ceafaa5902135a3b75f6581e2ee0d8c166d56.png" class="latex" alt="$s = \frac{9}{2}$" style="vertical-align: -13px" width="48" height="38" />.
+</p><p>We know that <img src="//latex.artofproblemsolving.com/1/9/f/19fe095dacf8946a0d795b945f827dd129fdf7b6.png" class="latex" alt="$BC = BG + GC = 20 + \frac{9}{2} = \frac{49}{2}$" style="vertical-align: -13px" width="259" height="38" />, so the area of <img src="//latex.artofproblemsolving.com/b/5/e/b5e59e1c8133350a64e3cc58089749bdd88b30d2.png" class="latex" alt="$ABCD = (\frac{49}{2})(6\sqrt{3}) = 147\sqrt{3}$" style="vertical-align: -13px" width="244" height="38" />. The requested answer is <img src="//latex.artofproblemsolving.com/b/6/8/b684db9e5596846886e2fadfa0d94d196566b8e8.png" class="latex" alt="$147 + 3 = \boxed{150}$" style="vertical-align: -6px" width="123" height="25" />.
+</p><p>~ adam_zheng
+</p>
+<h2><span class="mw-headline" id="Solution_9">Solution 9</span></h2>
+<p>Let points <img src="//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png" class="latex" alt="$E$" style="vertical-align: -1px" width="16" height="14" />, <img src="//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png" class="latex" alt="$F$" style="vertical-align: -1px" width="16" height="14" />, <img src="//latex.artofproblemsolving.com/6/e/2/6e28ce12d49d39f160d5a0ef54077fc98e4b9d2b.png" class="latex" alt="$G$" width="14" height="12" /> be the points where lines <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />, <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />, and <img src="//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png" class="latex" alt="$AD$" width="28" height="13" /> are tangent to the circle respectively. Then extend line <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" /> to point <img src="//latex.artofproblemsolving.com/b/1/9/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png" class="latex" alt="$H$" width="16" height="12" /> such that <img src="//latex.artofproblemsolving.com/b/b/3/bb3ddf9a5fa2fca5c4787d4f989af0eef1387bf0.png" class="latex" alt="$AH$" width="30" height="13" /> is perpendicular to <img src="//latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />.
+</p><p>According to Power of a Point, <img src="//latex.artofproblemsolving.com/e/0/8/e08645440b386c9cc61804e48187933fa2e94fb6.png" class="latex" alt="$CQ\cdot CP=CE^2\rightarrow 16\cdot 25=CE^2\rightarrow CE=20$" style="vertical-align: -4px" width="370" height="20" />.
+</p><p>Similarly, <img src="//latex.artofproblemsolving.com/3/9/4/394398b4ac555c3c252476345b1c7c4c7688a826.png" class="latex" alt="$AP\cdot AQ=AF^2\rightarrow 3\cdot 12=AF^2\rightarrow AF=6$" style="vertical-align: -4px" width="348" height="20" />.
+</p><p>(Note that <img src="//latex.artofproblemsolving.com/5/d/d/5dd4e130b0a7ebb3f84f65f25bae3b704fc3c495.png" class="latex" alt="$AG=AF=6$" style="vertical-align: -1px" width="115" height="14" /> because they are intersecting tangents from the same circle. Furthermore, <img src="//latex.artofproblemsolving.com/d/b/0/db08ede7ad3d6888cb68fa40946f12f1b9bd492c.png" class="latex" alt="$HE=AG=6$" style="vertical-align: -1px" width="118" height="14" /> due to a simple upwards translation.)
+</p><p>Therefore, <img src="//latex.artofproblemsolving.com/1/6/f/16f7dbddadba419246a01d92ed371444afd157c4.png" class="latex" alt="$HC=HE+EC=6+20=26$" style="vertical-align: -2px" width="255" height="16" />, and we already know that <img src="//latex.artofproblemsolving.com/f/7/f/f7f59328c5df535c1ebb496143f2dbd1cc5fc934.png" class="latex" alt="$AC=28$" style="vertical-align: -1px" width="72" height="14" />, meaning that we can use the Pythagorean Theorem on <img src="//latex.artofproblemsolving.com/a/a/e/aae0398b7fcbadbab54fe9e9a61bff87f5bc3417.png" class="latex" alt="$\Delta AHC$" style="vertical-align: -1px" width="62" height="14" /> to obtain: <img src="//latex.artofproblemsolving.com/3/2/6/32617a84142f5acf6db7fe7b8dcacd0530bced9a.png" class="latex" alt="$AH=6\sqrt{3}$" style="vertical-align: -2px" width="90" height="21" />.
+</p><p>Let <img src="//latex.artofproblemsolving.com/6/d/9/6d901a5c07e5f4579a94554128c53b9fa855ef17.png" class="latex" alt="$HB=k$" style="vertical-align: -1px" width="67" height="14" />. Then <img src="//latex.artofproblemsolving.com/8/6/1/861ed6067eaa2a04e0adb5269e8281c9957828b1.png" class="latex" alt="$BE=6-HB=6-k$" style="vertical-align: -2px" width="183" height="16" />. Since they are intersecting tangents from the same circle, <img src="//latex.artofproblemsolving.com/5/2/7/527c2498d2feed7e1486d2d0e0e1f45b72fc2ea9.png" class="latex" alt="$BF=BE=6-k$" style="vertical-align: -2px" width="150" height="16" />.
+</p><p>Therefore, <img src="//latex.artofproblemsolving.com/e/8/1/e814b5b4d8023da59286a5876fb432ff91282b8a.png" class="latex" alt="$AB=AF+BF=6+6-k=12-k$" style="vertical-align: -2px" width="305" height="16" />. We have all the side lengths of <img src="//latex.artofproblemsolving.com/f/8/3/f83ec17540687013220a3c7e8ab0fdbf0d0755a5.png" class="latex" alt="$\Delta ABH$" style="vertical-align: -1px" width="62" height="14" />, so applying the Pythagorean Theorem: <img src="//latex.artofproblemsolving.com/a/d/a/adada97ee41e7f563bf159be979828a98ccbd35e.png" class="latex" alt="$(6\sqrt{3})^2+k^2=(12-k)^2\rightarrow k=\frac{3}{2}$" style="vertical-align: -13px" width="268" height="38" />.
+</p><p>Thus, <img src="//latex.artofproblemsolving.com/8/f/a/8fa074dc3073e19c214c1fcb2d5a7ac71a8921ea.png" class="latex" alt="$BC=BE+EC=6-k+20=26-k=\frac{49}{2}$" style="vertical-align: -13px" width="362" height="38" />.
+</p><p><img src="//latex.artofproblemsolving.com/3/7/1/371a38911d1b51dd6e7e4495de0e05fd273e9c5f.png" class="latex" alt="$[ABCD]=AH\cdot BC=6\sqrt{3}\cdot \frac{49}{2}=147\sqrt{3}$" style="vertical-align: -13px" width="335" height="38" />, so the answer is <img src="//latex.artofproblemsolving.com/4/6/4/4649b1f9c320291995474a6d45af1bf004dc433f.png" class="latex" alt="$\boxed{150}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Sid2012#User">sid2012</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=FeM_xXiJj0c&amp;t=1s">https://www.youtube.com/watch?v=FeM_xXiJj0c&amp;t=1s</a>
+</p><p>~Steven Chen (www.professorchenedu.com)
+</p>
+<h2><span id="Video_Solution_2_(Mathematical_Dexterity)"></span><span class="mw-headline" id="Video_Solution_2_.28Mathematical_Dexterity.29">Video Solution 2 (Mathematical Dexterity)</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=1nDKQkr9NaU">https://www.youtube.com/watch?v=1nDKQkr9NaU</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution_3_by_OmegaLearn">Video Solution 3 by OmegaLearn</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/LpOegT0fKy8?t=740">https://youtu.be/LpOegT0fKy8?t=740</a>
+</p><p>~ pi_is_3.14
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2022_AIME_I" title="2022 AIME I">2022 AIME I</a></b> (<b><a href="/wiki/index.php/2022_AIME_I_Problems" title="2022 AIME I Problems">Problems</a></b> • <b><a href="/wiki/index.php/2022_AIME_I_Answer_Key" title="2022 AIME I Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2022">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_10" title="2022 AIME I Problems/Problem 10">Problem 10</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_12" title="2022 AIME I Problems/Problem 12">Problem 12</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_1" title="2022 AIME I Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_2" title="2022 AIME I Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_3" title="2022 AIME I Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_4" title="2022 AIME I Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_5" title="2022 AIME I Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_6" title="2022 AIME I Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_7" title="2022 AIME I Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_8" title="2022 AIME I Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_9" title="2022 AIME I Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_10" title="2022 AIME I Problems/Problem 10">10</a> <b>•</b> <a class="mw-selflink selflink">11</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_12" title="2022 AIME I Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_13" title="2022 AIME I Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_14" title="2022 AIME I Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_15" title="2022 AIME I Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818184310
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.144 seconds
+Real time usage: 0.151 seconds
+Preprocessor visited node count: 2953/1000000
+Preprocessor generated node count: 6770/1000000
+Post‐expand include size: 1714/2097152 bytes
+Template argument size: 112/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 57027/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.339      1 -total
+ 72.27%    3.136      1 Template:AIME_box
+ 23.05%    1.000      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:21789-0!canonical and timestamp 20250818184309 and revision id 239213
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2022_AIME_I_Problems/Problem_11&amp;oldid=239213">https://artofproblemsolving.com/wiki/index.php?title=2022_AIME_I_Problems/Problem_11&amp;oldid=239213</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Geometry_Problems" title="Category:Intermediate Geometry Problems">Intermediate Geometry Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e90d3cd2bd46b',t:'MTc1ODM0MjM5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818210126 -->
+</html>
+

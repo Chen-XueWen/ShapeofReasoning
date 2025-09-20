@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2023 AIME II Problems/Problem 11 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2023_AIME_II_Problems/Problem_11","wgTitle":"2023 AIME II Problems/Problem 11","wgCurRevisionId":215276,"wgRevisionId":215276,"wgArticleId":23921,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Combinatorics Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2023_AIME_II_Problems/Problem_11","wgRelevantArticleId":23921,"wgRequestId":"0443e53c8dc6ab3156c90792","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2023_AIME_II_Problems_Problem_11 rootpage-2023_AIME_II_Problems_Problem_11 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2023 AIME II Problems/Problem 11																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2023_AIME_II_Problems/Problem_11" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2023_AIME_II_Problems/Problem_11&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2023_AIME_II_Problems/Problem_11&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2023_AIME_II_Problems/Problem_11&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2023_AIME_II_Problems/Problem_11" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2023 AIME II Problems/Problem 11</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution"><span class="tocnumber">2</span> <span class="toctext">Solution</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Video_Solution"><span class="tocnumber">5</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Find the number of collections of <img src="//latex.artofproblemsolving.com/9/a/5/9a5b4928c8fe50ce3c2428da3bee3505e891b788.png" class="latex" alt="$16$" style="vertical-align: 0px" width="17" height="13" /> distinct subsets of <img src="//latex.artofproblemsolving.com/d/2/2/d2289231163b75dca0daf0f842ee0fba6f289fc2.png" class="latex" alt="$\{1,2,3,4,5\}$" style="vertical-align: -4px" width="95" height="18" /> with the property that for any two subsets <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" /> and <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" /> in the collection, <img src="//latex.artofproblemsolving.com/a/5/d/a5d0df951b998a7931ac51b1cab9659e2ca001a8.png" class="latex" alt="$X \cap Y \not= \emptyset.$" style="vertical-align: -4px" width="92" height="19" />
+</p>
+<h2><span class="mw-headline" id="Solution">Solution</span></h2>
+<p>Denote by <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> a collection of 16 distinct subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" />.
+Denote <img src="//latex.artofproblemsolving.com/2/6/1/2618897d51e5feffd67811c56846edef54467244.png" class="latex" alt="$N = \min \left\{ |S|: S \in \mathcal C \right\}$" style="vertical-align: -5px" width="177" height="20" />.
+</p><p>Case 1: <img src="//latex.artofproblemsolving.com/b/7/f/b7f7a06f7ff46ad88bc8ae4c49c943fd3d659b25.png" class="latex" alt="$N = 0$" width="49" height="12" />.
+</p><p>This entails <img src="//latex.artofproblemsolving.com/0/5/8/0586a9d24dda126fd5bd416538d6577bab708aa7.png" class="latex" alt="$\emptyset \in \mathcal C$" style="vertical-align: -2px" width="44" height="16" />.
+Hence, for any other set <img src="//latex.artofproblemsolving.com/9/f/a/9fa21825619378aed1d9515a3ec49c388eb9b392.png" class="latex" alt="$A \in \mathcal C$" style="vertical-align: -2px" width="48" height="15" />, we have <img src="//latex.artofproblemsolving.com/6/f/a/6faf3b8bdd903bdd7c8713f6be888073e995d8ce.png" class="latex" alt="$\emptyset \cap A = \emptyset$" style="vertical-align: -2px" width="78" height="16" />. This is infeasible.
+</p><p>Case 2: <img src="//latex.artofproblemsolving.com/b/7/3/b7331aa4b5e853bc095a9a02277bbb1e6a7a84d2.png" class="latex" alt="$N = 1$" style="vertical-align: 0px" width="49" height="13" />.
+</p><p>Let <img src="//latex.artofproblemsolving.com/3/e/4/3e46b4c5d41ffe8d213f6dace243e414e89cbfb8.png" class="latex" alt="$\{a_1\} \in \mathcal C$" style="vertical-align: -5px" width="70" height="20" />.
+To get <img src="//latex.artofproblemsolving.com/7/3/4/734ef4e918614a46a8fff2d125fc71a7dfe98cef.png" class="latex" alt="$\{a_1\} \cap A \neq \emptyset$" style="vertical-align: -5px" width="104" height="20" /> for all <img src="//latex.artofproblemsolving.com/9/f/a/9fa21825619378aed1d9515a3ec49c388eb9b392.png" class="latex" alt="$A \in \mathcal C$" style="vertical-align: -2px" width="48" height="15" />.
+We must have <img src="//latex.artofproblemsolving.com/7/0/e/70ec922c76d8a403396e02a293601e9e0eea63d5.png" class="latex" alt="$a_1 \in \mathcal A$" style="vertical-align: -4px" width="56" height="17" />.
+</p><p>The total number of subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" /> that contain <img src="//latex.artofproblemsolving.com/1/a/b/1ab39d761413804680d26d972381f028001562f5.png" class="latex" alt="$a_1$" style="vertical-align: -2px" width="15" height="10" /> is <img src="//latex.artofproblemsolving.com/9/5/2/9521a8469412ce4dd8556ba0edd5af8a8b1ac754.png" class="latex" alt="$2^4 = 16$" style="vertical-align: 0px" width="58" height="15" />.
+Because <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> contains 16 subsets.
+We must have <img src="//latex.artofproblemsolving.com/9/8/f/98f68931b605cf5289b3fec9bdf23f8da3c50e64.png" class="latex" alt="$\mathcal C = \left\{ \{a_1\} \cup A&#160;: \forall \ A \subseteq \left\{ 1, 2, 3, 4, 5 \right\} \backslash \left\{a_1 \right\} \right\}$" style="vertical-align: -5px" width="339" height="20" />.
+Therefore, for any <img src="//latex.artofproblemsolving.com/e/2/1/e213046b4e25b2cd1d6b92618847322a8dcf92a2.png" class="latex" alt="$X, Y \in \mathcal C$" style="vertical-align: -4px" width="73" height="18" />, we must have <img src="//latex.artofproblemsolving.com/e/8/4/e840314c834a7a2589bfe9bb5cabe81b6f669860.png" class="latex" alt="$X \cap Y \supseteq \{a_1\}$" style="vertical-align: -5px" width="113" height="20" />.
+So this is feasible.
+</p><p>Now, we count the number of <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> in this case.
+We only need to determine <img src="//latex.artofproblemsolving.com/1/a/b/1ab39d761413804680d26d972381f028001562f5.png" class="latex" alt="$a_1$" style="vertical-align: -2px" width="15" height="10" />.
+Therefore, the number of solutions is 5.
+</p><p>Case 3: <img src="//latex.artofproblemsolving.com/1/b/d/1bd0e22036b664824ed34f48c39c73ad5928c05a.png" class="latex" alt="$N = 2$" style="vertical-align: -1px" width="52" height="14" />.
+</p><p>Case 3.1: There is exactly one subset in <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> that contains 2 elements.
+</p><p>Denote this subset as <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+We then put all subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" /> that contain at least three elements into <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" />, except <img src="//latex.artofproblemsolving.com/4/a/a/4aaa9ae28b09432cbe6aa749f7c90f533369ef52.png" class="latex" alt="$\left\{ a_3, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />.
+This satisfies <img src="//latex.artofproblemsolving.com/c/0/f/c0f7e6eacaff73e8fecf57366a957ea7f8285a91.png" class="latex" alt="$X \cap Y \neq \emptyset$" style="vertical-align: -4px" width="84" height="18" /> for any <img src="//latex.artofproblemsolving.com/e/2/1/e213046b4e25b2cd1d6b92618847322a8dcf92a2.png" class="latex" alt="$X, Y \in \mathcal C$" style="vertical-align: -4px" width="73" height="18" />.
+</p><p>Now, we count the number of <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> in this case.
+We only need to determine <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+Therefore, the number of solutions is <img src="//latex.artofproblemsolving.com/9/b/f/9bfd1a7ef429b76abe80e3bf7e963b1bc1dc742f.png" class="latex" alt="$\binom{5}{2} = 10$" style="vertical-align: -22px" width="79" height="53" />.
+</p><p>Case 3.2: There are exactly two subsets in <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> that contain 2 elements.
+</p><p>They must take the form <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" /> and <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+</p><p>We then put all subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" /> that contain at least three elements into <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" />, except <img src="//latex.artofproblemsolving.com/4/a/a/4aaa9ae28b09432cbe6aa749f7c90f533369ef52.png" class="latex" alt="$\left\{ a_3, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" /> and <img src="//latex.artofproblemsolving.com/d/1/3/d133b8f313be391f847178636cf8a258939b81ad.png" class="latex" alt="$\left\{ a_2, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />.
+This satisfies <img src="//latex.artofproblemsolving.com/c/0/f/c0f7e6eacaff73e8fecf57366a957ea7f8285a91.png" class="latex" alt="$X \cap Y \neq \emptyset$" style="vertical-align: -4px" width="84" height="18" /> for any <img src="//latex.artofproblemsolving.com/e/2/1/e213046b4e25b2cd1d6b92618847322a8dcf92a2.png" class="latex" alt="$X, Y \in \mathcal C$" style="vertical-align: -4px" width="73" height="18" />.
+</p><p>Now, we count the number of <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> in this case.
+We only need to determine <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" /> and <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+Therefore, the number of solutions is <img src="//latex.artofproblemsolving.com/b/3/a/b3a7dae252307fcb9988758d3d8f44da078630e8.png" class="latex" alt="$5 \cdot \binom{4}{2} = 30$" style="vertical-align: -23px" width="104" height="55" />.
+</p><p>Case 3.3: There are exactly three subsets in <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> that contain 2 elements.
+They take the form <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/5/e/e/5ee3303a606bd747a04fd73ee2412bceba8f31e9.png" class="latex" alt="$\left\{ a_1, a_4 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+</p><p>We then put all subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" /> that contain at least three elements into <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" />, except <img src="//latex.artofproblemsolving.com/4/a/a/4aaa9ae28b09432cbe6aa749f7c90f533369ef52.png" class="latex" alt="$\left\{ a_3, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />, <img src="//latex.artofproblemsolving.com/d/1/3/d133b8f313be391f847178636cf8a258939b81ad.png" class="latex" alt="$\left\{ a_2, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />, <img src="//latex.artofproblemsolving.com/f/3/f/f3f644d70848c662a90fbb278116873ab18ca412.png" class="latex" alt="$\left\{ a_2, a_3, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />.
+This satisfies <img src="//latex.artofproblemsolving.com/c/0/f/c0f7e6eacaff73e8fecf57366a957ea7f8285a91.png" class="latex" alt="$X \cap Y \neq \emptyset$" style="vertical-align: -4px" width="84" height="18" /> for any <img src="//latex.artofproblemsolving.com/e/2/1/e213046b4e25b2cd1d6b92618847322a8dcf92a2.png" class="latex" alt="$X, Y \in \mathcal C$" style="vertical-align: -4px" width="73" height="18" />.
+</p><p>Now, we count the number of <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> in this case.
+We only need to determine <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/5/e/e/5ee3303a606bd747a04fd73ee2412bceba8f31e9.png" class="latex" alt="$\left\{ a_1, a_4 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+Therefore, the number of solutions is <img src="//latex.artofproblemsolving.com/9/6/b/96b176a9a826238a4fbcc3c775a4bfaac753af5c.png" class="latex" alt="$5 \cdot \binom{4}{3} = 20$" style="vertical-align: -23px" width="104" height="55" />.
+</p><p>Case 3.4: There are exactly three subsets in <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> that contain 2 elements.
+They take the form <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/e/5/c/e5c4c66bfbae7a8351f1ac905b46e56deab7796b.png" class="latex" alt="$\left\{ a_2, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+</p><p>We then put all subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" /> that contain at least three elements into <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" />, except <img src="//latex.artofproblemsolving.com/4/a/a/4aaa9ae28b09432cbe6aa749f7c90f533369ef52.png" class="latex" alt="$\left\{ a_3, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />, <img src="//latex.artofproblemsolving.com/d/1/3/d133b8f313be391f847178636cf8a258939b81ad.png" class="latex" alt="$\left\{ a_2, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />, <img src="//latex.artofproblemsolving.com/e/d/c/edc787a69dd05119bc35d034482ceed9ae1a00bc.png" class="latex" alt="$\left\{ a_1, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />.
+This satisfies <img src="//latex.artofproblemsolving.com/c/0/f/c0f7e6eacaff73e8fecf57366a957ea7f8285a91.png" class="latex" alt="$X \cap Y \neq \emptyset$" style="vertical-align: -4px" width="84" height="18" /> for any <img src="//latex.artofproblemsolving.com/e/2/1/e213046b4e25b2cd1d6b92618847322a8dcf92a2.png" class="latex" alt="$X, Y \in \mathcal C$" style="vertical-align: -4px" width="73" height="18" />.
+</p><p>Now, we count the number of <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> in this case.
+We only need to determine <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/e/5/c/e5c4c66bfbae7a8351f1ac905b46e56deab7796b.png" class="latex" alt="$\left\{ a_2, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+Therefore, the number of solutions is <img src="//latex.artofproblemsolving.com/3/0/0/300c762a669ea8aadfda3501895647add33ba31e.png" class="latex" alt="$\binom{5}{3} = 10$" style="vertical-align: -22px" width="79" height="53" />.
+</p><p>Case 3.5: There are exactly four subsets in <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> that contain 2 elements.
+They take the form <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/5/e/e/5ee3303a606bd747a04fd73ee2412bceba8f31e9.png" class="latex" alt="$\left\{ a_1, a_4 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/e/9/b/e9befe4c0c2174ca8df93fe8a626cc0afafb1d48.png" class="latex" alt="$\left\{ a_1, a_5 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+</p><p>We then put all subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" /> that contain at least three elements into <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" />, except <img src="//latex.artofproblemsolving.com/4/a/a/4aaa9ae28b09432cbe6aa749f7c90f533369ef52.png" class="latex" alt="$\left\{ a_3, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />, <img src="//latex.artofproblemsolving.com/d/1/3/d133b8f313be391f847178636cf8a258939b81ad.png" class="latex" alt="$\left\{ a_2, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />, <img src="//latex.artofproblemsolving.com/e/d/c/edc787a69dd05119bc35d034482ceed9ae1a00bc.png" class="latex" alt="$\left\{ a_1, a_4, a_5 \right\}$" style="vertical-align: -5px" width="87" height="20" />, <img src="//latex.artofproblemsolving.com/9/5/2/952cfdfbe3b2c3f8efa937a88885f0a8354ea6de.png" class="latex" alt="$\left\{ a_2, a_3, a_4 \right\}$" style="vertical-align: -5px" width="87" height="20" />.
+This satisfies <img src="//latex.artofproblemsolving.com/c/0/f/c0f7e6eacaff73e8fecf57366a957ea7f8285a91.png" class="latex" alt="$X \cap Y \neq \emptyset$" style="vertical-align: -4px" width="84" height="18" /> for any <img src="//latex.artofproblemsolving.com/e/2/1/e213046b4e25b2cd1d6b92618847322a8dcf92a2.png" class="latex" alt="$X, Y \in \mathcal C$" style="vertical-align: -4px" width="73" height="18" />.
+</p><p>Now, we count the number of <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> in this case.
+We only need to determine <img src="//latex.artofproblemsolving.com/6/b/6/6b6755c47c2ed9895ffdc84f3904b2069b1257fd.png" class="latex" alt="$\left\{ a_1, a_2 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/c/2/f/c2fa6d9175af800cfd705973389bed25dc99b3bc.png" class="latex" alt="$\left\{ a_1, a_3 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/5/e/e/5ee3303a606bd747a04fd73ee2412bceba8f31e9.png" class="latex" alt="$\left\{ a_1, a_4 \right\}$" style="vertical-align: -5px" width="62" height="20" />, <img src="//latex.artofproblemsolving.com/e/9/b/e9befe4c0c2174ca8df93fe8a626cc0afafb1d48.png" class="latex" alt="$\left\{ a_1, a_5 \right\}$" style="vertical-align: -5px" width="62" height="20" />.
+Therefore, the number of solutions is 5.
+</p><p>Putting all subcases together, the number of solutions is this case is <img src="//latex.artofproblemsolving.com/8/4/6/8462f8c05a9342906f6333d97ab4d47be7e96415.png" class="latex" alt="$10 + 30 + 20 + 10 + 5 = 75$" style="vertical-align: -2px" width="215" height="15" />.
+</p><p>Case 4: <img src="//latex.artofproblemsolving.com/8/3/b/83bade2a0e3fbe216bdfb531f88b79297937cda7.png" class="latex" alt="$N \geq 3$" style="vertical-align: -3px" width="52" height="17" />.
+</p><p>The number of subsets of <img src="//latex.artofproblemsolving.com/e/8/c/e8ce1491e46b9846879aeabbd9232aea39097ebc.png" class="latex" alt="$\left\{ 1, 2, 3, 4, 5 \right\}$" style="vertical-align: -5px" width="98" height="20" /> that contain at least three elements is <img src="//latex.artofproblemsolving.com/b/4/8/b48185286aba56d02b535503a61f19f5cbce8896.png" class="latex" alt="$\sum_{i=3}^5 \binom{5}{i} = 16$" style="vertical-align: -23px" width="110" height="55" />.
+Because <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> has 16 elements, we must select all such subsets into <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" />.
+Therefore, the number of solutions in this case is 1.
+</p><p>Putting all cases together, the total number of <img src="//latex.artofproblemsolving.com/7/d/5/7d563ff56d0179ed76e46ad9007b8411307eaefb.png" class="latex" alt="$\mathcal C$" style="vertical-align: 0px" width="10" height="13" /> is <img src="//latex.artofproblemsolving.com/6/b/9/6b9f7e79d66b7a5b6254ed5191df500524c7513a.png" class="latex" alt="$5 + 75 + 1 = \boxed{\textbf{(081) }}$" style="vertical-align: -11px" width="168" height="30" />.
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>Denote the <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> as <img src="//latex.artofproblemsolving.com/8/8/9/8899a46645ad5412ff4e4159bc9d035a7230f47a.png" class="latex" alt="$\{ 1,2,3,4,5 \}$" style="vertical-align: -4px" width="95" height="18" /> and the collection of subsets as <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />. 
+</p><p><br />
+<b>Case 1: There are only sets of size <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> or higher in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />:  </b>
+Any two sets in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> must have at least one element common to both of them (since <img src="//latex.artofproblemsolving.com/8/b/2/8b2dd91d7c50d11456dc8f3649bb840f36ed8d01.png" class="latex" alt="$3+3&gt;5$" style="vertical-align: -2px" width="76" height="15" />). Since there are <img src="//latex.artofproblemsolving.com/9/a/5/9a5b4928c8fe50ce3c2428da3bee3505e891b788.png" class="latex" alt="$16$" style="vertical-align: 0px" width="17" height="13" /> subsets of <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> that have size <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> or higher, there is only one possibility for this case.
+</p><p><br />
+<b>Case 2: There are only sets of size <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> or higher in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />:  </b>
+Firstly, there cannot be a no size <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> set <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />, or it will be overcounting the first case.
+</p><p>If there is only one such size <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> set, there are <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> ways to choose it. That size <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> set, say <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" />, cannot be in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> with <img src="//latex.artofproblemsolving.com/c/5/d/c5d38c09688eb98626f85aaa18e8ae4a94d61dff.png" class="latex" alt="$Y = A/X$" style="vertical-align: -5px" width="80" height="20" /> (a three element set). Thus, there are only <img src="//latex.artofproblemsolving.com/f/1/9/f1965fae079a9ba2c0726c307070c2355dfcb213.png" class="latex" alt="$15$" style="vertical-align: 0px" width="17" height="13" /> possible size <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> subsets that can be in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />, giving us <img src="//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> for this case.
+</p><p>If there are two sets with size <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />, we can choose the common elements of these two subsets in <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> ways, giving us a total of <img src="//latex.artofproblemsolving.com/b/1/8/b1864f3f734794a1c1d6ca93c066befd8a73723e.png" class="latex" alt="$5\cdot 6 = 30$" width="73" height="12" />.
+</p><p>If there are three sets with size <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />, they can either share one common element, which can be done in <img src="//latex.artofproblemsolving.com/c/4/7/c47fdae2d201b1a7f51ca66646dabc8acf0ab832.png" class="latex" alt="$5 \cdot 4 = 20$" style="vertical-align: 0px" width="73" height="13" /> ways, or they can share pairwise common elements (sort of like a cycle), which can be done <img src="//latex.artofproblemsolving.com/9/b/f/9bfd1a7ef429b76abe80e3bf7e963b1bc1dc742f.png" class="latex" alt="$\binom{5}{2} = 10$" style="vertical-align: -22px" width="79" height="53" /> ways. In total, we have <img src="//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png" class="latex" alt="$30$" width="17" height="12" /> possibilities.
+</p><p>If there are four sets with size <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />, they all have to share one common element, which can be done in <img src="//latex.artofproblemsolving.com/e/d/a/eda32272d0cb6b79e2b1b826ac18bff6ca8e665d.png" class="latex" alt="$5\cdot 1$" style="vertical-align: -1px" width="33" height="14" /> ways.
+</p><p>Thus, summing everything up, this will give us <img src="//latex.artofproblemsolving.com/a/7/e/a7e4c2930d79c57bee209557767b878cd704ea46.png" class="latex" alt="$75$" style="vertical-align: -1px" width="20" height="14" /> possible sets <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />
+</p><p><br />
+<b>Case 3: There is a set with size <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />:  </b>
+Notice that be at most one size <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> subset. There are <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> ways to choose that single element set. Say it's <img src="//latex.artofproblemsolving.com/7/4/d/74d91572b11fb08581dc7126a3773a5ee51ea095.png" class="latex" alt="$\{ 1\}$" style="vertical-align: -5px" width="29" height="20" />. All other subsets in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> must have a <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> in them, but there are only <img src="//latex.artofproblemsolving.com/c/3/c/c3ce08bb199d7dae1d8ba64eee96f7511702069c.png" class="latex" alt="$2^4-1 = 15$" style="vertical-align: -2px" width="92" height="18" /> of them. Thus this case yields <img src="//latex.artofproblemsolving.com/6/c/8/6c84170667bfc8d0372b103985d0ec46d0c2a5a0.png" class="latex" alt="$5\cdot 1 = 5$" style="vertical-align: -1px" width="66" height="14" /> possibilities.
+</p><p><br />
+Thus, the total number of sets <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> would be <img src="//latex.artofproblemsolving.com/9/2/0/920586221654fc3717e4384263e485265e2ae2ba.png" class="latex" alt="$1+75+5 = \boxed{\textbf{(081)}}$" style="vertical-align: -11px" width="162" height="30" />.
+</p><p>~sml1809
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>Firstly, there cannot be two subsets with cardinality 1, or they will not intersect.
+</p><p>If there is one subset <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> with cardinality <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />; let the element in <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> be <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />, then there are <img src="//latex.artofproblemsolving.com/9/5/8/9584bdb500d49089d884caad5e9f4484b6267bbf.png" class="latex" alt="$2^4=16$" style="vertical-align: 0px" width="58" height="15" /> subsets that do not include <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> so they do not work. Every remaining subsets <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> will have <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> as an element so <img src="//latex.artofproblemsolving.com/e/b/2/eb221389f3d3ec156178687497a9cb426ee61406.png" class="latex" alt="$S\cap{A}\geq1$" style="vertical-align: -3px" width="81" height="17" />, since we just excluded all that do not. Since there are 15 subsets left, all are forced into the group of 16 subsets, so we just choose the number of <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> to determine the set <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" />. <img src="//latex.artofproblemsolving.com/f/f/5/ff5eba6ae264a61eace8ec67410ef6ec6238b16f.png" class="latex" alt="$A\in\{1,2,3,4,5\}$" style="vertical-align: -5px" width="134" height="20" /> so there are 5 ways.
+</p><p>For the rest of the cases, we assume there are no sets <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> with cardinality 1.  Notice that the only way to "violate" the condition is to have subsets <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" /> and <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" /> with cardinalities 2 and 3 in some order. Otherwise, by the Pigeonhole Principle, if two sets both have cardinalities more than 3, they are bound to have one element of intersection. Say a set <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> has <img src="//latex.artofproblemsolving.com/1/3/6/13607d6166a5c0bdc7365de57735531fc21f82e8.png" class="latex" alt="$|S|=2$" style="vertical-align: -5px" width="57" height="20" />, then there is clearly only one set <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> that will make <img src="//latex.artofproblemsolving.com/8/0/b/80b0fb403850511e069c42b11c3e3045cd4f98b8.png" class="latex" alt="$S\cap{s}=0$" style="vertical-align: -1px" width="76" height="14" />. By our previous claim, all other subsets that have cardinality <img src="//latex.artofproblemsolving.com/e/e/1/ee1a4e1eef25c83605fa4b5ff64171d12c00d517.png" class="latex" alt="$c\geq{3}$" style="vertical-align: -3px" width="43" height="16" /> will work.
+</p><p>Now if we generalize a bit: If a subset has <img src="//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" class="latex" alt="$N$" width="16" height="12" /> 2-element subsets which belong to set <img src="//latex.artofproblemsolving.com/5/d/1/5d1e4485dc90c450e8c76826516c1b2ccb8fce16.png" class="latex" alt="$M$" width="19" height="12" />, then there are exactly <img src="//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" class="latex" alt="$N$" width="16" height="12" /> subsets with cardinality 3 that don't work. Therefore, the number of "violating subsets" are all subsets with cardinality <img src="//latex.artofproblemsolving.com/5/1/c/51c8e80911056f1c7142dcd070da7fc128429eae.png" class="latex" alt="$c\leq{1}$" style="vertical-align: -3px" width="43" height="16" />, all 2-element subsets that are not in <img src="//latex.artofproblemsolving.com/5/d/1/5d1e4485dc90c450e8c76826516c1b2ccb8fce16.png" class="latex" alt="$M$" width="19" height="12" />, and all corresponding cardinality 3 subsets. Subtracting from the total 32 subsets, we get that <img src="//latex.artofproblemsolving.com/d/5/e/d5e390f09a79262e39aa310b76550ab0b48e6cf9.png" class="latex" alt="$32-(1+5+(10-N)+N)=16$" style="vertical-align: -5px" width="271" height="20" /> subsets that do work. This includes all subsets in <img src="//latex.artofproblemsolving.com/5/d/1/5d1e4485dc90c450e8c76826516c1b2ccb8fce16.png" class="latex" alt="$M$" width="19" height="12" />, so the remaining non-violating subsets are forced. This is equivalent now to choosing <img src="//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" class="latex" alt="$N$" width="16" height="12" /> 2 element subsets.
+</p><p>Following casework on the number of 2-element subsets:
+</p><p>If <img src="//latex.artofproblemsolving.com/f/f/b/ffbf0e3d6449ddf18d2352976ba403dc41dd46b5.png" class="latex" alt="$N=1$" style="vertical-align: 0px" width="49" height="13" />: There are <img src="//latex.artofproblemsolving.com/e/e/5/ee559317aed18491b8093c9dffcc7931e41f1991.png" class="latex" alt="$\binom{5}{2}=10$" style="vertical-align: -22px" width="79" height="53" /> ways.
+</p><p>If <img src="//latex.artofproblemsolving.com/a/c/e/acef3f81f0ca3e4b075ec332c2d4f035778ebce1.png" class="latex" alt="$N=2$" style="vertical-align: -1px" width="52" height="14" />: There are <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> ways to choose the intersection between the 2 sets (remember they have to have at least one element of intersection) and <img src="//latex.artofproblemsolving.com/5/c/9/5c9b68a04fadb4cbe90954c537de424c1519ef51.png" class="latex" alt="$\binom{4}{2}=6$" style="vertical-align: -22px" width="70" height="53" /> ways to choose the distinct elements in the subsets, so there are <img src="//latex.artofproblemsolving.com/5/c/5/5c536e7fdfac5101eadb72eeba552661a68e7db1.png" class="latex" alt="$5*6=30$" width="77" height="12" /> ways.
+</p><p>If <img src="//latex.artofproblemsolving.com/6/2/c/62cbee4f6fd50f986cc39275a4e09aff1d2200a7.png" class="latex" alt="$N=3$" width="49" height="12" />: It can be a cycle, where WLOG let the elements be <img src="//latex.artofproblemsolving.com/a/5/b/a5b29b358e825defa3e11b7d903d43ec31e5909a.png" class="latex" alt="$a,b,c$" style="vertical-align: -4px" width="43" height="18" /> so the sets are <img src="//latex.artofproblemsolving.com/1/4/a/14a2c20e83eb6b284ae911197da985716112e513.png" class="latex" alt="$\{a,b\}$" style="vertical-align: -4px" width="43" height="18" />, <img src="//latex.artofproblemsolving.com/8/a/5/8a5e942bf042bb6c511254dfa00da593f35b22c9.png" class="latex" alt="$\{b,c\}$" style="vertical-align: -4px" width="41" height="18" />, and <img src="//latex.artofproblemsolving.com/2/c/4/2c4df7f1abaa51ed146f2009757978930a91b266.png" class="latex" alt="$\{c,a\}$" style="vertical-align: -5px" width="46" height="20" />. This is just <img src="//latex.artofproblemsolving.com/c/e/5/ce5894fb25890d6b71779b81a580a39fe1b1cdcd.png" class="latex" alt="$\binom{5}{3}=10$" style="vertical-align: -22px" width="79" height="53" />. Alternatively, it can also be the case where all sets share one element. There are 5 ways to choose this element and <img src="//latex.artofproblemsolving.com/5/c/9/5c9b68a04fadb4cbe90954c537de424c1519ef51.png" class="latex" alt="$\binom{4}{2}=6$" style="vertical-align: -22px" width="70" height="53" /> ways to choose the remaining elements to assign to each set. There are <img src="//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png" class="latex" alt="$30$" width="17" height="12" /> ways.
+</p><p>If <img src="//latex.artofproblemsolving.com/f/c/e/fce912a0ad9e9d6cab93289db73fe702ea56b18f.png" class="latex" alt="$N=4$" style="vertical-align: 0px" width="50" height="13" />: By the Pigeonhole Principle, the only way all pairwise sets have at one common intersection is if all share one element in common. There are 5 ways to choose this element and the remaining numbers are forced. There are 5 ways.
+</p><p><img src="//latex.artofproblemsolving.com/3/c/0/3c03ad002b8d485563746e40c24d384dd10fbaf1.png" class="latex" alt="$N\geq{5}$" style="vertical-align: -3px" width="52" height="17" /> does not provide any valid cases since to have all pairwise elements to intersect one element, they must be the same element by the Pigeonhole Principle, but there are not enough subsets.
+</p><p>If <img src="//latex.artofproblemsolving.com/9/a/a/9aa8639375012de6e38db8211ff8767a17f1dd55.png" class="latex" alt="$N=0$" width="49" height="12" />, then there is only one way since <img src="//latex.artofproblemsolving.com/7/6/4/76431d0cbe91ff1e4ace5036f48542beaf85ec98.png" class="latex" alt="$\binom{5}{3}+\binom{5}{4}+\binom{5}{5}=16$" style="vertical-align: -23px" width="200" height="55" />.
+</p><p>Adding all cases yields <img src="//latex.artofproblemsolving.com/9/f/8/9f885bf35dd3bead386f42af40146ca6cfdb9420.png" class="latex" alt="$5+10+30+30+5+1=\boxed{81}$" style="vertical-align: -6px" width="248" height="25" /> ways!
+</p><p>-Magnetoninja
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/FH2QUGVNchw">https://youtu.be/FH2QUGVNchw</a>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2023_AIME_II" title="2023 AIME II">2023 AIME II</a></b> (<b><a href="/wiki/index.php/2023_AIME_II_Problems" title="2023 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2023_AIME_II_Answer_Key" title="2023 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2023">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2023_AIME_II_Problems/Problem_10" title="2023 AIME II Problems/Problem 10">Problem 10</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2023_AIME_II_Problems/Problem_12" title="2023 AIME II Problems/Problem 12">Problem 12</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2023_AIME_II_Problems/Problem_1" title="2023 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_2" title="2023 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_3" title="2023 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_4" title="2023 AIME II Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_5" title="2023 AIME II Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_6" title="2023 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_7" title="2023 AIME II Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_8" title="2023 AIME II Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_9" title="2023 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_10" title="2023 AIME II Problems/Problem 10">10</a> <b>•</b> <a class="mw-selflink selflink">11</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_12" title="2023 AIME II Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_13" title="2023 AIME II Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_14" title="2023 AIME II Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2023_AIME_II_Problems/Problem_15" title="2023 AIME II Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818175505
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.117 seconds
+Real time usage: 0.121 seconds
+Preprocessor visited node count: 1904/1000000
+Preprocessor generated node count: 4478/1000000
+Post‐expand include size: 1734/2097152 bytes
+Template argument size: 132/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 36058/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.870      1 -total
+ 75.76%    4.447      1 Template:AIME_box
+ 21.79%    1.279      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:23921-0!canonical and timestamp 20250818175505 and revision id 215276
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2023_AIME_II_Problems/Problem_11&amp;oldid=215276">https://artofproblemsolving.com/wiki/index.php?title=2023_AIME_II_Problems/Problem_11&amp;oldid=215276</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Combinatorics_Problems" title="Category:Intermediate Combinatorics Problems">Intermediate Combinatorics Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e89888d60820e',t:'MTc1ODM0MjA5OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818190437 -->
+</html>
+

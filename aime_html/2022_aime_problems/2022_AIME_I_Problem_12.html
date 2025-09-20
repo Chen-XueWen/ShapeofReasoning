@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://wiki.artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2022 AIME I Problems/Problem 12 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2022_AIME_I_Problems/Problem_12","wgTitle":"2022 AIME I Problems/Problem 12","wgCurRevisionId":214111,"wgRevisionId":214111,"wgArticleId":21790,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Combinatorics Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2022_AIME_I_Problems/Problem_12","wgRelevantArticleId":21790,"wgRequestId":"ab39faaf695f641858222926","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2022_AIME_I_Problems_Problem_12 rootpage-2022_AIME_I_Problems_Problem_12 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2022 AIME I Problems/Problem 12																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_12" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2022_AIME_I_Problems/Problem_12&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2022_AIME_I_Problems/Problem_12&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2022_AIME_I_Problems/Problem_12&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2022_AIME_I_Problems/Problem_12" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2022 AIME I Problems/Problem 12</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1_.28Easy_to_Understand.29"><span class="tocnumber">2</span> <span class="toctext">Solution 1 (Easy to Understand)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.28Linearity_of_Expectation.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (Linearity of Expectation)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28Rigorous.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (Rigorous)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4"><span class="tocnumber">5</span> <span class="toctext">Solution 4</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Video_Solution"><span class="tocnumber">6</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_Also"><span class="tocnumber">7</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>For any finite set <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" />, let <img src="//latex.artofproblemsolving.com/1/b/a/1ba88fe425f7e0ace5c9da517c9f6b25ae3b5d1e.png" class="latex" alt="$| X |$" style="vertical-align: -5px" width="28" height="20" /> denote the number of elements in <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" />. Define
+<img src="//latex.artofproblemsolving.com/4/f/9/4f9075f9c2c171e75749e225e835cbbc72cf488a.png" class="latexcenter" alt="\[S_n = \sum | A \cap B | ,\]" width="135" height="25" />
+where the sum is taken over all ordered pairs <img src="//latex.artofproblemsolving.com/8/9/b/89b04994cc8acbe4a2eb753624de38556ba34690.png" class="latex" alt="$(A, B)$" style="vertical-align: -4px" width="49" height="18" /> such that <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> are subsets of <img src="//latex.artofproblemsolving.com/f/5/c/f5c5ddaa932ea515afea8b13060bfebddf2dc2cc.png" class="latex" alt="$\left\{ 1 , 2 , 3,  \cdots , n \right\}$" style="vertical-align: -5px" width="118" height="20" /> with <img src="//latex.artofproblemsolving.com/a/0/b/a0bc696f86450365203378121331a472c3b47f58.png" class="latex" alt="$|A| = |B|$" style="vertical-align: -5px" width="75" height="20" />.
+For example, <img src="//latex.artofproblemsolving.com/1/f/9/1f922c7f371f9b25d4a39023d05bff8309968422.png" class="latex" alt="$S_2 = 4$" style="vertical-align: -2px" width="52" height="15" /> because the sum is taken over the pairs of subsets
+<img src="//latex.artofproblemsolving.com/c/d/c/cdc6dc2de56e85298fde8df68c5f8060dca2c575.png" class="latexcenter" alt="\[(A, B) \in \left\{ (\emptyset, \emptyset) , ( \{1\} , \{1\} ), ( \{1\} , \{2\} ) , ( \{2\} , \{1\} ) , ( \{2\} , \{2\} ) , ( \{1 , 2\} , \{1 , 2\} ) \right\} ,\]" width="595" height="19" />
+giving <img src="//latex.artofproblemsolving.com/3/3/1/331ad7bcc67ca3a3840e68916c2b90c28b10292e.png" class="latex" alt="$S_2 = 0 + 1 + 0 + 0 + 1 + 2 = 4$" style="vertical-align: -4px" width="244" height="17" />.
+Let <img src="//latex.artofproblemsolving.com/a/2/7/a27af6f78e232a28650fedf8bc17fd65aaa619ab.png" class="latex" alt="$\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$" style="vertical-align: -17px" width="82" height="43" />, where <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> and <img src="//latex.artofproblemsolving.com/0/6/1/0615acc3725de21025457e7d6f7694dab8e2f758.png" class="latex" alt="$q$" style="vertical-align: -3px" width="8" height="11" /> are relatively prime positive integers. Find the remainder when <img src="//latex.artofproblemsolving.com/8/5/6/856ee48ce76ddbd106a05384c2ea2c28e3b76c02.png" class="latex" alt="$p + q$" style="vertical-align: -3px" width="41" height="14" /> is divided by
+1000.
+</p>
+<h2><span id="Solution_1_(Easy_to_Understand)"></span><span class="mw-headline" id="Solution_1_.28Easy_to_Understand.29">Solution 1 (Easy to Understand)</span></h2>
+<p>Let's try out for small values of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to get a feel for the problem. When <img src="//latex.artofproblemsolving.com/d/1/d/d1dc65ed28b0f7cee7f947d1636a3a31d2b46ddc.png" class="latex" alt="$n=1, S_n$" style="vertical-align: -4px" width="74" height="18" /> is obviously <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />. The problem states that for <img src="//latex.artofproblemsolving.com/e/4/7/e475b76dfd67cc09b2f7409e37279de87ab61bfe.png" class="latex" alt="$n=2, S_n$" style="vertical-align: -4px" width="74" height="18" /> is <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />. Let's try it out for <img src="//latex.artofproblemsolving.com/5/6/3/5635737307f5f0651cced8ee2e6558a426fd27b5.png" class="latex" alt="$n=3$" width="43" height="12" />. 
+</p><p>Let's perform casework on the number of elements in <img src="//latex.artofproblemsolving.com/b/e/f/bef747a48a2a8d43c4841e12c89f2de2502a672e.png" class="latex" alt="$A, B$" style="vertical-align: -3px" width="35" height="16" />. 
+</p><p><img src="//latex.artofproblemsolving.com/5/6/c/56c8d99e5cd637469e38824a211af673fecc0af1.png" class="latex" alt="$\textbf{Case 1:} |A| = |B| = 1$" style="vertical-align: -5px" width="169" height="20" />
+</p><p>In this case, the only possible equivalencies will be if they are the exact same element, which happens <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> times.
+</p><p><img src="//latex.artofproblemsolving.com/8/b/c/8bcdbfd16e7f95d547222a52c796312cbbe1fd1a.png" class="latex" alt="$\textbf{Case 2:} |A| = |B| = 2$" style="vertical-align: -5px" width="169" height="20" />
+</p><p>In this case, if they share both elements, which happens <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> times, we will get <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> for each time, and if they share only one element, which also happens <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> times, we will get <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> for each time, for a total of <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> for this case.
+</p><p><img src="//latex.artofproblemsolving.com/0/a/6/0a6b1cfb8e2d56f5252405c64c37b3a052a4e8fc.png" class="latex" alt="$\textbf{Case 3:} |A| = |B| = 3$" style="vertical-align: -5px" width="169" height="20" />
+</p><p>In this case, the only possible scenario is that they both are the set <img src="//latex.artofproblemsolving.com/f/e/f/fef839af6c8716130345f2d29030096bb4c2ac22.png" class="latex" alt="$\{1,2,3\}$" style="vertical-align: -4px" width="60" height="18" />, and we have <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> for this case.
+</p><p><br />
+In total, <img src="//latex.artofproblemsolving.com/e/e/b/eebe5088e0f3b9c6a58f7b04102409a58b9cfc0a.png" class="latex" alt="$S_3 = 18$" style="vertical-align: -4px" width="63" height="17" />.
+</p><p>Now notice, the number of intersections by each element <img src="//latex.artofproblemsolving.com/b/d/f/bdf684c924a9586015b75f0bcd4769bff9016387.png" class="latex" alt="$1 \ldots 3$" style="vertical-align: -1px" width="47" height="14" />, or in general, <img src="//latex.artofproblemsolving.com/b/7/e/b7e1151bb4e6384618e90ea47f006ec74ef99af7.png" class="latex" alt="$1 \ldots n$" style="vertical-align: 0px" width="47" height="12" /> is equal for each element because of symmetry - each element when <img src="//latex.artofproblemsolving.com/5/6/3/5635737307f5f0651cced8ee2e6558a426fd27b5.png" class="latex" alt="$n=3$" width="43" height="12" /> adds <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> to the answer. Notice that <img src="//latex.artofproblemsolving.com/4/7/8/478ee745bd478b273d1aee6b7e93f656692ad6ac.png" class="latex" alt="$6 = \binom{4}{2}$" style="vertical-align: -22px" width="66" height="53" /> - let's prove that <img src="//latex.artofproblemsolving.com/3/0/9/3095e78b9afed9ea413996ade375f75f7cf0b26e.png" class="latex" alt="$S_n = n \cdot \binom{2n-2}{n-1}$" style="vertical-align: -23px" width="150" height="55" /> (note that you can assume this and answer the problem if you're running short on time in the real test).
+</p><p>Let's analyze the element <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> - to find a general solution, we must count the number of these subsets that <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> appears in. For <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> to be in both <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />, we need both sets to contain <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and another subset of <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> through <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> not including <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />. (<img src="//latex.artofproblemsolving.com/d/d/2/dd2ce663c09d02eb696212b68a4beb3aa1ea3e87.png" class="latex" alt="$A = \{k\} \cup A&#39;| A&#39; \subset \{1,2,\ldots,n\} \land A&#39; \not \subset \{k\}$" style="vertical-align: -5px" width="341" height="20" /> and 
+<img src="//latex.artofproblemsolving.com/4/6/8/468c2dfc975efb788419aedcdd1e41f58ce02c8c.png" class="latex" alt="$B = \{k\} \cup B&#39;| B&#39; \subset \{1,2,\ldots,n\} \land B&#39; \not \subset \{k\}$" style="vertical-align: -5px" width="345" height="20" />)
+</p><p>For any <img src="//latex.artofproblemsolving.com/7/8/b/78bc283b0e7a0d1c9e60a4b487d64719754b22c7.png" class="latex" alt="$0\leq l \leq n-1$" style="vertical-align: -3px" width="107" height="17" /> that is the size of both <img src="//latex.artofproblemsolving.com/1/0/9/1090530ae883b627e090bfb5e450ef796febca40.png" class="latex" alt="$A&#39;$" style="vertical-align: -1px" width="20" height="16" /> and <img src="//latex.artofproblemsolving.com/4/c/7/4c71f19552a05ee5e2b31e94aff3fb986884bf31.png" class="latex" alt="$B&#39;$" width="18" height="14" />, the number of ways to choose the subsets <img src="//latex.artofproblemsolving.com/1/0/9/1090530ae883b627e090bfb5e450ef796febca40.png" class="latex" alt="$A&#39;$" style="vertical-align: -1px" width="20" height="16" /> and <img src="//latex.artofproblemsolving.com/4/c/7/4c71f19552a05ee5e2b31e94aff3fb986884bf31.png" class="latex" alt="$B&#39;$" width="18" height="14" /> is <img src="//latex.artofproblemsolving.com/c/a/d/cad3050131fd24e454c0ee91e792c6dffc8a8456.png" class="latex" alt="$\binom{n-1}{l}$" style="vertical-align: -23px" width="72" height="55" /> for both subsets, so the total number of ways to choose the subsets are <img src="//latex.artofproblemsolving.com/e/8/6/e86527f330afc8511f6c00bf1127f054fb5a5e9d.png" class="latex" alt="$\binom{n-1}{l}^2$" style="vertical-align: -23px" width="80" height="58" />.
+Now we sum this over all possible <img src="//latex.artofproblemsolving.com/9/b/2/9b25f8e64b484493fda944d25cad453423041fe6.png" class="latex" alt="$l$" width="5" height="12" />'s to find the total number of ways to form sets <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> that contain <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />. This is equal to <img src="//latex.artofproblemsolving.com/3/5/4/35429cb54d594e87b49655c5c4b7d76ddab639a6.png" class="latex" alt="$\sum_{l=0}^{n-1} \binom{n-1}{l}^2$" style="vertical-align: -23px" width="108" height="59" />. This is a simplification of Vandermonde's identity, which states that <img src="//latex.artofproblemsolving.com/6/9/d/69d90b7b30686a570338e346020923be1b6adf80.png" class="latex" alt="$\sum_{k=0}^{r} \binom{m}{k} \cdot \binom{n}{r-k} = \binom{m+n}{r}$" style="vertical-align: -23px" width="258" height="56" />. Here, <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" />, <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and <img src="//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" class="latex" alt="$r$" width="8" height="8" /> are all <img src="//latex.artofproblemsolving.com/4/b/d/4bdca93962a2beaffc172ca394e04fe05bd74ffd.png" class="latex" alt="$n-1$" style="vertical-align: 0px" width="41" height="12" />, so this sum is equal to <img src="//latex.artofproblemsolving.com/2/2/b/22b9544e05b0d2b1306d91702bd0ba65a1b0c2ad.png" class="latex" alt="$\binom{2n-2}{n-1}$" style="vertical-align: -22px" width="75" height="53" />. Finally, since we are iterating over all <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />'s for <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> values of <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />, we have <img src="//latex.artofproblemsolving.com/3/0/9/3095e78b9afed9ea413996ade375f75f7cf0b26e.png" class="latex" alt="$S_n = n \cdot \binom{2n-2}{n-1}$" style="vertical-align: -23px" width="150" height="55" />, proving our claim.
+</p><p>We now plug in <img src="//latex.artofproblemsolving.com/c/7/4/c74a070eea97d9363f58a257e05e75fc69efa753.png" class="latex" alt="$S_n$" style="vertical-align: -2px" width="19" height="15" /> to the expression we want to find. This turns out to be <img src="//latex.artofproblemsolving.com/6/1/2/612e8dd5e8ee52a7c20c781a55cae8862a4b0638.png" class="latex" alt="$\frac{2022 \cdot \binom{4042}{2021}}{2021 \cdot \binom{4040}{2020}}$" style="vertical-align: -21px" width="98" height="51" />. Expanding produces <img src="//latex.artofproblemsolving.com/e/6/a/e6a2eb13e8f47901f4b7afdc0ff981ad7f07ba22.png" class="latex" alt="$\frac{2022 \cdot 4042!\cdot 2020! \cdot 2020!}{2021 \cdot 4040! \cdot 2021! \cdot 2021!}$" style="vertical-align: -13px" width="206" height="39" />.
+</p><p>After cancellation, we have <img src="//latex.artofproblemsolving.com/f/0/8/f08f3ce814148a4a3ebe0476e2d13b91f72396f7.png" class="latexcenter" alt="\[\frac{2022 \cdot 4042 \cdot 4041}{2021 \cdot 2021 \cdot 2021} \implies \frac{4044\cdot 4041}{2021 \cdot 2021}\]" width="275" height="37" />
+</p><p><img src="//latex.artofproblemsolving.com/7/c/0/7c017d5c9314208827a7d2f8cd8d9ee075735663.png" class="latex" alt="$4044$" style="vertical-align: 0px" width="36" height="13" /> and <img src="//latex.artofproblemsolving.com/4/2/1/4218c7ebcaa5ca94859d02e316d593ecd896bc9c.png" class="latex" alt="$4041$" style="vertical-align: 0px" width="35" height="13" /> don't have any common factors with <img src="//latex.artofproblemsolving.com/e/9/9/e99b9c3842e40e4102ae86b3317f26103c80cdb5.png" class="latex" alt="$2021$" style="vertical-align: 0px" width="35" height="13" />, so we're done with the simplification. We want to find <img src="//latex.artofproblemsolving.com/1/1/2/11276fa4afbdcade02eade184519215c4017667d.png" class="latex" alt="$4044 \cdot 4041 + 2021^2 \pmod{1000} \equiv 44 \cdot 41 + 21^2 \pmod{1000} \equiv 1804+441 \pmod{1000} \equiv 2245 \pmod{1000} \equiv \boxed{245}$" style="vertical-align: -6px" width="907" height="25" />
+</p><p><br />
+~KingRavi
+~Edited by MY-2
+</p>
+<h2><span id="Solution_2_(Linearity_of_Expectation)"></span><span class="mw-headline" id="Solution_2_.28Linearity_of_Expectation.29">Solution 2 (Linearity of Expectation)</span></h2>
+<p>We take cases based on the number of values in each of the subsets in the pair. Suppose we have <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> elements in each of the subsets in a pair (for a total of n elements in the set). The expected number of elements in any random pair will be <img src="//latex.artofproblemsolving.com/1/a/0/1a0c8d5904c273a23e4097208abec640a1737324.png" class="latex" alt="$n \cdot \frac{k}{n} \cdot \frac{k}{n}$" style="vertical-align: -13px" width="69" height="39" /> by linearity of expectation because for each of the <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> elements, there is a <img src="//latex.artofproblemsolving.com/f/a/b/fab87c80bc03be9d21f8b21e2eba0c2b3327e920.png" class="latex" alt="$\frac{k}{n}$" style="vertical-align: -13px" width="17" height="39" /> probability that the element will be chosen. To find the sum over all such values, we multiply this quantity by  <img src="//latex.artofproblemsolving.com/7/5/7/757797c86dca576ca200f408fb7d08f4ad52f942.png" class="latex" alt="$\binom{n}{k}^2$" style="vertical-align: -22px" width="45" height="56" />. Summing, we get <img src="//latex.artofproblemsolving.com/a/7/6/a7663a96e445e59e8b3b9602b2caf61452e53b54.png" class="latexcenter" alt="\[\sum_{k=1}^{n} \frac{k^2}{n} \binom{n}{k}^2\]" width="95" height="57" /> Notice that we can rewrite this as <img src="//latex.artofproblemsolving.com/4/0/7/40716202485dae8773ab8a5d369209a4399934ce.png" class="latexcenter" alt="\[\sum_{k=1}^{n} \frac{1}{n} \left(\frac{k \cdot n!}{(k)!(n - k)!}\right)^2 = \sum_{k=1}^{n} \frac{1}{n} n^2 \left(\frac{(n-1)!}{(k - 1)!(n - k)!}\right)^2 = n \sum_{k=1}^{n} \binom{n - 1}{k - 1}^2 = n \sum_{k=1}^{n} \binom{n - 1}{k - 1}\binom{n - 1}{n - k}\]" width="774" height="57" /> We can simplify this using Vandermonde's identity to get <img src="//latex.artofproblemsolving.com/f/0/1/f014cc2ed5f9cc2a6e5dbf554d25793a2acc2548.png" class="latex" alt="$n \binom{2n - 2}{n - 1}$" style="vertical-align: -23px" width="92" height="55" />. Evaluating this for <img src="//latex.artofproblemsolving.com/0/c/b/0cb39dbc06a6cd0a0f4e4dd1e3ff461fb7026ba6.png" class="latex" alt="$2022$" width="35" height="12" /> and <img src="//latex.artofproblemsolving.com/e/9/9/e99b9c3842e40e4102ae86b3317f26103c80cdb5.png" class="latex" alt="$2021$" style="vertical-align: 0px" width="35" height="13" /> gives <img src="//latex.artofproblemsolving.com/2/9/d/29d909a9b9e4046847b0df8ecf2f2e449c833898.png" class="latexcenter" alt="\[\frac{2022\binom{4042}{2021}}{2021\binom{4040}{2020}} = \frac{2022 \cdot 4042 \cdot 4041}{2021^3} = \frac{2022 \cdot 2 \cdot 4041}{2021^2}\]" width="379" height="49" /> Evaluating the numerators and denominators mod <img src="//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" /> gives <img src="//latex.artofproblemsolving.com/8/8/3/88323b0d8696df5727ce47718c5cdd1a1aaf1409.png" class="latex" alt="$804 + 441 = 1\boxed{245}$" style="vertical-align: -6px" width="150" height="25" />
+</p><p>- pi_is_3.14
+</p>
+<h2><span id="Solution_3_(Rigorous)"></span><span class="mw-headline" id="Solution_3_.28Rigorous.29">Solution 3 (Rigorous)</span></h2>
+<p>For each element <img src="//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png" class="latex" alt="$i$" width="5" height="12" />, denote <img src="//latex.artofproblemsolving.com/c/0/d/c0d96b413ef256c64df028ca3de0e0ea4effc4d0.png" class="latex" alt="$x_i = \left( x_{i, A}, x_{i, B} \right) \in \left\{ 0 , 1 \right\}^2$" style="vertical-align: -6px" width="199" height="24" />, where <img src="//latex.artofproblemsolving.com/5/b/3/5b3c75262d5c4ed3b74048663c916f59628ffa4c.png" class="latex" alt="$x_{i, A} = \Bbb I \left\{ i \in A \right\}$" style="vertical-align: -6px" width="126" height="20" /> (resp. <img src="//latex.artofproblemsolving.com/5/0/7/5077e152e7b8bc7f52ef7d0396a2095e1cdb62cf.png" class="latex" alt="$x_{i, B} = \Bbb I \left\{ i \in B \right\}$" style="vertical-align: -6px" width="128" height="20" />).
+</p><p>Denote <img src="//latex.artofproblemsolving.com/a/0/b/a0b3371c30cc39a281d6cac95ab51b119389c7fd.png" class="latex" alt="$\Omega = \left\{ (x_1, \cdots , x_n): \sum_{i = 1}^n x_{i, A} = \sum_{i = 1}^n x_{i, B} \right\}$" style="vertical-align: -23px" width="320" height="55" />.
+</p><p>Denote <img src="//latex.artofproblemsolving.com/7/2/8/72831eb00ea1b95e0b05d75f7e34961d1199a906.png" class="latex" alt="$\Omega_{-j} = \left\{ (x_1, \cdots , x_{j-1} , x_{j+1} , \cdots , x_n): \sum_{i \neq j} x_{i, A} = \sum_{i \neq j} x_{i, B} \right\}$" style="vertical-align: -26px" width="457" height="58" />.
+</p><p>Hence,
+<img src="//latex.artofproblemsolving.com/a/f/2/af26b9a82aa5c4c18696d7313c554ec08c367f66.png" class="latexcenter" alt="\begin{align*} S_n &amp; = \sum_{(x_1, \cdots , x_n) \in \Omega} \sum_{i = 1}^n \Bbb I \left\{ x_{i, A} = x_{i, B} = 1 \right\} \\ &amp; = \sum_{i = 1}^n \sum_{(x_1, \cdots , x_n) \in \Omega} \Bbb I \left\{ x_{i, A} = x_{i, B} = 1 \right\} \\ &amp; = \sum_{i = 1}^n \sum_{(x_1, \cdots , x_{i-1} , x_{i+1} , \cdots , x_n) \in \Omega_{-i}} 1  \\ &amp; = \sum_{i = 1}^n \sum_{j=0}^{n-1} \left( \binom{n-1}{j} \right)^2 \\ &amp; = n \sum_{j=0}^{n-1} \left( \binom{n-1}{j} \right)^2 \\ &amp; = n \sum_{j=0}^{n-1} \binom{n-1}{j} \binom{n-1}{n-1-j} \\ &amp; = n \binom{2n-2}{n-1} . \end{align*}" width="301" height="430" />
+</p><p>Therefore,
+<img src="//latex.artofproblemsolving.com/1/e/4/1e47f638593b861720aae9e00c70e78873031d8c.png" class="latexcenter" alt="\begin{align*} \frac{S_{2022}}{S_{2021}} &amp; = \frac{2022 \binom{4042}{2021}}{2021 \binom{4040}{2020}} \\ &amp; = \frac{4044 \cdot 4041}{2021^2} . \end{align*}" width="158" height="92" />
+</p><p>This is in the lowest term.
+Therefore, modulo 1000,
+<img src="//latex.artofproblemsolving.com/5/4/a/54a2944e846c5092149a7ea9b71022b8b5cc22ef.png" class="latexcenter" alt="\begin{align*} p + q  &amp; \equiv 4044 \cdot 4041 + 2021^2 \\ &amp; \equiv 44 \cdot 41 + 21^2 \\ &amp; \equiv \boxed{\textbf{(245) }} . \end{align*}" width="215" height="83" />
+</p><p>~Steven Chen (www.professorchenedu.com)
+</p>
+<h2><span class="mw-headline" id="Solution_4">Solution 4</span></h2>
+<p>Let's ask what the contribution of an element <img src="//latex.artofproblemsolving.com/9/1/3/91330a300b2601536fc74ede967a1a15c59944d9.png" class="latex" alt="$k\in \{1,2,\cdots,n\}$" style="vertical-align: -5px" width="133" height="20" /> is to the sum <img src="//latex.artofproblemsolving.com/0/2/3/023b46cee4d0d2cf22b92d612c10d1c91a7119fd.png" class="latex" alt="$S_n = \sum | A \cap B |.$" style="vertical-align: -11px" width="139" height="31" />
+</p><p>The answer is given by the number of <img src="//latex.artofproblemsolving.com/b/b/0/bb0c75d9abe3e693ba0bb677cecbb923cefd81af.png" class="latex" alt="$(A,B)$" style="vertical-align: -4px" width="49" height="18" /> such that <img src="//latex.artofproblemsolving.com/7/e/b/7eb42ba305512f59c605f9dcecaf4a0cf45ed262.png" class="latex" alt="$|A|=|B|$" style="vertical-align: -4px" width="70" height="18" /> and <img src="//latex.artofproblemsolving.com/f/6/3/f6330a3bc42d2982873001d060a551dc36ba422d.png" class="latex" alt="$k \in A\cap B$" style="vertical-align: -2px" width="83" height="15" />, which is given by <img src="//latex.artofproblemsolving.com/2/2/b/22b9544e05b0d2b1306d91702bd0ba65a1b0c2ad.png" class="latex" alt="$\binom{2n-2}{n-1}$" style="vertical-align: -22px" width="75" height="53" />
+by the following construction: Write down 1 to <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> except <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> in a row. Do the same in a second row. Then choose <img src="//latex.artofproblemsolving.com/4/b/d/4bdca93962a2beaffc172ca394e04fe05bd74ffd.png" class="latex" alt="$n-1$" style="vertical-align: 0px" width="41" height="12" /> numbers out of these <img src="//latex.artofproblemsolving.com/d/7/0/d7005cc2dc7f084de8debbd99ce593b6a7730acd.png" class="latex" alt="$2n-2$" width="50" height="12" /> numbers. <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and the numbers chosen in the first row make up <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" />. <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and the numbers not chosen in the second row make up <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />. This is a one-to-one correspondence between <img src="//latex.artofproblemsolving.com/b/b/0/bb0c75d9abe3e693ba0bb677cecbb923cefd81af.png" class="latex" alt="$(A,B)$" style="vertical-align: -4px" width="49" height="18" /> and the ways to choose <img src="//latex.artofproblemsolving.com/4/b/d/4bdca93962a2beaffc172ca394e04fe05bd74ffd.png" class="latex" alt="$n-1$" style="vertical-align: 0px" width="41" height="12" /> numbers from <img src="//latex.artofproblemsolving.com/d/7/0/d7005cc2dc7f084de8debbd99ce593b6a7730acd.png" class="latex" alt="$2n-2$" width="50" height="12" /> numbers.
+</p><p>The contribution from all elements is therefore 
+<img src="//latex.artofproblemsolving.com/b/a/4/ba4751afb2148620996acf71d8dcfb82a0af43f1.png" class="latexcenter" alt="\[S_n = n\binom{2n-2}{n-1}.\]" width="138" height="53" />
+For the rest please see Solution 1 or 2.
+</p><p>~qyang
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/cXJmHV5BnfY">https://youtu.be/cXJmHV5BnfY</a> ~MathProblemSolvingSkills.com
+</p><p><a rel="nofollow" class="external free" href="https://youtu.be/wTYXkE32v9o">https://youtu.be/wTYXkE32v9o</a> ~AMC &amp; AIME Training
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2022_AIME_I" title="2022 AIME I">2022 AIME I</a></b> (<b><a href="/wiki/index.php/2022_AIME_I_Problems" title="2022 AIME I Problems">Problems</a></b> • <b><a href="/wiki/index.php/2022_AIME_I_Answer_Key" title="2022 AIME I Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2022">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_11" title="2022 AIME I Problems/Problem 11">Problem 11</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_13" title="2022 AIME I Problems/Problem 13">Problem 13</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2022_AIME_I_Problems/Problem_1" title="2022 AIME I Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_2" title="2022 AIME I Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_3" title="2022 AIME I Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_4" title="2022 AIME I Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_5" title="2022 AIME I Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_6" title="2022 AIME I Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_7" title="2022 AIME I Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_8" title="2022 AIME I Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_9" title="2022 AIME I Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_10" title="2022 AIME I Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_11" title="2022 AIME I Problems/Problem 11">11</a> <b>•</b> <a class="mw-selflink selflink">12</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_13" title="2022 AIME I Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_14" title="2022 AIME I Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2022_AIME_I_Problems/Problem_15" title="2022 AIME I Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818182243
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.112 seconds
+Real time usage: 0.117 seconds
+Preprocessor visited node count: 1188/1000000
+Preprocessor generated node count: 2882/1000000
+Post‐expand include size: 1714/2097152 bytes
+Template argument size: 112/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 22638/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.497      1 -total
+ 72.03%    4.680      1 Template:AIME_box
+ 25.46%    1.654      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:21790-0!canonical and timestamp 20250818182243 and revision id 214111
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2022_AIME_I_Problems/Problem_12&amp;oldid=214111">https://artofproblemsolving.com/wiki/index.php?title=2022_AIME_I_Problems/Problem_12&amp;oldid=214111</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Combinatorics_Problems" title="Category:Intermediate Combinatorics Problems">Intermediate Combinatorics Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e90d6ffcec99d',t:'MTc1ODM0MjM5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818182243 -->
+</html>
+

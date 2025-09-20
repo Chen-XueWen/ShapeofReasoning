@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2020 AIME I Problems/Problem 12 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2020_AIME_I_Problems/Problem_12","wgTitle":"2020 AIME I Problems/Problem 12","wgCurRevisionId":260830,"wgRevisionId":260830,"wgArticleId":18304,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Number Theory Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2020_AIME_I_Problems/Problem_12","wgRelevantArticleId":18304,"wgRequestId":"abb3e7c1f8d063ff3f754593","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2020_AIME_I_Problems_Problem_12 rootpage-2020_AIME_I_Problems_Problem_12 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2020 AIME I Problems/Problem 12																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2020_AIME_I_Problems/Problem_12" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2020_AIME_I_Problems/Problem_12&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2020_AIME_I_Problems/Problem_12&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2020_AIME_I_Problems/Problem_12&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2020_AIME_I_Problems/Problem_12" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2020 AIME I Problems/Problem 12</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Video_solution_by_grogg007"><span class="tocnumber">2</span> <span class="toctext">Video solution by grogg007</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_1.1"><span class="tocnumber">3</span> <span class="toctext">Solution 1.1</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Note"><span class="tocnumber">3.1</span> <span class="toctext">Note</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_1.2_.28LTE_.2B_Binomial.29"><span class="tocnumber">4</span> <span class="toctext">Solution 1.2 (LTE + Binomial)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_2_.28Simpler.2C_just_basic_mods_and_Fermat.27s_theorem.29"><span class="tocnumber">5</span> <span class="toctext">Solution 2 (Simpler, just basic mods and Fermat's theorem)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_3_.28Totient_.26_Binomial_Theorems.29"><span class="tocnumber">6</span> <span class="toctext">Solution 3 (Totient &amp; Binomial Theorems)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_4_.28Elementary_and_Thorough.29"><span class="tocnumber">7</span> <span class="toctext">Solution 4 (Elementary and Thorough)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_5_.28Official_MAA.29"><span class="tocnumber">8</span> <span class="toctext">Solution 5 (Official MAA)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Video_Solution"><span class="tocnumber">9</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_Also"><span class="tocnumber">10</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> be the least positive integer for which <img src="//latex.artofproblemsolving.com/e/f/6/ef640cb66d09b78c04e940a9b0f3b3936d24dd68.png" class="latex" alt="$149^n-2^n$" style="vertical-align: 0px" width="75" height="13" /> is divisible by <img src="//latex.artofproblemsolving.com/b/e/a/bea2d45e56acdb58b6f31e461737d12c57e2c476.png" class="latex" alt="$3^3\cdot5^5\cdot7^7.$" width="79" height="15" /> Find the number of positive integer divisors of <img src="//latex.artofproblemsolving.com/b/d/9/bd923e41635af40a1abe58f230732f2280b0723a.png" class="latex" alt="$n.$" width="14" height="8" />
+</p>
+<h2><span class="mw-headline" id="Video_solution_by_grogg007">Video solution by <a href="/wiki/index.php/User:Grogg007" title="User:Grogg007">grogg007</a></span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/HP2R171ypEs">https://youtu.be/HP2R171ypEs</a>
+</p>
+<h2><span class="mw-headline" id="Solution_1.1">Solution 1.1</span></h2>
+<p>As usual, denote <img src="//latex.artofproblemsolving.com/5/7/4/57467e642fbd3cbdacda9d0fa1bda0b44100edd1.png" class="latex" alt="$v_p(n)$" style="vertical-align: -4px" width="40" height="18" /> the highest power of prime <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> that divides <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />.
+<a href="/wiki/index.php/Lifting_the_Exponent" class="mw-redirect" title="Lifting the Exponent">Lifting the Exponent</a> shows that <img src="//latex.artofproblemsolving.com/4/b/d/4bd2d660b56015800037624405c9049dfe933ac2.png" class="latexcenter" alt="\[3=v_3(149^n-2^n) = v_3(n) + v_3(147) = v_3(n)+1\]" width="381" height="18" /> so thus, <img src="//latex.artofproblemsolving.com/8/1/9/819068968ed60608a91d0c3921d6296964660e9d.png" class="latex" alt="$3^2$" width="15" height="15" /> divides <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. It also shows that <img src="//latex.artofproblemsolving.com/5/3/0/53094f61c11d56b76e86ebcf022ba7e3dd8737c1.png" class="latexcenter" alt="\[7=v_7(149^n-2^n) = v_7(n) + v_7(147) = v_7(n)+2\]" width="381" height="18" /> so thus, <img src="//latex.artofproblemsolving.com/a/5/2/a525d21eef8ae26634719caaf9bd7a44343c1e6b.png" class="latex" alt="$7^5$" style="vertical-align: -1px" width="18" height="17" /> divides <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. 
+</p><p><br />
+Now, setting <img src="//latex.artofproblemsolving.com/4/d/b/4db5fcd2b01722bedd868838a530e7296a4ff0e4.png" class="latex" alt="$n = 4c$" style="vertical-align: 0px" width="52" height="12" /> (necessitated by <img src="//latex.artofproblemsolving.com/e/b/b/ebbcfca755b6bd72a818180dd9fab1749939b61b.png" class="latex" alt="$149^n \equiv 2^n \pmod 5$" style="vertical-align: -4px" width="149" height="18" /> in order to set up LTE), we see <img src="//latex.artofproblemsolving.com/7/5/1/751491e1c63eab23ad0634a239692802ccf73d95.png" class="latexcenter" alt="\[v_5(149^{4c}-2^{4c}) = v_5(149^{4c}-16^{c})\]" width="256" height="19" /> and since <img src="//latex.artofproblemsolving.com/d/b/a/dba13ba15483a4fbb04b9a70b0e3f70bc6f4ae9c.png" class="latex" alt="$149^{4} \equiv 1 \pmod{25}$" style="vertical-align: -4px" width="147" height="19" /> and <img src="//latex.artofproblemsolving.com/4/2/4/424d91de4f8b3505d4e2fd2720e46f9ffa2531cb.png" class="latex" alt="$16^1 \equiv 16 \pmod{25}$" style="vertical-align: -4px" width="147" height="19" /> then <img src="//latex.artofproblemsolving.com/f/c/d/fcdc61daba0f43b1fd902e9b65e663e14d156484.png" class="latex" alt="$v_5(149^{4c}-2^{4c})=v_5(149^4-16)+v_5(c)=1+v_5(c)$" style="vertical-align: -5px" width="402" height="21" /> meaning that we have that by LTE, <img src="//latex.artofproblemsolving.com/7/9/f/79f9b3487b1514c066cd840704a1d349e2237d27.png" class="latex" alt="$5^4 | c$" style="vertical-align: -4px" width="29" height="19" /> and <img src="//latex.artofproblemsolving.com/e/c/b/ecbe7df4a79ed19fa18091af546030154c4b5491.png" class="latex" alt="$4 \cdot 5^4$" style="vertical-align: 0px" width="37" height="15" /> divides <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. 
+</p><p>Since <img src="//latex.artofproblemsolving.com/8/1/9/819068968ed60608a91d0c3921d6296964660e9d.png" class="latex" alt="$3^2$" width="15" height="15" />, <img src="//latex.artofproblemsolving.com/a/5/2/a525d21eef8ae26634719caaf9bd7a44343c1e6b.png" class="latex" alt="$7^5$" style="vertical-align: -1px" width="18" height="17" /> and <img src="//latex.artofproblemsolving.com/f/1/a/f1ab5a3da2efeec25a2b5694c324b69f96fe73dd.png" class="latex" alt="$4\cdot 5^4$" style="vertical-align: 0px" width="37" height="15" /> all divide <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />, the smallest value of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> working is their LCM, also <img src="//latex.artofproblemsolving.com/5/6/f/56f754771817eec527fa3ad899a668517cfb958b.png" class="latex" alt="$3^2 \cdot 7^5 \cdot 4 \cdot 5^4 = 2^2 \cdot 3^2 \cdot 5^4 \cdot 7^5$" style="vertical-align: 0px" width="226" height="15" />. Thus the number of divisors is <img src="//latex.artofproblemsolving.com/e/3/f/e3ffaf7150cbcc3070db684620490e8f5b6d30b3.png" class="latex" alt="$(2+1)(2+1)(4+1)(5+1) = \boxed{270}$" style="vertical-align: -5px" width="281" height="23" />.
+</p><p>~kevinmathz
+</p><p>clarified by another user 
+</p><p>notation note from another user
+</p>
+<h3><span class="mw-headline" id="Note">Note</span></h3>
+<p>We were able to use LTE with 3 and 7 but not 5 because in order to use LTE, we need \( p \mid x-y \).
+</p><p>Obviously, \( 149^n \equiv 2^n \pmod{3} \) implies \( 149^n - 2^n \equiv 0 \pmod{3} \), so LTE works here.
+</p><p>Furthermore, \( 149^n \equiv 2^n \pmod{7} \) implies \( 149^n - 2^n \equiv 0 \pmod{7} \), so LTE works here.
+</p><p>However, when we get to the case of 5, we see that \( 149^n \equiv 2^n \pmod{5} \) doesn't always hold; specifically, this is only valid when \( n \) is a multiple of \( 4 \), which is why we let \( n = 4c \) in the solution.
+</p><p><b>mathboy282</b>
+</p>
+<h2><span id="Solution_1.2_(LTE_+_Binomial)"></span><span class="mw-headline" id="Solution_1.2_.28LTE_.2B_Binomial.29">Solution 1.2 (LTE + Binomial)</span></h2>
+<p>Follow solution 1 to get that <img src="//latex.artofproblemsolving.com/8/8/8/888150e425c84cff8933d111c91c4a4e2325bb65.png" class="latex" alt="$3^2 \cdot 7^5$" style="vertical-align: -1px" width="48" height="17" /> is a divisor of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. We now take care of the <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" /> part.
+Rewrite <img src="//latex.artofproblemsolving.com/e/f/6/ef640cb66d09b78c04e940a9b0f3b3936d24dd68.png" class="latex" alt="$149^n-2^n$" style="vertical-align: 0px" width="75" height="13" /> as <img src="//latex.artofproblemsolving.com/a/6/0/a6099f9aec73603cae88e8e4292edc8bff8311f6.png" class="latex" alt="$(150-1)^n-2^n$" style="vertical-align: -5px" width="124" height="20" /> and assume <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is even. Since this expression is divisible by <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" />, we expand and get 
+<img src="//latex.artofproblemsolving.com/4/2/4/4244da5be57ce3409fd65521aad50d7bffb9020d.png" class="latexcenter" alt="\[\binom n0(1^n)-\binom n1(1^{n-1}150^1)+\binom n2(1^{n-2}150^2)\cdot\cdot\cdot+\binom nn(150^n)-2^n \equiv 0 \pmod {5^5}.\]" width="619" height="53" />
+Everything except the first three terms and the <img src="//latex.artofproblemsolving.com/6/c/3/6c36f0b157e8c2fbe0638c2f2b378e08d07695aa.png" class="latex" alt="$2^n$" width="17" height="12" /> term is divisible by <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" />, so we can rewrite this as
+<img src="//latex.artofproblemsolving.com/6/8/4/68471de365bd87149d9efd3974388ef9cb2de47b.png" class="latexcenter" alt="\[1-150n+\frac{n(n-1)}{2}150^2-2^n \equiv 0 \pmod {5^5},\]" width="363" height="38" />
+And the following must be true:
+<img src="//latex.artofproblemsolving.com/c/e/2/ce2c2af48b844e7f3a9f5bbae680e6489b4a0c92.png" class="latexcenter" alt="\[1-150n+\frac{n(n-1)}{2}150^2-2^n \equiv 0 \pmod {5^2}.\]" width="363" height="38" />
+Since <img src="//latex.artofproblemsolving.com/4/7/8/478743e8cd5289ee0f0a7c29e55635d62eaaaa27.png" class="latex" alt="$150n+\frac{n(n-1)}{2}150^2$" style="vertical-align: -13px" width="168" height="40" /> divides <img src="//latex.artofproblemsolving.com/3/6/9/369aa2b96d08192baf66da44577be596a58d6778.png" class="latex" alt="$5^2$" width="15" height="15" />, we can now see that
+<img src="//latex.artofproblemsolving.com/7/8/e/78e74c37a9a9460725a3f29a8a3c11625bee36e3.png" class="latexcenter" alt="\[1-2^n \equiv 0 \pmod {5^2}.\]" width="174" height="20" />
+Solving for <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />, <img src="//latex.artofproblemsolving.com/0/9/c/09c633ec31cd4e6178cf234ec15d5a4a3beb058c.png" class="latex" alt="$n \equiv 0 \pmod {2^2 \cdot 5}$" style="vertical-align: -5px" width="148" height="21" />.
+We also know this is true:
+<img src="//latex.artofproblemsolving.com/c/4/b/c4bcb5bd2f9f81b2c7f3605e8230a4184100f502.png" class="latexcenter" alt="\[1-150n+\frac{n(n-1)}{2}150^2-2^n \equiv 0 \pmod {5^3}.\]" width="363" height="38" />
+We know <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is divisible by <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" />, so <img src="//latex.artofproblemsolving.com/4/7/8/478743e8cd5289ee0f0a7c29e55635d62eaaaa27.png" class="latex" alt="$150n+\frac{n(n-1)}{2}150^2$" style="vertical-align: -13px" width="168" height="40" /> divides <img src="//latex.artofproblemsolving.com/c/e/c/cec0dcde3e88efde55a8c8df29fc970f9e6c6da8.png" class="latex" alt="$5^3$" width="15" height="15" />.
+And now,
+<img src="//latex.artofproblemsolving.com/f/1/1/f116dc85658e601c4f7ae626ef48bab63128e526.png" class="latexcenter" alt="\[1-2^n \equiv 0 \pmod {5^3}\]" width="169" height="20" />
+gives <img src="//latex.artofproblemsolving.com/1/5/f/15f8cc67f65faf3453c1ec65b19f7f8f94a1fb97.png" class="latexcenter" alt="\[n \equiv 0 \pmod {2^2 \cdot 5^2}.\]" width="166" height="20" />
+This process can be repeated until we obtain <img src="//latex.artofproblemsolving.com/8/c/a/8caea51e159235c6a6cadefba0bddd35152260c9.png" class="latex" alt="$n \equiv 0 \pmod {2^2 \cdot 5^4}$" style="vertical-align: -5px" width="155" height="21" />. The desired solution is then simply <img src="//latex.artofproblemsolving.com/2/e/a/2ea43534e3432ded0618a31daba9adc8c22540cd.png" class="latex" alt="$\text{lcm} (3^2 \cdot 7^5, 2^2 \cdot 5^4)$" style="vertical-align: -5px" width="142" height="21" /> which yields an answer of <img src="//latex.artofproblemsolving.com/7/7/e/77e7538f16b527f68700e9f514f86a2c6bde57a8.png" class="latex" alt="$(2+1)(5+1)(2+1)(4+1)=\boxed{270}$" style="vertical-align: -6px" width="283" height="25" />.
+</p><p>~Marchk26
+</p>
+<h2><span id="Solution_2_(Simpler,_just_basic_mods_and_Fermat's_theorem)"></span><span class="mw-headline" id="Solution_2_.28Simpler.2C_just_basic_mods_and_Fermat.27s_theorem.29">Solution 2 (Simpler, just basic mods and Fermat's theorem)</span></h2>
+<p>Note that for all <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />, <img src="//latex.artofproblemsolving.com/1/0/0/10036266a51e4226396f31b126d690ecb2671421.png" class="latex" alt="$149^n - 2^n$" style="vertical-align: -2px" width="78" height="16" /> is divisible by <img src="//latex.artofproblemsolving.com/3/3/e/33ea23b14d775725e262893e9a029dd0e12f79d7.png" class="latex" alt="$149-2 = 147$" style="vertical-align: 0px" width="110" height="13" /> by difference of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />th powers. That is <img src="//latex.artofproblemsolving.com/1/f/1/1f1dfcbb3687625525e2ca99fbd74ccf04549b0b.png" class="latex" alt="$3\cdot7^2$" width="37" height="15" />, so now we can clearly see that the smallest <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to make the expression divisible by <img src="//latex.artofproblemsolving.com/c/4/a/c4aaecd00c115e0a1f5d807ac00b10f428d07993.png" class="latex" alt="$3^3$" width="15" height="15" /> is just <img src="//latex.artofproblemsolving.com/8/1/9/819068968ed60608a91d0c3921d6296964660e9d.png" class="latex" alt="$3^2$" width="15" height="15" />. Similarly, we can reason that the smallest <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to make the expression divisible by <img src="//latex.artofproblemsolving.com/0/a/0/0a00241b495a94bfc00453fb6d99d4123ace04e2.png" class="latex" alt="$7^7$" width="15" height="15" /> is just <img src="//latex.artofproblemsolving.com/a/5/2/a525d21eef8ae26634719caaf9bd7a44343c1e6b.png" class="latex" alt="$7^5$" style="vertical-align: -1px" width="18" height="17" />. 
+</p><p>Finally, for <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" />, take <img src="//latex.artofproblemsolving.com/f/9/9/f99b124d56cec6fe3b8c313b5f11e0587539afbc.png" class="latex" alt="$\pmod {5}$" style="vertical-align: -4px" width="70" height="18" /> and <img src="//latex.artofproblemsolving.com/a/6/3/a639d24ca8feb8c494bda306bb5ae53b83bec69c.png" class="latex" alt="$\pmod {25}$" style="vertical-align: -5px" width="83" height="20" /> of each quantity (They happen to both be <img src="//latex.artofproblemsolving.com/b/a/e/bae5aba07d37ff6ff813107e76260fb31ad5794e.png" class="latex" alt="$-1$" style="vertical-align: 0px" width="22" height="12" /> and <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> respectively, so you only need to compute once). One knows from <a href="/wiki/index.php/Fermat%27s_theorem" title="Fermat&#39;s theorem">Fermat's theorem</a> that the maximum possible minimum <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> for divisibility by <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> is <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />, and other values are factors of <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />. Testing all of them(just <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />,<img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />,<img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> using mods-not too bad), <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> is indeed the smallest value to make the expression divisible by <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" />, and this clearly is NOT divisible by <img src="//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png" class="latex" alt="$25$" width="17" height="12" />.
+Therefore, the smallest <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to make this expression divisible by <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" /> is <img src="//latex.artofproblemsolving.com/6/d/0/6d0ca6feeadd1b19b5dd01927f7abce33ff27eb3.png" class="latex" alt="$2^2 \cdot 5^4$" width="45" height="15" />.
+</p><p>Calculating the LCM of all these, one gets <img src="//latex.artofproblemsolving.com/5/4/3/5433e37d0f16e806534bc8b95f48b63018e9b70f.png" class="latex" alt="$2^2 \cdot 3^2 \cdot 5^4 \cdot 7^5$" width="104" height="15" />. Using the factor counting formula,
+the answer is <img src="//latex.artofproblemsolving.com/f/a/7/fa7a6fdfd24b4db254543ffb9732b9c869b27393.png" class="latex" alt="$3\cdot3\cdot5\cdot6$" width="75" height="12" /> = <img src="//latex.artofproblemsolving.com/3/0/b/30bdcc1781104861036c33865fe6e8c5b07ac084.png" class="latex" alt="$\boxed{270}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~Solution by thanosaops
+</p><p>~formatted by MY-2 and pandyhu2001
+</p>
+<h2><span id="Solution_3_(Totient_&amp;_Binomial_Theorems)"></span><span class="mw-headline" id="Solution_3_.28Totient_.26_Binomial_Theorems.29">Solution 3 (Totient &amp; Binomial Theorems)</span></h2>
+<p>For the <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" /> case, we can see that the problem implies <img src="//latex.artofproblemsolving.com/1/3/c/13ccdd627e4f6973cbc59761c214a537eaf268be.png" class="latex" alt="$149^n \equiv 2^n \pmod{5^5}.$" style="vertical-align: -5px" width="165" height="21" /> 
+</p><p>The modular inverse of <img src="//latex.artofproblemsolving.com/b/a/d/bad8748e13043898f1f733da5f0bdd824b36317f.png" class="latex" alt="$2 \pmod{3125}$" style="vertical-align: -5px" width="110" height="20" /> is the least positive integer <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> such that <img src="//latex.artofproblemsolving.com/3/1/3/313801ca1bee5362e9fbe6e6c46fe7ebd4e2d349.png" class="latex" alt="$2x \equiv 1 \pmod{3125}.$" style="vertical-align: -5px" width="159" height="20" /> 
+<img src="//latex.artofproblemsolving.com/9/3/6/936d24b3e7e54e8b11607239d697cc23fe6c9979.png" class="latexcenter" alt="\[x = \frac{3125 + 1}{2} = 1563 \implies (149\cdot1563)^n \equiv 1 \pmod{5^5}.\]" width="442" height="38" />
+</p><p>Now we can use Euler's Totient Theorem, which states that if <img src="//latex.artofproblemsolving.com/2/4/3/243a9bccd607f3d4df30145b89804407f429b025.png" class="latex" alt="$\gcd(a,b) = 1,$" style="vertical-align: -5px" width="107" height="20" /> then <img src="//latex.artofproblemsolving.com/0/d/1/0d1670279ee24a2b2ff63dfc61b4fc4f88fb1e46.png" class="latex" alt="$a^{\phi(b)} \equiv 1 \pmod{b}.$" style="vertical-align: -5px" width="146" height="23" /> <img src="//latex.artofproblemsolving.com/8/7/2/872ac72e921e0748d26d8033b7c48ca171e1f1d3.png" class="latex" alt="$\phi(5^5) = 3125 \cdot (1 - \frac{1}{5}) = 2500,$" style="vertical-align: -13px" width="241" height="38" /> so <img src="//latex.artofproblemsolving.com/b/e/b/beb7415dd0218c4f7bfcfdd0029e900703a889aa.png" class="latex" alt="$(149\cdot1563)^{2500} \equiv 1 \pmod{5^5}.$" style="vertical-align: -5px" width="238" height="21" />
+</p><p>So <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> must be a multiple of <img src="//latex.artofproblemsolving.com/b/a/2/ba28c3fb81719b49ede04b6cc117d5ce826c0f65.png" class="latex" alt="$2500 = 2^2 \cdot 5^2.$" style="vertical-align: -1px" width="114" height="17" />
+</p><p>Next, we consider modulo <img src="//latex.artofproblemsolving.com/1/0/5/1051e7d41ec0b8bd688a872be17538413f4ee97b.png" class="latex" alt="$27$" style="vertical-align: -1px" width="20" height="14" />:
+<img src="//latex.artofproblemsolving.com/8/8/1/881e2268962995cd391e3c816cf5344eb05ea9e6.png" class="latexcenter" alt="\[149^n - 2^n \equiv 14^n - 2^n \pmod{27} \equiv 0 \pmod{27}.\]" width="386" height="18" />
+<img src="//latex.artofproblemsolving.com/b/1/3/b13a9ea503aa1780e6ff77aefa68a67d6055eb0b.png" class="latexcenter" alt="\[14^n \equiv 2^n \pmod{27}\]" width="157" height="18" /> 
+<img src="//latex.artofproblemsolving.com/8/6/6/8667b86fd2d4e9c72c0fadecb8d39058d8f32749.png" class="latexcenter" alt="\[7^n \equiv 1 \pmod{27}\]" width="140" height="18" /> 
+Apply Euler's Totient Theorem again to get <img src="//latex.artofproblemsolving.com/9/e/0/9e0b0139ac8249c1c6e28a27ed3eddd47b1c9b28.png" class="latex" alt="$7^{18} \equiv 1 \pmod{27}.$" style="vertical-align: -5px" width="145" height="21" /> 
+</p><p>So <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> needs to be a multiple of <img src="//latex.artofproblemsolving.com/f/6/a/f6a1b9d5cec741422bfb37f91db47fd7514f5377.png" class="latex" alt="$9.$" width="12" height="12" />
+</p><p>For the <img src="//latex.artofproblemsolving.com/0/a/0/0a00241b495a94bfc00453fb6d99d4123ace04e2.png" class="latex" alt="$7^7$" width="15" height="15" /> case we can set up another congruence:
+<img src="//latex.artofproblemsolving.com/b/0/7/b076fb76f0fd415b0206f2fb7cdf8d7610e21ec7.png" class="latexcenter" alt="\[149^n - 2^n \equiv 0 \pmod{7^7} \implies (2 + 7 \cdot 21)^n - 2^n \equiv 0 \pmod{7^7}\]" width="504" height="20" />
+</p><p>To continue evaluating we use the Binomial Theorem:
+<img src="//latex.artofproblemsolving.com/2/5/d/25d7bbae43654b0bed3d5ed2bbb04915ae2c3602.png" class="latexcenter" alt="\[\sum_{k=0}^{n} \binom{n}{k} 2^{n-k} (7 \cdot 21)^k - 2^n \equiv 0 \pmod{7^7}\]" width="327" height="53" />
+<img src="//latex.artofproblemsolving.com/9/c/8/9c83146c8fbd6b7c3fcad64828bfccbe1e447c6f.png" class="latexcenter" alt="\[\cancel{2^n} + \binom{n}{1} 2^{n-1} (7 \cdot 21) + \binom{n}{2} 2^{n-2} (7 \cdot 21)^2 + \dots \cancel{- 2^n} \equiv 0 \pmod{7^7}\]" width="530" height="53" />
+<img src="//latex.artofproblemsolving.com/3/0/2/30274bee9b7e98014df7062d97b007a5c60812a7.png" class="latexcenter" alt="\[\binom{n}{1} \cdot 2^{n-1} \cdot 147 + \binom{n}{2} 2^{n-2} \cdot 147^2 + \binom{n}{3} 2^{n-3} \cdot 147^3 + \binom{n}{4} 2^{n-4} \cdot 147^4 \dots \equiv 0 \pmod{7^7}.\]" width="642" height="53" />
+</p><p>Since <img src="//latex.artofproblemsolving.com/1/1/b/11bc47c19ab630dfcdc9f368cc075848d7b86242.png" class="latex" alt="$147 = 3 \cdot 7^2,$" style="vertical-align: -4px" width="97" height="20" /> the first term is a multiple of <img src="//latex.artofproblemsolving.com/2/2/d/22d1bda9678baed8c6d096b115db9515c3b283d0.png" class="latex" alt="$7^2,$" style="vertical-align: -4px" width="23" height="20" /> the second is a multiple of <img src="//latex.artofproblemsolving.com/b/a/b/babc5c93950b9e26a8e392c4e90d5f03400230ac.png" class="latex" alt="$7^4,$" style="vertical-align: -4px" width="23" height="20" /> and the third is a multiple of <img src="//latex.artofproblemsolving.com/a/4/a/a4ab025c23ca3ff60a703451053738be3cba7030.png" class="latex" alt="$7^6.$" style="vertical-align: -1px" width="23" height="17" /> Everything after is a multiple of <img src="//latex.artofproblemsolving.com/8/d/5/8d5a3736993ee3d4674d37e9112adaa6f9c2a479.png" class="latex" alt="$7^7.$" style="vertical-align: -1px" width="23" height="17" />
+</p><p>So <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> must be a multiple of <img src="//latex.artofproblemsolving.com/a/5/2/a525d21eef8ae26634719caaf9bd7a44343c1e6b.png" class="latex" alt="$7^5$" style="vertical-align: -1px" width="18" height="17" /> at the minimum for these three terms to also be multiples of <img src="//latex.artofproblemsolving.com/8/d/5/8d5a3736993ee3d4674d37e9112adaa6f9c2a479.png" class="latex" alt="$7^7.$" style="vertical-align: -1px" width="23" height="17" />
+</p><p>Putting everything together we find the smallest value of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to be <img src="//latex.artofproblemsolving.com/d/a/1/da114eb60e3a9a6f2f1c58ee931661141e87698d.png" class="latex" alt="$n = 2^2 \cdot 3^2 \cdot 5^4 \cdot 7^5,$" style="vertical-align: -4px" width="148" height="20" /> so the answer is <img src="//latex.artofproblemsolving.com/d/4/8/d484ff182980e0f8c4cd75298ec789b620ff449c.png" class="latex" alt="$(2+1)(2+1)(4+1)(5+1) = \boxed{270}.$" style="vertical-align: -6px" width="288" height="25" />
+</p><p>~<a href="/wiki/index.php/User:Grogg007" title="User:Grogg007">grogg007</a>
+</p>
+<h2><span id="Solution_4_(Elementary_and_Thorough)"></span><span class="mw-headline" id="Solution_4_.28Elementary_and_Thorough.29">Solution 4 (Elementary and Thorough)</span></h2>
+<p>As usual, denote <img src="//latex.artofproblemsolving.com/5/7/4/57467e642fbd3cbdacda9d0fa1bda0b44100edd1.png" class="latex" alt="$v_p(n)$" style="vertical-align: -4px" width="40" height="18" /> the highest power of prime <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> that divides <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. For divisibility by <img src="//latex.artofproblemsolving.com/c/4/a/c4aaecd00c115e0a1f5d807ac00b10f428d07993.png" class="latex" alt="$3^3$" width="15" height="15" />, notice that <img src="//latex.artofproblemsolving.com/2/2/c/22c83e27ae85a9e7050aa0886063821c08078f8f.png" class="latex" alt="$v_3(149^3 - 2^3) = 2$" style="vertical-align: -4px" width="136" height="19" /> as <img src="//latex.artofproblemsolving.com/c/f/0/cf07ab10a3e5e7d8c7f1c033e68723cc352facdb.png" class="latex" alt="$149^3 - 2^3 =$" style="vertical-align: 0px" width="92" height="15" /> <img src="//latex.artofproblemsolving.com/f/7/6/f767e3d4b2759eac58e5e24ed7baa882136e314f.png" class="latex" alt="$(147)(149^2 + 2\cdot149 + 2^2)$" style="vertical-align: -4px" width="199" height="19" />, and upon checking mods, <img src="//latex.artofproblemsolving.com/4/e/3/4e3bf50e241a7de1b9102cfca5a658fe53555eac.png" class="latex" alt="$149^2 + 2\cdot149 + 2^2$" style="vertical-align: -1px" width="143" height="16" /> is divisible by <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> but not <img src="//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png" class="latex" alt="$9$" width="8" height="12" />. In addition, <img src="//latex.artofproblemsolving.com/c/2/a/c2a705ce3855c5ee5ac31c47112da750860eb667.png" class="latex" alt="$149^9 - 2^9$" style="vertical-align: 0px" width="72" height="15" /> is divisible by <img src="//latex.artofproblemsolving.com/c/4/a/c4aaecd00c115e0a1f5d807ac00b10f428d07993.png" class="latex" alt="$3^3$" width="15" height="15" /> because <img src="//latex.artofproblemsolving.com/e/5/a/e5adbfc95c08dc3cb9adebd27f4f059e67bbc2d7.png" class="latex" alt="$149^9 - 2^9 = (149^3 - 2^3)(149^6 + 149^3\cdot2^3 + 2^6)$" style="vertical-align: -4px" width="358" height="19" />, and the rightmost factor equates to <img src="//latex.artofproblemsolving.com/5/3/6/536c6fe62c5f6599060f350f254735aa7ab80435.png" class="latex" alt="$1 + 1 + 1 \pmod{3} \equiv 0 \pmod{3}$" style="vertical-align: -4px" width="248" height="18" />. In fact, <img src="//latex.artofproblemsolving.com/4/5/9/459803c0da1da27106295f66e19f3d31a934ea1a.png" class="latex" alt="$n = 9 = 3^2$" width="83" height="15" /> is the least possible choice to ensure divisibility by <img src="//latex.artofproblemsolving.com/c/4/a/c4aaecd00c115e0a1f5d807ac00b10f428d07993.png" class="latex" alt="$3^3$" width="15" height="15" /> because if <img src="//latex.artofproblemsolving.com/d/d/1/dd1fd11fd6c4cc614da45afa1a509ee4da40319a.png" class="latex" alt="$n = a \cdot 3^b$" width="72" height="15" />, with <img src="//latex.artofproblemsolving.com/6/c/d/6cd30e90e191fac48655ccd5b1ca5d1d12890b4b.png" class="latex" alt="$3 \nmid a$" style="vertical-align: -4px" width="33" height="18" /> and <img src="//latex.artofproblemsolving.com/e/0/c/e0cc471db0a5e90a77ae94b6445be91059359d9b.png" class="latex" alt="$b &lt; 2$" style="vertical-align: 0px" width="40" height="13" />, we write <img src="//latex.artofproblemsolving.com/2/6/0/260f09ea864b5ff08f99b534d68b5d30b14b780f.png" class="latexcenter" alt="\[149^{a \cdot 3^b} - 2^{a \cdot 3^b} =  (149^{3^b} - 2^{3^b})(149^{3^b(a - 1)} + 149^{3^b(a - 2)}\cdot2^{3^b}+\cdots2^{3^b(a - 1)}).\]" width="520" height="22" /> Then, the rightmost factor is equivalent to <img src="//latex.artofproblemsolving.com/3/f/2/3f29e75abbe496cdadf2568fb5fba54598122cd1.png" class="latex" alt="$\pm a \pmod{3} \not\equiv 0 \pmod{3}$" style="vertical-align: -4px" width="200" height="18" />, and <img src="//latex.artofproblemsolving.com/a/1/5/a150d4996b27529af6ed5a1e3b8baaf847327871.png" class="latex" alt="$v_3(149^{3^b} - 2^{3^b}) = b + 1 &lt; 3$" style="vertical-align: -5px" width="215" height="25" />.
+</p><p>For divisibility by <img src="//latex.artofproblemsolving.com/0/a/0/0a00241b495a94bfc00453fb6d99d4123ace04e2.png" class="latex" alt="$7^7$" width="15" height="15" />, we'll induct, claiming that <img src="//latex.artofproblemsolving.com/f/2/3/f23e5b90262163de8706054141c64f8a9a5af3dc.png" class="latex" alt="$v_7(149^{7^k} - 2^{7^k}) = k + 2$" style="vertical-align: -4px" width="183" height="22" /> for whole numbers <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />. The base case is clear. Then, <img src="//latex.artofproblemsolving.com/2/b/c/2bce67914a6728970c4b58488ab0a131038d2882.png" class="latexcenter" alt="\[v_7(149^{7^{k+1}} - 2^{7^{k+1}}) = v_7(149^{7^k} - 2^{7^k}) + v_7(149^{6\cdot7^k} + 2^{7^k}\cdot149^{5\cdot7^k} + \cdots + 2^{5\cdot7^k}\cdot149^{7^k} + 2^{6\cdot7^k}).\]" width="648" height="23" /> By the induction hypothesis, <img src="//latex.artofproblemsolving.com/f/2/3/f23e5b90262163de8706054141c64f8a9a5af3dc.png" class="latex" alt="$v_7(149^{7^k} - 2^{7^k}) = k + 2$" style="vertical-align: -4px" width="183" height="22" />. Then, notice that <img src="//latex.artofproblemsolving.com/c/4/7/c47c04027755efe31e57bc6fda7130e74ed32311.png" class="latexcenter" alt="\[S(k) = 149^{6\cdot7^k} + 2^{7^k}\cdot149^{5\cdot7^k} + \cdots + 2^{5\cdot7^k}\cdot149^{7^k} + 2^{6\cdot7^k} \equiv 7 \cdot 2^{6\cdot7^k}\pmod{7} \equiv 7 \cdot 2^{6\cdot7^k}\pmod{49}.\]" width="710" height="22" /> This tells us that <img src="//latex.artofproblemsolving.com/7/4/b/74b9d8caa32e164594e695c19fece20f45b8c6b2.png" class="latex" alt="$S(k)$" style="vertical-align: -4px" width="35" height="18" /> is divisible by <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />, but not <img src="//latex.artofproblemsolving.com/3/4/c/34c8e6bf4d57cd6f2bb0d7d43e00f0f442f53b84.png" class="latex" alt="$49$" style="vertical-align: 0px" width="17" height="13" /> so that <img src="//latex.artofproblemsolving.com/3/0/7/3074835a18127870122cd8117f095c559a13debc.png" class="latex" alt="$v_7\left(S(k)\right) = 1$" style="vertical-align: -4px" width="102" height="18" />, completing our induction. We can verify that <img src="//latex.artofproblemsolving.com/a/5/2/a525d21eef8ae26634719caaf9bd7a44343c1e6b.png" class="latex" alt="$7^5$" style="vertical-align: -1px" width="18" height="17" /> is the least choice of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to ensure divisibility by <img src="//latex.artofproblemsolving.com/0/a/0/0a00241b495a94bfc00453fb6d99d4123ace04e2.png" class="latex" alt="$7^7$" width="15" height="15" /> by arguing similarly to the <img src="//latex.artofproblemsolving.com/c/4/a/c4aaecd00c115e0a1f5d807ac00b10f428d07993.png" class="latex" alt="$3^3$" width="15" height="15" /> case. 
+</p><p>Finally, for <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" />, we take the powers of <img src="//latex.artofproblemsolving.com/9/a/c/9ac7aa4fe47f55808896713ce8fcd30b954e59a3.png" class="latex" alt="$149$" style="vertical-align: 0px" width="26" height="13" /> and <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> in mod <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> and mod <img src="//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png" class="latex" alt="$25$" width="17" height="12" />. Writing out these mods, we have that <img src="//latex.artofproblemsolving.com/d/6/7/d67bf7f3123f388b7fd01d2b6edb67c2390078d1.png" class="latex" alt="$149^n \equiv 2^n \pmod{5}$" style="vertical-align: -4px" width="149" height="18" /> if and only if <img src="//latex.artofproblemsolving.com/d/c/5/dc5448692c7f11e463776572d81fceb0028b0c87.png" class="latex" alt="$4 | n$" style="vertical-align: -4px" width="24" height="18" />, in which <img src="//latex.artofproblemsolving.com/e/3/4/e3457136123be21fe0c31382a6ff804568e8bfcd.png" class="latex" alt="$149^n \equiv 2^n \equiv 1 \pmod{5}$" style="vertical-align: -4px" width="182" height="18" />. So here we claim that <img src="//latex.artofproblemsolving.com/b/9/b/b9bfae73a85fb39e91cb1425988d7ee6090a5321.png" class="latex" alt="$v_5(149^{4\cdot5^k} - 2^{4\cdot5^k}) = k + 1$" style="vertical-align: -4px" width="204" height="22" /> and perform yet another induction. The base case is true: <img src="//latex.artofproblemsolving.com/c/a/9/ca96f5bbe2b2bf6ce14b3676eebd215465a8dbac.png" class="latex" alt="$5 | 149^4 - 2^4$" style="vertical-align: -4px" width="86" height="19" />, but <img src="//latex.artofproblemsolving.com/b/8/f/b8f78c46385565b4e07f4a2431381c6fe94f24fc.png" class="latex" alt="$149^4 - 2^4 \equiv 1 - 16 \pmod{25}$" style="vertical-align: -4px" width="227" height="19" />. Now then, assuming the induction statement to hold for some <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />, <img src="//latex.artofproblemsolving.com/b/0/a/b0a772ed096897987a4dd5c8c0dce955d222cf28.png" class="latexcenter" alt="\[v_5(149^{4\cdot5^{k+1}} - 2^{4\cdot5^{k+1}}) = (k+1) + v_5(149^{4\cdot4\cdot5^k}+2^{4\cdot5^k}\cdot149^{3\cdot4\cdot5^k}+\cdots+2^{3\cdot4\cdot5^k}\cdot149^{4\cdot5^k}+2^{4\cdot4\cdot5^k}).\]" width="669" height="23" /> Note that <img src="//latex.artofproblemsolving.com/a/c/0/ac0c6244f558906843e32603c742cd71b8304dbb.png" class="latex" alt="$S&#39;(k) =  149^{4\cdot4\cdot5^k}+2^{4\cdot5^k}\cdot149^{3\cdot4\cdot5^k}+\cdots+2^{3\cdot4\cdot5^k}\cdot149^{4\cdot5^k}+2^{4\cdot4\cdot5^k}$" style="vertical-align: -5px" width="506" height="25" /> equates to <img src="//latex.artofproblemsolving.com/a/9/9/a99a4be08f1b7f0dbf0957860a00feebc525383c.png" class="latex" alt="$S&#39;&#39;(k) = 1 + 2^{4\cdot5^k} + \cdots + 2^{16\cdot5^k}$" style="vertical-align: -5px" width="243" height="25" /> in both mod <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> and mod <img src="//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png" class="latex" alt="$25$" width="17" height="12" />. We notice that <img src="//latex.artofproblemsolving.com/c/d/9/cd9e1a09a8c2a54d599ba33b72d35a3468236c69.png" class="latex" alt="$S&#39;&#39;(k) \equiv 0 \pmod{5}$" style="vertical-align: -4px" width="149" height="18" />. Writing out the powers of <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> mod <img src="//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png" class="latex" alt="$25$" width="17" height="12" />, we have <img src="//latex.artofproblemsolving.com/6/5/5/65562f8706ab4d1600a22333371ba9fc65386cea.png" class="latex" alt="$S&#39;&#39;(0) \equiv 5 \pmod{25}$" style="vertical-align: -4px" width="157" height="18" />. Also <img src="//latex.artofproblemsolving.com/6/b/b/6bb05ee78f080b30a13606e340b61dfc02832952.png" class="latex" alt="$2^n \equiv 1 \pmod{25}$" style="vertical-align: -4px" width="131" height="18" /> when <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is a multiple of <img src="//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" />. Hence for <img src="//latex.artofproblemsolving.com/6/d/a/6da5c768d3e309c1b5337c06bf5ad8df078c5c01.png" class="latex" alt="$k &gt; 0$" style="vertical-align: 0px" width="43" height="13" />, <img src="//latex.artofproblemsolving.com/b/2/7/b2770bf36f9158dbc908ce9394d52db483675103.png" class="latex" alt="$S&#39;&#39;(k) \equiv 5 \mod{25}$" style="vertical-align: -4px" width="148" height="18" />. Thus, <img src="//latex.artofproblemsolving.com/9/6/3/963117ea499a7189a1b303d0b92e9efd2c775f26.png" class="latex" alt="$v_5\left(S&#39;(k)\right) = 1$" style="vertical-align: -4px" width="106" height="18" />, completing our induction. Applying the same argument from the previous two cases, <img src="//latex.artofproblemsolving.com/3/7/7/37792853a2770bef58f9a3bb2288470f48b6cf4a.png" class="latex" alt="$4\cdot5^4$" style="vertical-align: 0px" width="37" height="15" /> is the least choice to ensure divisibility by <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" />.
+</p><p>Our answer is the number of divisors of <img src="//latex.artofproblemsolving.com/1/8/d/18dbc630f0bac046ed3055856f29ae68add3ef7c.png" class="latex" alt="$\text{lcm}(3^2, 7^5, 2^2\cdot5^4) = 2^2 \cdot 3^2 \cdot 5^4 \cdot 7^5$" style="vertical-align: -4px" width="263" height="19" />. It is <img src="//latex.artofproblemsolving.com/d/8/3/d838b56c71582f46446027ac4fd3e6d176017da5.png" class="latex" alt="$(2 + 1)(2 + 1)(4 + 1)(5 + 1) = \boxed{270}$" style="vertical-align: -5px" width="281" height="23" />.
+</p><p>~hnkevin42
+</p>
+<h2><span id="Solution_5_(Official_MAA)"></span><span class="mw-headline" id="Solution_5_.28Official_MAA.29">Solution 5 (Official MAA)</span></h2>
+<p>Analyze each prime power separately.
+Start with the case of <img src="//latex.artofproblemsolving.com/c/4/a/c4aaecd00c115e0a1f5d807ac00b10f428d07993.png" class="latex" alt="$3^3$" width="15" height="15" />. By the Binomial Theorem,
+<img src="//latex.artofproblemsolving.com/a/3/4/a34ee4566a248e02c3e5c8582663c639929dd584.png" class="latexcenter" alt="\begin{align*} 		149^n - 2^n &amp;= (147+2)^n - 2^n \\ 		&amp;= \binom n1 \cdot 147 \cdot 2^{n-1} 		+ \binom n2 \cdot 147^2 \cdot 2^{n-2}\\ 		&amp;\qquad+ \binom n3 \cdot 147^3 \cdot 2^{n-3} 		+ \cdots. 	\end{align*}" width="383" height="139" />Because <img src="//latex.artofproblemsolving.com/b/5/5/b554c3eb69d2f5e6625bd31774ea2be775dd9ec3.png" class="latex" alt="$147$" style="vertical-align: 0px" width="27" height="12" /> is divisible by <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />, all terms after the first two are divisible by <img src="//latex.artofproblemsolving.com/c/4/a/c4aaecd00c115e0a1f5d807ac00b10f428d07993.png" class="latex" alt="$3^3$" width="15" height="15" />, and the exponent of <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> in the first term is less than that in the second term. Hence it is necessary and sufficient that <img src="//latex.artofproblemsolving.com/5/1/a/51a3688179badfd8350d305be92c8bf5f29f9e87.png" class="latex" alt="$3^3 \mid 147n$" style="vertical-align: -4px" width="69" height="19" />, that is, <img src="//latex.artofproblemsolving.com/0/a/1/0a1807ba938da359f57a672d93d5e2363ebcb23b.png" class="latex" alt="$3^2 \mid n$" style="vertical-align: -4px" width="42" height="19" />.
+For the <img src="//latex.artofproblemsolving.com/0/a/0/0a00241b495a94bfc00453fb6d99d4123ace04e2.png" class="latex" alt="$7^7$" width="15" height="15" /> case, consider the same expansion as in the previous case. Because <img src="//latex.artofproblemsolving.com/b/5/5/b554c3eb69d2f5e6625bd31774ea2be775dd9ec3.png" class="latex" alt="$147$" style="vertical-align: 0px" width="27" height="12" /> is divisible by <img src="//latex.artofproblemsolving.com/d/e/9/de9b314d77b0fa0b0caeac11a9934fab71c1ce12.png" class="latex" alt="$49 = 7^2$" style="vertical-align: 0px" width="57" height="15" />, all terms after the first three are divisible by <img src="//latex.artofproblemsolving.com/0/a/0/0a00241b495a94bfc00453fb6d99d4123ace04e2.png" class="latex" alt="$7^7$" width="15" height="15" />, and the exponent of <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> in the first term is less than that in the second and third term. Hence it is necessary and sufficient that <img src="//latex.artofproblemsolving.com/1/6/7/167c6b0d24ce3965f521a3f3b1efac3e0a35c250.png" class="latex" alt="$7^7 \mid 147n$" style="vertical-align: -4px" width="69" height="19" />, that is, <img src="//latex.artofproblemsolving.com/b/6/6/b661d6e7c4608812ae1255b7b8449e5191da6495.png" class="latex" alt="$7^5 \mid n$" style="vertical-align: -4px" width="42" height="19" />.
+For the <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" /> case, working modulo <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> gives <img src="//latex.artofproblemsolving.com/b/6/4/b64d6583fdc02b35a94d99d7bb20ed045a97bca4.png" class="latex" alt="$149^n - 2^n \equiv 4^n - 2^n = 2^n(2^n-1) \pmod 5$" style="vertical-align: -4px" width="336" height="18" />, so it must be that <img src="//latex.artofproblemsolving.com/2/7/b/27bdfa271a80ea422c94afa9543c400965b4276c.png" class="latex" alt="$4 \mid n$" style="vertical-align: -4px" width="34" height="18" />. Let <img src="//latex.artofproblemsolving.com/1/d/5/1d5954c3819886bac1f1a4238dd00a8dec3506c4.png" class="latex" alt="$n = 4m$" style="vertical-align: 0px" width="59" height="12" />, and let <img src="//latex.artofproblemsolving.com/f/6/8/f686095e97f989669e746e1fe18c2b9f939eb066.png" class="latex" alt="$c = 149^4 - 2^4 = (149^2-2^2)(149^2+2^2) = 147 \cdot 151 \cdot 22205$" style="vertical-align: -4px" width="454" height="19" />. Note that <img src="//latex.artofproblemsolving.com/a/6/0/a60e7d71e954d20af971188c9f36832de170c8e1.png" class="latex" alt="$\frac c5$" style="vertical-align: -13px" width="15" height="34" /> is an integer not divisible by <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" />. Expand by the Binomial Theorem again to get
+<img src="//latex.artofproblemsolving.com/0/b/f/0bf91adec9e252714cc28046f35c7de271bed35b.png" class="latexcenter" alt="\begin{align*} 		(149^4)^m - (2^4)^m &amp;= (c+16)^m - (16)^m \\ 		&amp;= \binom m1 \cdot c \cdot 16^{m-1} 		+ \binom m2 \cdot c^2 \cdot 16^{m-2} \\ 		&amp;\qquad+ \binom m3 \cdot c^3 \cdot 16^{m-3} 		+ \binom m4 \cdot c^4 \cdot 16^{m-4} 		+ \cdots. 	\end{align*}" width="523" height="141" />All terms after the first four are divisible by <img src="//latex.artofproblemsolving.com/0/e/1/0e1baff6050db5d3e78ff320d0358d74adf9b153.png" class="latex" alt="$5^5$" width="15" height="15" />, and the exponent of <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> in the first term is less than that in the second, third, or fourth term. Hence it is necessary and sufficient that <img src="//latex.artofproblemsolving.com/9/2/9/929d37a682be46267059ce9325e34e84d77de10e.png" class="latex" alt="$5^5 \mid cm$" style="vertical-align: -4px" width="55" height="19" />. Thus <img src="//latex.artofproblemsolving.com/c/2/6/c267be6ab61c6d3f196911cd0486fa41ba5fa1d2.png" class="latex" alt="$5^4 \mid m$" style="vertical-align: -4px" width="47" height="19" />, and it follows that <img src="//latex.artofproblemsolving.com/c/3/a/c3ac6609f68fd8469f48e0704871d4c66a86d54e.png" class="latex" alt="$4 \cdot 5^4 \mid n$" style="vertical-align: -4px" width="64" height="19" />.
+Therefore the least <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is <img src="//latex.artofproblemsolving.com/2/7/e/27e701cb553859ed9f07f79b6e321e619d70fd42.png" class="latex" alt="$3^2 \cdot (2^2 \cdot 5^4) \cdot 7^5$" style="vertical-align: -4px" width="118" height="19" />. The requested number of divisors is <img src="//latex.artofproblemsolving.com/9/1/3/9135249f213fc627faf50a19454201fe33d35726.png" class="latex" alt="$(1+2)(1+2)(1+4)(1+5) = 270$" style="vertical-align: -4px" width="269" height="18" />.
+</p><p>The results of the above cases can be generalized using the following lemma.
+</p><p>Lifting the Exponent Lemma: Let <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> be an odd prime, and let <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> be integers relatively prime to <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> such that <img src="//latex.artofproblemsolving.com/8/6/b/86b5c2b3adbe2ab1f5051ae73586f46313110e8f.png" class="latex" alt="$p \mid (a-b)$" style="vertical-align: -4px" width="77" height="18" />. Let <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> be a positive integer. Then the number of factors of <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> that divide <img src="//latex.artofproblemsolving.com/8/b/a/8bac9c4ea9dccc41aa3e1283b35250af0d8d7cc0.png" class="latex" alt="$a^n - b^n$" width="57" height="12" /> is equal to the number of factors of <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> that divide <img src="//latex.artofproblemsolving.com/5/a/6/5a697bfdeadf2105048670e6f6c7d4dc6878dc4f.png" class="latex" alt="$a-b$" width="40" height="12" /> plus the number of factors of <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> that divide <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />.
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=O0BprEOVkjo">https://www.youtube.com/watch?v=O0BprEOVkjo</a>
+~ Math Gold Medalist
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2020_AIME_I" title="2020 AIME I">2020 AIME I</a></b> (<b><a href="/wiki/index.php/2020_AIME_I_Problems" title="2020 AIME I Problems">Problems</a></b> • <b><a href="/wiki/index.php/2020_AIME_I_Answer_Key" title="2020 AIME I Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2020">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2020_AIME_I_Problems/Problem_11" title="2020 AIME I Problems/Problem 11">Problem 11</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2020_AIME_I_Problems/Problem_13" title="2020 AIME I Problems/Problem 13">Problem 13</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2020_AIME_I_Problems/Problem_1" title="2020 AIME I Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_2" title="2020 AIME I Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_3" title="2020 AIME I Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_4" title="2020 AIME I Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_5" title="2020 AIME I Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_6" title="2020 AIME I Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_7" title="2020 AIME I Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_8" title="2020 AIME I Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_9" title="2020 AIME I Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_10" title="2020 AIME I Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_11" title="2020 AIME I Problems/Problem 11">11</a> <b>•</b> <a class="mw-selflink selflink">12</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_13" title="2020 AIME I Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_14" title="2020 AIME I Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2020_AIME_I_Problems/Problem_15" title="2020 AIME I Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250918055130
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.154 seconds
+Real time usage: 0.160 seconds
+Preprocessor visited node count: 2212/1000000
+Preprocessor generated node count: 5138/1000000
+Post‐expand include size: 1714/2097152 bytes
+Template argument size: 112/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 41578/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.567      1 -total
+ 70.70%    4.643      1 Template:AIME_box
+ 23.39%    1.536      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:18304-0!canonical and timestamp 20250918055130 and revision id 260830
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2020_AIME_I_Problems/Problem_12&amp;oldid=260830">https://artofproblemsolving.com/wiki/index.php?title=2020_AIME_I_Problems/Problem_12&amp;oldid=260830</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Number_Theory_Problems" title="Category:Intermediate Number Theory Problems">Intermediate Number Theory Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e98383dfb8b8b',t:'MTc1ODM0MjcwMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250918060530 -->
+</html>
+

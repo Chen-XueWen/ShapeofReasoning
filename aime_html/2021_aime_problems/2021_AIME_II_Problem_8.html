@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 AIME II Problems/Problem 8 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_AIME_II_Problems/Problem_8","wgTitle":"2021 AIME II Problems/Problem 8","wgCurRevisionId":187394,"wgRevisionId":187394,"wgArticleId":20923,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Combinatorics Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_AIME_II_Problems/Problem_8","wgRelevantArticleId":20923,"wgRequestId":"6b5d9a7919a3332314a3aad5","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_AIME_II_Problems_Problem_8 rootpage-2021_AIME_II_Problems_Problem_8 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 AIME II Problems/Problem 8																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_8" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2021_AIME_II_Problems/Problem_8&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_8&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_8&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2021_AIME_II_Problems/Problem_8" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 AIME II Problems/Problem 8</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1_.28Four-Variable_Recursion.29"><span class="tocnumber">2</span> <span class="toctext">Solution 1 (Four-Variable Recursion)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.28Markov_Chain_and_Dynamic_Programming.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (Markov Chain and Dynamic Programming)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28One-Variable_Recursion.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (One-Variable Recursion)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Casework.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Casework)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28One-Variable_Recursion_and_Casework.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (One-Variable Recursion and Casework)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Remark_.28Markov_Chain.29"><span class="tocnumber">7</span> <span class="toctext">Remark (Markov Chain)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Video_Solution"><span class="tocnumber">8</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Video_Solution_2"><span class="tocnumber">9</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_Also"><span class="tocnumber">10</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>An ant makes a sequence of moves on a cube where a move consists of walking from one vertex to an adjacent vertex along an edge of the cube. Initially the ant is at a vertex of the bottom face of the cube and chooses one of the three adjacent vertices to move to as its first move. For all moves after the first move, the ant does not return to its previous vertex, but chooses to move to one of the other two adjacent vertices. All choices are selected at random so that each of the possible moves is equally likely. The probability that after exactly <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" /> moves that ant is at a vertex of the top face on the cube is <img src="//latex.artofproblemsolving.com/2/7/f/27f583697295fc6f723862c13228ee55107c33ca.png" class="latex" alt="$\frac{m}{n}$" style="vertical-align: -12px" width="18" height="33" />, where <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> and <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> are relatively prime positive integers. Find <img src="//latex.artofproblemsolving.com/0/6/0/06042c919364943ac222dc0a083e87e47007e8b7.png" class="latex" alt="$m + n.$" style="vertical-align: -1px" width="52" height="12" />
+</p>
+<h2><span id="Solution_1_(Four-Variable_Recursion)"></span><span class="mw-headline" id="Solution_1_.28Four-Variable_Recursion.29">Solution 1 (Four-Variable Recursion)</span></h2>
+<p>For all positive integers <img src="//latex.artofproblemsolving.com/c/9/9/c99a6aaebc17474bd09ea71d84d4e769a0662b55.png" class="latex" alt="$k,$" style="vertical-align: -3px" width="14" height="16" /> let
+</p>
+<ul><li><img src="//latex.artofproblemsolving.com/0/e/5/0e5606f1dd5422a48abe6437f90337fe6c6ca914.png" class="latex" alt="$N(k,\mathrm{BB})$" style="vertical-align: -4px" width="73" height="18" /> be the number of ways to make a sequence of exactly <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> moves, where the last move is from the bottom face to the bottom face.</li></ul>
+<ul><li><img src="//latex.artofproblemsolving.com/5/e/8/5e88cf67c90403ba8ec8ac5d3b7c4c3bfd02e6fb.png" class="latex" alt="$N(k,\mathrm{BT})$" style="vertical-align: -4px" width="73" height="18" /> be the number of ways to make a sequence of exactly <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> moves, where the last move is from the bottom face to the top face.</li></ul>
+<ul><li><img src="//latex.artofproblemsolving.com/5/f/5/5f51cc6d29d11378b816e27a153242f65c45db26.png" class="latex" alt="$N(k,\mathrm{TB})$" style="vertical-align: -4px" width="73" height="18" /> be the number of ways to make a sequence of exactly <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> moves, where the last move is from the top face to the bottom face.</li></ul>
+<ul><li><img src="//latex.artofproblemsolving.com/5/0/3/5030ced6ca4176553c4aab35676ac0233603503a.png" class="latex" alt="$N(k,\mathrm{TT})$" style="vertical-align: -4px" width="73" height="18" /> be the number of ways to make a sequence of exactly <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> moves, where the last move is from the top face to the top face.</li></ul>
+<p>The base case occurs at <img src="//latex.artofproblemsolving.com/3/9/7/39744f1e901ee42463a7548466b48204efd83627.png" class="latex" alt="$k=1,$" style="vertical-align: -3px" width="47" height="16" /> from which <img src="//latex.artofproblemsolving.com/d/d/7/dd74dbb0207536b7ff0d5e8cbeb2c9fef86dc280.png" class="latex" alt="$\left(N(1,\mathrm{BB}),N(1,\mathrm{BT}),N(1,\mathrm{TB}),N(1,\mathrm{TT})\right)=(2,1,0,0).$" style="vertical-align: -4px" width="436" height="18" /> 
+</p><p>Suppose the ant makes exactly <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> moves for some <img src="//latex.artofproblemsolving.com/c/1/9/c196eae3e2f54257197d87215490e1263944b644.png" class="latex" alt="$k\geq2.$" style="vertical-align: -2px" width="47" height="15" /> We perform casework on its last move:
+</p>
+<ol style="margin-left: 1.5em;">
+  <li>If its last move is from the bottom face to the bottom face, then its next move has</li><p class="mw-empty-elt">
+</p><ul style="margin-left: 1.5em; list-style-type: circle">
+  <li><img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> way to move from the bottom face to the bottom face.</li><p class="mw-empty-elt">
+  </p><li><img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> way to move from the bottom face to the top face.</li><p class="mw-empty-elt">
+</p></ul>
+  <li>If its last move is from the bottom face to the top face, then its next move has <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> ways to move from the top face to the top face.</li><p class="mw-empty-elt">
+  </p><li>If its last move is from the top face to the bottom face, then its next move has <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> ways to move from the bottom face to the bottom face.</li><p class="mw-empty-elt">
+  </p><li>If its last move is from the top face to the top face, then its next move has<p class="mw-empty-elt">
+</p><ul style="margin-left: 1.5em; list-style-type: circle">
+  <li><img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> way to move from the top face to the bottom face.</li><p class="mw-empty-elt">
+  </p><li><img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> way to move from the top face to the top face.</li><p class="mw-empty-elt">
+</p></ul>
+</li></ol>
+<p>Alternatively, this recursion argument is illustrated below, where each dashed arrow indicates <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> way, and each solid arrow indicates <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> ways:
+<img src="//latex.artofproblemsolving.com/f/d/0/fd0afc8df31f7cd55dacb05b9c7f12a9eb193230.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */  size(9cm);  pair A, B, C, D, E, F, G, H, X, Y;  A=(0,6);  B=(0,4);  C=(0,2);  D=(0,0);  E=(10,6);  F=(10,4);  G=(10,2);  H=(10,0);  X=(-1,8);  Y=(11,8);  label(&quot;BB&quot;, A, (-2,0));  label(&quot;BT&quot;, B, (-2,0));  label(&quot;TB&quot;, C, (-2,0));  label(&quot;TT&quot;, D, (-2,0));  label(&quot;BB&quot;, E, (2,0));  label(&quot;BT&quot;, F, (2,0));  label(&quot;TB&quot;, G, (2,0));  label(&quot;TT&quot;, H, (2,0));  label(&quot;\textbf{The \boldmath{$k$}th Move}&quot;, shift(0.3,0)*X);  label(&quot;\textbf{The \boldmath{$(k+1)$}th Move}&quot;, shift(-0.3,-0.085)*Y);  draw(A--E,0.8+black+dashed,EndArrow);  draw(A--F,0.8+black+dashed,EndArrow);  draw(B--H,0.8+black,EndArrow);  draw(C--E,0.8+black,EndArrow);  draw(D--G,0.8+black+dashed,EndArrow);  draw(D--H,0.8+black+dashed,EndArrow);  dot(A^^B^^C^^D^^E^^F^^G^^H, 5+black); [/asy]" width="428" height="198" />
+Therefore, we have the following relationships:
+<img src="//latex.artofproblemsolving.com/f/3/8/f3892718127226922da7b26eb0ea3231229c9e11.png" class="latexcenter" alt="\begin{align*} N(1,\mathrm{BB})&amp;=2, \\  N(1,\mathrm{BT})&amp;=1, \\ N(1,\mathrm{TB})&amp;=0, \\ N(1,\mathrm{TT})&amp;=0, \\ N(k+1,\mathrm{BB})&amp;=N(k,\mathrm{BB})+2\cdot N(k,\mathrm{TB}), \\ N(k+1,\mathrm{BT})&amp;=N(k,\mathrm{BB}), \\ N(k+1,\mathrm{TB})&amp;=N(k,\mathrm{TT}), \\ N(k+1,\mathrm{TT})&amp;=N(k,\mathrm{TT})+2\cdot N(k,\mathrm{BT}). \end{align*}" width="328" height="192" />
+Using these equations, we recursively fill out the table below:
+<img src="//latex.artofproblemsolving.com/3/0/c/30cf8611e8e260b65e3a4a055d23b92809e21790.png" class="latexcenter" alt="\[\begin{array}{c||c|c|c|c|c|c|c|c}    \hspace{7mm}&amp;\hspace{6.5mm}&amp;\hspace{6.5mm}&amp;\hspace{6.75mm}&amp;\hspace{6.75mm}&amp;\hspace{6.75mm}&amp;\hspace{6.75mm}&amp;&amp; \\ [-2.5ex] \boldsymbol{k} &amp; \boldsymbol{1} &amp; \boldsymbol{2} &amp; \boldsymbol{3} &amp; \boldsymbol{4} &amp; \boldsymbol{5} &amp; \boldsymbol{6} &amp; \boldsymbol{7} &amp; \boldsymbol{8} \\  \hline \hline &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; \\ [-2.25ex] \boldsymbol{N(k,\mathrm{BB})} &amp;2&amp;2&amp;2&amp;6&amp;18&amp;38&amp;66&amp;118 \\ \hline   &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; \\ [-2.25ex] \boldsymbol{N(k,\mathrm{BT})} &amp;1&amp;2&amp;2&amp;2&amp;6&amp;18&amp;38&amp;66 \\ \hline  &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; \\ [-2.25ex] \boldsymbol{N(k,\mathrm{TB})} &amp;0&amp;0&amp;2&amp;6&amp;10&amp;14&amp;26&amp;62 \\ \hline    &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; \\ [-2.25ex] \boldsymbol{N(k,\mathrm{TT})} &amp;0&amp;2&amp;6&amp;10&amp;14&amp;26&amp;62&amp;138 \\ \hline \hline &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; \\ [-2.25ex] \textbf{Total}&amp;\boldsymbol{3}&amp;\boldsymbol{6}&amp;\boldsymbol{12}&amp;\boldsymbol{24}&amp;\boldsymbol{48}&amp;\boldsymbol{96}&amp;\boldsymbol{192}&amp;\boldsymbol{384} \end{array}\]" width="490" height="151" />
+By the Multiplication Principle, there are <img src="//latex.artofproblemsolving.com/3/6/d/36da9996f5e5a954e34230c32e19edcca1cb79d2.png" class="latex" alt="$3\cdot2^{k-1}$" width="54" height="15" /> ways to make exactly <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> moves. So, we must get <img src="//latex.artofproblemsolving.com/3/a/7/3a7df4b7004e4f616f7c03d2c12f51d206a1ed72.png" class="latexcenter" alt="\[N(k,\mathrm{BB})+N(k,\mathrm{BT})+N(k,\mathrm{TB})+N(k,\mathrm{TT})=3\cdot2^{k-1}\]" width="444" height="20" /> for all values of <img src="//latex.artofproblemsolving.com/5/d/4/5d48e0968a64d782fe75bca620ce749938b7d0bb.png" class="latex" alt="$k.$" width="13" height="12" />
+</p><p>Finally, the requested probability is <img src="//latex.artofproblemsolving.com/8/a/f/8af1363597ea4014143d7fe37f61fcb5d5a34a2f.png" class="latexcenter" alt="\[\frac{N(8,\mathrm{BT})+N(8,\mathrm{TT})}{N(8,\mathrm{BB})+N(8,\mathrm{BT})+N(8,\mathrm{TB})+N(8,\mathrm{TT})}=\frac{66+138}{118+66+62+138}=\frac{204}{384}=\frac{17}{32},\]" width="656" height="43" /> from which the answer is <img src="//latex.artofproblemsolving.com/8/3/6/8365ed6e9000f20c31bcce5629f20a380170efcf.png" class="latex" alt="$17+32=\boxed{049}.$" style="vertical-align: -5px" width="125" height="23" />
+</p><p>~Arcticturn ~MRENTHUSIASM
+</p>
+<h2><span id="Solution_2_(Markov_Chain_and_Dynamic_Programming)"></span><span class="mw-headline" id="Solution_2_.28Markov_Chain_and_Dynamic_Programming.29">Solution 2 (Markov Chain and Dynamic Programming)</span></h2>
+<p>Let the state from bottom to top be <img src="//latex.artofproblemsolving.com/4/5/4/45494a9e741429b097537eaa17525b94e806525b.png" class="latex" alt="$B2T,$" style="vertical-align: -4px" width="43" height="18" /> from top to top be <img src="//latex.artofproblemsolving.com/5/e/a/5eaaef7def77538dfb6b36751df9e1991640a990.png" class="latex" alt="$T2T,$" style="vertical-align: -4px" width="41" height="18" /> from top to bottom be <img src="//latex.artofproblemsolving.com/e/2/6/e26a4f32f059f89bb80b12b794da4a4826d406d6.png" class="latex" alt="$T2B,$" style="vertical-align: -4px" width="44" height="18" /> and from bottom to bottom be <img src="//latex.artofproblemsolving.com/a/a/9/aa9be0ffe41074bc113378eeb2cbbc2510af8940.png" class="latex" alt="$B2B.$" style="vertical-align: -1px" width="45" height="14" /> We can draw the following State Transition Diagram with <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chain</a>. The numbers on the transition arc are the transition probabilities. 
+</p>
+<div class="center"><div class="floatnone"><a href="/wiki/index.php/File:Markov-Chain-AIME.png" class="image"><img alt="Markov-Chain-AIME.png" src="https://wiki-images.artofproblemsolving.com//thumb/5/5d/Markov-Chain-AIME.png/300px-Markov-Chain-AIME.png" width="300" height="300" srcset="https://wiki-images.artofproblemsolving.com//thumb/5/5d/Markov-Chain-AIME.png/450px-Markov-Chain-AIME.png 1.5x, https://wiki-images.artofproblemsolving.com//thumb/5/5d/Markov-Chain-AIME.png/600px-Markov-Chain-AIME.png 2x" /></a></div></div>
+<p>The probabilities of being in a state after <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> steps and after <img src="//latex.artofproblemsolving.com/4/b/d/4bdca93962a2beaffc172ca394e04fe05bd74ffd.png" class="latex" alt="$n-1$" style="vertical-align: 0px" width="41" height="12" /> steps has the following relationships:
+<img src="//latex.artofproblemsolving.com/6/e/4/6e4582c443ab777a79a7571659e260498ab3943f.png" class="latexcenter" alt="\begin{align*} B2T(n) &amp;= B2B(n-1) \cdot \frac12\\ T2T(n) &amp;= B2T(n-1) + T2T(n-1) \cdot \frac12\\ T2B(n) &amp;= T2T(n-1) \cdot \frac12\\ B2B(n) &amp;= T2B(n-1) + B2B(n-1) \cdot \frac12 \end{align*}" width="322" height="166" />
+Those probabilities are calculated by <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Dynamic_programming">Dynamic Programming</a> in the following table:
+<img src="//latex.artofproblemsolving.com/5/7/5/575e180d64eb37431e0ff565ae56a1e07cce0f5a.png" class="latexcenter" alt="\[\begin{array}{c|cccc}  &amp;  &amp;  &amp;  &amp; \\ [-2ex] n &amp; B2T(n) &amp; T2T(n) &amp; T2B(n) &amp; B2B(n) \\ [1ex] \hline  &amp;  &amp;  &amp;  &amp; \\ [-1ex] 1 &amp; \frac13 &amp; 0 &amp; 0 &amp; \frac23\\  &amp;  &amp;  &amp;  &amp; \\ 2 &amp; \frac23 \cdot \frac12 = \frac13 &amp; \frac13 &amp; 0 &amp; \frac23 \cdot \frac12 = \frac13 \\  &amp;  &amp;  &amp;  &amp; \\ 3 &amp; \frac13 \cdot \frac12 = \frac16 &amp; \frac13 + \frac13 \cdot \frac12 = \frac12 &amp; \frac13 \cdot \frac12 = \frac16 &amp; \frac13 \cdot \frac12 = \frac16 \\  &amp;  &amp;  &amp;  &amp; \\ 4 &amp; \frac16 \cdot \frac12 = \frac{1}{12} &amp; \frac16 + \frac12 \cdot \frac12 = \frac{5}{12} &amp; \frac12 \cdot \frac12 = \frac14 &amp; \frac16 + \frac16 \cdot \frac12 = \frac14 \\  &amp;  &amp;  &amp;  &amp; \\ 5 &amp; \frac14 \cdot \frac12 = \frac18 &amp; \frac{1}{12} + \frac{5}{12} \cdot \frac{1}{2} = \frac{7}{24} &amp; \frac{5}{12} \cdot \frac12 = \frac{5}{24} &amp; \frac14 + \frac14 \cdot \frac12 = \frac38 \\  &amp;  &amp;  &amp;  &amp; \\ 6 &amp; \frac38 \cdot \frac12 = \frac{3}{16} &amp; \frac18 + \frac{7}{24} \cdot \frac12 = \frac{13}{48} &amp; \frac{7}{24} \cdot \frac12 = \frac{7}{48} &amp; \frac{5}{24} + \frac38 \cdot \frac12 = \frac{19}{48} \\  &amp;  &amp;  &amp;  &amp; \\ 7 &amp; \frac{19}{48} \cdot \frac12 = \frac{19}{96}&amp;  \frac{3}{16} + \frac{13}{48} \cdot \frac{1}{2} = \frac{31}{96}&amp; \frac{13}{48} \cdot \frac{1}{2} = \frac{13}{96} &amp; \frac{7}{48} + \frac{19}{48} \cdot \frac12 = \frac{11}{32}\\  &amp;  &amp;  &amp;  &amp; \\ 8 &amp; \frac{11}{32} \cdot \frac{1}{2} = \frac{11}{64} &amp; \frac{19}{96} + \frac{31}{96} \cdot \frac12 = \frac{23}{64} &amp; \frac{31}{96} \cdot \frac12 = \frac{31}{192} &amp; \frac{13}{96} + \frac{11}{32} \cdot \frac12 = \frac{59}{192} \\ [1ex] \end{array}\]" width="516" height="360" />
+Finally, the requested probability is <img src="//latex.artofproblemsolving.com/a/d/f/adf9aacae6be299987a8a3c257914dec06e5f831.png" class="latex" alt="$\frac{11}{64} + \frac{23}{64} = \frac{17}{32},$" style="vertical-align: -13px" width="120" height="38" /> from which the answer is <img src="//latex.artofproblemsolving.com/4/e/6/4e64a6ea19c2ea991c33bcde983a77b542de3688.png" class="latex" alt="$17 + 32 = \boxed{049}.$" style="vertical-align: -5px" width="125" height="23" />
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Isabelchen#AIME">isabelchen</a>
+</p>
+<h2><span id="Solution_3_(One-Variable_Recursion)"></span><span class="mw-headline" id="Solution_3_.28One-Variable_Recursion.29">Solution 3 (One-Variable Recursion)</span></h2>
+<p>Note that we don't care which exact vertex the ant is located at, just which level (either top face or bottom face).
+Consider the ant to be on any of the two levels and having moved at least one move. Define <img src="//latex.artofproblemsolving.com/2/4/5/245a5501248a6ea24f520f76d4140cedf08e1674.png" class="latex" alt="$p_i$" style="vertical-align: -3px" width="14" height="11" /> to be the probability that after <img src="//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png" class="latex" alt="$i$" width="5" height="12" /> moves, the ant ends up on the level it started on.
+</p><p>On the first move, the ant can stay on the bottom level with <img src="//latex.artofproblemsolving.com/7/5/4/7547747b133453d3c209cff6cfbf129aa67a6947.png" class="latex" alt="$\frac{2}{3}$" style="vertical-align: -12px" width="11" height="37" /> chance and <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> moves left. Or, it can move to the top level with <img src="//latex.artofproblemsolving.com/4/e/1/4e1965f8d70832ded66434c75a7bd52b75090af0.png" class="latex" alt="$\frac{1}{3}$" style="vertical-align: -12px" width="11" height="37" /> chance and <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> moves left (it has to spend another on the top as it can not return immediately). So the requested probability is <img src="//latex.artofproblemsolving.com/1/7/e/17e32d21cbcb78b20a172a43ba201758e3c63569.png" class="latex" alt="$P = \frac{2}{3}(1 - p_7) + \frac{1}{3}p_6$" style="vertical-align: -13px" width="167" height="38" />. 
+</p><p>Consider when the ant has <img src="//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png" class="latex" alt="$i$" width="5" height="12" /> moves left (and it's not the ant's first move). It can either stay on its current level with <img src="//latex.artofproblemsolving.com/2/f/9/2f960094315d60883495f9b74148e17487ee9584.png" class="latex" alt="$\frac{1}{2}$" style="vertical-align: -12px" width="11" height="37" /> chance and <img src="//latex.artofproblemsolving.com/6/b/2/6b2dd333217bc16ff25dea2371c2c0ca754d8854.png" class="latex" alt="$i - 1$" style="vertical-align: 0px" width="36" height="13" /> moves left, or travel to the opposite level with <img src="//latex.artofproblemsolving.com/2/f/9/2f960094315d60883495f9b74148e17487ee9584.png" class="latex" alt="$\frac{1}{2}$" style="vertical-align: -12px" width="11" height="37" /> chance, then move to another vertex on the opposite level, to have <img src="//latex.artofproblemsolving.com/4/5/a/45a3a7ddacd9ab781cc89b5f252568651f99c7e8.png" class="latex" alt="$i - 2$" width="37" height="12" /> moves left. Thus we obtain the recurrence
+<img src="//latex.artofproblemsolving.com/f/2/1/f214dd517ae2dd3a44ff7c6ae44ceb4e16e9e875.png" class="latexcenter" alt="\[p_i = \frac{1}{2}p_{i - 1} + \frac{1}{2}(1 - p_{i - 2})\]" width="195" height="37" />
+</p><p>Computing <img src="//latex.artofproblemsolving.com/2/4/5/245a5501248a6ea24f520f76d4140cedf08e1674.png" class="latex" alt="$p_i$" style="vertical-align: -3px" width="14" height="11" /> with the starting conditions <img src="//latex.artofproblemsolving.com/3/b/9/3b9e1bd65a891136417e4324350aec4bab8f82ed.png" class="latex" alt="$p_0 = 1$" style="vertical-align: -3px" width="50" height="15" /> and <img src="//latex.artofproblemsolving.com/6/f/a/6fa5325f3a824e25345cdf462ca3f8cdc37c1586.png" class="latex" alt="$p_1 = \frac{1}{2}$" style="vertical-align: -13px" width="56" height="38" />, we obtain <img src="//latex.artofproblemsolving.com/0/4/0/040c67e72ba4cd61b6456d21fbd2e5462cfbde5d.png" class="latex" alt="$p_6 = \frac{33}{64}$" style="vertical-align: -13px" width="65" height="38" /> and <img src="//latex.artofproblemsolving.com/1/e/1/1e17c3095e0881241cade41f3352fb7d1de56651.png" class="latex" alt="$p_7 = \frac{59}{128}$" style="vertical-align: -13px" width="74" height="38" />. Hence <img src="//latex.artofproblemsolving.com/4/6/b/46b418e6fa8131f915516ea37ab919954657ef8a.png" class="latex" alt="$P = \frac{2}{3}(1 - p_7) + \frac{1}{3}p_6= \frac{17}{32}$" style="vertical-align: -13px" width="214" height="38" /> as desired; <img src="//latex.artofproblemsolving.com/d/6/b/d6b8af8111c12dfcef0b504649333e872c721ec2.png" class="latex" alt="$\boxed{049}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~polarity
+</p>
+<h2><span id="Solution_4_(Casework)"></span><span class="mw-headline" id="Solution_4_.28Casework.29">Solution 4 (Casework)</span></h2>
+<p>On each move, we can either stay on the level we previously were (stay on the bottom/top) or switch levels (go from top to bottom and vise versa). Since we start on the bottom, ending on the top means that we will have to switch an odd number of times; since we cannot switch twice in a row, over an eight-move period we can either make one or three switches. Furthermore, once we switch to a level we can choose one of two directions of traveling on that level: clockwise or counterclockwise (since we can't go back to our previous move, our first move on the level after switching determines our direction). 
+</p>
+<ol><li><b>Case 1: one switch.</b> Our one switch can either happen at the start/end of our moves, or in the middle. There are <img src="//latex.artofproblemsolving.com/a/d/1/ad1ecdb964b4b705bdac06dafe86a4dc0cc53f83.png" class="latex" alt="$4 + 24 = 28$" style="vertical-align: -2px" width="94" height="15" /> ways to do this, outlined below.
+<ol><li><b>Subcase 1: switch happens at ends.</b> If our first move is a switch, then there are two ways to determine the direction we travel along the top layer. Multiply by <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> to count for symmetry (last move is a switch) so this case yields <img src="//latex.artofproblemsolving.com/8/c/b/8cb0e6e64d73bacef9c8869039bc21581f1884e6.png" class="latex" alt="$2^2 = 4$" style="vertical-align: 0px" width="50" height="15" /> possibilities.</li>
+<li><b>Subcase 2: switch happens in the middle.</b> There are six places for the switch to happen; the switch breaks the sequences of moves into two chains, with each having <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> ways to choose their direction of travel. This case yields <img src="//latex.artofproblemsolving.com/0/4/b/04b76bc7e2dd63378d561fa82d97119a032aca46.png" class="latex" alt="$6 \cdot 2^2 = 24$" style="vertical-align: 0px" width="81" height="15" /> possibilities.</li></ol></li>
+<li><b>Case 2: three switches.</b> Either two, one, or none of our switches occur at the start/end of our moves. There are <img src="//latex.artofproblemsolving.com/2/2/4/2244348cca548b9cf9cdb9f91b76ccf82b141680.png" class="latex" alt="$16 + 96 + 64 = 176$" style="vertical-align: -1px" width="149" height="14" /> ways to do this, outlined below. (Keep in mind we can't have two switches in a row.)
+<ol><li><b>Subcase 1: start and end with a switch.</b> Since our third switch can't be in moves <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> or <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />, there are four ways to place our switch, breaking our sequence into two chains. This case yields <img src="//latex.artofproblemsolving.com/f/c/b/fcb5ab554871e220a45e2cc26dde21ce679525ea.png" class="latex" alt="$4 \cdot 2^2 = 16$" style="vertical-align: 0px" width="80" height="15" /> possibilities.</li>
+<li><b>Subcase 2: one of our switches is at the start/end.</b> WLOG our first move is a switch; moves <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png" class="latex" alt="$8$" style="vertical-align: -1px" width="11" height="14" /> cannot be switches. We can choose <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> from any of the remaining <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> moves to be switches, but we have to subtract the <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> illegal cases where the two switches are in a row (3-4, 4-5, 5-6, 6-7). These three switches break our sequence into three chains; accounting for symmetry this case yields <img src="//latex.artofproblemsolving.com/e/2/7/e27797191855eef3ed72cbf035420cf5ad2ce85f.png" class="latex" alt="$2\left(\binom{5}{2} - 4\right) \cdot 2^3 = 96$" style="vertical-align: -22px" width="180" height="53" /> possibilities.</li>
+<li><b>Subcase 3: all our switches are in the middle.</b> We choose <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> from any of the <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> middle moves to be our switches, but have to subtract the cases where at least two of them are in a row. If at least two switches are in a row, there are five places for the group of <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> and four places for the third switch; however this overcounts the case where all three are in a row, which has <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> possibilities. These three switches break our sequence into four chains, so this case yields <img src="//latex.artofproblemsolving.com/3/9/c/39ce799febdff0e376e5f235e971afb7c389d73b.png" class="latex" alt="$\left(\binom{6}{3} - 5 \cdot 4 + 4\right) \cdot 2^4 = 64$" style="vertical-align: -22px" width="222" height="53" /> possibilities.</li></ol></li></ol>
+<p>Our probability is then <img src="//latex.artofproblemsolving.com/c/c/7/cc753fdfd8be96a7ecd53c871519c5ba0e3af6ec.png" class="latex" alt="$\frac{176 + 28}{3 \cdot 2^7} = \frac{17}{32}$" style="vertical-align: -13px" width="120" height="38" />, so the answer is <img src="//latex.artofproblemsolving.com/a/f/6/af6cfafd5578d97309db507b4759d1633e79b20f.png" class="latex" alt="$17+32=\boxed{049}$" style="vertical-align: -6px" width="123" height="25" />.
+</p>
+<h2><span id="Solution_5_(One-Variable_Recursion_and_Casework)"></span><span class="mw-headline" id="Solution_5_.28One-Variable_Recursion_and_Casework.29">Solution 5 (One-Variable Recursion and Casework)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/7/5/d/75dfcf7177739e768582307df28f20b900dab55c.png" class="latex" alt="$p(n)$" style="vertical-align: -4px" width="33" height="18" /> be the probability that we are on the top when you get to the <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />th move, and <img src="//latex.artofproblemsolving.com/4/a/2/4a2ebc68fc607de193a7de354dbd412d6093c6d5.png" class="latex" alt="$p(n-1)$" style="vertical-align: -4px" width="65" height="18" /> and <img src="//latex.artofproblemsolving.com/9/9/d/99d885d93c12169702d5b8073686854540e526bc.png" class="latex" alt="$p(n-2)$" style="vertical-align: -5px" width="67" height="20" /> be the probability that you are on the top when you get to the <img src="//latex.artofproblemsolving.com/7/9/5/7955459cf8b75c3ac12c23c393024177d7d56412.png" class="latex" alt="$(n-1)$" style="vertical-align: -4px" width="54" height="18" />th move and <img src="//latex.artofproblemsolving.com/5/6/6/566aa684bcb55b4c157e26cb0a7faa94d391c3d1.png" class="latex" alt="$(n-2)$" style="vertical-align: -4px" width="54" height="18" />th move respectively.
+</p><p>Now you can do some recursion, splitting up into cases:
+</p><p>Case 1: You are not on the top for the <img src="//latex.artofproblemsolving.com/7/9/5/7955459cf8b75c3ac12c23c393024177d7d56412.png" class="latex" alt="$(n-1)$" style="vertical-align: -4px" width="54" height="18" />th move or the <img src="//latex.artofproblemsolving.com/5/6/6/566aa684bcb55b4c157e26cb0a7faa94d391c3d1.png" class="latex" alt="$(n-2)$" style="vertical-align: -4px" width="54" height="18" />th move. In this case, it is a <img src="//latex.artofproblemsolving.com/9/a/5/9a53c08802dfa4ac8241120c917a4e407cb074ee.png" class="latex" alt="$1-p(n-1)$" style="vertical-align: -5px" width="99" height="20" /> chance that you were not on the top for the <img src="//latex.artofproblemsolving.com/7/9/5/7955459cf8b75c3ac12c23c393024177d7d56412.png" class="latex" alt="$(n-1)$" style="vertical-align: -4px" width="54" height="18" />th move, and a <img src="//latex.artofproblemsolving.com/4/6/1/4617680ce8557cbefeff3daff5391b48c1a2c627.png" class="latex" alt="$1-p(n-2)$" style="vertical-align: -5px" width="99" height="20" /> that you are not on the top for the <img src="//latex.artofproblemsolving.com/5/6/6/566aa684bcb55b4c157e26cb0a7faa94d391c3d1.png" class="latex" alt="$(n-2)$" style="vertical-align: -4px" width="54" height="18" />th move. This leads you to a <img src="//latex.artofproblemsolving.com/4/f/2/4f24e31c3b766889dee5b048f6d192dc07532061.png" class="latex" alt="$\frac{1}{2}\cdot(1-p(n-1))\cdot(1-p(n-2))$" style="vertical-align: -13px" width="263" height="38" /> chance for the first case. (The <img src="//latex.artofproblemsolving.com/b/d/c/bdc960c165b21ba43f7a90caa2893d40409d6944.png" class="latex" alt="$\frac12$" style="vertical-align: -12px" width="11" height="37" /> is there because of the fact that you can go up and you can also stay on the bottom side, as you cannot return.)
+</p><p>Case 2: You are on the top for the <img src="//latex.artofproblemsolving.com/7/9/5/7955459cf8b75c3ac12c23c393024177d7d56412.png" class="latex" alt="$(n-1)$" style="vertical-align: -4px" width="54" height="18" />th move, but not on the top for the <img src="//latex.artofproblemsolving.com/5/6/6/566aa684bcb55b4c157e26cb0a7faa94d391c3d1.png" class="latex" alt="$(n-2)$" style="vertical-align: -4px" width="54" height="18" />th move. This leads you to a <img src="//latex.artofproblemsolving.com/4/d/6/4d68c8dec3ca21f5c7a9204aabfbc55d69cd59c5.png" class="latex" alt="$p(n-1)\cdot(1-p(n-2))$" style="vertical-align: -5px" width="191" height="20" /> probability (no extra components because you cannot return).
+</p><p>Case 3: You are on top for both the <img src="//latex.artofproblemsolving.com/7/9/5/7955459cf8b75c3ac12c23c393024177d7d56412.png" class="latex" alt="$(n-1)$" style="vertical-align: -4px" width="54" height="18" />th move and the <img src="//latex.artofproblemsolving.com/5/6/6/566aa684bcb55b4c157e26cb0a7faa94d391c3d1.png" class="latex" alt="$(n-2)$" style="vertical-align: -4px" width="54" height="18" />th move. This leads to a probability of <img src="//latex.artofproblemsolving.com/6/d/2/6d2bca67210de795655773fc0bb5203b66e14221.png" class="latex" alt="$\frac{1}{2}\cdot p(n-1)\cdot p(n-2)$" style="vertical-align: -13px" width="172" height="38" /> (adding the extra <img src="//latex.artofproblemsolving.com/b/d/c/bdc960c165b21ba43f7a90caa2893d40409d6944.png" class="latex" alt="$\frac12$" style="vertical-align: -12px" width="11" height="37" /> because you can either stay on the top or go down.
+</p><p>As the 4th case requires you to go down then up, but you cannot retrace, there is no <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />th case.
+</p><p>These cases, added up, lead you to <img src="//latex.artofproblemsolving.com/4/e/a/4ea63e095d7760395ee259f06597d5dd2616dba3.png" class="latexcenter" alt="\[p(n)=\frac{1}{2}\cdot(1-p(n-1))(1-p(n-2))+p(n-1)(1-p(n-2))+\frac{1}{2}\cdot p(n-1)p(n-2).\]" width="583" height="37" /> This can be further simplified down by expanding and combining like terms to <img src="//latex.artofproblemsolving.com/9/b/0/9b00b8226d4121e8d525da3dfcb85af3716a3775.png" class="latexcenter" alt="\[p(n)=\frac{1+p(n-1)-p(n-2)}{2}.\]" width="251" height="38" />
+Then we must find <img src="//latex.artofproblemsolving.com/7/c/5/7c5c9911c7798d30de896314c14dff1b969d179a.png" class="latex" alt="$p(1)$" style="vertical-align: -4px" width="31" height="18" /> and <img src="//latex.artofproblemsolving.com/e/1/b/e1b5a39632eb09829e575edc9b05b8f39401abcb.png" class="latex" alt="$p(2)$" style="vertical-align: -4px" width="31" height="18" />. p(1) is trivially <img src="//latex.artofproblemsolving.com/4/e/1/4e1965f8d70832ded66434c75a7bd52b75090af0.png" class="latex" alt="$\frac{1}{3}$" style="vertical-align: -12px" width="11" height="37" />. You can find <img src="//latex.artofproblemsolving.com/e/1/b/e1b5a39632eb09829e575edc9b05b8f39401abcb.png" class="latex" alt="$p(2)$" style="vertical-align: -4px" width="31" height="18" /> using basic probability techniques that is left as an exercise to the reader to get <img src="//latex.artofproblemsolving.com/7/5/4/7547747b133453d3c209cff6cfbf129aa67a6947.png" class="latex" alt="$\frac{2}{3}$" style="vertical-align: -12px" width="11" height="37" />. In the end, you plug in to get
+<img src="//latex.artofproblemsolving.com/a/8/b/a8b7805548672c27ded583dceac142fe18871fee.png" class="latexcenter" alt="\[p(1)=\frac{1}{3}, P(2)=\frac{2}{3}, P(3)=\frac{2}{3}, P(4)=\frac{1}{2}, P(5)=\frac{5}{12}, P(6)=\frac{11}{24}, P(7)=\frac{25}{48}, P(8)=\boxed{\frac{17}{32}}.\]" width="701" height="48" />
+Therefore, the answer is <img src="//latex.artofproblemsolving.com/a/f/6/af6cfafd5578d97309db507b4759d1633e79b20f.png" class="latex" alt="$17+32=\boxed{049}$" style="vertical-align: -6px" width="123" height="25" />.
+</p><p>~dragoon
+</p>
+<h2><span id="Remark_(Markov_Chain)"></span><span class="mw-headline" id="Remark_.28Markov_Chain.29">Remark (Markov Chain)</span></h2>
+<p>This problem is similar to the following problems:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/1985_AIME_Problems/Problem_12">1985 AIME Problem 12</a></li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/2003_AIME_II_Problems/Problem_13">2003 AIME II Problem 13</a></li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_23">2021 AMC 12A Problem 23</a></li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/2022_AMC_8_Problems/Problem_25">2022 AMC 8 Problem 25</a></li></ul>
+<p>They can all be solved by <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chain</a> and <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Dynamic_programming">Dynamic Programming</a>.
+</p><p>Let <img src="//latex.artofproblemsolving.com/7/6/c/76ce4b055db58eaf041c6df81590b7303d886cf8.png" class="latex" alt="$p_{ij} = P(X_{n+1} = j | X_n = i)$" style="vertical-align: -6px" width="209" height="20" /> be the probability that state <img src="//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png" class="latex" alt="$i$" width="5" height="12" /> transits to state <img src="//latex.artofproblemsolving.com/8/1/2/8122aa89ea6e80784c6513d22787ad86e36ad0cc.png" class="latex" alt="$j$" style="vertical-align: -3px" width="8" height="16" /> on the next step, and <img src="//latex.artofproblemsolving.com/d/3/b/d3b63c17213f84d730e0de1f8c08597f7a648e37.png" class="latex" alt="$s_i$" style="vertical-align: -2px" width="13" height="10" /> be the probability of being in state <img src="//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png" class="latex" alt="$i$" width="5" height="12" />. It follows that <img src="//latex.artofproblemsolving.com/8/0/9/8095b5ffad3782e13b04e499290a1dca1600bc48.png" class="latex" alt="$s_j$" style="vertical-align: -4px" width="14" height="12" /> is the sum of the products of <img src="//latex.artofproblemsolving.com/d/3/b/d3b63c17213f84d730e0de1f8c08597f7a648e37.png" class="latex" alt="$s_i$" style="vertical-align: -2px" width="13" height="10" /> and <img src="//latex.artofproblemsolving.com/7/9/2/79220e9b9f82ca92de037d2a8a6bc00ac0f9a0e0.png" class="latex" alt="$p_{ij}$" style="vertical-align: -4px" width="20" height="12" /> of all the previous state <img src="//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png" class="latex" alt="$i$" width="5" height="12" />: <img src="//latex.artofproblemsolving.com/7/e/e/7ee269efae3e860f6c6f0e8acc0908a4378dea34.png" class="latexcenter" alt="\[s_j = \sum_{i} (s_{i} \cdot p_{ij}).\]" width="130" height="37" />
+This formula can also be applied to solve <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/2019_AMC_10B_Problems/Problem_22">2019 AMC10B Problem 22</a>.
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Isabelchen#AIME">isabelchen</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/dBLEe0oczuA">https://youtu.be/dBLEe0oczuA</a>
+</p><p>~Interstigation
+</p>
+<h2><span class="mw-headline" id="Video_Solution_2">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/4UjQhFEa1ms">https://youtu.be/4UjQhFEa1ms</a>
+</p><p>~MathProblemSolvingSkills.com
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2021_AIME_II" title="2021 AIME II">2021 AIME II</a></b> (<b><a href="/wiki/index.php/2021_AIME_II_Problems" title="2021 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2021_AIME_II_Answer_Key" title="2021 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2021">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_7" title="2021 AIME II Problems/Problem 7">Problem 7</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_9" title="2021 AIME II Problems/Problem 9">Problem 9</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_1" title="2021 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_2" title="2021 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_3" title="2021 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_4" title="2021 AIME II Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_5" title="2021 AIME II Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_6" title="2021 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_7" title="2021 AIME II Problems/Problem 7">7</a> <b>•</b> <a class="mw-selflink selflink">8</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_9" title="2021 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_10" title="2021 AIME II Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_11" title="2021 AIME II Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_12" title="2021 AIME II Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_13" title="2021 AIME II Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_14" title="2021 AIME II Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_15" title="2021 AIME II Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818181432
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.106 seconds
+Real time usage: 0.109 seconds
+Preprocessor visited node count: 1257/1000000
+Preprocessor generated node count: 3020/1000000
+Post‐expand include size: 1730/2097152 bytes
+Template argument size: 128/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 26808/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.190      1 -total
+ 72.14%    3.744      1 Template:AIME_box
+ 25.82%    1.340      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:20923-0!canonical and timestamp 20250818181432 and revision id 187394
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_8&amp;oldid=187394">https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_8&amp;oldid=187394</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Combinatorics_Problems" title="Category:Intermediate Combinatorics Problems">Intermediate Combinatorics Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e94664c95d67f',t:'MTc1ODM0MjU0NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818194854 -->
+</html>
+

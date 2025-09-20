@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 AIME II Problems/Problem 15 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_AIME_II_Problems/Problem_15","wgTitle":"2021 AIME II Problems/Problem 15","wgCurRevisionId":256815,"wgRevisionId":256815,"wgArticleId":20943,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_AIME_II_Problems/Problem_15","wgRelevantArticleId":20943,"wgRequestId":"5632841e808533c2bcc173f8","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_AIME_II_Problems_Problem_15 rootpage-2021_AIME_II_Problems_Problem_15 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 AIME II Problems/Problem 15																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_15" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2021_AIME_II_Problems/Problem_15&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_15&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_15&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2021_AIME_II_Problems/Problem_15" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 AIME II Problems/Problem 15</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.28Four_Variables.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (Four Variables)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Quadratics_With_Two_Variables.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Quadratics With Two Variables)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28Basic_Substitutions.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (Basic Substitutions)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6_.28Short.29"><span class="tocnumber">7</span> <span class="toctext">Solution 6 (Short)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7"><span class="tocnumber">8</span> <span class="toctext">Solution 7</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_8_.28Fast.29"><span class="tocnumber">9</span> <span class="toctext">Solution 8 (Fast)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Video_Solution"><span class="tocnumber">10</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Video_Solution_by_Interstigation"><span class="tocnumber">11</span> <span class="toctext">Video Solution by Interstigation</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#See_Also"><span class="tocnumber">12</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/e/e/f/eef0203e65664bd00b5f0325c5c5fcd81bcead8d.png" class="latex" alt="$f(n)$" style="vertical-align: -4px" width="34" height="18" /> and <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> be functions satisfying
+<img src="//latex.artofproblemsolving.com/d/2/7/d27af3275e885b65d8cdb2caa1c2ef6bd46bd4a7.png" class="latexcenter" alt="\[f(n) = \begin{cases}\sqrt{n} &amp; \text{ if } \sqrt{n} \text{ is an integer}\\ 1 + f(n+1) &amp; \text{ otherwise} \end{cases}\]" width="331" height="53" />and
+<img src="//latex.artofproblemsolving.com/3/d/c/3dcced5eb55ddff1576102fc6df37624d1053bed.png" class="latexcenter" alt="\[g(n) = \begin{cases}\sqrt{n} &amp; \text{ if } \sqrt{n} \text{ is an integer}\\ 2 + g(n+2) &amp; \text{ otherwise} \end{cases}\]" width="328" height="53" />for positive integers <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. Find the least positive integer <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> such that <img src="//latex.artofproblemsolving.com/6/c/c/6cc68887b2bf1f5afc2657badf436600424c990f.png" class="latex" alt="$\tfrac{f(n)}{g(n)} = \tfrac{4}{7}$" style="vertical-align: -9px" width="63" height="26" />.
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>Consider what happens when we try to calculate <img src="//latex.artofproblemsolving.com/e/e/f/eef0203e65664bd00b5f0325c5c5fcd81bcead8d.png" class="latex" alt="$f(n)$" style="vertical-align: -4px" width="34" height="18" /> where n is not a square. If <img src="//latex.artofproblemsolving.com/a/c/c/acc780a34be48ce05e7e054cc03478a4bb0335d3.png" class="latex" alt="$k^2&lt;n&lt;(k+1)^2$" style="vertical-align: -5px" width="142" height="21" /> for (positive) integer k, recursively calculating the value of the function gives us <img src="//latex.artofproblemsolving.com/3/a/1/3a1c20d9c55661f7ff70f4a130d081fd5f759930.png" class="latex" alt="$f(n)=(k+1)^2-n+f((k+1)^2)=k^2+3k+2-n$" style="vertical-align: -4px" width="413" height="19" />. Note that this formula also returns the correct value when <img src="//latex.artofproblemsolving.com/5/4/e/54ed517e235c1b26a37381023c3da343ea2057ec.png" class="latex" alt="$n=(k+1)^2$" style="vertical-align: -4px" width="96" height="19" />, but not when <img src="//latex.artofproblemsolving.com/b/2/0/b20f2c119833a62272565f843f02be0a37429879.png" class="latex" alt="$n=k^2$" width="51" height="15" />. Thus <img src="//latex.artofproblemsolving.com/0/c/0/0c07f4ad4e02be8682bbac17aacd8a68328aa463.png" class="latex" alt="$f(n)=k^2+3k+2-n$" style="vertical-align: -4px" width="183" height="19" /> for <img src="//latex.artofproblemsolving.com/0/f/0/0f089f633721439921871ce031635ec5457d78cb.png" class="latex" alt="$k^2&lt;n \leq (k+1)^2$" style="vertical-align: -4px" width="138" height="19" />.
+</p><p>If <img src="//latex.artofproblemsolving.com/a/9/3/a9340922b3658d98a0dac17f47d0da8b4298e730.png" class="latex" alt="$2 \mid (k+1)^2-n$" style="vertical-align: -5px" width="122" height="21" />, <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> returns the same value as <img src="//latex.artofproblemsolving.com/e/e/f/eef0203e65664bd00b5f0325c5c5fcd81bcead8d.png" class="latex" alt="$f(n)$" style="vertical-align: -4px" width="34" height="18" />. This is because the recursion once again stops at <img src="//latex.artofproblemsolving.com/c/e/1/ce1879a44818d1c5ee8286585d4d4b7e3df1d286.png" class="latex" alt="$(k+1)^2$" style="vertical-align: -4px" width="61" height="19" />. We seek a case in which <img src="//latex.artofproblemsolving.com/5/f/6/5f653c1f5f90c989f4a342ffd1532594759eefca.png" class="latex" alt="$f(n)&lt;g(n)$" style="vertical-align: -4px" width="93" height="18" />, so obviously this is not what we want. We want <img src="//latex.artofproblemsolving.com/6/0/3/6034bac973cc06f6bf21ef5a1bcecc2b0876fbe8.png" class="latex" alt="$(k+1)^2,n$" style="vertical-align: -4px" width="81" height="19" /> to have a different parity, or <img src="//latex.artofproblemsolving.com/3/c/f/3cff91106986d596b444b21427ff9ee5ac08db4c.png" class="latex" alt="$n, k$" style="vertical-align: -3px" width="28" height="16" /> have the same parity. When this is the case, <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> instead returns <img src="//latex.artofproblemsolving.com/d/d/3/dd32c414e752511e4ea69dd7dcf366b40cda2ff7.png" class="latex" alt="$(k+2)^2-n+g((k+2)^2)=k^2+5k+6-n$" style="vertical-align: -4px" width="352" height="19" />.
+</p><p>Write <img src="//latex.artofproblemsolving.com/3/5/1/351013080aa3a696604ff1968453b230849f6a7c.png" class="latex" alt="$7f(n)=4g(n)$" style="vertical-align: -4px" width="111" height="18" />, which simplifies to <img src="//latex.artofproblemsolving.com/4/7/8/47820c9614e18333dec5df17b04becf0fdac324a.png" class="latex" alt="$3k^2+k-10=3n$" style="vertical-align: -1px" width="143" height="16" />. Notice that we want the LHS expression to be divisible by 3; as a result, <img src="//latex.artofproblemsolving.com/d/e/6/de672af5841ae46198b69efc1502117b4057efc8.png" class="latex" alt="$k \equiv 1 \pmod{3}$" style="vertical-align: -4px" width="114" height="18" />. We also want n to be strictly greater than <img src="//latex.artofproblemsolving.com/0/e/5/0e5c83cc0c639fc2ed843bbe2d3d209fb478b104.png" class="latex" alt="$k^2$" width="16" height="15" />, so <img src="//latex.artofproblemsolving.com/9/e/2/9e2bbc8357b35068a075d2838e6b159ab763fc39.png" class="latex" alt="$k-10&gt;0, k&gt;10$" style="vertical-align: -3px" width="143" height="16" />. The LHS expression is always even (since <img src="//latex.artofproblemsolving.com/3/9/f/39fc586b2dfc937457780cbf04456e47e5844b41.png" class="latex" alt="$3k^2+k-10$" style="vertical-align: -2px" width="101" height="18" /> factors to <img src="//latex.artofproblemsolving.com/5/a/2/5a2844cb7ecbac3ab9cddbbbe23dee55f3fd6531.png" class="latex" alt="$k(3k+1)-10$" style="vertical-align: -5px" width="117" height="20" />, and one of <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/d/a/9/da9d12bd91cbe9207a5a98df4ddafc49880669ac.png" class="latex" alt="$3k+1$" style="vertical-align: -2px" width="52" height="16" /> will be even), so to ensure that <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> share the same parity, <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> should be even. Then the least <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> that satisfies these requirements is <img src="//latex.artofproblemsolving.com/e/e/e/eeea146896e1df40b6321be6a44348d891336c5e.png" class="latex" alt="$k=16$" style="vertical-align: 0px" width="52" height="13" />, giving <img src="//latex.artofproblemsolving.com/5/6/f/56f68275e1080aea8a2dcd39d4cc23138ac6434c.png" class="latex" alt="$n=258$" width="61" height="12" />.
+</p><p>Indeed - if we check our answer, it works. Therefore, the answer is <img src="//latex.artofproblemsolving.com/f/2/2/f22276b19a678bad74c5ffbd3c88680365242af8.png" class="latex" alt="$\boxed{258}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>-Ross Gao
+</p>
+<h2><span id="Solution_2_(Four_Variables)"></span><span class="mw-headline" id="Solution_2_.28Four_Variables.29">Solution 2 (Four Variables)</span></h2>
+<p>We consider <img src="//latex.artofproblemsolving.com/e/e/f/eef0203e65664bd00b5f0325c5c5fcd81bcead8d.png" class="latex" alt="$f(n)$" style="vertical-align: -4px" width="34" height="18" /> and <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> separately:
+</p>
+<ul style="list-style-type:square;">
+  <li><img src="//latex.artofproblemsolving.com/8/4/3/8438886f5861fae145254316fb0dade499454bd0.png" class="latex" alt="$\boldsymbol{f(n)}$" style="vertical-align: -5px" width="43" height="20" /><p>
+We restrict <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> in which <img src="//latex.artofproblemsolving.com/a/e/b/aebe1e3ab9f4c5f7f829154aad8147e375a785ab.png" class="latex" alt="$k^2&lt;n\leq(k+1)^2$" style="vertical-align: -5px" width="142" height="21" /> for some positive integer <img src="//latex.artofproblemsolving.com/c/9/9/c99a6aaebc17474bd09ea71d84d4e769a0662b55.png" class="latex" alt="$k,$" style="vertical-align: -3px" width="14" height="16" /> or <img src="//latex.artofproblemsolving.com/4/2/0/420b840958f3d5a1f822fe79c350233e0080f702.png" class="latexcenter" alt="\[n=(k+1)^2-p\hspace{40mm}(1)\]" width="339" height="19" /> for some integer <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> such that <img src="//latex.artofproblemsolving.com/d/0/a/d0a4283775cedeb49d3a46d0240e5f8a4d7fd595.png" class="latex" alt="$0\leq p&lt;2k+1.$" style="vertical-align: -3px" width="120" height="16" /> By recursion, we get
+<img src="//latex.artofproblemsolving.com/9/3/2/932d7c4e1bdb6276062a94b239dbc10332937707.png" class="latexcenter" alt="\begin{align*} f\left((k+1)^2\right)&amp;=k+1, \\ f\left((k+1)^2-1\right)&amp;=k+2, \\ f\left((k+1)^2-2\right)&amp;=k+3, \\ &amp; \ \vdots \\ f\bigl(\phantom{ }\underbrace{(k+1)^2-p}_{n}\phantom{ }\bigr)&amp;=k+p+1. \hspace{19mm}(2) \\ \end{align*}" width="340" height="166" /></p></li><p class="mw-empty-elt">
+  </p><li><img src="//latex.artofproblemsolving.com/8/9/b/89bac64dbd0e9b40fa582014433ba4f1d24334ac.png" class="latex" alt="$\boldsymbol{g(n)}$" style="vertical-align: -4px" width="38" height="19" /><p>
+If <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and <img src="//latex.artofproblemsolving.com/c/e/1/ce1879a44818d1c5ee8286585d4d4b7e3df1d286.png" class="latex" alt="$(k+1)^2$" style="vertical-align: -4px" width="61" height="19" /> have the same parity, then we get <img src="//latex.artofproblemsolving.com/d/4/6/d46a9623be0d91786e4f72fe76baa01c1fc3e34d.png" class="latex" alt="$g(n)=f(n)$" style="vertical-align: -4px" width="93" height="18" /> by a similar process from <img src="//latex.artofproblemsolving.com/4/f/2/4f237b39b29765713f5e254915267d88363da8ab.png" class="latex" alt="$g\left((k+1)^2\right)=k+1.$" style="vertical-align: -7px" width="164" height="23" /> This contradicts the precondition <img src="//latex.artofproblemsolving.com/0/0/0/0009b3ec0290dea39e3f4d644c9520e082629872.png" class="latex" alt="$\frac{f(n)}{g(n)} = \frac{4}{7}.$" style="vertical-align: -17px" width="80" height="43" /> Therefore, <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and <img src="//latex.artofproblemsolving.com/c/e/1/ce1879a44818d1c5ee8286585d4d4b7e3df1d286.png" class="latex" alt="$(k+1)^2$" style="vertical-align: -4px" width="61" height="19" /> must have different parities, from which <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and <img src="//latex.artofproblemsolving.com/a/8/3/a8346d06d8e553d5674f99f7d7347125a7ac08ca.png" class="latex" alt="$(k+2)^2$" style="vertical-align: -5px" width="65" height="21" /> must have the same parity. </p><p>
+It follows that <img src="//latex.artofproblemsolving.com/5/8/9/5898bd45997500373d304a741a06d7df87edf322.png" class="latex" alt="$k^2&lt;n&lt;(k+2)^2,$" style="vertical-align: -4px" width="144" height="19" /> or <img src="//latex.artofproblemsolving.com/0/1/0/0107905060b42ff904cc04646b5d3f1c199021a6.png" class="latexcenter" alt="\[n=(k+2)^2-2q\hspace{38.25mm}(3)\]" width="340" height="19" /> for some integer <img src="//latex.artofproblemsolving.com/0/6/1/0615acc3725de21025457e7d6f7694dab8e2f758.png" class="latex" alt="$q$" style="vertical-align: -3px" width="8" height="11" /> such that <img src="//latex.artofproblemsolving.com/c/e/a/cea5e2e96e9be6f7cbeba9f96279a94f3d813242.png" class="latex" alt="$0&lt;q&lt;2k+2.$" style="vertical-align: -3px" width="120" height="16" /> By recursion, we get
+<img src="//latex.artofproblemsolving.com/5/6/c/56c5a4a0e449ddd709cd3d6e02102a533630a2f9.png" class="latexcenter" alt="\begin{align*} g\left((k+2)^2\right)&amp;=k+2, \\ g\left((k+2)^2-2\right)&amp;=k+4, \\ g\left((k+2)^2-4\right)&amp;=k+6, \\ &amp; \ \vdots \\ g\bigl(\phantom{ }\underbrace{(k+2)^2-2q}_{n}\phantom{ }\bigr)&amp;=k+2q+2. \hspace{15.5mm}(4) \\ \end{align*}" width="340" height="166" /></p></li><p class="mw-empty-elt">
+  </p><li><b>Answer</b><p>
+By <img src="//latex.artofproblemsolving.com/6/2/f/62f62a19f0425d8e6121ca0c1cfd3ce96e43c9c5.png" class="latex" alt="$(2)$" style="vertical-align: -4px" width="21" height="18" /> and <img src="//latex.artofproblemsolving.com/5/c/d/5cd745197cba7afe3782047dd959022f1fd297f2.png" class="latex" alt="$(4),$" style="vertical-align: -4px" width="27" height="18" /> we have <img src="//latex.artofproblemsolving.com/8/d/3/8d331da6dfcdd4c34a6de5dd4b3231a1ed44dc18.png" class="latexcenter" alt="\[\frac{f(n)}{g(n)}=\frac{k+p+1}{k+2q+2}=\frac{4}{7}. \hspace{27mm}(5)\]" width="339" height="43" />
+From <img src="//latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> and <img src="//latex.artofproblemsolving.com/9/0/1/9011d0e0615c63ca8738fe88e08dc53b52d22751.png" class="latex" alt="$(3),$" style="vertical-align: -4px" width="27" height="18" /> equating the expressions for <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> gives <img src="//latex.artofproblemsolving.com/2/2/7/227c124e20b9ea8a660c552767f5e497c6ed6b70.png" class="latex" alt="$(k+1)^2-p=(k+2)^2-2q.$" style="vertical-align: -4px" width="225" height="19" /> Solving for <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> produces <img src="//latex.artofproblemsolving.com/3/1/d/31d93e6e4c54fe45c95930fd1d6afc9de84ad8bc.png" class="latexcenter" alt="\[k=\frac{2q-p-3}{2}. \hspace{41.25mm}(6)\]" width="339" height="37" />
+We substitute <img src="//latex.artofproblemsolving.com/d/d/8/dd8597460a07f59450a07e0f94607fcb479cf974.png" class="latex" alt="$(6)$" style="vertical-align: -4px" width="21" height="18" /> into <img src="//latex.artofproblemsolving.com/7/c/e/7cea5ea9497510f373d10a8abb830d925c8fc22f.png" class="latex" alt="$(5),$" style="vertical-align: -4px" width="27" height="18" /> then simplify, cross-multiply, and rearrange:
+<img src="//latex.artofproblemsolving.com/5/e/6/5e617155055bcd14e3330b01eb913d98eeeedc4f.png" class="latexcenter" alt="\begin{align*} \frac{\tfrac{2q-p-3}{2}+p+1}{\tfrac{2q-p-3}{2}+2q+2}&amp;=\frac{4}{7} \\ \frac{p+2q-1}{-p+6q+1}&amp;=\frac{4}{7} \\ 7p+14q-7&amp;=-4p+24q+4 \\ 11p-11&amp;=10q \\ 11(p-1)&amp;=10q. \hspace{29mm}(7) \end{align*}" width="339" height="170" />
+Since <img src="//latex.artofproblemsolving.com/9/a/3/9a36fd68fa4d41e5d982a0a86b3a9ea2b4ca993d.png" class="latex" alt="$\gcd(11,10)=1,$" style="vertical-align: -4px" width="123" height="18" /> we know that <img src="//latex.artofproblemsolving.com/a/b/0/ab0727c08c4aaa6fa119bd3fafe17851e431fd70.png" class="latex" alt="$p-1$" style="vertical-align: -4px" width="42" height="17" /> must be divisible by <img src="//latex.artofproblemsolving.com/5/1/7/517151f6f181bc7bcbfe164ac5c211c84abc0e92.png" class="latex" alt="$10,$" style="vertical-align: -3px" width="22" height="16" /> and <img src="//latex.artofproblemsolving.com/0/6/1/0615acc3725de21025457e7d6f7694dab8e2f758.png" class="latex" alt="$q$" style="vertical-align: -3px" width="8" height="11" /> must be divisible by <img src="//latex.artofproblemsolving.com/4/e/7/4e76ce9da0f428536412a4f539b127c608760686.png" class="latex" alt="$11.$" style="vertical-align: 0px" width="21" height="12" /> </p><p> Recall that the restrictions on <img src="//latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> and <img src="//latex.artofproblemsolving.com/6/2/f/62f62a19f0425d8e6121ca0c1cfd3ce96e43c9c5.png" class="latex" alt="$(2)$" style="vertical-align: -4px" width="21" height="18" /> are <img src="//latex.artofproblemsolving.com/b/4/7/b47db06ec3e086a3cbe00352a035e19f44b25d89.png" class="latex" alt="$0\leq p&lt;2k+1$" style="vertical-align: -3px" width="116" height="16" /> and <img src="//latex.artofproblemsolving.com/0/4/2/0426d6b5beb07588a1e9c944d1588d39e3908599.png" class="latex" alt="$0&lt;q&lt;2k+2,$" style="vertical-align: -3px" width="120" height="16" /> respectively. Substituting <img src="//latex.artofproblemsolving.com/d/d/8/dd8597460a07f59450a07e0f94607fcb479cf974.png" class="latex" alt="$(6)$" style="vertical-align: -4px" width="21" height="18" /> into either inequality gives <img src="//latex.artofproblemsolving.com/3/f/0/3f04af26fedb2b964bfce519be5afff20ff5ebbf.png" class="latex" alt="$p+1&lt;q.$" style="vertical-align: -3px" width="78" height="15" /> Combining all these results produces <img src="//latex.artofproblemsolving.com/2/3/9/23947a05895c13480699630b0264abdf0e687560.png" class="latexcenter" alt="\[0&lt;p+1&lt;q&lt;2k+2. \hspace{28mm}(8)\]" width="339" height="18" />
+
+To minimize <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> in either <img src="//latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> or <img src="//latex.artofproblemsolving.com/9/0/1/9011d0e0615c63ca8738fe88e08dc53b52d22751.png" class="latex" alt="$(3),$" style="vertical-align: -4px" width="27" height="18" /> we minimize <img src="//latex.artofproblemsolving.com/c/9/9/c99a6aaebc17474bd09ea71d84d4e769a0662b55.png" class="latex" alt="$k,$" style="vertical-align: -3px" width="14" height="16" /> so we minimize <img src="//latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> and <img src="//latex.artofproblemsolving.com/0/6/1/0615acc3725de21025457e7d6f7694dab8e2f758.png" class="latex" alt="$q$" style="vertical-align: -3px" width="8" height="11" /> in <img src="//latex.artofproblemsolving.com/f/c/5/fc565756cba43b332975ddb373372f922a613171.png" class="latex" alt="$(8).$" style="vertical-align: -4px" width="26" height="18" /> From <img src="//latex.artofproblemsolving.com/d/d/8/dd8597460a07f59450a07e0f94607fcb479cf974.png" class="latex" alt="$(6)$" style="vertical-align: -4px" width="21" height="18" /> and <img src="//latex.artofproblemsolving.com/4/6/b/46b729ce4de390719802ffb0114406aa93f23bd2.png" class="latex" alt="$(7),$" style="vertical-align: -4px" width="27" height="18" /> we construct the following table:
+<img src="//latex.artofproblemsolving.com/e/6/1/e610ad850cfdb97e80024778f16ec05f51421d1f.png" class="latexcenter" alt="\[\begin{array}{c|c|c|c} &amp; &amp; &amp; \\ [-2.5ex] \boldsymbol{p} &amp; \boldsymbol{q} &amp; \boldsymbol{k} &amp; \textbf{Satisfies }\boldsymbol{(8)?} \\ [0.5ex] \hline &amp; &amp; &amp; \\ [-2ex] 11 &amp; 11 &amp; 4 &amp; \\ 21 &amp; 22 &amp; 10 &amp; \\ 31 &amp; 33 &amp; 16 &amp; \checkmark \\ \geq41 &amp; \geq44 &amp; \geq22 &amp; \checkmark \\ \end{array}\]" width="289" height="111" />
+Finally, we have <img src="//latex.artofproblemsolving.com/5/c/b/5cb3f03933d4c6d99522f125beb47ac4f03d7015.png" class="latex" alt="$(p,q,k)=(31,33,16).$" style="vertical-align: -4px" width="170" height="18" /> Substituting this result into either <img src="//latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> or <img src="//latex.artofproblemsolving.com/b/8/8/b88ea3916e8089c7edbccc3ff91e58e01a6e2682.png" class="latex" alt="$(3)$" style="vertical-align: -4px" width="21" height="18" /> generates <img src="//latex.artofproblemsolving.com/d/a/6/da68e41f4fd240eea39f26b59ee74e5aca1a8978.png" class="latex" alt="$n=\boxed{258}.$" style="vertical-align: -5px" width="77" height="23" /></p></li><p class="mw-empty-elt">
+  </p><li><b>Remark</b><p>
+We can verify that <img src="//latex.artofproblemsolving.com/3/7/8/378e781cf0c738da49c5410f1f8207cabe550e48.png" class="latexcenter" alt="\[\frac{f(258)}{g(258)}=\frac{1\cdot31+f(258+1\cdot31)}{2\cdot33+g(258+2\cdot33)}=\frac{31+\overbrace{f(289)}^{17}}{66+\underbrace{g(324)}_{18}}=\frac{48}{84}=\frac47.\]" width="468" height="87" /></p></li><p class="mw-empty-elt">
+</p></ul>
+<p>~MRENTHUSIASM
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>Since <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> isn't a perfect square, let <img src="//latex.artofproblemsolving.com/2/7/2/27233938ade751ed233a60157da23f3425b83148.png" class="latex" alt="$n=m^2+k$" style="vertical-align: -1px" width="90" height="16" /> with <img src="//latex.artofproblemsolving.com/d/7/1/d711341bd8f37e45f085647d459e52d98f7d8aaf.png" class="latex" alt="$0&lt;k&lt;2m+1$" style="vertical-align: -1px" width="123" height="14" />. If <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> is odd, then <img src="//latex.artofproblemsolving.com/e/e/c/eec982c75f59e20fc8da7b21838c8f27263843bf.png" class="latex" alt="$f(n)=g(n)$" style="vertical-align: -4px" width="93" height="18" />. If <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> is even, then
+<img src="//latex.artofproblemsolving.com/d/5/9/d59b1887c86358fcbabb13c57a4cc57661ef3463.png" class="latexcenter" alt="\begin{align*} f(n)&amp;=(m+1)^2-(m^2+k)+(m+1)=3m+2-k, \\ g(n)&amp;=(m+2)^2-(m^2+k)+(m+2)=5m+6-k, \end{align*}" width="421" height="47" />
+from which
+<img src="//latex.artofproblemsolving.com/5/0/7/50785fcb79fb241dbd2f97954f108f2af9144a58.png" class="latexcenter" alt="\begin{align*} 7(3m+2-k)&amp;=4(5m+6-k) \\ m&amp;=3k+10. \end{align*}" width="245" height="40" />
+Since <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> is even, <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> is even. Since <img src="//latex.artofproblemsolving.com/0/2/7/027c9bc64345c34d189fddb3388b72d8c76c113e.png" class="latex" alt="$k\neq 0$" style="vertical-align: -4px" width="43" height="17" />, the smallest <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> is <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> which produces the smallest <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />: <img src="//latex.artofproblemsolving.com/d/0/f/d0f7a6c320a1f8338cbec5ee40d95b65227f42ea.png" class="latexcenter" alt="\[k=2 \implies m=16 \implies n=16^2+2=\boxed{258}.\]" width="358" height="23" />
+~Afo
+</p>
+<h2><span id="Solution_4_(Quadratics_With_Two_Variables)"></span><span class="mw-headline" id="Solution_4_.28Quadratics_With_Two_Variables.29">Solution 4 (Quadratics With Two Variables)</span></h2>
+<p>To begin, note that if <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is a perfect square, <img src="//latex.artofproblemsolving.com/e/e/c/eec982c75f59e20fc8da7b21838c8f27263843bf.png" class="latex" alt="$f(n)=g(n)$" style="vertical-align: -4px" width="93" height="18" />, so <img src="//latex.artofproblemsolving.com/7/8/9/789b2d56ebdcf15ef70c7222ea56f53028f3bb87.png" class="latex" alt="$f(n)/g(n)=1$" style="vertical-align: -4px" width="111" height="18" />, so we must look at values of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> that are not perfect squares (what a surprise). First, let the distance between <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and the first perfect square greater than or equal to it be <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />, making the values of <img src="//latex.artofproblemsolving.com/3/2/8/32893b705a72e5c6eb5f0635aed989753bc7b994.png" class="latex" alt="$f(n+k)$" style="vertical-align: -4px" width="66" height="18" /> and <img src="//latex.artofproblemsolving.com/f/e/6/fe613151c16d01d0ca25f02c64b9111a246e789a.png" class="latex" alt="$g(n+k)$" style="vertical-align: -4px" width="65" height="18" /> integers. Using this notation, we see that <img src="//latex.artofproblemsolving.com/4/f/a/4fa9acf0ceb4a32bfdb7ef887e74bd45b969361e.png" class="latex" alt="$f(n)=k+f(n+k)$" style="vertical-align: -4px" width="159" height="18" />, giving us a formula for the numerator of our ratio. However, since the function of <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> does not add one to the previous inputs in the function until a perfect square is achieved, but adds values of two, we can not achieve the value of <img src="//latex.artofproblemsolving.com/7/2/e/72ea4917bb877c3dc62e0ff08cd8a9fb90ba581c.png" class="latex" alt="$\sqrt{n+k}$" style="vertical-align: -2px" width="58" height="18" /> in <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> unless <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> is an even number. However, this is impossible, since if <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> was an even number, <img src="//latex.artofproblemsolving.com/e/e/c/eec982c75f59e20fc8da7b21838c8f27263843bf.png" class="latex" alt="$f(n)=g(n)$" style="vertical-align: -4px" width="93" height="18" />, giving a ratio of one. Thus, <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> must be an odd number.
+</p><p>Thus, since <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> must be an odd number, regardless of whether <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is even or odd, to get an integral value in <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" />, we must get to the next perfect square after <img src="//latex.artofproblemsolving.com/f/9/e/f9ece7f97f556d5af63003cb94ecbc04def23999.png" class="latex" alt="$n+k$" style="vertical-align: -1px" width="42" height="14" />. To make matters easier, let <img src="//latex.artofproblemsolving.com/0/c/9/0c9e8e1de57f88538ad43935e1c0c571dc6d7c55.png" class="latex" alt="$z^2=n+k$" style="vertical-align: -1px" width="83" height="16" />. Thus, in <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" />, we want to achieve <img src="//latex.artofproblemsolving.com/3/f/0/3f0683181dbbdb8bd2b76b374e57b219276280eb.png" class="latex" alt="$(z+1)^2$" style="vertical-align: -4px" width="60" height="19" />. 
+</p><p>Expanding <img src="//latex.artofproblemsolving.com/3/f/0/3f0683181dbbdb8bd2b76b374e57b219276280eb.png" class="latex" alt="$(z+1)^2$" style="vertical-align: -4px" width="60" height="19" /> and substituting in the fact that <img src="//latex.artofproblemsolving.com/a/5/8/a58b45bc3e62cbc23d752175350a5c5966bb8018.png" class="latex" alt="$z=\sqrt{n+k}$" style="vertical-align: -3px" width="94" height="21" /> yields:
+</p><p><img src="//latex.artofproblemsolving.com/a/b/d/abdce9f346c3ae90e93935fc4b7d26c04479e6a2.png" class="latexcenter" alt="\[(z+1)^2=z^2+2z+1=n+k+2\sqrt{n+k}+1\]" width="360" height="21" />
+</p><p>Thus, we must add the quantity <img src="//latex.artofproblemsolving.com/3/4/3/343c615d605708572e4d16d031d5286482d5dfbd.png" class="latex" alt="$k+2z+1$" style="vertical-align: -1px" width="81" height="14" /> to <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to achieve a integral value in the function <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" />. Thus.
+</p><p><img src="//latex.artofproblemsolving.com/e/e/f/eeff6bf5d6dd2739ed1e9573f58dba1c87bbff89.png" class="latexcenter" alt="\[g(n)=(k+2z+1)+\sqrt{n+k+2\sqrt{n+k}+1}\]" width="359" height="32" />
+</p><p>However, note that the quantity within the square root is just <img src="//latex.artofproblemsolving.com/3/f/0/3f0683181dbbdb8bd2b76b374e57b219276280eb.png" class="latex" alt="$(z+1)^2$" style="vertical-align: -4px" width="60" height="19" />, and so:
+</p><p><img src="//latex.artofproblemsolving.com/9/8/f/98f51193c8a10d7f63308fc1b5d7bffa274b66cf.png" class="latexcenter" alt="\[g(n)=k+3z+2\]" width="140" height="18" />
+</p><p>Thus,
+<img src="//latex.artofproblemsolving.com/9/d/9/9d9fd797785771956e93d1dff8c0d3b9e237b19b.png" class="latexcenter" alt="\[\frac{f(n)}{g(n)}=\frac{k+z}{k+3z+2}\]" width="146" height="43" />
+</p><p>Since we want this quantity to equal <img src="//latex.artofproblemsolving.com/e/4/1/e418cb8fb0c830e7ad6eb1e2c03056fd51d8c45e.png" class="latex" alt="$\frac{4}{7}$" style="vertical-align: -12px" width="11" height="37" />, we can set the above equation equal to this number and collect all the variables to one side to achieve
+</p><p><img src="//latex.artofproblemsolving.com/2/1/b/21b29b23e9e70ee50fa73386ff9ab95da906bca5.png" class="latexcenter" alt="\[3k-5z=8\]" width="92" height="12" />
+</p><p>Substituting back in that <img src="//latex.artofproblemsolving.com/a/5/8/a58b45bc3e62cbc23d752175350a5c5966bb8018.png" class="latex" alt="$z=\sqrt{n+k}$" style="vertical-align: -3px" width="94" height="21" />, and then separating variables and squaring yields that
+</p><p><img src="//latex.artofproblemsolving.com/9/2/4/9242758db76d5dfa6faf8282d7e091811c226ee8.png" class="latexcenter" alt="\[9k^2-73k+64=25n\]" width="169" height="16" />
+</p><p>Now, if we treat <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> as a constant, we can use the quadratic formula in respect to <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> to get an equation for <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> in terms of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> (without all the squares). Doing so yields
+</p><p><img src="//latex.artofproblemsolving.com/7/b/6/7b6be7467deaf62d1b9a934609d9a67b6b631d53.png" class="latexcenter" alt="\[\frac{73\pm\sqrt{3025+900n}}{18}=k\]" width="188" height="40" />
+</p><p>Now, since <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> are integers, we want the quantity within the square root to be a perfect square. Note that <img src="//latex.artofproblemsolving.com/d/d/7/dd751e22c6adc821a2aa2b9d6dce3bdd0bd162e3.png" class="latex" alt="$55^2=3025$" width="85" height="15" />. Thus, assume that the quantity within the root is equal to the perfect square, <img src="//latex.artofproblemsolving.com/0/f/5/0f521656db779d024e6aff0f9a3771ac28d2c3db.png" class="latex" alt="$m^2$" width="22" height="15" />. Thus, after using a difference of squares, we have
+<img src="//latex.artofproblemsolving.com/1/1/7/117fc218ffcb9e4c5dae4316d3709711f8257d90.png" class="latexcenter" alt="\[(m-55)(m+55)=900n\]" width="201" height="18" />
+Since we want <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> to be an integer, we know that the <img src="//latex.artofproblemsolving.com/1/7/c/17c924be2d96aaeaadfdfd4b35b06d2a60edb5d9.png" class="latex" alt="$LHS$" width="41" height="12" /> should be divisible by five, so, let's assume that we should have <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> divisible by five. If so, the quantity <img src="//latex.artofproblemsolving.com/a/9/2/a927dd2d0e7142f0ad24ba75a6467458e5be1214.png" class="latex" alt="$18k-73$" style="vertical-align: -2px" width="70" height="16" /> must be divisible by five, meaning that <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> leaves a remainder of one when divided by 5 (if the reader knows LaTeX well enough to write this as a modulo argument, please go ahead and do so!). 
+</p><p>Thus, we see that to achieve integers <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> that could potentially satisfy the problem statement, we must try the values of <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> congruent to one modulo five. However, if we recall a statement made earlier in the solution, we see that we can skip all even values of <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> produced by this modulo argument.
+</p><p>Also, note that <img src="//latex.artofproblemsolving.com/3/6/e/36e5da1104435ba593678738e2554a407dcf993e.png" class="latex" alt="$k=1,6$" style="vertical-align: -3px" width="60" height="16" /> won't work, as they are too small, and will give an erroneous value for <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. After trying <img src="//latex.artofproblemsolving.com/d/4/b/d4b0631e916a1a70b8179d501b37a539e04d73c4.png" class="latex" alt="$k=11,21,31$" style="vertical-align: -3px" width="104" height="16" />, we see that <img src="//latex.artofproblemsolving.com/7/3/7/737bf9b9ddaf4d4879ecdb1dbf30e8080954c19f.png" class="latex" alt="$k=31$" style="vertical-align: 0px" width="51" height="13" /> will give a value of <img src="//latex.artofproblemsolving.com/c/a/1/ca1972811df2ff0f3179a423cdb90bea70523e4e.png" class="latex" alt="$m=485$" style="vertical-align: 0px" width="66" height="13" />, which yields <img src="//latex.artofproblemsolving.com/f/0/2/f02294256b8b270ef5eae7e48d9d6fc5ebe1ee41.png" class="latex" alt="$n=\boxed{258}$" style="vertical-align: -5px" width="74" height="23" />, which, if plugged in to for our equations of <img src="//latex.artofproblemsolving.com/e/e/f/eef0203e65664bd00b5f0325c5c5fcd81bcead8d.png" class="latex" alt="$f(n)$" style="vertical-align: -4px" width="34" height="18" /> and <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" />, will yield the desired ratio, and we're done.
+</p><p>Side Note: If any part of this solution is not rigorous, or too vague, please label it in the margin with "needs proof". If you can prove it, please add a lemma to the solution doing so&#160;:)
+</p><p>-Azeem H. (mathislife52)
+</p>
+<h2><span id="Solution_5_(Basic_Substitutions)"></span><span class="mw-headline" id="Solution_5_.28Basic_Substitutions.29">Solution 5 (Basic Substitutions)</span></h2>
+<p>First of all, if <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is a perfect square, <img src="//latex.artofproblemsolving.com/8/f/9/8f96cda94145dd82e7fffb5dc6aab5a79ce2c63d.png" class="latex" alt="$f(n)=g(n)=\sqrt{n}$" style="vertical-align: -4px" width="145" height="19" /> and their quotient is <img src="//latex.artofproblemsolving.com/6/c/d/6cdd1b53e5faf7a118222e4b7571d1e9afa0cf56.png" class="latex" alt="$1.$" style="vertical-align: 0px" width="12" height="12" /> So, for the rest of this solution, assume <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is not a perfect square.
+</p><p>Let <img src="//latex.artofproblemsolving.com/9/6/9/9698c992334be77221be8c8c819909eca34fde9b.png" class="latex" alt="$a^2$" width="15" height="15" /> be the smallest perfect square greater than <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and let <img src="//latex.artofproblemsolving.com/a/1/d/a1d03c3c5b9abf1bdb0c9df06fe5fb11ae13d0e8.png" class="latex" alt="$b^2$" style="vertical-align: -1px" width="17" height="17" /> be the smallest perfect square greater than <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> with the same parity as <img src="//latex.artofproblemsolving.com/c/5/4/c54e7152acd659788861f0453ac195c635e0a005.png" class="latex" alt="$n,$" style="vertical-align: -3px" width="15" height="11" /> and note that either <img src="//latex.artofproblemsolving.com/c/4/d/c4d6c17fef7c3d0a099d86cb13c69c5ef21fc480.png" class="latex" alt="$b=a$" width="41" height="12" /> or <img src="//latex.artofproblemsolving.com/e/3/b/e3baf504e22ce7007a4c0cc1442b0445f88fb570.png" class="latex" alt="$b=a+1.$" style="vertical-align: -1px" width="76" height="14" /> Notice that <img src="//latex.artofproblemsolving.com/9/3/8/938271ae238fed0206beb1cdcaaefc5573c98906.png" class="latex" alt="$(a-1)^2 &lt; n &lt; a^2.$" style="vertical-align: -4px" width="142" height="19" />
+</p><p>With a bit of inspection, it becomes clear that <img src="//latex.artofproblemsolving.com/1/f/2/1f2c8a3b37a8c7f0fc92f5a8830483ba7d2b2dc4.png" class="latex" alt="$f(n) = a+(a^2-n)$" style="vertical-align: -4px" width="155" height="19" /> and <img src="//latex.artofproblemsolving.com/2/5/d/25d3b39c66dac248380ad85004de3eaa9059026c.png" class="latex" alt="$g(n) = b+(b^2-n).$" style="vertical-align: -4px" width="154" height="19" />
+</p><p>If <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> have the same parity, we get <img src="//latex.artofproblemsolving.com/5/a/b/5abd2c942ae299fd26e18d0ca5d390a7ca4a8c34.png" class="latex" alt="$a=b$" width="42" height="12" /> so <img src="//latex.artofproblemsolving.com/2/6/0/260a1e772797b60886827004c985d2cc28a821eb.png" class="latex" alt="$f(n) = g(n)$" style="vertical-align: -4px" width="93" height="18" /> and their quotient is <img src="//latex.artofproblemsolving.com/6/c/d/6cdd1b53e5faf7a118222e4b7571d1e9afa0cf56.png" class="latex" alt="$1.$" style="vertical-align: 0px" width="12" height="12" /> So, for the rest of this solution, we let <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> have opposite parity. We have two cases to consider.
+</p><p>Case 1: <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is odd and <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> is even
+</p><p>Here, we get <img src="//latex.artofproblemsolving.com/5/6/0/560782606ee6400cb96f39f3efee581aedf0ada7.png" class="latex" alt="$a=2k$" style="vertical-align: -1px" width="55" height="14" /> for some positive integer <img src="//latex.artofproblemsolving.com/5/d/4/5d48e0968a64d782fe75bca620ce749938b7d0bb.png" class="latex" alt="$k.$" width="13" height="12" /> Then, <img src="//latex.artofproblemsolving.com/e/2/a/e2abdee23a910ae013e334f08b0007b96e010d69.png" class="latex" alt="$b = 2k+1.$" style="vertical-align: -1px" width="86" height="14" /> We let <img src="//latex.artofproblemsolving.com/5/b/6/5b6332d6a8c5a93f8d4a9dbe4caf5157c4af9ba5.png" class="latex" alt="$n = a^2-(2m+1)$" style="vertical-align: -4px" width="143" height="19" /> for some positive integer <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> so <img src="//latex.artofproblemsolving.com/7/6/2/762d754f66d7f2faad3b0ae7b49bee11a1c29bca.png" class="latex" alt="$f(n) = 2k+2m+1$" style="vertical-align: -4px" width="157" height="18" /> and <img src="//latex.artofproblemsolving.com/f/6/1/f61f28af852241c0add3dc8d650f6921ce6d7d4c.png" class="latex" alt="$g(n) = 2k+1+2m+1+4k+1 = 6k+2m+3.$" style="vertical-align: -4px" width="385" height="18" />
+</p><p>We set <img src="//latex.artofproblemsolving.com/9/c/7/9c7bd83daa3b97e4247f6411c7d3d00cfc8a747e.png" class="latex" alt="$\frac{2k+2m+1}{6k+2m+3}=\frac{4}{7},$" style="vertical-align: -14px" width="143" height="39" /> cross multiply, and rearrange to get <img src="//latex.artofproblemsolving.com/5/e/1/5e10344fa44829a9a3857f672c501d29075326a9.png" class="latex" alt="$6m-10k=5.$" style="vertical-align: 0px" width="112" height="13" /> Since <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> are integers, the LHS will always be even and the RHS will always be odd, and thus, this case yields no solutions.
+</p><p>Case 2: <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is even and <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> is odd
+</p><p>Here, we get <img src="//latex.artofproblemsolving.com/8/a/d/8ad1a11368d047b562fa52f3071efa661b37ad87.png" class="latex" alt="$a=2k+1$" style="vertical-align: -2px" width="86" height="16" /> for some positive ineger <img src="//latex.artofproblemsolving.com/5/d/4/5d48e0968a64d782fe75bca620ce749938b7d0bb.png" class="latex" alt="$k.$" width="13" height="12" /> Then, <img src="//latex.artofproblemsolving.com/3/f/9/3f96cd9cc53483320319fed46e9e667e3e63e484.png" class="latex" alt="$b=2k+2.$" style="vertical-align: -1px" width="86" height="14" /> We let <img src="//latex.artofproblemsolving.com/5/b/6/5b6332d6a8c5a93f8d4a9dbe4caf5157c4af9ba5.png" class="latex" alt="$n = a^2-(2m+1)$" style="vertical-align: -4px" width="143" height="19" /> for some positive integer <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> so <img src="//latex.artofproblemsolving.com/4/9/7/497b873fe32bf1b538299477d45e273ae0e1963f.png" class="latex" alt="$f(n)=2k+1+2m+1=2k+2m+2$" style="vertical-align: -4px" width="310" height="18" /> and <img src="//latex.artofproblemsolving.com/9/9/c/99c0c951738c87207939cbe20ac741e1160c265b.png" class="latex" alt="$g(n)=2k+2+2m+1+4k+3 = 6k+2m+6.$" style="vertical-align: -4px" width="385" height="18" />
+</p><p>We set <img src="//latex.artofproblemsolving.com/3/3/a/33a87bff91c6e92b4ee358ef4ec5cf1b72c3c102.png" class="latex" alt="$\frac{2k+2m+2}{6k+2m+6} = \frac{4}{7},$" style="vertical-align: -14px" width="143" height="39" /> cross multiply, and rearrange to get <img src="//latex.artofproblemsolving.com/5/5/e/55e0d744f07087af32a4c5371d735106488a920a.png" class="latex" alt="$5k=3m-5,$" style="vertical-align: -3px" width="103" height="16" /> or <img src="//latex.artofproblemsolving.com/b/4/b/b4ba085d78cae2dbc3e983a968d0403e58228d1a.png" class="latex" alt="$k=\frac{3}{5}m-1.$" style="vertical-align: -12px" width="98" height="37" /> Since <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> are integers, <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> must be a multiple of <img src="//latex.artofproblemsolving.com/b/8/3/b835f2c6c592edc4583ce996f86bcc0d07ca8da5.png" class="latex" alt="$5.$" width="12" height="12" /> Some possible solutions for <img src="//latex.artofproblemsolving.com/9/e/6/9e695806b544fba2e5806536d2759a6e083ed996.png" class="latex" alt="$(k,m)$" style="vertical-align: -4px" width="46" height="18" /> with the least <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> and <img src="//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" class="latex" alt="$m$" width="15" height="8" /> are <img src="//latex.artofproblemsolving.com/7/4/7/74703ccd2f8cdeea29cd66b86a567c6c6b661fa1.png" class="latex" alt="$(2,5), (5,10), (8,15),$" style="vertical-align: -4px" width="159" height="18" /> and <img src="//latex.artofproblemsolving.com/3/5/4/354b15d19027acd0ab1dbd80b976749f63989c2e.png" class="latex" alt="$(11,20).$" style="vertical-align: -4px" width="62" height="18" />
+</p><p>We wish to minimize <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> since <img src="//latex.artofproblemsolving.com/e/d/2/ed2353aed026fbc35d1e50591cae11ff1007bbc6.png" class="latex" alt="$a=2k+1.$" style="vertical-align: -1px" width="87" height="14" /> One thing to keep in mind is the initial assumption <img src="//latex.artofproblemsolving.com/9/3/8/938271ae238fed0206beb1cdcaaefc5573c98906.png" class="latex" alt="$(a-1)^2 &lt; n &lt; a^2.$" style="vertical-align: -4px" width="142" height="19" />
+</p><p>The pair <img src="//latex.artofproblemsolving.com/e/a/9/ea9d3308a17610dcb38bfd84b443bdd0ea403605.png" class="latex" alt="$(2,5)$" style="vertical-align: -4px" width="38" height="18" /> gives <img src="//latex.artofproblemsolving.com/a/f/b/afb4f3e6be1a841d398e11a69a9d4a1d965514a3.png" class="latex" alt="$a=2(2)+1=5$" style="vertical-align: -5px" width="133" height="20" /> and <img src="//latex.artofproblemsolving.com/b/f/0/bf01a0ab7b0862113ec83362ea177968f5ba8c58.png" class="latex" alt="$n=5^2-(2(5)+1)=14.$" style="vertical-align: -4px" width="197" height="19" /> But <img src="//latex.artofproblemsolving.com/e/3/a/e3a9609f579ba2d7abf8aeee1305b0ea8f1d87f4.png" class="latex" alt="$4^2&lt;14&lt;5^2$" style="vertical-align: 0px" width="98" height="15" /> is clearly false, so we discard this case.
+</p><p>The pair <img src="//latex.artofproblemsolving.com/b/a/7/ba77260014f4bc5572944bdb94ee27dfa1575855.png" class="latex" alt="$(5,10)$" style="vertical-align: -4px" width="47" height="18" /> gives <img src="//latex.artofproblemsolving.com/c/9/4/c94c9ee85a52a7937fd738bd6d547347bb7c78f2.png" class="latex" alt="$a=2(5)+1=11$" style="vertical-align: -4px" width="138" height="18" /> and <img src="//latex.artofproblemsolving.com/9/4/4/944890b724b8882262195b041fa545192f34d6f3.png" class="latex" alt="$n=11^2-(2(10)+1)=100,$" style="vertical-align: -5px" width="228" height="21" /> which is a perfect square and therefore can be discarded.
+</p><p>The pair <img src="//latex.artofproblemsolving.com/8/9/5/895622b11d1903ff13fb477976d5c756dc085be5.png" class="latex" alt="$(8,15)$" style="vertical-align: -4px" width="47" height="18" /> gives <img src="//latex.artofproblemsolving.com/d/7/3/d73059ae3a54acff397b95966839a3d5b0d2d1c8.png" class="latex" alt="$a=2(8)+1=17$" style="vertical-align: -4px" width="139" height="18" /> and <img src="//latex.artofproblemsolving.com/e/a/4/ea4e30f44f49cab39cc711b3ca3afe27604846a0.png" class="latex" alt="$n=17^2-(2(15)+1)=258,$" style="vertical-align: -5px" width="228" height="21" /> which is between <img src="//latex.artofproblemsolving.com/b/a/d/bade9c1fe9e69f976dbef4cf4458c5671671ecf5.png" class="latex" alt="$16^2$" style="vertical-align: 0px" width="24" height="15" /> and <img src="//latex.artofproblemsolving.com/d/a/7/da78889a64dc9e07265176ed001353c5b71cc10b.png" class="latex" alt="$17^2$" style="vertical-align: 0px" width="24" height="15" /> so it is our smallest solution.
+</p><p>So, <img src="//latex.artofproblemsolving.com/f/2/2/f22276b19a678bad74c5ffbd3c88680365242af8.png" class="latex" alt="$\boxed{258}$" style="vertical-align: -5px" width="39" height="23" /> is the correct answer.
+</p><p>~mc21s
+</p>
+<h2><span id="Solution_6_(Short)"></span><span class="mw-headline" id="Solution_6_.28Short.29">Solution 6 (Short)</span></h2>
+<p>Say the answer is in the form <img src="//latex.artofproblemsolving.com/6/4/0/640d9779e7abd79852cf8a8a30859ea28666d500.png" class="latex" alt="$n^{2}-x$" style="vertical-align: -2px" width="53" height="18" />, then <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> must be odd or else <img src="//latex.artofproblemsolving.com/0/a/f/0afadd7728e7727c6c74dce2a991b422f1ef288c.png" class="latex" alt="$f(x) = g(x)$" style="vertical-align: -4px" width="92" height="18" />. Say <img src="//latex.artofproblemsolving.com/3/6/6/36630f46eeb07df58f2ad20600698e0341bfa055.png" class="latex" alt="$y = n^{2}-x$" style="vertical-align: -4px" width="87" height="20" />. <img src="//latex.artofproblemsolving.com/0/8/8/088ad3a9e58339d691167761825fec6fd14ac13c.png" class="latex" alt="$f(y) = x+n$" style="vertical-align: -5px" width="104" height="20" />, <img src="//latex.artofproblemsolving.com/4/1/e/41e5a8c42cad582b2676e3e53d6b4bd8f241fe78.png" class="latex" alt="$g(y) = 3n+2+x$" style="vertical-align: -5px" width="143" height="20" />. Because <img src="//latex.artofproblemsolving.com/2/4/a/24ae7143e718629d5762d98fb7936ec93eadf7d3.png" class="latex" alt="$f(y)/g(y)$" style="vertical-align: -5px" width="79" height="20" /> = <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />*(an integer)/<img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />*(an integer),  <img src="//latex.artofproblemsolving.com/5/5/d/55d2d6ae8dc42c453e185eb15218630a292c6e60.png" class="latex" alt="$f(y)$" style="vertical-align: -4px" width="33" height="18" /> is <img src="//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" />*(an integer) so <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> must be odd or else <img src="//latex.artofproblemsolving.com/5/5/d/55d2d6ae8dc42c453e185eb15218630a292c6e60.png" class="latex" alt="$f(y)$" style="vertical-align: -4px" width="33" height="18" /> would be odd. Solving for <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> in terms of <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> gives integer <img src="//latex.artofproblemsolving.com/8/2/c/82ce435deec1a16bf9e4ea49a224e7a197e96475.png" class="latex" alt="$x = (5/3)n+8/3$" style="vertical-align: -5px" width="138" height="20" /> which means <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> mod <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />, because <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is also odd, <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> mod <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" />. <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> must be less than <img src="//latex.artofproblemsolving.com/2/f/9/2f9a96c63183be91b9fe70e6e16dfa4bfec6f3da.png" class="latex" alt="$2n-1$" style="vertical-align: 0px" width="50" height="12" /> or else the minimum square above <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> would be <img src="//latex.artofproblemsolving.com/b/7/7/b77d5228eafef570dd489e3df26bc3fdf0763058.png" class="latex" alt="$(n-1)^{2}$" style="vertical-align: -5px" width="66" height="21" />. We set an inequality 
+<img src="//latex.artofproblemsolving.com/d/9/6/d96beb991f95ad9efab28293e7dec38c6f2a8307.png" class="latex" alt="$(5/3)n+8/3&lt;2n-1 =&gt; 5n+8&lt;6n-3 =&gt; n&gt;11$" style="vertical-align: -5px" width="436" height="20" />.   
+Since <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is <img src="//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> mod <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" />, <img src="//latex.artofproblemsolving.com/b/7/3/b7341545d5484c6c86ae46c3edc15cf1f772613c.png" class="latex" alt="$n = 17$" style="vertical-align: 0px" width="53" height="12" /> and <img src="//latex.artofproblemsolving.com/7/8/1/781414e17428cf4aee3d35e6b60665fe13b3e357.png" class="latex" alt="$x = 31$" style="vertical-align: 0px" width="51" height="13" /> giving <img src="//latex.artofproblemsolving.com/b/7/e/b7e613fb23f99c27a2737a568caa07b143455503.png" class="latex" alt="$17^{2}-31$" style="vertical-align: -2px" width="68" height="18" /> = <img src="//latex.artofproblemsolving.com/f/2/2/f22276b19a678bad74c5ffbd3c88680365242af8.png" class="latex" alt="$\boxed{258}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~mathophobia
+</p><p>~<img src="//latex.artofproblemsolving.com/latex.png" class="latex" alt="$\LaTeX$" style="vertical-align: -4px" width="46" height="15" /> added by Bread10
+</p>
+<h2><span class="mw-headline" id="Solution_7">Solution 7</span></h2>
+<p>Define a nonnegative integer <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> such that <img src="//latex.artofproblemsolving.com/e/1/6/e168986cafeb8fc4dd0d24488fb62c124bb3572a.png" class="latex" alt="$g(n)-f(n)$" style="vertical-align: -5px" width="94" height="20" /> = <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />. Since <img src="//latex.artofproblemsolving.com/b/a/1/ba12ce3b382e4215a267a32e1926ce15665bfbbb.png" class="latex" alt="$\frac{f(n)}{g(n)} = \frac{4}{7},$" style="vertical-align: -18px" width="84" height="45" /> <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> is a positive integer. Now, suppose 3 consecutive integers <img src="//latex.artofproblemsolving.com/c/c/6/cc6873715a60ff7706da71b8cad30cead78b1ad3.png" class="latex" alt="$a-1$" style="vertical-align: 0px" width="40" height="12" />, <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />, and <img src="//latex.artofproblemsolving.com/6/4/b/64be5731bafe97ab8fb5d0f9c52c1c5362f963d8.png" class="latex" alt="$a+1$" style="vertical-align: -1px" width="40" height="13" />, and <img src="//latex.artofproblemsolving.com/4/8/1/481ee96f7fad7e2824c2fe99fefa533dc9e1a65f.png" class="latex" alt="$(a-1)^2 &lt; n &lt; a^2$" style="vertical-align: -5px" width="141" height="21" />. When <img src="//latex.artofproblemsolving.com/9/d/2/9d28627b5865dbcb180dc28385dcc561c2cefe4d.png" class="latex" alt="$g(n) &gt; f(n)$" style="vertical-align: -5px" width="96" height="20" />, <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> must have a different parity than <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />, so that <img src="//latex.artofproblemsolving.com/e/e/f/eef0203e65664bd00b5f0325c5c5fcd81bcead8d.png" class="latex" alt="$f(n)$" style="vertical-align: -4px" width="34" height="18" />'s recursive sequence ends on <img src="//latex.artofproblemsolving.com/9/6/9/9698c992334be77221be8c8c819909eca34fde9b.png" class="latex" alt="$a^2$" width="15" height="15" />, while <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> continues to <img src="//latex.artofproblemsolving.com/6/0/7/60739085ef469e721f391d83a9dcdd8a8fb759b4.png" class="latex" alt="$(a+1)^2$" style="vertical-align: -4px" width="61" height="19" />. If this condition is satisfied, we can figure out the value of <img src="//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" /> based on <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />. According to the definitions of <img src="//latex.artofproblemsolving.com/e/e/f/eef0203e65664bd00b5f0325c5c5fcd81bcead8d.png" class="latex" alt="$f(n)$" style="vertical-align: -4px" width="34" height="18" /> and <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" />, <img src="//latex.artofproblemsolving.com/e/2/9/e29000395a1f00360a93d7a4e878e322af94183b.png" class="latex" alt="$f(n) = a+a^2-n,$" style="vertical-align: -5px" width="149" height="21" /> and <img src="//latex.artofproblemsolving.com/a/8/f/a8f883e5b6df55d4cbce2fed45aec811d5071e01.png" class="latex" alt="$g(n) = (a+1)+(a+1)^2-n,$" style="vertical-align: -5px" width="238" height="21" /> which gives <img src="//latex.artofproblemsolving.com/6/7/b/67be3802663175ce0dc4004c759e04c57c57f3ef.png" class="latex" alt="$k = 2a+2$" style="vertical-align: -2px" width="86" height="16" />. And because of <img src="//latex.artofproblemsolving.com/a/d/3/ad35962198a2ebc7ac82e3a5488d87b7398328e2.png" class="latex" alt="$f(n) + k = g(n)$" style="vertical-align: -5px" width="129" height="20" />, <img src="//latex.artofproblemsolving.com/a/6/2/a62fff7b76555204e67b7b0122dda676f6f87870.png" class="latex" alt="$\frac{k}{g(n)} = \frac{3}{7},$" style="vertical-align: -18px" width="83" height="44" /> so cross multiplying gives <img src="//latex.artofproblemsolving.com/5/5/7/5578193681dffb64f0814408569261125b5ea56e.png" class="latex" alt="$3g(n) = 14a+14$" style="vertical-align: -5px" width="138" height="20" />. This means that <img src="//latex.artofproblemsolving.com/0/9/4/0941821b507183bcda7a898521450ad255a4ae9e.png" class="latex" alt="$14a+14$" style="vertical-align: -2px" width="70" height="15" /> is divisible by 3, and thus <img src="//latex.artofproblemsolving.com/6/f/c/6fc95d74d277f19e2896fd4ad9cbeb11dad43830.png" class="latex" alt="$a \equiv 2 \pmod{3}$" style="vertical-align: -4px" width="113" height="18" />. The final thing left is to find the smallest <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> such that the corresponding value of <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> exist. Simple guess and check should give that the smallest value of <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> is <img src="//latex.artofproblemsolving.com/9/c/1/9c19b0a0f727823a736f3d80746d3f91414a6b5e.png" class="latex" alt="$a = 17$" style="vertical-align: 0px" width="52" height="12" />, which yields an answer of <img src="//latex.artofproblemsolving.com/7/6/6/766801880c898dc3cf9fe398d87a7f05050587ae.png" class="latex" alt="$n = \boxed{258}$" style="vertical-align: -6px" width="76" height="25" />.
+</p><p>~ Marchk26
+</p>
+<h2><span id="Solution_8_(Fast)"></span><span class="mw-headline" id="Solution_8_.28Fast.29">Solution 8 (Fast)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/8/a/1/8a1b42bcaf2e8a19898c4d9e25aea36035d6135a.png" class="latex" alt="$n=k^2-x$" style="vertical-align: -2px" width="87" height="18" />, where <img src="//latex.artofproblemsolving.com/1/5/b/15b8d77c54be379fd1a7ab84b47de687b2e4dca5.png" class="latex" alt="$0 \leq x \leq 2k-2$" style="vertical-align: -3px" width="120" height="17" />. This means that <img src="//latex.artofproblemsolving.com/8/e/0/8e0c6fd97fd456fd260e7d87a07c359491cdd01e.png" class="latex" alt="$f(n)=k+x$" style="vertical-align: -5px" width="105" height="20" />.
+For <img src="//latex.artofproblemsolving.com/6/5/9/659a6a2610357101d77dbae8eb9bf0b3100c08fd.png" class="latex" alt="$g(x)$" style="vertical-align: -4px" width="32" height="18" />, note that <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> must be odd, otherwise <img src="//latex.artofproblemsolving.com/e/e/c/eec982c75f59e20fc8da7b21838c8f27263843bf.png" class="latex" alt="$f(n)=g(n)$" style="vertical-align: -4px" width="93" height="18" />. This means that <img src="//latex.artofproblemsolving.com/3/f/d/3fda49917e5cf30f3fdcf2fbf4ed52d62ab10fbf.png" class="latex" alt="$g(n)$" style="vertical-align: -4px" width="33" height="18" /> must 'skip' one perfect square (being <img src="//latex.artofproblemsolving.com/0/e/5/0e5c83cc0c639fc2ed843bbe2d3d209fb478b104.png" class="latex" alt="$k^2$" width="16" height="15" />), and go to <img src="//latex.artofproblemsolving.com/c/e/1/ce1879a44818d1c5ee8286585d4d4b7e3df1d286.png" class="latex" alt="$(k+1)^2$" style="vertical-align: -4px" width="61" height="19" />. This will take <img src="//latex.artofproblemsolving.com/5/7/d/57dd4ca1deab7380c26e7d13d5d39022a3c82c20.png" class="latex" alt="$(k+1)^2-k^2+x+k+1=3k+x+2$" style="vertical-align: -5px" width="308" height="21" />. We have <img src="//latex.artofproblemsolving.com/7/b/8/7b8f8671221639daaabca7bad33244a063454991.png" class="latex" alt="$\frac{k+x}{3k+x+2}=\frac{4}{7}$" style="vertical-align: -15px" width="126" height="41" />. Cross multiplying and simplifying we get <img src="//latex.artofproblemsolving.com/d/8/f/d8fbbc5b133639424ba439d6ff6c032f4b2bcf45.png" class="latex" alt="$3x-5k=8$" style="vertical-align: -2px" width="96" height="16" />. Taking <img src="//latex.artofproblemsolving.com/9/a/0/9a0d8c08f0ad6a50346ffec72e968658f4b56f40.png" class="latex" alt="$mod 5$" width="43" height="12" /> we have <img src="//latex.artofproblemsolving.com/b/7/e/b7e5a5f608e6d969ec0ec1284349fce7d8fcbfb4.png" class="latex" alt="$3x=3 \mod 5$" style="vertical-align: -1px" width="117" height="14" /> or <img src="//latex.artofproblemsolving.com/5/9/f/59ff1802bd0810312e114d9890641c20c7076870.png" class="latex" alt="$x = 1 \mod 5$" style="vertical-align: -1px" width="108" height="14" />. Note that the inequality <img src="//latex.artofproblemsolving.com/1/5/b/15b8d77c54be379fd1a7ab84b47de687b2e4dca5.png" class="latex" alt="$0 \leq x \leq 2k-2$" style="vertical-align: -3px" width="120" height="17" /> when <img src="//latex.artofproblemsolving.com/4/a/9/4a917383c41c1de4163f0284d02a8e2168667760.png" class="latex" alt="$x=5t+1$" style="vertical-align: -2px" width="83" height="15" /> and <img src="//latex.artofproblemsolving.com/e/b/1/eb12fbf6664e02777e1e0e5aa000bc47532c61bc.png" class="latex" alt="$t \geq 5$" style="vertical-align: -3px" width="42" height="16" />. Trying out <img src="//latex.artofproblemsolving.com/7/a/8/7a8e7bdfca7acbee99b041e26804dfb90a8a6737.png" class="latex" alt="$t=5$" width="39" height="12" />, we get <img src="//latex.artofproblemsolving.com/3/3/c/33c69e94b14ccdb341b6959753f2aef546d04e2e.png" class="latex" alt="$x=26$" style="vertical-align: -1px" width="55" height="14" /> which doesn't work as x is even. Trying out <img src="//latex.artofproblemsolving.com/9/b/c/9bcc0eda03625a62c9fa0fb27cd84d54e47707ab.png" class="latex" alt="$t=6$" style="vertical-align: -1px" width="42" height="14" />, we get <img src="//latex.artofproblemsolving.com/1/8/7/1875c5bfd7db8f3b23b14a97b76e2f4a8c122ef4.png" class="latex" alt="$x=31$" style="vertical-align: -1px" width="55" height="14" /> and <img src="//latex.artofproblemsolving.com/f/4/7/f47539c1a0629a2ac310c7b044b8d60a5f12c939.png" class="latex" alt="$k=17$" style="vertical-align: 0px" width="52" height="13" />, which satisfies all conditions, meaning the answer is <img src="//latex.artofproblemsolving.com/2/7/c/27c1b9e6d84566f2c7160c32ca82cef6552c4d8f.png" class="latex" alt="$17^2-31=\boxed{258}.$" style="vertical-align: -6px" width="136" height="25" />
+</p><p>~E___
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/tRVe2bKwIY8">https://youtu.be/tRVe2bKwIY8</a>
+</p><p>~Mathematical Dexterity
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Interstigation">Video Solution by Interstigation</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/WmEmwt3xwoo">https://youtu.be/WmEmwt3xwoo</a>
+</p><p>~Interstigation
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2021_AIME_II" title="2021 AIME II">2021 AIME II</a></b> (<b><a href="/wiki/index.php/2021_AIME_II_Problems" title="2021 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2021_AIME_II_Answer_Key" title="2021 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2021">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_14" title="2021 AIME II Problems/Problem 14">Problem 14</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b>Last Question</b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_1" title="2021 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_2" title="2021 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_3" title="2021 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_4" title="2021 AIME II Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_5" title="2021 AIME II Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_6" title="2021 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_7" title="2021 AIME II Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_8" title="2021 AIME II Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_9" title="2021 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_10" title="2021 AIME II Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_11" title="2021 AIME II Problems/Problem 11">11</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_12" title="2021 AIME II Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_13" title="2021 AIME II Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_14" title="2021 AIME II Problems/Problem 14">14</a> <b>•</b> <a class="mw-selflink selflink">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818195935
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.209 seconds
+Real time usage: 1.035 seconds
+Preprocessor visited node count: 3221/1000000
+Preprocessor generated node count: 7384/1000000
+Post‐expand include size: 1700/2097152 bytes
+Template argument size: 135/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 60046/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.477      1 -total
+ 73.02%    3.269      1 Template:AIME_box
+ 24.21%    1.084      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:20943-0!canonical and timestamp 20250818195933 and revision id 256815
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_15&amp;oldid=256815">https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_15&amp;oldid=256815</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e947b8e9d0650',t:'MTc1ODM0MjU0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818215758 -->
+</html>
+

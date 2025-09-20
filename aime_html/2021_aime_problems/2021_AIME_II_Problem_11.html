@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 AIME II Problems/Problem 11 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_AIME_II_Problems/Problem_11","wgTitle":"2021 AIME II Problems/Problem 11","wgCurRevisionId":240755,"wgRevisionId":240755,"wgArticleId":20939,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_AIME_II_Problems/Problem_11","wgRelevantArticleId":20939,"wgRequestId":"f41ea034d3680a0818433924","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_AIME_II_Problems_Problem_11 rootpage-2021_AIME_II_Problems_Problem_11 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 AIME II Problems/Problem 11																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_11" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2021_AIME_II_Problems/Problem_11&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_11&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2021_AIME_II_Problems/Problem_11&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2021_AIME_II_Problems/Problem_11" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 AIME II Problems/Problem 11</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Logic.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Logic)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28THINK.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (THINK)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Video_Solution"><span class="tocnumber">7</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Animated_Solution_by_Interstigation"><span class="tocnumber">8</span> <span class="toctext">Animated Solution by Interstigation</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#See_Also"><span class="tocnumber">9</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>A teacher was leading a class of four perfectly logical students. The teacher chose a set <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> of four integers and gave a different number in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> to each student. Then the teacher announced to the class that the numbers in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> were four consecutive two-digit positive integers, that some number in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> was divisible by <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" />, and a different number in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> was divisible by <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />. The teacher then asked if any of the students could deduce what <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is, but in unison, all of the students replied no.
+</p><p>However, upon hearing that all four students replied no, each student was able to determine the elements of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />. Find the sum of all possible values of the greatest element of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />.
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>Note that <img src="//latex.artofproblemsolving.com/1/0/4/1044f33d078cf4ff631c424b020601c6cd3243ac.png" class="latex" alt="$\operatorname{lcm}(6,7)=42.$" style="vertical-align: -5px" width="118" height="20" /> It is clear that <img src="//latex.artofproblemsolving.com/f/f/a/ffad8ff1d47b7a8c890e5dce310d8f4c7e997d4b.png" class="latex" alt="$42\not\in S$" style="vertical-align: -4px" width="52" height="17" /> and <img src="//latex.artofproblemsolving.com/6/d/9/6d991a454275e5f0f83e83aa61263144684420cd.png" class="latex" alt="$84\not\in S,$" style="vertical-align: -4px" width="55" height="17" /> otherwise the three other elements in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> are divisible by neither <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> nor <img src="//latex.artofproblemsolving.com/b/1/7/b17ce6fcb2994d4241d780dd5311d828db133411.png" class="latex" alt="$7.$" width="12" height="12" />
+</p><p>In the table below, the multiples of <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> are colored in yellow, and the multiples of <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> are colored in green. By the least common multiple, we obtain cycles: If <img src="//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is a possible maximum value of <img src="//latex.artofproblemsolving.com/2/f/2/2f2e8e8dd78b26ddc9ac278cc179101d30644cae.png" class="latex" alt="$S,$" style="vertical-align: -3px" width="15" height="16" /> then <img src="//latex.artofproblemsolving.com/9/7/9/979eb14a985c476a6499f73d73f7d781a6440a91.png" class="latex" alt="$n+42$" style="vertical-align: -1px" width="50" height="13" /> must be another possible maximum value of <img src="//latex.artofproblemsolving.com/2/f/2/2f2e8e8dd78b26ddc9ac278cc179101d30644cae.png" class="latex" alt="$S,$" style="vertical-align: -3px" width="15" height="16" /> and vice versa. By observations, we circle all possible maximum values of <img src="//latex.artofproblemsolving.com/0/d/7/0d7e49ad93a99ed6dcafd1c6acba511a181ab6a4.png" class="latex" alt="$S.$" width="14" height="12" />
+<img src="//latex.artofproblemsolving.com/7/5/2/7526c151bf536ffc8f506aef3d976912c7b69b68.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */ size(20cm);  fill((5,0)--(6,0)--(6,2)--(5,2)--cycle,yellow); fill((11,0)--(12,0)--(12,3)--(11,3)--cycle,yellow); fill((17,1)--(18,1)--(18,3)--(17,3)--cycle,yellow); fill((23,1)--(24,1)--(24,3)--(23,3)--cycle,yellow); fill((29,1)--(30,1)--(30,3)--(29,3)--cycle,yellow); fill((35,1)--(36,1)--(36,3)--(35,3)--cycle,yellow);  fill((6,0)--(7,0)--(7,2)--(6,2)--cycle,green); fill((13,0)--(14,0)--(14,3)--(13,3)--cycle,green); fill((20,1)--(21,1)--(21,3)--(20,3)--cycle,green); fill((27,1)--(28,1)--(28,3)--(27,3)--cycle,green); fill((34,1)--(35,1)--(35,3)--(34,3)--cycle,green);  fill((42,3)--(41,3)--(41,2)--cycle,yellow); fill((42,2)--(41,2)--(41,1)--cycle,yellow); fill((42,3)--(42,2)--(41,2)--cycle,green); fill((42,2)--(42,1)--(41,1)--cycle,green);  for (real i=9.5; i&lt;=41.5; ++i) {    label(&quot;$&quot;+string(i+0.5)+&quot;$&quot;,(i,2.5),fontsize(9pt)); }  for (real i=0.5; i&lt;=41.5; ++i) {    label(&quot;$&quot;+string(i+42.5)+&quot;$&quot;,(i,1.5),fontsize(9pt)); }  for (real i=0.5; i&lt;=14.5; ++i) {    label(&quot;$&quot;+string(i+84.5)+&quot;$&quot;,(i,0.5),fontsize(9pt)); }  draw(circle((6.5,1.5),0.45)); draw(circle((6.5,0.5),0.45)); draw(circle((7.5,1.5),0.45)); draw(circle((7.5,0.5),0.45)); draw(circle((8.5,1.5),0.45)); draw(circle((8.5,0.5),0.45)); draw(circle((13.5,2.5),0.45)); draw(circle((13.5,1.5),0.45)); draw(circle((13.5,0.5),0.45)); draw(circle((14.5,2.5),0.45)); draw(circle((14.5,1.5),0.45)); draw(circle((14.5,0.5),0.45)); draw(circle((20.5,2.5),0.45)); draw(circle((20.5,1.5),0.45)); draw(circle((23.5,2.5),0.45)); draw(circle((23.5,1.5),0.45)); draw(circle((29.5,2.5),0.45)); draw(circle((29.5,1.5),0.45)); draw(circle((30.5,2.5),0.45)); draw(circle((30.5,1.5),0.45)); draw(circle((35.5,2.5),0.45)); draw(circle((35.5,1.5),0.45)); draw(circle((36.5,2.5),0.45)); draw(circle((36.5,1.5),0.45)); draw(circle((37.5,2.5),0.45)); draw(circle((37.5,1.5),0.45));  draw((9,3)--(42,3)); draw((0,2)--(42,2)); draw((0,1)--(42,1)); draw((0,0)--(15,0));  for (real i=0; i&lt;9; ++i)  {     draw((i,2)--(i,0)); }  for (real i=9; i&lt;16; ++i)  {     draw((i,3)--(i,0)); }  for (real i=16; i&lt;=42; ++i)  {     draw((i,3)--(i,1)); } [/asy]" width="945" height="68" />
+From the second row of the table above, we perform casework on the possible maximum value of <img src="//latex.artofproblemsolving.com/2/e/0/2e0a6377c5d368567b4ea4990c703e9c4af38188.png" class="latex" alt="$S:$" width="20" height="12" />
+<img src="//latex.artofproblemsolving.com/e/3/0/e30d6aa7f6d66bb41c6c2f5e69c56956e74de15a.png" class="latexcenter" alt="\[\begin{array}{c||c|c|l} &amp; &amp; &amp; \\ [-2.5ex] \textbf{Max Value} &amp; \boldsymbol{S} &amp; \textbf{Valid?} &amp; \hspace{16.25mm}\textbf{Reasoning/Conclusion} \\ [0.5ex] \hline &amp; &amp; &amp; \\ [-2ex] 49 &amp; \{46,47,48,49\} &amp; &amp; \text{The student who gets } 46 \text{ will reply yes.} \\ 50 &amp; \{47,48,49,50\} &amp; \checkmark &amp; \text{Another possibility is } S=\{89,90,91,92\}. \\ 51 &amp; \{48,49,50,51\} &amp; &amp; \text{The student who gets } 51 \text{ will reply yes.} \\ 56 &amp; \{53,54,55,56\} &amp; &amp; \text{The student who gets } 53 \text{ will reply yes.} \\ 57 &amp; \{54,55,56,57\} &amp; &amp; \text{The student who gets } 57 \text{ will reply yes.} \\ 63 &amp; \{60,61,62,63\} &amp; &amp; \text{The students who get } 60,61,62 \text{ will reply yes.} \\ 66 &amp; \{63,64,65,66\} &amp; &amp; \text{The students who get } 64,65,66 \text{ will reply yes.} \\ 72 &amp; \{69,70,71,72\} &amp; &amp; \text{The student who gets } 69 \text{ will reply yes.} \\ 73 &amp; \{70,71,72,73\} &amp; &amp; \text{The student who gets } 73 \text{ will reply yes.} \\ 78 &amp; \{75,76,77,78\} &amp; &amp; \text{The student who gets } 75 \text{ will reply yes.} \\ 79 &amp; \{76,77,78,79\} &amp; \checkmark &amp; \text{Another possibility is } S=\{34,35,36,37\}. \\ 80 &amp; \{77,78,79,80\} &amp; &amp; \text{The student who gets } 80 \text{ will reply yes.} \end{array}\]" width="667" height="271" />
+Finally, all possibilities for <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> are <img src="//latex.artofproblemsolving.com/8/c/5/8c565324acf28cfb878023f9170947ccbaee2fcb.png" class="latex" alt="$\{34,35,36,37\}, \{47,48,49,50\}, \{76,77,78,79\},$" style="vertical-align: -4px" width="365" height="18" /> and <img src="//latex.artofproblemsolving.com/1/5/f/15ff4f04471de2e6408ebc953991323b10041e60.png" class="latex" alt="$\{89,90,91,92\},$" style="vertical-align: -4px" width="119" height="18" /> from which the answer is <img src="//latex.artofproblemsolving.com/2/3/2/2320e8b6a82313b2a8496e006faa934618a7ddf2.png" class="latex" alt="$37+50+79+92=\boxed{258}.$" style="vertical-align: -5px" width="205" height="23" />
+</p><p><u><b>Remarks</b></u>
+</p>
+<ol style="margin-left: 1.5em;">
+  <li>Alternatively, we can reconstruct the second table in this solution as follows, where Y and N denote the replies of "yes" and "no", respectively. Notice that this table has some kind of symmetry!
+
+<img src="//latex.artofproblemsolving.com/0/b/2/0b24061d6be4d8f6fbd2bf0f8c7401d73e989548.png" class="latexcenter" alt="[asy] /* Made by MRENTHUSIASM */ size(20cm);  for (real j=5.5; j&lt;41.5; j+=6)  { 	fill((j+0.5,4)--(j-0.5,4)--(j-0.5,3)--(j+0.5,3)--cycle,yellow); }  for (real j=6.5; j&lt;41.5; j+=7)  { 	fill((j+0.5,4)--(j-0.5,4)--(j-0.5,3)--(j+0.5,3)--cycle,green); }  fill((4,1)--(8,1)--(8,2)--(4,2)--cycle,mediumgray); fill((33,1)--(37,1)--(37,2)--(33,2)--cycle,mediumgray); fill((42,4)--(41,4)--(41,3)--cycle,yellow); fill((42,4)--(42,3)--(41,3)--cycle,green);  for (real i=0.5; i&lt;=41.5; ++i) {    label(&quot;$&quot;+string(i+42.5)+&quot;$&quot;,(i,3.5),fontsize(9pt)); }  draw(circle((6.5,3.5),0.45)); draw(circle((7.5,3.5),0.45)); draw(circle((8.5,3.5),0.45)); draw(circle((13.5,3.5),0.45)); draw(circle((14.5,3.5),0.45)); draw(circle((20.5,3.5),0.45)); draw(circle((23.5,3.5),0.45)); draw(circle((29.5,3.5),0.45)); draw(circle((30.5,3.5),0.45)); draw(circle((35.5,3.5),0.45)); draw(circle((36.5,3.5),0.45)); draw(circle((37.5,3.5),0.45));  label(&quot;Y&quot;,(3.5,2.5),blue); label(&quot;N&quot;,(4.5,2.5),blue);  label(&quot;N&quot;,(5.5,2.5),blue); label(&quot;N&quot;,(6.5,2.5),blue);  label(&quot;N&quot;,(4.5,1.5),blue); label(&quot;N&quot;,(5.5,1.5),blue);  label(&quot;N&quot;,(6.5,1.5),blue); label(&quot;N&quot;,(7.5,1.5),blue);  label(&quot;N&quot;,(5.5,0.5),blue); label(&quot;N&quot;,(6.5,0.5),blue);  label(&quot;N&quot;,(7.5,0.5),blue); label(&quot;Y&quot;,(8.5,0.5),blue);  label(&quot;Y&quot;,(10.5,2.5),blue); label(&quot;N&quot;,(11.5,2.5),blue);  label(&quot;N&quot;,(12.5,2.5),blue); label(&quot;N&quot;,(13.5,2.5),blue);  label(&quot;N&quot;,(11.5,1.5),blue); label(&quot;N&quot;,(12.5,1.5),blue);  label(&quot;N&quot;,(13.5,1.5),blue); label(&quot;Y&quot;,(14.5,1.5),blue);  label(&quot;Y&quot;,(17.5,2.5),blue); label(&quot;Y&quot;,(18.5,2.5),blue);  label(&quot;Y&quot;,(19.5,2.5),blue); label(&quot;N&quot;,(20.5,2.5),blue);  label(&quot;N&quot;,(20.5,1.5),blue); label(&quot;Y&quot;,(21.5,1.5),blue);  label(&quot;Y&quot;,(22.5,1.5),blue); label(&quot;Y&quot;,(23.5,1.5),blue);  label(&quot;Y&quot;,(26.5,2.5),blue); label(&quot;N&quot;,(27.5,2.5),blue);  label(&quot;N&quot;,(28.5,2.5),blue); label(&quot;N&quot;,(29.5,2.5),blue);  label(&quot;N&quot;,(27.5,1.5),blue); label(&quot;N&quot;,(28.5,1.5),blue);  label(&quot;N&quot;,(29.5,1.5),blue); label(&quot;Y&quot;,(30.5,1.5),blue);  label(&quot;Y&quot;,(32.5,2.5),blue); label(&quot;N&quot;,(33.5,2.5),blue);  label(&quot;N&quot;,(34.5,2.5),blue); label(&quot;N&quot;,(35.5,2.5),blue);  label(&quot;N&quot;,(33.5,1.5),blue); label(&quot;N&quot;,(34.5,1.5),blue);  label(&quot;N&quot;,(35.5,1.5),blue); label(&quot;N&quot;,(36.5,1.5),blue);  label(&quot;N&quot;,(34.5,0.5),blue); label(&quot;N&quot;,(35.5,0.5),blue);  label(&quot;N&quot;,(36.5,0.5),blue); label(&quot;Y&quot;,(37.5,0.5),blue);   for (real i=0; i&lt;=42; ++i) {     draw((i,4)--(i,3)); }  draw((0,4)--(42,4)); draw((0,3)--(42,3)); [/asy]" width="945" height="92" /></li>
+  <li>As a confirmation, we can verify that each student will be able to deduce what <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is upon hearing the four replies of "no" in unison. For example, if <img src="//latex.artofproblemsolving.com/9/c/f/9cf5612f24c02f5e47e439fd483fcf70d0322456.png" class="latex" alt="$S=\{47,48,49,50\},$" style="vertical-align: -4px" width="155" height="18" /> then all students will know that no one gets <img src="//latex.artofproblemsolving.com/5/a/b/5abef9fdb0235b2ede2639538b5bd76711e058fa.png" class="latex" alt="$46$" style="vertical-align: 0px" width="17" height="13" /> or <img src="//latex.artofproblemsolving.com/a/7/2/a727bef7aec1145a712ffa07ca8da91afc1a79b1.png" class="latex" alt="$51,$" style="vertical-align: -4px" width="25" height="17" /> otherwise that student will reply yes (as discussed). Therefore, all students will conclude that <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> has only one possibility.</li><p class="mw-empty-elt">
+</p></ol>
+<p>~MRENTHUSIASM
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>We know right away that <img src="//latex.artofproblemsolving.com/f/f/a/ffad8ff1d47b7a8c890e5dce310d8f4c7e997d4b.png" class="latex" alt="$42\not\in S$" style="vertical-align: -4px" width="52" height="17" /> and <img src="//latex.artofproblemsolving.com/8/9/c/89cfe448d448d1960c122f4f703f2bb3dc53d9ae.png" class="latex" alt="$84\not\in S$" style="vertical-align: -4px" width="54" height="18" /> as stated in Solution 1.
+</p><p>To get a feel for the problem, let’s write out some possible values of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> based on the teacher’s remarks. The first multiple of 7 that is two-digit is 14. The closest multiple of six from 14 is 12, and therefore there are two possible sets of four consecutive integers containing 12 and 14; <img src="//latex.artofproblemsolving.com/7/c/5/7c5eb78032faa5cb1b18bb413b356b24abdade58.png" class="latex" alt="$\{11,12,13,14\}$" style="vertical-align: -5px" width="117" height="20" /> and <img src="//latex.artofproblemsolving.com/6/4/d/64d084875f9e2c7121f00386c0b9567751d94f71.png" class="latex" alt="$\{12,13,14,15\}$" style="vertical-align: -5px" width="117" height="20" />. Here we get our first crucial idea; that if the multiples of 6 and 7 differ by two, there will be 2 possible sets of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> without any student input. Similarly, if they differ by 3, there will be only 1 possible set, and if they differ by 1, 3 possible sets.
+</p><p>Now we read the student input. Each student says they can’t figure out what <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is just based on the teacher’s information, which means each student has to have a number that would be in 2 or 3 of the possible sets (This is based off of the first line of student input). However, now that each student knows that all of them have numbers that fit into more than one possible set, this means that S cannot have two possible sets because otherwise, when shifting from one set to the other, one of the end numbers would not be in the shifted set, but we know each number has to fall in two or more possible sets. For example, take <img src="//latex.artofproblemsolving.com/7/c/5/7c5eb78032faa5cb1b18bb413b356b24abdade58.png" class="latex" alt="$\{11,12,13,14\}$" style="vertical-align: -5px" width="117" height="20" /> and <img src="//latex.artofproblemsolving.com/6/4/d/64d084875f9e2c7121f00386c0b9567751d94f71.png" class="latex" alt="$\{12,13,14,15\}$" style="vertical-align: -5px" width="117" height="20" />. The numbers at the end, 11 and 15, only fall in one set, but each number must fall in at least two sets. This means that there must be three possible sets of S, in which case the actual S would be the middle S.
+Take for example <img src="//latex.artofproblemsolving.com/e/1/b/e1b33956b80760d761712e0a694113bc6110ced7.png" class="latex" alt="$\{33,34,35,36\}$" style="vertical-align: -5px" width="117" height="20" />, <img src="//latex.artofproblemsolving.com/2/6/a/26a835243ce01515b42b97f127a4d0377ecb8ad4.png" class="latex" alt="$\{34,35,36,37\}$" style="vertical-align: -4px" width="114" height="18" />, and <img src="//latex.artofproblemsolving.com/a/7/2/a721c4fc758c29820df9551d94727758cb11887e.png" class="latex" alt="$\{35,36,37,38\}$" style="vertical-align: -5px" width="117" height="20" />. 37 and 34 fall in two sets while 35 and 36 fall in all three sets, so the condition is met. Now, this means that the multiple of 6 and 7 must differ by 1. 
+Since 42 means the difference is 0, when you add/subtract 6 and 7, you will obtain the desired difference of 1, and similarly adding/subtracting 6 or 7 from 84 will also obtain the difference of 1. Thus there are four possible sets of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />; <img src="//latex.artofproblemsolving.com/2/6/a/26a835243ce01515b42b97f127a4d0377ecb8ad4.png" class="latex" alt="$\{34,35,36,37\}$" style="vertical-align: -4px" width="114" height="18" />, <img src="//latex.artofproblemsolving.com/6/8/a/68ac70be6df136b4628849b422c0a07b57e86532.png" class="latex" alt="$\{47,48,49,50\}$" style="vertical-align: -4px" width="114" height="18" />, <img src="//latex.artofproblemsolving.com/2/9/d/29d894e91cbbb47e7037c77b7e1a243841d663bd.png" class="latex" alt="$\{76,77,78,79\}$" style="vertical-align: -4px" width="114" height="18" /> and <img src="//latex.artofproblemsolving.com/5/4/9/549461e0a9e8642f462e41491bbf4bd629ec54c3.png" class="latex" alt="$\{89,90,91,92.\}$" style="vertical-align: -5px" width="122" height="20" />. Therefore the sum of the greatest elements of the possible sets <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is <img src="//latex.artofproblemsolving.com/4/0/c/40cc6ded80774eda7abaf38f683752bc335a8e29.png" class="latex" alt="$37+50+79+92=\boxed{258}$" style="vertical-align: -6px" width="204" height="25" />
+</p><p>~KingRavi
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>In a solution that satisfies these constraints, the multiple of 6 must be adjacent to multiple of 7. The other two numbers must be on either side. 
+</p><p>WLOG assume the set is <img src="//latex.artofproblemsolving.com/7/9/1/791c12878eca662ca09e3e31b8ffbf8233060fcf.png" class="latex" alt="$\{a,6j,7k,b\}$" style="vertical-align: -5px" width="97" height="20" />. The student with numbers <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />, <img src="//latex.artofproblemsolving.com/f/1/7/f1792b5821280d81c79ec72cdde33f542f5e444b.png" class="latex" alt="$6j$" style="vertical-align: -4px" width="19" height="17" />, and <img src="//latex.artofproblemsolving.com/1/c/2/1c2d97b164f6f0adb33315e88175f831b441888c.png" class="latex" alt="$7k$" style="vertical-align: -1px" width="21" height="14" /> can think the set is <img src="//latex.artofproblemsolving.com/5/3/e/53e9dd97e1819afc4e2b556902d80d7acb7d431c.png" class="latex" alt="$\{a-1, a,6j,7k\}$" style="vertical-align: -5px" width="131" height="20" /> or <img src="//latex.artofproblemsolving.com/7/9/1/791c12878eca662ca09e3e31b8ffbf8233060fcf.png" class="latex" alt="$\{a,6j,7k,b\}$" style="vertical-align: -5px" width="97" height="20" />, and the students with number <img src="//latex.artofproblemsolving.com/f/1/7/f1792b5821280d81c79ec72cdde33f542f5e444b.png" class="latex" alt="$6j$" style="vertical-align: -4px" width="19" height="17" />, <img src="//latex.artofproblemsolving.com/1/c/2/1c2d97b164f6f0adb33315e88175f831b441888c.png" class="latex" alt="$7k$" style="vertical-align: -1px" width="21" height="14" />, and <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> can think the set is <img src="//latex.artofproblemsolving.com/7/9/1/791c12878eca662ca09e3e31b8ffbf8233060fcf.png" class="latex" alt="$\{a,6j,7k,b\}$" style="vertical-align: -5px" width="97" height="20" /> or <img src="//latex.artofproblemsolving.com/9/5/8/9581c9cc5a552eb8be135e05b86b2c0ca5cbbd71.png" class="latex" alt="$\{6j,7k,b, b+1\}$" style="vertical-align: -5px" width="127" height="20" />. Therefore, none of the students know the set for sure. 
+</p><p>Playing around with the arrangement of the multiple of 6 and multiple of 7 shows that this is the only configuration viewed as ambiguous to all the students. (Therefore when they hear nobody else knows either, they can find out it is this configuration)
+</p><p>Considering <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> as <img src="//latex.artofproblemsolving.com/7/9/1/791c12878eca662ca09e3e31b8ffbf8233060fcf.png" class="latex" alt="$\{a,6j,7k,b\}$" style="vertical-align: -5px" width="97" height="20" />,b is 2 mod 6 and 1 mod 7, so <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> is 8 mod 42. (since it is all 2-digit, the values are either 50 or 92).
+</p><p>Similarly, considering <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> as <img src="//latex.artofproblemsolving.com/c/1/4/c1484e3691d6a4398562325a80fe0e8408f69593.png" class="latex" alt="$\{a,7j,6k,b\}$" style="vertical-align: -5px" width="97" height="20" />, <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> is 1 mod 6 and 2 mod 7, so <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> is 37 mod 42. The values that satisfy that are 37 and 79. 
+</p><p>The total sum of all these values is therefore <img src="//latex.artofproblemsolving.com/2/a/8/2a8caa6cfc42590945a6348ce123bcc8675d9320.png" class="latex" alt="$50+92+37+79=\boxed{258}$" style="vertical-align: -6px" width="204" height="25" />.
+</p><p>This solution will even work when the bounds (in this question, 2-digit so &lt;100) are much larger and it is impractical to perform casework.
+</p><p>~balav123
+</p>
+<h2><span id="Solution_4_(Logic)"></span><span class="mw-headline" id="Solution_4_.28Logic.29">Solution 4 (Logic)</span></h2>
+<p>Consider the tuple <img src="//latex.artofproblemsolving.com/4/4/c/44c1c1b28449067b9b540c8d112bad31d18f21ff.png" class="latex" alt="$(a, a+1, a+2, a+3)$" style="vertical-align: -5px" width="173" height="20" /> as a possible <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />. If one of the values in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> or <img src="//latex.artofproblemsolving.com/9/6/f/96faea847e02913922a697e156449abb2205bae1.png" class="latex" alt="$4 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" />, observe the student will be able to deduce <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> with no additional information. This is because, if a value is <img src="//latex.artofproblemsolving.com/7/0/f/70f7e3d5ba020e5a91c1cbab2f887e1966b4457e.png" class="latex" alt="$b = 3 \pmod{7}$" style="vertical-align: -5px" width="115" height="20" /> and <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> contains a <img src="//latex.artofproblemsolving.com/4/4/8/448d734c51c70be44621ffcb2517e7c743a75b9e.png" class="latex" alt="$0 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" />, then the values of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> must be <img src="//latex.artofproblemsolving.com/8/2/5/82597a3386ef77dab1b8c7e66bdfd54dd4882831.png" class="latex" alt="$(b-3, b-2, b-1, b)$" style="vertical-align: -5px" width="165" height="20" />. Similarly, if we are given a <img src="//latex.artofproblemsolving.com/4/7/4/4746527fcec2faa37f375a75513087f5a463bc7f.png" class="latex" alt="$b \equiv 4 \pmod{7}$" style="vertical-align: -5px" width="115" height="20" /> and we know that <img src="//latex.artofproblemsolving.com/4/4/8/448d734c51c70be44621ffcb2517e7c743a75b9e.png" class="latex" alt="$0 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> is in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />, <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> must be <img src="//latex.artofproblemsolving.com/c/5/c/c5c406d456098645d4095bd55824f4200125f87a.png" class="latex" alt="$(b, b+1, b+2, b+3).$" style="vertical-align: -5px" width="170" height="20" /> Hence, the only possibility for <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> is <img src="//latex.artofproblemsolving.com/e/f/c/efcae235acb46ae08f29781e5a888a2f94338bc4.png" class="latex" alt="$5, 6 \pmod{7}.$" style="vertical-align: -5px" width="105" height="20" />
+</p><p>In either case, we are guaranteed there is a <img src="//latex.artofproblemsolving.com/8/c/3/8c32e1510489254340fdf0cab1e63f7da78b9e79.png" class="latex" alt="$6, 0, 1 \pmod{7}$" style="vertical-align: -5px" width="117" height="20" /> value in <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />. The difference comes down to if there is a <img src="//latex.artofproblemsolving.com/3/3/d/33de0b7cb44cfc0b0ef87247ae9ceec11d8cbe1a.png" class="latex" alt="$5 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> value or a <img src="//latex.artofproblemsolving.com/3/f/0/3f0c1b2b2e12f86dc88b4ffdf83756a1b69adb40.png" class="latex" alt="$1 \pmod{7}$" style="vertical-align: -4px" width="79" height="18" /> value. The person receiving such value will be able to determine all of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> but the <img src="//latex.artofproblemsolving.com/8/c/3/8c32e1510489254340fdf0cab1e63f7da78b9e79.png" class="latex" alt="$6, 0, 1 \pmod{7}$" style="vertical-align: -5px" width="117" height="20" /> people will not be able to differentiate the two cases ... yet.
+</p><p>Now consider which value among the consecutive integers is <img src="//latex.artofproblemsolving.com/7/7/4/7746a00dc4c407c1993e98ed6e64b4f5cf24df5d.png" class="latex" alt="$c \equiv 3 \pmod{6}$" style="vertical-align: -5px" width="115" height="20" />, if any. The person will know that <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is either <img src="//latex.artofproblemsolving.com/3/8/c/38c2771bb9445987eb60d5a328fe7c650d8ce92f.png" class="latex" alt="$(c-3, c-2, c-1, c)$" style="vertical-align: -5px" width="166" height="20" /> or <img src="//latex.artofproblemsolving.com/e/f/8/ef877cd9ec5b234c5aa47f10617f193a9215be89.png" class="latex" alt="$(c, c+1, c+2, c+3)$" style="vertical-align: -5px" width="166" height="20" /> to have a <img src="//latex.artofproblemsolving.com/e/8/9/e8966903c26e0531219b351c8eb07b504bb91975.png" class="latex" alt="$0 \pmod{6}$" style="vertical-align: -5px" width="83" height="20" /> value in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />. Neither the <img src="//latex.artofproblemsolving.com/5/7/f/57fbb593d38ed92ec68c1fe30cea32150d0bd0c1.png" class="latex" alt="$6, 1 \pmod{7}$" style="vertical-align: -5px" width="100" height="20" /> person can be <img src="//latex.artofproblemsolving.com/d/e/b/deb582e1b9e8535b3c12f98884e3127d57e4884a.png" class="latex" alt="$3 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" />, else they can decipher what <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is right off the bat by considering which set has <img src="//latex.artofproblemsolving.com/2/9/c/29cbfdbf02623b2484713e053a2950dad2e9cdd2.png" class="latex" alt="$0 \pmod{7}.$" style="vertical-align: -5px" width="88" height="20" /> This translates to the possible <img src="//latex.artofproblemsolving.com/3/3/d/33de0b7cb44cfc0b0ef87247ae9ceec11d8cbe1a.png" class="latex" alt="$5 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> or <img src="//latex.artofproblemsolving.com/3/f/0/3f0c1b2b2e12f86dc88b4ffdf83756a1b69adb40.png" class="latex" alt="$1 \pmod{7}$" style="vertical-align: -4px" width="79" height="18" /> person cannot be <img src="//latex.artofproblemsolving.com/e/8/9/e8966903c26e0531219b351c8eb07b504bb91975.png" class="latex" alt="$0 \pmod{6}$" style="vertical-align: -5px" width="83" height="20" />. We are given that <img src="//latex.artofproblemsolving.com/4/4/8/448d734c51c70be44621ffcb2517e7c743a75b9e.png" class="latex" alt="$0 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> and <img src="//latex.artofproblemsolving.com/e/8/9/e8966903c26e0531219b351c8eb07b504bb91975.png" class="latex" alt="$0 \pmod{6}$" style="vertical-align: -5px" width="83" height="20" /> cannot be the same person. Hence we conclude one of the <img src="//latex.artofproblemsolving.com/6/1/7/617f33d5f281f850cf159a18cb3624d1fc8c6f63.png" class="latex" alt="$6 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> or <img src="//latex.artofproblemsolving.com/3/f/0/3f0c1b2b2e12f86dc88b4ffdf83756a1b69adb40.png" class="latex" alt="$1 \pmod{7}$" style="vertical-align: -4px" width="79" height="18" /> must be the <img src="//latex.artofproblemsolving.com/e/8/9/e8966903c26e0531219b351c8eb07b504bb91975.png" class="latex" alt="$0 \pmod{6}$" style="vertical-align: -5px" width="83" height="20" /> person.
+</p><p>Let the <img src="//latex.artofproblemsolving.com/6/1/7/617f33d5f281f850cf159a18cb3624d1fc8c6f63.png" class="latex" alt="$6 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> person be <img src="//latex.artofproblemsolving.com/b/0/8/b0823c85620ad0327388add71f33a8c9dfe340dd.png" class="latex" alt="$0 \pmod{6}.$" style="vertical-align: -5px" width="88" height="20" /> Then--hypothetical--<img src="//latex.artofproblemsolving.com/f/a/a/faa25300beb9377fb49faea543a329eedddb7c7d.png" class="latex" alt="$c \equiv 2 \pmod{7}$" style="vertical-align: -5px" width="115" height="20" /> person is <img src="//latex.artofproblemsolving.com/a/f/d/afd81c3445e4c07926b1e809b32a03ef76519b66.png" class="latex" alt="$3 \pmod{6}.$" style="vertical-align: -5px" width="88" height="20" /> After the first round, the <img src="//latex.artofproblemsolving.com/8/c/3/8c32e1510489254340fdf0cab1e63f7da78b9e79.png" class="latex" alt="$6, 0, 1 \pmod{7}$" style="vertical-align: -5px" width="117" height="20" /> people realize that <img src="//latex.artofproblemsolving.com/f/0/c/f0c263ac862f87dfd9f8aba7dc70d27a97d39901.png" class="latex" alt="$2 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> is not in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> else they would have deduced <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> by noting <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> was either <img src="//latex.artofproblemsolving.com/3/8/c/38c2771bb9445987eb60d5a328fe7c650d8ce92f.png" class="latex" alt="$(c-3, c-2, c-1, c)$" style="vertical-align: -5px" width="166" height="20" /> or <img src="//latex.artofproblemsolving.com/e/f/8/ef877cd9ec5b234c5aa47f10617f193a9215be89.png" class="latex" alt="$(c, c+1, c+2, c+3)$" style="vertical-align: -5px" width="166" height="20" /> to have a <img src="//latex.artofproblemsolving.com/e/8/9/e8966903c26e0531219b351c8eb07b504bb91975.png" class="latex" alt="$0 \pmod{6}$" style="vertical-align: -5px" width="83" height="20" /> and choosing the former based on where <img src="//latex.artofproblemsolving.com/4/4/8/448d734c51c70be44621ffcb2517e7c743a75b9e.png" class="latex" alt="$0 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> is. Hence they figure out <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> by knowing <img src="//latex.artofproblemsolving.com/8/3/7/83749be7eeda0497702ffbd223188942b83fd988.png" class="latex" alt="$5 \pmod{7}.$" style="vertical-align: -5px" width="88" height="20" /> So <img src="//latex.artofproblemsolving.com/0/b/3/0b31bfadde7bd2c81bf0feba80706fb552dbd47e.png" class="latex" alt="$a \equiv 5 \pmod{7}$" style="vertical-align: -5px" width="117" height="20" /> and <img src="//latex.artofproblemsolving.com/7/b/a/7ba07e017c9ca54f9a743147d38435f90842cf91.png" class="latex" alt="$a \equiv 5 \pmod{6}$" style="vertical-align: -5px" width="117" height="20" /> (from <img src="//latex.artofproblemsolving.com/6/1/7/617f33d5f281f850cf159a18cb3624d1fc8c6f63.png" class="latex" alt="$6 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> person being <img src="//latex.artofproblemsolving.com/e/8/9/e8966903c26e0531219b351c8eb07b504bb91975.png" class="latex" alt="$0 \pmod{6}$" style="vertical-align: -5px" width="83" height="20" />).
+</p><p>Similarly, if  <img src="//latex.artofproblemsolving.com/3/f/0/3f0c1b2b2e12f86dc88b4ffdf83756a1b69adb40.png" class="latex" alt="$1 \pmod{7}$" style="vertical-align: -4px" width="79" height="18" /> person is <img src="//latex.artofproblemsolving.com/e/8/9/e8966903c26e0531219b351c8eb07b504bb91975.png" class="latex" alt="$0 \pmod{6}$" style="vertical-align: -5px" width="83" height="20" /> we find that <img src="//latex.artofproblemsolving.com/e/2/f/e2f9d7fb28364b951b9c6d92fa51818be41b72c0.png" class="latex" alt="$a \equiv 6 \pmod{7}$" style="vertical-align: -5px" width="117" height="20" /> (so a <img src="//latex.artofproblemsolving.com/f/0/c/f0c263ac862f87dfd9f8aba7dc70d27a97d39901.png" class="latex" alt="$2 \pmod{7}$" style="vertical-align: -5px" width="83" height="20" /> is in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />) and <img src="//latex.artofproblemsolving.com/7/3/7/73746086da13a11eaea03201b0bdb9feedced6a0.png" class="latex" alt="$a \equiv 4 \pmod{6}.$" style="vertical-align: -5px" width="122" height="20" />
+</p><p>By CRT, the possibilities are <img src="//latex.artofproblemsolving.com/c/1/5/c15426502ed33522c171ec8186fc79abb534dce5.png" class="latex" alt="$a \equiv 5,  34 \pmod{42}.$" style="vertical-align: -5px" width="157" height="20" /> The sum of the greatest values of <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> are the sum of <img src="//latex.artofproblemsolving.com/6/7/4/674c6a8df8e7da9316eb9409afd1a322e038d657.png" class="latex" alt="$a + 3$" style="vertical-align: -2px" width="43" height="15" /> and so we get <img src="//latex.artofproblemsolving.com/4/b/f/4bfd8becc245a96f37c5983fe364b2b21c4811e3.png" class="latex" alt="$(34 + 3) + (47 + 3) + (76 + 3) + (89 + 3) = \boxed{258}.$" style="vertical-align: -6px" width="391" height="25" /> 
+</p><p>~Aaryabhatta1
+</p>
+<h2><span id="Solution_5_(THINK)"></span><span class="mw-headline" id="Solution_5_.28THINK.29">Solution 5 (THINK)</span></h2>
+<p>Start by writing down every two-digit multiple of <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />. First, <img src="//latex.artofproblemsolving.com/e/d/0/ed0d6c36fdad9c2874053be46c7e4120f2edcf47.png" class="latex" alt="$42$" style="vertical-align: 0px" width="17" height="12" /> and <img src="//latex.artofproblemsolving.com/4/1/3/4131457f67c5dbfd8b1c6be1f74a47595a9bd3be.png" class="latex" alt="$84$" style="vertical-align: 0px" width="18" height="13" /> will not be in <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> because we need two distinct numbers where one is a multiple of <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and ANOTHER is a multiple of <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />. Furthermore, it is clear at this point that if the multiples of <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> are exactly <img src="//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> apart, then it will be obvious what <img src="//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is; it is just the smaller multiple to the larger multiple. Therefore, we cross out numbers <img src="//latex.artofproblemsolving.com/7/7/8/7787560370af87675a004b70bed11c7a0bd05945.png" class="latex" alt="$18, 21, 24, 60, 63, 66$" style="vertical-align: -4px" width="151" height="17" />. 
+</p><p>That leaves us with pairs of multiples of <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> that are exactly <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> or <img src="//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> apart. In this case, if the multiples of <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> are two apart, such as <img src="//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> and <img src="//latex.artofproblemsolving.com/8/2/0/820a20de2847dfdc1bc5cffc8d904933150032bd.png" class="latex" alt="$14$" style="vertical-align: 0px" width="18" height="12" />, then the non-multiples will be able to deduce what the set is; this leaves that the <img src="//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> and <img src="//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> must be one apart.
+</p><p>Specifically, these are pairs <img src="//latex.artofproblemsolving.com/f/5/5/f5530a9a3e45a5304f910cbcbdd2875fb32f4ffa.png" class="latex" alt="$(35, 36), (48, 49), (77, 78),$" style="vertical-align: -5px" width="199" height="20" /> and <img src="//latex.artofproblemsolving.com/0/6/0/060752f8ba1956642cdb5da89940fedc7bd38816.png" class="latex" alt="$(90, 91)$" style="vertical-align: -5px" width="60" height="20" />. In each of these pairs, respectively, the largest number will be one greater than the larger multiple, namely <img src="//latex.artofproblemsolving.com/2/d/2/2d21524f0bf6315fb9e0e342a28094a0466a0a4a.png" class="latex" alt="$37, 50, 79, 92$" style="vertical-align: -4px" width="99" height="17" />. Therefore, our answer is <img src="//latex.artofproblemsolving.com/1/1/9/119a20d78cd4652612638ce27b8a3db37f408a3a.png" class="latex" alt="$37 + 50 + 79 + 92 = \boxed{258}$" style="vertical-align: -6px" width="204" height="25" />. 
+</p><p>~ xHypotenuse
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=7jKjilTRhs4">https://www.youtube.com/watch?v=7jKjilTRhs4</a>
+</p>
+<h2><span class="mw-headline" id="Animated_Solution_by_Interstigation">Animated Solution by Interstigation</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/TKXU33jnXkI">https://youtu.be/TKXU33jnXkI</a>
+</p><p>~Interstigation
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2021_AIME_II" title="2021 AIME II">2021 AIME II</a></b> (<b><a href="/wiki/index.php/2021_AIME_II_Problems" title="2021 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2021_AIME_II_Answer_Key" title="2021 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2021">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_10" title="2021 AIME II Problems/Problem 10">Problem 10</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_12" title="2021 AIME II Problems/Problem 12">Problem 12</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2021_AIME_II_Problems/Problem_1" title="2021 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_2" title="2021 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_3" title="2021 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_4" title="2021 AIME II Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_5" title="2021 AIME II Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_6" title="2021 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_7" title="2021 AIME II Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_8" title="2021 AIME II Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_9" title="2021 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_10" title="2021 AIME II Problems/Problem 10">10</a> <b>•</b> <a class="mw-selflink selflink">11</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_12" title="2021 AIME II Problems/Problem 12">12</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_13" title="2021 AIME II Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_14" title="2021 AIME II Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2021_AIME_II_Problems/Problem_15" title="2021 AIME II Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818203217
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.121 seconds
+Real time usage: 0.125 seconds
+Preprocessor visited node count: 1638/1000000
+Preprocessor generated node count: 3872/1000000
+Post‐expand include size: 1734/2097152 bytes
+Template argument size: 132/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 36211/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.102      1 -total
+ 72.83%    4.444      1 Template:AIME_box
+ 24.55%    1.498      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:20939-0!canonical and timestamp 20250818203217 and revision id 240755
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_11&amp;oldid=240755">https://artofproblemsolving.com/wiki/index.php?title=2021_AIME_II_Problems/Problem_11&amp;oldid=240755</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e946f7fecc953',t:'MTc1ODM0MjU0NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250819011207 -->
+</html>
+

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="https://artofproblemsolving.com/apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="https://assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="https://artofproblemsolving.com/assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/sharedsite.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/navheader.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/footer.css">
+		<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="//assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="//artofproblemsolving.com/assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2024 AIME II Problems/Problem 12 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2024_AIME_II_Problems/Problem_12","wgTitle":"2024 AIME II Problems/Problem 12","wgCurRevisionId":240740,"wgRevisionId":240740,"wgArticleId":27011,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Geometry Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2024_AIME_II_Problems/Problem_12","wgRelevantArticleId":27011,"wgRequestId":"487c4eddc6b63978d5b88c80","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@0o9mmcg",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2024_AIME_II_Problems_Problem_12 rootpage-2024_AIME_II_Problems_Problem_12 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2024 AIME II Problems/Problem 12																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="/wiki/index.php/2024_AIME_II_Problems/Problem_12" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:2024_AIME_II_Problems/Problem_12&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="/wiki/index.php?title=2024_AIME_II_Problems/Problem_12&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="/wiki/index.php?title=2024_AIME_II_Problems/Problem_12&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="/wiki/index.php/Special:WhatLinksHere/2024_AIME_II_Problems/Problem_12" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="/wiki/index.php/Special:SpecialPages" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2024 AIME II Problems/Problem 12</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1_.28completely_no_calculus_required.29"><span class="tocnumber">2</span> <span class="toctext">Solution 1 (completely no calculus required)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28coordinate_bash.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (coordinate bash)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28small_perturb.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (small perturb)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6.28trig_identities_and_questionable_rigidity.29"><span class="tocnumber">7</span> <span class="toctext">Solution 6(trig identities and questionable rigidity)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7"><span class="tocnumber">8</span> <span class="toctext">Solution 7</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_8_.28intuitive_elementary_calculus_solution.29"><span class="tocnumber">9</span> <span class="toctext">Solution 8 (intuitive elementary calculus solution)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Video_Solution"><span class="tocnumber">10</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Video_Solution_2"><span class="tocnumber">11</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Geometry_Solution"><span class="tocnumber">12</span> <span class="toctext">Geometry Solution</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">13</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let \(O=(0,0)\), \(A=\left(\tfrac{1}{2},0\right)\), and \(B=\left(0,\tfrac{\sqrt{3}}{2}\right)\) be points in the coordinate plane. Let \(\mathcal{F}\) be the family of segments \(\overline{PQ}\) of unit length lying in the first quadrant with \(P\) on the \(x\)-axis and \(Q\) on the \(y\)-axis. There is a unique point \(C\) on \(\overline{AB}\), distinct from \(A\) and \(B\),  that does not belong to any segment from \(\mathcal{F}\) other than \(\overline{AB}\). Then \(OC^2=\tfrac{p}{q}\), where \(p\) and \(q\) are relatively prime positive integers. Find \(p+q\).
+</p><p><br />
+</p>
+<h2><span id="Solution_1_(completely_no_calculus_required)"></span><span class="mw-headline" id="Solution_1_.28completely_no_calculus_required.29">Solution 1 (completely no calculus required)</span></h2>
+<p>Begin by finding the equation of the line <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" />: <img src="//latex.artofproblemsolving.com/5/8/1/5812cb5c625c18cca1f36c802b32fa4a1a4f94c1.png" class="latex" alt="$y= -\sqrt{3}x+\frac{\sqrt{3}}{2}$" style="vertical-align: -13px" width="135" height="43" /> Now, consider the general equation of all lines that belong to <img src="//latex.artofproblemsolving.com/7/d/f/7df6156885f7ecb884a812ae7155a0ad3ea33684.png" class="latex" alt="$\mathcal{F}$" style="vertical-align: 0px" width="15" height="13" />. Let <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> be located at <img src="//latex.artofproblemsolving.com/4/d/9/4d9a1a2bfc90e4eb3684cce0698c7aebbeede0c8.png" class="latex" alt="$(a,0)$" style="vertical-align: -4px" width="39" height="18" /> and <img src="//latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> be located at <img src="//latex.artofproblemsolving.com/5/0/8/5085f53f913f21af1857d2767db27ee043ebe0d3.png" class="latex" alt="$(0,b)$" style="vertical-align: -4px" width="37" height="18" />. With these assumptions, we may arrive at the equation <img src="//latex.artofproblemsolving.com/e/8/0/e80ff9fe3fea644c5fd3e2f30f6ec0807493baab.png" class="latex" alt="$ay +bx =ab$" style="vertical-align: -4px" width="103" height="18" />. However, a critical condition that must be satisfied by our parameters is that <img src="//latex.artofproblemsolving.com/c/b/4/cb41a338501ac2431badf6cf14cc97e8f8b64ad6.png" class="latex" alt="$a^2+b^2=1$" style="vertical-align: -1px" width="87" height="16" />, since the length of <img src="//latex.artofproblemsolving.com/f/1/f/f1fcf923515a45c30d73c6f10653ed6b23b7124d.png" class="latex" alt="$\overline{PQ}=1$" style="vertical-align: -4px" width="64" height="21" />. 
+</p><p>Here's the golden trick that resolves the problem: we wish to find some point <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> along <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> such that <img src="//latex.artofproblemsolving.com/0/d/e/0deaae00f6af4ac1f5882568e7b6667bb334a2ef.png" class="latex" alt="$\overline{PQ}$" style="vertical-align: -3px" width="29" height="19" /> passes through <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> if and only if <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" />. It's not hard to convince oneself of this, since the property <img src="//latex.artofproblemsolving.com/c/b/4/cb41a338501ac2431badf6cf14cc97e8f8b64ad6.png" class="latex" alt="$a^2+b^2=1$" style="vertical-align: -1px" width="87" height="16" /> implies that if <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" />, then <img src="//latex.artofproblemsolving.com/4/e/b/4eb59959dc14dd259b36332118fd76d1b91101f7.png" class="latex" alt="$\overline{PQ}=\overline{AB}$" style="vertical-align: -4px" width="83" height="21" />.
+</p><p>We should now try to relate the point <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> to some value of <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />. This is accomplished by finding the intersection of two lines: <img src="//latex.artofproblemsolving.com/0/4/4/044a9920f5ac42b0cb3f22ac11a56e1411899bb8.png" class="latexcenter" alt="\[     a\left(-\sqrt{3}x +\frac{\sqrt{3}}{2}\right) + x\sqrt{1-a^2} = a\sqrt{1-a^2} \]" width="333" height="53" />
+</p><p>Where we have also used the fact that <img src="//latex.artofproblemsolving.com/e/5/7/e5797b25378bbdc9788616954bbf680c54969e16.png" class="latex" alt="$b=\sqrt{1-a^2}$" style="vertical-align: -3px" width="97" height="21" />, which follows nicely from <img src="//latex.artofproblemsolving.com/9/0/7/907b9035efa54b85f627b1eddda64f452e485ef5.png" class="latex" alt="$a^2+b^2 =1$" style="vertical-align: -2px" width="90" height="18" />.  <img src="//latex.artofproblemsolving.com/c/0/e/c0ee2720313f38a93cbe6f21f0260456b98fa0a4.png" class="latexcenter" alt="\[     a\left(-\sqrt{3}x +\frac{\sqrt{3}}{2}\right)   = (a-x)\sqrt{1-a^2} \]" width="283" height="53" />
+</p><p>Square both sides and go through some algebraic manipulations to arrive at 
+<img src="//latex.artofproblemsolving.com/4/7/0/47054d561a3c23820cb495ad6c88ff240d06e28b.png" class="latexcenter" alt="\[     -a^4 +2xa^3+\left(-4x^2+3x+\frac{1}{4}\right)a^2-2xa+x^2=0 \]" width="399" height="43" />
+</p><p>Note how <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> is a solution to this polynomial, and it is logically so. If we found the set of intersections consisting of line segment <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> with an identical copy of itself, every single point on the line (all <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> values) should satisfy the equation. Thus, we can perform polynomial division to eliminate the extraneous solution <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" />. <img src="//latex.artofproblemsolving.com/e/4/4/e44b1ec86848e1ca2cea27d76f6db63301b9d9b0.png" class="latexcenter" alt="\[     -a^3 + \left(2x-\frac{1}{2}\right)a^2+(-4x^2+4x)a-2x^2=0 \]" width="363" height="43" />
+</p><p>Remember our original goal. It was to find an <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> value such that <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> is the only valid solution. Therefore, we can actually plug in <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> back into the equation to look for values of <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> such that the relation is satisfied, then eliminate undesirable answers.
+<img src="//latex.artofproblemsolving.com/e/8/5/e8599d1e692326df34ce66df62c0e48b5ed45703.png" class="latexcenter" alt="\[     16x^2-10x+1=0 \]" width="149" height="17" />
+This is easily factored, allowing us to determine that <img src="//latex.artofproblemsolving.com/a/7/7/a7748019dbdfff219164b7b4836b03540f589c1c.png" class="latex" alt="$x=\frac{1}{8},\frac{1}{2}$" style="vertical-align: -13px" width="71" height="38" />. The latter root is not our answer, since on line <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" />, <img src="//latex.artofproblemsolving.com/2/9/3/293bec9ca64641677589285fda42e2925cac63b7.png" class="latex" alt="$y\left(\frac{1}{2}\right)=0$" style="vertical-align: -18px" width="87" height="45" />, the horizontal line segment running from <img src="//latex.artofproblemsolving.com/f/9/6/f9603ca3089464e548fc6f1366bc474e7efef8d9.png" class="latex" alt="$(0,0)$" style="vertical-align: -4px" width="38" height="18" /> to <img src="//latex.artofproblemsolving.com/2/5/a/25a306093bbd9e0699c65dba033c9483cd379dc4.png" class="latex" alt="$(1,0)$" style="vertical-align: -4px" width="38" height="18" /> covers that point. From this, we see that <img src="//latex.artofproblemsolving.com/4/3/1/431ef9780f93ffb12986278c91f8f5921299dc9d.png" class="latex" alt="$x=\frac{1}{8}$" style="vertical-align: -12px" width="46" height="37" /> is the only possible candidate.
+</p><p>Going back to line <img src="//latex.artofproblemsolving.com/4/1/6/416ababe7613ddb4acc70520bf80ddbf5e2c43a4.png" class="latex" alt="$\overline{AB}, y= -\sqrt{3}x+\frac{\sqrt{3}}{2}$" style="vertical-align: -13px" width="171" height="43" />, plugging in <img src="//latex.artofproblemsolving.com/4/3/1/431ef9780f93ffb12986278c91f8f5921299dc9d.png" class="latex" alt="$x=\frac{1}{8}$" style="vertical-align: -12px" width="46" height="37" /> yields <img src="//latex.artofproblemsolving.com/3/e/f/3efa5d16a165635f6ed9d8242eb4da5786270f09.png" class="latex" alt="$y=\frac{3\sqrt{3}}{8}$" style="vertical-align: -13px" width="73" height="43" />. The distance from the origin is then given by <img src="//latex.artofproblemsolving.com/6/e/c/6eca1ddca0ac3d12f68a6f44597bfa161254ba0e.png" class="latex" alt="$\sqrt{\frac{1}{8^2}+\left(\frac{3\sqrt{3}}{8}\right)^2} =\sqrt{\frac{7}{16}}$" style="vertical-align: -25px" width="200" height="66" />. That number squared is <img src="//latex.artofproblemsolving.com/b/d/4/bd4ea89e8a9b511a1fd1ba07cb76c32eaaa35a50.png" class="latex" alt="$\frac{7}{16}$" style="vertical-align: -13px" width="20" height="37" />, so the answer is <img src="//latex.artofproblemsolving.com/f/9/6/f965c65ffafa96e1b4829f464d29824db0a23dc2.png" class="latex" alt="$\boxed{023}$" style="vertical-align: -5px" width="39" height="23" />. 
+</p><p><br />
+</p><p>~Installhelp_hex
+</p><p>Why this works: Assume the quartic equation has exactly two real roots. Then for <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> to be the only solution, it must be a doubled root. Thus, even after dividing the quartic by <img src="//latex.artofproblemsolving.com/d/e/7/de7582e15d16937d4fba51e9d1b465768e37ecd6.png" class="latex" alt="$a-\frac{1}{2}$" style="vertical-align: -12px" width="43" height="37" />, <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> is still a root.
+~inaccessibles
+</p><p><br />
+Other explanation: Clearly <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> works because then PQ = AB. Thus, we can factor out <img src="//latex.artofproblemsolving.com/d/e/7/de7582e15d16937d4fba51e9d1b465768e37ecd6.png" class="latex" alt="$a-\frac{1}{2}$" style="vertical-align: -12px" width="43" height="37" />. 
+</p><p>From the 3rd degree polynomial, it must either have 3 real roots, or 1 real root and 2 non real roots, because it has real coefficients.
+</p><p>So it must have atleast 1 real root. If this root wasn't <img src="//latex.artofproblemsolving.com/2/f/9/2f960094315d60883495f9b74148e17487ee9584.png" class="latex" alt="$\frac{1}{2}$" style="vertical-align: -12px" width="11" height="37" /> this would mean their is another line PQ that satisfies the equation. Thus, their must be another root at <img src="//latex.artofproblemsolving.com/5/8/3/58371499ac4be5e5fbf324de21151edfd8a2c0ac.png" class="latex" alt="$a=\frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> and plugging in, we can solve for <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />.
+~Bigbrain_2009
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p><img src="//latex.artofproblemsolving.com/5/a/7/5a737548820d48fbd3faf8a97555dfbc4bc9b5da.png" class="latex" alt="$y=-(\tan \theta) x+\sin \theta=-\sqrt{3}x+\frac{\sqrt{3}}{2}, x=\frac{\sqrt{3}-2\sin \theta}{2\sqrt{3}-2\tan \theta}$" style="vertical-align: -18px" width="445" height="48" />
+</p><p>Now, we want to find <img src="//latex.artofproblemsolving.com/c/2/b/c2b97fed97483e3175406b55e604b1aadf819412.png" class="latex" alt="$\lim_{\theta\to\frac{\pi}{3}}\frac{\sqrt{3}-2\sin \theta}{2\sqrt{3}-2\tan \theta}$" style="vertical-align: -18px" width="146" height="48" />. By L'Hôpital's rule, we get <img src="//latex.artofproblemsolving.com/8/f/5/8f5d5c8a3be760979c074d6b03eb3fea4473a54f.png" class="latex" alt="$x=\lim_{\theta\to\frac{\pi}{3}}\frac{\sqrt{3}-2\sin \theta}{2\sqrt{3}-2\tan \theta}=\lim_{\theta\to\frac{\pi}{3}}\cos^3{\theta}=\frac{1}{8}$" style="vertical-align: -18px" width="320" height="48" />. This means that <img src="//latex.artofproblemsolving.com/3/3/7/33700819d3a8807fe9809746a80433a888887032.png" class="latex" alt="$y=\frac{3\sqrt{3}}{8}\implies OC^2=\frac{7}{16}$" style="vertical-align: -13px" width="205" height="43" />, so we get <img src="//latex.artofproblemsolving.com/f/9/6/f965c65ffafa96e1b4829f464d29824db0a23dc2.png" class="latex" alt="$\boxed{023}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p>~Bluesoul
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>The equation of line <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> is <img src="//latex.artofproblemsolving.com/1/8/8/18854e7486960343d11a26265fd14901d4aa5ccd.png" class="latexcenter" alt="\[ y = \frac{\sqrt{3}}{2}  - \sqrt{3} x.  \hspace{1cm} (1) \]" width="192" height="41" />
+</p><p>The position of line  <img src="//latex.artofproblemsolving.com/7/a/b/7ab17967324fc2b12349c0610c6c256f4c829162.png" class="latex" alt="$PQ$" style="vertical-align: -3px" width="27" height="16" /> can be characterized by <img src="//latex.artofproblemsolving.com/3/4/4/344b92766669dbc4bfac1dc0623ca793a6749886.png" class="latex" alt="$\angle QPO$" style="vertical-align: -4px" width="58" height="18" />, denoted as <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" />.
+Thus, the equation of line <img src="//latex.artofproblemsolving.com/7/a/b/7ab17967324fc2b12349c0610c6c256f4c829162.png" class="latex" alt="$PQ$" style="vertical-align: -3px" width="27" height="16" /> is
+</p><p><img src="//latex.artofproblemsolving.com/8/7/d/87da397c8b555c2ea240f85355812860a8b642a7.png" class="latexcenter" alt="\[ y = \sin \theta - \tan \theta \cdot x . \hspace{1cm} (2) \]" width="225" height="18" />
+</p><p>Solving (1) and (2), the <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />-coordinate of the intersecting point of lines <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> and <img src="//latex.artofproblemsolving.com/7/a/b/7ab17967324fc2b12349c0610c6c256f4c829162.png" class="latex" alt="$PQ$" style="vertical-align: -3px" width="27" height="16" /> satisfies the following equation:
+</p><p><img src="//latex.artofproblemsolving.com/b/e/4/be456f37eb55dce5cd2947b605877acdddcb51e6.png" class="latexcenter" alt="\[ \frac{\frac{\sqrt{3}}{2} - \sqrt{3} x}{\sin \theta} + \frac{x}{\cos \theta} = 1 . \hspace{1cm} (1) \]" width="250" height="43" />
+</p><p>We denote the L.H.S. as <img src="//latex.artofproblemsolving.com/4/4/a/44a5e1cd361d3577eda0f0a7cbf0ab844aa3f7cd.png" class="latex" alt="$f \left( \theta; x \right)$" style="vertical-align: -5px" width="57" height="20" />.
+</p><p>We observe that <img src="//latex.artofproblemsolving.com/b/7/c/b7c604e518a8761c02be92b502be8f46baa9fc3b.png" class="latex" alt="$f \left( 60^\circ&#160;; x \right) = 1$" style="vertical-align: -5px" width="107" height="20" /> for all <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />.
+Therefore, the point <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> that this problem asks us to find can be equivalently stated in the following way:
+</p><p>We interpret Equation (1) as a parameterized equation that <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> is a tuning parameter and <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> is a variable that shall be solved and expressed in terms of <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />.
+In Equation (1), there exists a unique <img src="//latex.artofproblemsolving.com/d/d/c/ddcaf7b26d8b4bfe79ed812da0148f8f345c51dd.png" class="latex" alt="$x \in \left( 0, 1 \right)$" style="vertical-align: -5px" width="75" height="20" />, denoted as <img src="//latex.artofproblemsolving.com/e/7/2/e72754a5986fff7b4fc77b44f4e810012e5a93d6.png" class="latex" alt="$x_C$" style="vertical-align: -2px" width="20" height="10" /> (<img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />-coordinate of point <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />), such that the only solution is <img src="//latex.artofproblemsolving.com/9/0/d/90d724caac2633cd64de7387b26cfac25c522047.png" class="latex" alt="$\theta = 60^\circ$" width="57" height="13" />. For all other <img src="//latex.artofproblemsolving.com/f/3/a/f3a5d98abed157fefc88234fd60fc68d6f4dad46.png" class="latex" alt="$x \in \left( 0, 1 \right) \backslash \{ x_C \}$" style="vertical-align: -5px" width="127" height="20" />, there are more than one solutions with one solution <img src="//latex.artofproblemsolving.com/9/0/d/90d724caac2633cd64de7387b26cfac25c522047.png" class="latex" alt="$\theta = 60^\circ$" width="57" height="13" /> and at least another solution.
+</p><p>Given that function <img src="//latex.artofproblemsolving.com/d/7/6/d76b54b90428a9266ad102e8fa7a5dd984dc9823.png" class="latex" alt="$f \left( \theta&#160;; x \right)$" style="vertical-align: -5px" width="57" height="20" /> is differentiable, the above condition is equivalent to the first-order-condition
+<img src="//latex.artofproblemsolving.com/4/f/7/4f7dc0d2952371d554d9babd4d9db95103ee6e3c.png" class="latexcenter" alt="\[ \frac{\partial f \left( \theta&#160;; x_C \right) }{\partial \theta} \bigg|_{\theta = 60^\circ} = 0 . \]" width="160" height="45" />
+</p><p>Calculating derivatives in this equation, we get
+<img src="//latex.artofproblemsolving.com/4/3/a/43a5e2720c57d2a8c604b428074f9242206beb54.png" class="latexcenter" alt="\[ - \left( \frac{\sqrt{3}}{2} - \sqrt{3} x_C \right) \frac{\cos 60^\circ}{\sin^2 60^\circ} + x_C \frac{\sin 60^\circ}{\cos^2 60^\circ} = 0. \]" width="351" height="53" />
+</p><p>By solving this equation, we get
+<img src="//latex.artofproblemsolving.com/0/c/f/0cf3f5ffb4f4ef6dea551773a8ccbc1e239d53b5.png" class="latexcenter" alt="\[ x_C = \frac{1}{8} . \]" width="62" height="37" />
+</p><p>Plugging this into Equation (1), we get the <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />-coordinate of point <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />:
+<img src="//latex.artofproblemsolving.com/5/0/a/50a727fbac2dde4da713c7439daa00ae9f0ba664.png" class="latexcenter" alt="\[ y_C = \frac{3 \sqrt{3}}{8} . \]" width="84" height="41" />
+</p><p>Therefore,
+\begin{align*}
+OC^2 &amp; = x_C^2 + y_C^2 \\
+&amp; = \frac{7}{16} .
+\end{align*}
+</p><p>Therefore, the answer is <img src="//latex.artofproblemsolving.com/e/5/a/e5a5c762cc2240dda3fbbaf4be8f150bbe8f1973.png" class="latex" alt="$7 + 16 = \boxed{\textbf{(23) }}$" style="vertical-align: -11px" width="127" height="30" />.
+</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)
+</p>
+<h2><span id="Solution_4_(coordinate_bash)"></span><span class="mw-headline" id="Solution_4_.28coordinate_bash.29">Solution 4 (coordinate bash)</span></h2>
+<p>Let <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> be a segment in <img src="//latex.artofproblemsolving.com/7/d/f/7df6156885f7ecb884a812ae7155a0ad3ea33684.png" class="latex" alt="$\mathcal{F}$" style="vertical-align: 0px" width="15" height="13" /> with x-intercept <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and y-intercept <img src="//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" />. We can write <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> as
+\begin{align*}
+\frac{x}{a} + \frac{y}{b} &amp;= 1 \\
+y &amp;= b(1 - \frac{x}{a}).
+\end{align*}
+Let the unique point in the first quadrant <img src="//latex.artofproblemsolving.com/a/d/f/adfd9ae8a3fac031d3b8b470a52a709a23d4d6d2.png" class="latex" alt="$(x, y)$" style="vertical-align: -5px" width="44" height="20" /> lie on <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> and no other segment in <img src="//latex.artofproblemsolving.com/7/d/f/7df6156885f7ecb884a812ae7155a0ad3ea33684.png" class="latex" alt="$\mathcal{F}$" style="vertical-align: 0px" width="15" height="13" />. We can find <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> by solving
+<img src="//latex.artofproblemsolving.com/1/c/b/1cb56b35151a4f78c5366a2ba00a29037902c8f8.png" class="latexcenter" alt="\[b(1 - \frac{x}{a}) = (b + db)(1 - \frac{x}{a + da})\]" width="251" height="34" />
+and taking the limit as <img src="//latex.artofproblemsolving.com/f/8/5/f85392c2232027ab592e62bad2ed23b7368c70d0.png" class="latex" alt="$da, db \to 0$" style="vertical-align: -4px" width="84" height="18" />. Since <img src="//latex.artofproblemsolving.com/f/3/7/f37bba504894945c07a32f5496d74299a37aa51c.png" class="latex" alt="$s$" width="8" height="8" /> has length <img src="//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />, <img src="//latex.artofproblemsolving.com/c/b/1/cb121a6cd58dfec534be167da9c598bedb21c7ef.png" class="latex" alt="$a^2 + b^2 = 1^2$" style="vertical-align: -2px" width="97" height="18" /> by the Pythagorean theorem. Solving this for <img src="//latex.artofproblemsolving.com/4/d/f/4dfc70f39c1b8363cb568d0dec56ede6583b1c4a.png" class="latex" alt="$db$" style="vertical-align: -1px" width="19" height="14" />, we get
+\begin{align*}
+a^2 + b^2 &amp;= 1 \\
+b^2 &amp;= 1 - a^2 \\
+\frac{db^2}{da} &amp;= \frac{d(1 - a^2)}{da} \\
+2a\frac{db}{da} &amp;= -2a \\
+db &amp;= -\frac{a}{b}da.
+\end{align*}
+After we substitute <img src="//latex.artofproblemsolving.com/2/7/1/271c8e153558f32b73c24c6883fac84c1aa64c66.png" class="latex" alt="$db = -\frac{a}{b}da$" style="vertical-align: -13px" width="90" height="34" />, the equation for <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> becomes
+<img src="//latex.artofproblemsolving.com/5/8/2/5826f4d8304a51ad0c9d8da47d13713c12ac728e.png" class="latexcenter" alt="\[b(1 - \frac{x}{a}) = (b -\frac{a}{b} da)(1 - \frac{x}{a + da}).\]" width="272" height="34" />
+</p><p>In <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" />, <img src="//latex.artofproblemsolving.com/5/8/4/584468cd4c65823de9a250fe030f827bce3f7a6c.png" class="latex" alt="$a = \frac{1}{2}$" style="vertical-align: -12px" width="45" height="37" /> and <img src="//latex.artofproblemsolving.com/f/8/5/f859616eec1aee0e56640b3c564137fec4718283.png" class="latex" alt="$b = \frac{\sqrt{3}}{2}$" style="vertical-align: -13px" width="62" height="43" />. To find the x-coordinate of <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />, we substitute these into the equation for <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> and get
+\begin{align*}
+\frac{\sqrt{3}}{2}(1 - \frac{x}{\frac{1}{2}}) &amp;= (\frac{\sqrt{3}}{2} - \frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} da)(1 - \frac{x}{\frac{1}{2} + da}) \\
+\frac{\sqrt{3}}{2}(1 - 2x) &amp;= (\frac{\sqrt{3}}{2} - \frac{da}{\sqrt{3}})(1 - \frac{x}{\frac{1 + 2da}{2}}) \\
+\frac{\sqrt{3}}{2} - \sqrt{3}x &amp;= \frac{3 - 2da}{2\sqrt{3}}(1 - \frac{2x}{1 + 2da}) \\
+\frac{\sqrt{3}}{2} - \sqrt{3}x &amp;= \frac{3 - 2da}{2\sqrt{3}} \cdot \frac{1 + 2da - 2x}{1 + 2da} \\
+\frac{\sqrt{3}}{2} - \sqrt{3}x &amp;= \frac{3 + 6da - 6x - 2da - 4da^2 + 4xda}{2\sqrt{3} + 4\sqrt{3}da} \\
+(\frac{\sqrt{3}}{2} - \sqrt{3}x)(2\sqrt{3} + 4\sqrt{3}da) &amp;= 3 + 6da - 6x - 2da - 4da^2 + 4xda \\
+3 + 6da - 6x - 12xda &amp;= 3 + 4da - 6x - 4da^2 + 4xda \\
+2da &amp;= -4da^2 + 16xda \\
+16xda &amp;= 2da + 4da^2 \\
+x &amp;= \frac{da + 2da^2}{8da}.
+\end{align*}
+We take the limit as <img src="//latex.artofproblemsolving.com/6/e/7/6e7c6494d10c51efd2304c790d83a8555fb23e72.png" class="latex" alt="$da \to 0$" style="vertical-align: -1px" width="58" height="14" /> to get
+<img src="//latex.artofproblemsolving.com/8/9/7/897369d5f3e19a2cba09826e15f5b33d2d34c27f.png" class="latexcenter" alt="\[x = \lim_{da \to 0} \frac{da + 2da^2}{8da} = \lim_{da \to 0} \frac{1 + 2da}{8} = \frac{1}{8}.\]" width="317" height="39" />
+We substitute <img src="//latex.artofproblemsolving.com/2/0/b/20b95d9a942bd9719d186895a627673dda9e7497.png" class="latex" alt="$x = \frac{1}{8}$" style="vertical-align: -13px" width="50" height="38" /> into the equation for <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> to find the y-coordinate of <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />:
+<img src="//latex.artofproblemsolving.com/5/8/5/5856c278026623b0ab0ea2abfe30ea2b78838477.png" class="latexcenter" alt="\[y = b(1 - \frac{x}{a}) = \frac{\sqrt{3}}{2}(1 - \frac{\frac{1}{8}}{\frac{1}{2}}) = \frac{3\sqrt{3}}{8}.\]" width="278" height="47" />
+The problem asks for
+<img src="//latex.artofproblemsolving.com/2/1/7/21782548fda1c94c233f6917ea426cbc65fd583d.png" class="latexcenter" alt="\[OC^2 = x^2 + y^2 = (\frac{1}{8})^2 + (\frac{3\sqrt{3}}{8})^2 = \frac{7}{16} = \frac{p}{q},\]" width="344" height="44" />
+so <img src="//latex.artofproblemsolving.com/4/e/3/4e360314491c982d8e4a3316ec92b32d4cb853f1.png" class="latex" alt="$p + q = 7 + 16 = \boxed{023}$" style="vertical-align: -6px" width="179" height="25" />.
+</p>
+<h2><span id="Solution_5_(small_perturb)"></span><span class="mw-headline" id="Solution_5_.28small_perturb.29">Solution 5 (small perturb)</span></h2>
+<p><img src="//latex.artofproblemsolving.com/5/b/8/5b8b2170c51ddfe08233b19df590742415215e94.png" class="latexcenter" alt="[asy] pair O=(0,0); pair X=(1,0); pair Y=(0,1); pair A=(0.5,0); pair B=(0,sin(pi/3)); pair A1=(0.6,0); pair B1=(0,0.8); pair A2=(0.575,0.04); pair B2=(0.03,0.816); dot(O); dot(X); dot(Y); dot(A); dot(B); dot(A1); dot(B1); dot(A2); dot(B2); draw(X--O--Y); draw(A--B); draw(A1--B1); draw(A--A2); draw(B1--B2); label(&quot;$B$&quot;, B, W); label(&quot;$A$&quot;, A, S); label(&quot;$B_1$&quot;, B1, SW); label(&quot;$A_1$&quot;, A1, S); label(&quot;$B_2$&quot;, B2, E); label(&quot;$A_2$&quot;, A2, NE); label(&quot;$O$&quot;, O, SW); pair C=(0.18,0.56); label(&quot;$C$&quot;, C, E); dot(C); [/asy]" width="252" height="248" />
+</p><p>Let's move a little bit from <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> to <img src="//latex.artofproblemsolving.com/3/6/c/36c7f3f828cf12ab9cafeffad282468a95219600.png" class="latex" alt="$A_1$" style="vertical-align: -2px" width="19" height="15" />, then <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> must move to <img src="//latex.artofproblemsolving.com/2/4/3/243af6fad28c15abb3e11996374ba60e745bf543.png" class="latex" alt="$B_1$" style="vertical-align: -2px" width="19" height="15" /> to keep <img src="//latex.artofproblemsolving.com/5/d/6/5d6ddd6e21338e62af1f8831cd2d4e9aa6e4acd4.png" class="latex" alt="$A_1B_1 = 1$" style="vertical-align: -4px" width="77" height="17" />. <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> intersects with <img src="//latex.artofproblemsolving.com/f/4/6/f468920603bf6bb9fc352c0b775c4c350b2dd9a4.png" class="latex" alt="$A_1B_1$" style="vertical-align: -2px" width="40" height="15" /> at <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />. Pick points <img src="//latex.artofproblemsolving.com/e/3/a/e3a8ae66ded7f33f9385a37c9cadfb82720013d8.png" class="latex" alt="$A_2$" style="vertical-align: -2px" width="19" height="15" /> and <img src="//latex.artofproblemsolving.com/3/6/8/368b6f971b418d731c62ff2cb59f51c527d22849.png" class="latex" alt="$B_2$" style="vertical-align: -2px" width="20" height="15" /> on <img src="//latex.artofproblemsolving.com/0/c/5/0c54ccfa77b69efc23e15d107177d0bb82563ba5.png" class="latex" alt="$CA_1$" style="vertical-align: -4px" width="37" height="17" /> and <img src="//latex.artofproblemsolving.com/3/e/3/3e3a4ec0df571e719bd3f1d7e00bf71fc55ba2b9.png" class="latex" alt="$CB$" width="28" height="12" /> such that <img src="//latex.artofproblemsolving.com/a/1/4/a14369a53ac888d52d249b3a2fb310b01cf44ae8.png" class="latex" alt="$CA_2 = CA$" style="vertical-align: -4px" width="89" height="17" />, <img src="//latex.artofproblemsolving.com/9/3/9/939ad569e9d20259229d75cfcd0e4cd72fa5cb1d.png" class="latex" alt="$CB_2 = CB_1$" style="vertical-align: -4px" width="97" height="17" />, we have <img src="//latex.artofproblemsolving.com/7/9/6/796c2dd14fbadd5cdda516e4aa99002e1ddd5895.png" class="latex" alt="$A_1A_2 = BB_2$" style="vertical-align: -4px" width="104" height="17" />. Since <img src="//latex.artofproblemsolving.com/9/f/0/9f0bd1bf44e9dd29cf5383c208c802b0dccb4920.png" class="latex" alt="$AA_1$" style="vertical-align: -2px" width="32" height="15" /> is very small, <img src="//latex.artofproblemsolving.com/8/2/b/82b9c88cfd9c4f1925bc06a622fb758a555a896f.png" class="latex" alt="$\angle CA_1A \approx 60^\circ$" style="vertical-align: -4px" width="114" height="18" />, <img src="//latex.artofproblemsolving.com/9/4/d/94d67e57b8b30117c42ef1d74e60455bebf73621.png" class="latex" alt="$\angle CBB_1 \approx 30^\circ$" style="vertical-align: -4px" width="115" height="18" />, so <img src="//latex.artofproblemsolving.com/a/3/d/a3da949590e32fa5975a616f5a30a207a7e7cded.png" class="latex" alt="$AA_2\approx \sqrt{3}A_1A_2$" style="vertical-align: -4px" width="127" height="22" />, <img src="//latex.artofproblemsolving.com/9/3/9/93915c51006ebb2b9bc3833d7ad6ef0fe80afd1b.png" class="latex" alt="$B_1B_2 \approx \frac{1}{\sqrt{3}}BB_2$" style="vertical-align: -18px" width="133" height="43" />, by similarity, <img src="//latex.artofproblemsolving.com/b/6/b/b6b283211ac6243b1c3ce26521188d4f35409649.png" class="latex" alt="$\frac{CA}{CB} \approx \frac{CA}{CB_2} = \frac{AA_2}{B_1B_2} = \frac{\sqrt{3}A_1A_2}{\frac{1}{\sqrt{3}}BB_2} = 3$" style="vertical-align: -22px" width="297" height="52" />. So the coordinates of <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> is <img src="//latex.artofproblemsolving.com/8/7/3/873a1b365160a17c13d4da9a4d603b7d5b13b4da.png" class="latex" alt="$\left(\frac{1}{8}, \frac{3\sqrt{3}}{8}\right)$" style="vertical-align: -23px" width="88" height="55" />.
+</p><p>so <img src="//latex.artofproblemsolving.com/1/9/3/193b0bd0ba8c576d283568a288300cbbfd3d7909.png" class="latex" alt="$OC^2 = \frac{1}{64} + \frac{27}{64} = \frac{7}{16}$" style="vertical-align: -13px" width="175" height="38" />, the answer is <img src="//latex.artofproblemsolving.com/f/9/6/f965c65ffafa96e1b4829f464d29824db0a23dc2.png" class="latex" alt="$\boxed{023}$" style="vertical-align: -5px" width="39" height="23" />.
+</p>
+<h2><span id="Solution_6(trig_identities_and_questionable_rigidity)"></span><span class="mw-headline" id="Solution_6.28trig_identities_and_questionable_rigidity.29">Solution 6(trig identities and questionable rigidity)</span></h2>
+<p>Let's try to find the general form of a line that is in <img src="//latex.artofproblemsolving.com/7/d/f/7df6156885f7ecb884a812ae7155a0ad3ea33684.png" class="latex" alt="$\mathcal{F}$" style="vertical-align: 0px" width="15" height="13" /> based on what angle it makes with the x-axis, <img src="//latex.artofproblemsolving.com/c/d/4/cd44bb59e02b432c4dfde1690e054ce780798a9d.png" class="latex" alt="$OP = \cos{\theta}$" style="vertical-align: -1px" width="91" height="14" />, and <img src="//latex.artofproblemsolving.com/0/c/2/0c2b4858e98272402be4a0589f2fb9cbfc82ba24.png" class="latex" alt="$OQ = \sin{\theta}$" style="vertical-align: -4px" width="89" height="18" /> so its slope is <img src="//latex.artofproblemsolving.com/5/1/c/51cc025c06b71f02ff765e3a0ca88b9084964e21.png" class="latex" alt="$-\tan{\theta}$" style="vertical-align: -2px" width="57" height="16" /> and due to us knowing its y-intercept we know that our line has form <img src="//latex.artofproblemsolving.com/9/a/3/9a39320285fe0be314d95f1f8f8801105392bd6a.png" class="latex" alt="$y = -\tan{\theta}x + \sin{\theta}.$" style="vertical-align: -4px" width="163" height="18" /> 
+</p><p>Now we can analyze the system of equations made by <img src="//latex.artofproblemsolving.com/5/c/e/5ce70d521682d9e6ba9e6e7141e7f473c10312ff.png" class="latex" alt="$y = -\tan{\theta}x + \sin{\theta}$" style="vertical-align: -4px" width="158" height="18" /> and <img src="//latex.artofproblemsolving.com/9/c/9/9c993df55b2a5772dfd0e93ab51af7601688cd34.png" class="latex" alt="$y = -\tan{60^\circ}x + \sin{60^\circ}$" style="vertical-align: -4px" width="192" height="18" />, this gives us that <img src="//latex.artofproblemsolving.com/e/6/4/e64e79b2d63cd2ceaeba38a1ccafeab2fabf146a.png" class="latex" alt="$x = \dfrac{\sin{\theta}- \sin{60^\circ}}{\tan{\theta} - \sin{60^\circ}}.$" style="vertical-align: -15px" width="157" height="41" /> 
+</p><p>We can proceed to simplify our expression further: 
+<img src="//latex.artofproblemsolving.com/d/a/e/daef726e66ee06842e242e670ede6570c6d230e4.png" class="latexcenter" alt="\[x = \dfrac{\sin{\theta} - \sin{60^\circ}}{\frac{\sin{\theta}}{\cos{\theta}} - \frac{\sin{60^\circ}}{\cos{60^\circ}}}\]" width="144" height="44" /> <img src="//latex.artofproblemsolving.com/4/7/6/476e7bb633710f99857e9ce13550d8d3d9501b84.png" class="latexcenter" alt="\[= \dfrac{\sin{\theta} - \sin{60^\circ}}{\frac{\sin{(\theta - 60^\circ)}}{\cos{\theta}\cos{60^\circ}}}\]" width="128" height="46" /> <img src="//latex.artofproblemsolving.com/1/d/b/1dbb478649ada70d8d69ed54c549424536588f0d.png" class="latexcenter" alt="\[= \dfrac{2\sin{\dfrac{\theta - 60^\circ}{2}}\cos{\dfrac{\theta + 60^\circ}{2}}}{\dfrac{2\sin{\dfrac{\theta - 60^\circ}{2}}\cos{\dfrac{\theta - 60^\circ}{2}}}{\cos{\theta}\cos{60^\circ}}}\]" width="214" height="99" /> <img src="//latex.artofproblemsolving.com/9/5/e/95ef1cb7bc18554776b76e4cfa61e3dfdd140899.png" class="latexcenter" alt="\[= \dfrac{\sin{\dfrac{\theta - 60^\circ}{2}}}{\sin{\dfrac{\theta - 60^\circ}{2}}} \cdot \dfrac{\cos{\theta}\cos{60^\circ}\cos{\dfrac{\theta + 60^\circ}{2}}}{\cos{\dfrac{\theta - 60^\circ}{2}}}.\]" width="313" height="80" />
+</p><p>Seeing that there are only valid solutions when <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> is acute(all that is allowed anyways) and when <img src="//latex.artofproblemsolving.com/7/7/c/77cdf3720bbf46526af47101950f82df8c930ad5.png" class="latex" alt="$\theta \neq 60^\circ$" style="vertical-align: -4px" width="61" height="18" /> since one of the expressions in our simplified solution will equal <img src="//latex.artofproblemsolving.com/8/b/5/8b5f8a01adc0144788a9c0848dce9646f7b55837.png" class="latex" alt="$0/0$" style="vertical-align: -4px" width="26" height="18" />. Since there is only one intersection point for every <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> and vice versa in the appropriate domain and range(we can easily prove this by contradiction), we know that the missing element of the range(the points) must correspond with the excluded value. The x-coordinate of which which can be evaluated by taking the limit of our expression as <img src="//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png" class="latex" alt="$\theta$" width="8" height="13" /> goes to <img src="//latex.artofproblemsolving.com/2/9/f/29fa0a9949f018e121b2093216dd5db13d3abef0.png" class="latex" alt="$60^\circ$" width="24" height="13" /> which is <img src="//latex.artofproblemsolving.com/5/d/b/5db9e227e8177d26de452c2a2faeb6d45cc53d7b.png" class="latex" alt="$\frac{1}{8}$" style="vertical-align: -12px" width="11" height="37" /> regardless of the direction we approach <img src="//latex.artofproblemsolving.com/2/9/f/29fa0a9949f018e121b2093216dd5db13d3abef0.png" class="latex" alt="$60^\circ$" width="24" height="13" /> from. The corresponding <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> is <img src="//latex.artofproblemsolving.com/7/5/f/75f35d06b924d3bbd14e1f025706933e79ce7490.png" class="latex" alt="$\dfrac{3\sqrt{3}}{8}$" style="vertical-align: -13px" width="39" height="43" /> and using the distance formula gives us <img src="//latex.artofproblemsolving.com/f/9/6/f965c65ffafa96e1b4829f464d29824db0a23dc2.png" class="latex" alt="$\boxed{023}$" style="vertical-align: -5px" width="39" height="23" /> as our answer.
+</p><p>While this solution may seem long all of these steps come naturally.
+</p><p>~SailS
+</p>
+<h2><span class="mw-headline" id="Solution_7">Solution 7</span></h2>
+<div class="floatright"><a href="/wiki/index.php/File:2024_AIME_II_12_a.png" class="image"><img alt="2024 AIME II 12 a.png" src="https://wiki-images.artofproblemsolving.com//thumb/e/ef/2024_AIME_II_12_a.png/330px-2024_AIME_II_12_a.png" width="330" height="328" srcset="https://wiki-images.artofproblemsolving.com//thumb/e/ef/2024_AIME_II_12_a.png/495px-2024_AIME_II_12_a.png 1.5x, https://wiki-images.artofproblemsolving.com//e/ef/2024_AIME_II_12_a.png 2x" /></a></div>
+<p>Denote <img src="//latex.artofproblemsolving.com/0/9/a/09aed77184f2bdf793ea749d9dfe0a28aac7897f.png" class="latex" alt="$X(1,0), Y(0,1), P \in OX, Q \in OY, |PQ| = 1,$" style="vertical-align: -5px" width="352" height="20" />
+<img src="//latex.artofproblemsolving.com/4/4/3/44309f5ae3e05f391b213e04226e14a45d2f1d22.png" class="latexcenter" alt="\[k = const \in (0,1), \alpha = \angle OPQ.\]" width="242" height="18" />
+Then <img src="//latex.artofproblemsolving.com/2/8/3/283dd9a1ba9c5971f9ee39d4b28555e206b91615.png" class="latex" alt="$P = (\cos \alpha, 0), Q = (0, \sin \alpha).$" style="vertical-align: -5px" width="231" height="20" />
+</p><p>Let <img src="//latex.artofproblemsolving.com/b/9/9/b998c41c69e28fb63f842b343dc0c3775262e04e.png" class="latex" alt="$C \in PQ$" style="vertical-align: -4px" width="67" height="18" /> be the point with property <img src="//latex.artofproblemsolving.com/4/a/8/4a8b7a64bd0e488159e2247cae484493397a3a01.png" class="latex" alt="$k = \frac {PC}{QC} \implies$" style="vertical-align: -17px" width="113" height="43" />
+<img src="//latex.artofproblemsolving.com/7/5/e/75ee055acd405257879ec0c2147558815dfedd6b.png" class="latex" alt="$C = \left ( \frac{\cos \alpha}{k+1} , \frac{k \sin \alpha}{k+1} \right ).$" style="vertical-align: -18px" width="182" height="45" />
+</p><p>So locus of points <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> is the ellipse with semiaxes <img src="//latex.artofproblemsolving.com/b/f/e/bfe0cb68f9e0fcd3a240fa4f37606d494a6ab6f7.png" class="latex" alt="$\frac{1}{k+1}$" style="vertical-align: -14px" width="43" height="38" /> and <img src="//latex.artofproblemsolving.com/9/c/8/9c8e565dd5535b0d530fc620a7bc624a2a1fa5b6.png" class="latex" alt="$\frac{k}{k+1}.$" style="vertical-align: -15px" width="52" height="41" />
+</p><p>Point <img src="//latex.artofproblemsolving.com/c/c/9/cc937808e48346cc1f8f735e2b5439609e4bf619.png" class="latex" alt="$D = C$" width="54" height="12" /> is a unique point on <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> if the ellipse is tangent to the line <img src="//latex.artofproblemsolving.com/8/e/c/8ecee609050b0744995a1b79ec0fcd162a97441b.png" class="latex" alt="$AB.$" width="32" height="13" />
+</p><p>In this case in point <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> we get <img src="//latex.artofproblemsolving.com/c/d/4/cd46defe9e22a3e41b03b94be6bb5c614701e10b.png" class="latex" alt="$\frac{dy}{dx} = \frac{dy}{d \alpha}&#160;: \frac{dx}{d \alpha} = - k \cot \alpha.$" style="vertical-align: -13px" width="211" height="39" /> 
+</p><p>The tangent of the line <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> is <img src="//latex.artofproblemsolving.com/3/6/c/36cd3c99b25fadcea847d4d65492550b67f4cd96.png" class="latex" alt="$- \tan \alpha \implies k = \tan^2 \alpha.$" style="vertical-align: -2px" width="197" height="18" />
+</p><p>For point <img src="//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png" class="latex" alt="$D$" style="vertical-align: -1px" width="17" height="14" /> we get <img src="//latex.artofproblemsolving.com/1/c/7/1c705586b031622d60daf063300e3daed6ad48ee.png" class="latex" alt="$k = \tan^2 \theta.$" style="vertical-align: -1px" width="87" height="17" />
+</p><p><img src="//latex.artofproblemsolving.com/0/4/f/04fee48157471859de4aeb614e00b3ad9291bbb4.png" class="latexcenter" alt="\[\tan \angle DOX = \tan \varphi = \frac {D_y}{D_x} = \frac{k \sin \theta}{k+1}&#160;: \frac{\cos \theta}{k+1} = k \cdot \tan \theta = \tan^3 \theta.\]" width="501" height="40" />
+</p><p>For the line <img src="//latex.artofproblemsolving.com/e/8/a/e8a8f9b78a761c0062ac55c09e06a38c513710ae.png" class="latex" alt="$AB  \tan \theta = \frac {B_y}{A_x} = \sqrt{3} \implies k = 3 \implies$" style="vertical-align: -16px" width="308" height="42" />
+<img src="//latex.artofproblemsolving.com/b/9/b/b9b16c586458cf18ae9e8547c48817693ff0a492.png" class="latexcenter" alt="\[D = \left( \frac{\cos \theta}{k+1}, \frac{k \sin \theta}{k+1} \right) = \left( \frac{1}{\sqrt{1+ \tan^2 \theta} \cdot (k+1)}, \frac{k \tan \theta}{\sqrt{1+ \tan^2 \theta} \cdot (k+1)} \right) =\]" width="579" height="53" />
+<img src="//latex.artofproblemsolving.com/3/7/8/37828ed4f8a4aea1219d293271ccb2a8c790fbe8.png" class="latex" alt="$\left(\frac{1}{\sqrt{1+ k} \cdot (k+1)}, \frac{k \cdot \sqrt{k}}{\sqrt{1+ k} \cdot (k+1)} \right) = \left(\frac{1}{8}, \frac{3 \sqrt{3}}{8} \right),$" style="vertical-align: -23px" width="415" height="55" /> so we get <img src="//latex.artofproblemsolving.com/f/9/6/f965c65ffafa96e1b4829f464d29824db0a23dc2.png" class="latex" alt="$\boxed{023}$" style="vertical-align: -5px" width="39" height="23" />.
+</p><p><b>vladimir.shelomovskii@gmail.com, vvsss</b>
+</p>
+<h2><span id="Solution_8_(intuitive_elementary_calculus_solution)"></span><span class="mw-headline" id="Solution_8_.28intuitive_elementary_calculus_solution.29">Solution 8 (intuitive elementary calculus solution)</span></h2>
+<p>First, we find the equation of the line <img src="//latex.artofproblemsolving.com/a/2/3/a23d1bbf9a5c01aedeb74e5fc68f0ab6d5f49aff.png" class="latex" alt="$\overline{AB}:$" style="vertical-align: -1px" width="40" height="18" /> 
+<img src="//latex.artofproblemsolving.com/f/d/e/fde0339cc1bf6cebd90602c7bc92a667d4d687fb.png" class="latexcenter" alt="\[ y = -\sqrt{3} x + \dfrac{\sqrt{3}}{2}.  \hspace{1cm} (1) \]" width="206" height="41" />
+Now, say we have some line in <img src="//latex.artofproblemsolving.com/7/d/f/7df6156885f7ecb884a812ae7155a0ad3ea33684.png" class="latex" alt="$\mathcal{F}$" style="vertical-align: 0px" width="15" height="13" /> that spans from point <img src="//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png" class="latex" alt="$X$" width="15" height="12" /> at <img src="//latex.artofproblemsolving.com/3/0/3/30362973f115c0a92df47603206e0081b4ec87a9.png" class="latex" alt="$(0,a)$" style="vertical-align: -4px" width="39" height="18" />, and because this segment has unit length, ends at point <img src="//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png" class="latex" alt="$Y$" width="14" height="12" /> located at <img src="//latex.artofproblemsolving.com/e/d/4/ed4e232285972727fce321b0eb1b0f71da9189dc.png" class="latex" alt="$(\sqrt{1-a^2},0)$" style="vertical-align: -5px" width="97" height="23" />. Note that <img src="//latex.artofproblemsolving.com/9/5/9/95915f5885ed19f737ac8338c7c0b1d0e23fb73a.png" class="latex" alt="$\overline{XY}$" width="31" height="15" /> has the equation 
+<img src="//latex.artofproblemsolving.com/7/0/6/706cc3e04899d849bd6d83d7df792d99f797d9d0.png" class="latexcenter" alt="\[ y = -\dfrac{a}{\sqrt{1-a^2}}x + a. \hspace{1cm} (2) \]" width="231" height="37" />
+We notice that as <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> varies, <img src="//latex.artofproblemsolving.com/9/5/9/95915f5885ed19f737ac8338c7c0b1d0e23fb73a.png" class="latex" alt="$\overline{XY}$" width="31" height="15" /> will intersect <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> at all points on <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> except point <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" />. We make the key observation that <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> is what the intersection point of <img src="//latex.artofproblemsolving.com/9/5/9/95915f5885ed19f737ac8338c7c0b1d0e23fb73a.png" class="latex" alt="$\overline{XY}$" width="31" height="15" /> and <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> approaches as <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> approaches <img src="//latex.artofproblemsolving.com/c/7/7/c778d6190a62180381c8864640d46fa3f00866b8.png" class="latex" alt="$\dfrac{\sqrt{3}}{2}$" style="vertical-align: -12px" width="26" height="41" />.
+</p><p>To find this point, let's find the intersection point of <img src="//latex.artofproblemsolving.com/9/5/9/95915f5885ed19f737ac8338c7c0b1d0e23fb73a.png" class="latex" alt="$\overline{XY}$" width="31" height="15" /> and <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> in terms of <img src="//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />. 
+\begin{align*}
+y &amp;= -\sqrt{3} x + \dfrac{\sqrt{3}}{2} \\
+y &amp;= -\dfrac{a}{\sqrt{1-a^2}}x + a \\
+-\sqrt{3} x + \dfrac{\sqrt{3}}{2} &amp;= -\dfrac{a}{\sqrt{1-a^2}}x + a \\
+(\dfrac{a}{\sqrt{1-a^2}} - \sqrt{3}) \cdot x &amp;= a-\dfrac{\sqrt{3}}{2} \\
+x &amp;= \dfrac{(a-\dfrac{\sqrt{3}}{2})\cdot\sqrt{1-a^2}}{a - \sqrt{3} \cdot \sqrt{1-a^2}} \\ 
+\end{align*}
+</p><p>Note that we don't need to find the <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />-coordinate because we know that this point is on line <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" />, and once we find the <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />-coordinate, we can simply plug it into the equation of line <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" />
+</p><p>Now, we want to find <img src="//latex.artofproblemsolving.com/c/1/e/c1e506ab20c3bfda61543653be53a856644b772e.png" class="latexcenter" alt="\[ \lim_{a\to\frac{\sqrt{3}}{2}} \dfrac{(a-\dfrac{\sqrt{3}}{2})\cdot\sqrt{1-a^2}}{a - \sqrt{3} \cdot \sqrt{1-a^2}} \]" width="194" height="67" />
+We apply L'Hopital's Rule as this limit is indeterminate.
+Taking the derivative of the numerator using product rule:
+\begin{align*}
+\dfrac{d}{da} \left[(a-\dfrac{\sqrt{3}}{2})\cdot\sqrt{1-a^2}\right] &amp;= \sqrt{1-a^2} \cdot \dfrac{d}{da} \left(a-\dfrac{\sqrt{3}}{2}\right) + \dfrac{d}{da} \left(\sqrt{1-a^2}\right) \cdot (a-\dfrac{\sqrt{3}}{2})
+\end{align*}
+Note that we can apply the chain rule to get <img src="//latex.artofproblemsolving.com/b/e/8/be825388c431982b9d1ba083fd8968dfbbee22a8.png" class="latex" alt="$\dfrac{d}{da} \left(\sqrt{1-a^2}\right) = \dfrac{-a}{\sqrt{1-a^2}}$" style="vertical-align: -18px" width="204" height="44" />
+\begin{align*}
+&amp;= \sqrt{1-a^2} + \dfrac{-a}{\sqrt{1-a^2}} * (a-\dfrac{\sqrt{3}}{2}) \\
+&amp;= \dfrac{-2a^2 + \dfrac{a\sqrt{3}}{2} + 1}{\sqrt{1-a^2}}
+\end{align*}
+Taking the derivative of the denominator:
+\begin{align*}
+\dfrac{d}{da} \left[a-\sqrt{3}\cdot\sqrt{1-a^2}\right] &amp;= \dfrac{d}{da} (a) - \sqrt{3}\dfrac{d}{da}(\sqrt{1-a^2}) \\
+&amp;= 1 - \sqrt{3}\cdot\dfrac{-a}{\sqrt{1-a^2}} \\
+&amp;= \dfrac{\sqrt{1-a^2} + \sqrt{3}a}{\sqrt{1-a^2}}
+\end{align*}
+So, our final expression is <img src="//latex.artofproblemsolving.com/b/0/b/b0b0a7b239d752cf372c1a1d645a5d4992aec0b0.png" class="latexcenter" alt="\[ \dfrac{\frac{-2a^2 + \frac{a\sqrt{3}}{2} + 1}{\sqrt{1-a^2}}}{\frac{\sqrt{1-a^2} + \sqrt{3}a}{\sqrt{1-a^2}}}  \]" width="87" height="62" />
+<img src="//latex.artofproblemsolving.com/d/9/f/d9ffa6a360759e914b71805910098bc4d45d49fd.png" class="latexcenter" alt="\[ = \dfrac{-2a^2 + \frac{a\sqrt{3}}{2} + 1}{\sqrt{1-a^2} + \sqrt{3}a} \]" width="143" height="48" />
+</p><p>Now, all that remains is to substitute <img src="//latex.artofproblemsolving.com/a/2/3/a23d56d2ea3f14a50c8df7ffe4075132971df7a9.png" class="latex" alt="$a = \dfrac{\sqrt{3}}{2}$" style="vertical-align: -13px" width="64" height="43" />
+\begin{align*}
+&amp;= \dfrac{-\dfrac{3}{2} + \dfrac{3}{4} + 1}{\dfrac{1}{2} + \dfrac{3}{2}} \\
+&amp;= \dfrac{1}{8}
+\end{align*}
+Now, we can plug in <img src="//latex.artofproblemsolving.com/9/1/3/913bcad3c03ef035cf4873a770fe5c55c6068d55.png" class="latex" alt="$x = \dfrac{1}{8}$" style="vertical-align: -13px" width="50" height="38" /> into the equation of <img src="//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" />:
+\begin{align*}
+y &amp;= -\dfrac{\sqrt{3}}{8} + \dfrac{\sqrt{3}}{2} \\
+y &amp;= \dfrac{3\sqrt{3}}{8}
+\end{align*}
+So point C is located at <img src="//latex.artofproblemsolving.com/a/9/2/a92fa977af07ec77cb0a3bfe7d35d7fc3875629a.png" class="latex" alt="$(\dfrac{1}{8},\dfrac{3\sqrt{3}}{8})$" style="vertical-align: -13px" width="74" height="43" />
+The question asks for <img src="//latex.artofproblemsolving.com/c/5/6/c56a132ef074a79936a1e74e334bae13c644220a.png" class="latex" alt="$OC^2$" style="vertical-align: -1px" width="38" height="17" />, so we simply apply the Pythagorean Theorem:
+\begin{align*}
+OC^2 &amp;= (\dfrac{1}{8})^2 + (\dfrac{3\sqrt{3}}{2})^2 \\
+OC^2 &amp;= \dfrac{7}{16}\\
+7 + 16 &amp;= \boxed{23}
+\end{align*}
+</p><p>~143466534811009我输了游戏56二伯
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/914687Yv6SY?si=tc6XfoOIHu0gu6AL">https://youtu.be/914687Yv6SY?si=tc6XfoOIHu0gu6AL</a>
+</p><p>(no calculus)
+</p><p>~MathProblemSolvingSkills.com
+</p>
+<h2><span class="mw-headline" id="Video_Solution_2">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/QwLBBzHFPNE">https://youtu.be/QwLBBzHFPNE</a>
+</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)
+</p>
+<h2><span class="mw-headline" id="Geometry_Solution">Geometry Solution</span></h2>
+<p><img src="//latex.artofproblemsolving.com/8/1/2/8127f1ad0f774d25ffc13e4b52ee26adb0ca7b54.png" class="latexcenter" alt="[asy] pair O=(0,0); pair X=(1,0); pair Y=(0,1); pair A=(0.5,0); pair B=(0,sin(pi/3)); dot(O); dot(X); dot(Y); dot(A); dot(B); draw(X--O--Y); draw(A--B); label(&quot;$B$&quot;, B, W); pair P=(0.5, sin(pi/3)); dot(P); draw(A--P--B); label(&quot;$A$&quot;, A, S); label(&quot;$O$&quot;, O, SW); pair C=(1/8,3*sqrt(3)/8); dot(C); label(&quot;$C$&quot;, C, SW); draw(C--P); label(&quot;$P$&quot;, P, NE); [/asy]" width="252" height="248" />
+Let <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> be a fixed point in the first quadrant. Let <img src="//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> be a point on the positive <img src="//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />-axis and <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> be a point on the positive <img src="//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />-axis such that <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> passes through <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> and the length of <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" /> is minimal. Let <img src="//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> be the point such that <img src="//latex.artofproblemsolving.com/2/1/9/21958c4ae25f193a43e9e5984fbc8bf3f749c752.png" class="latex" alt="$OAPB$" style="vertical-align: -1px" width="59" height="14" /> is a rectangle. Prove that <img src="//latex.artofproblemsolving.com/5/b/0/5b051b4671eee9f2f9755741437b11ecd17a4927.png" class="latex" alt="$PC \perp AB$" style="vertical-align: -1px" width="83" height="14" />. (One can solve this through algebra/calculus bash, but I'm trying to find a solution that mainly uses geometry. If you know such a solution, write it here on this wiki page.) ~Furaken
+</p><p>I think there is such a geometry way:
+Let <img src="//latex.artofproblemsolving.com/6/d/5/6d5c9afa92ae3180f02754c177e530d9d0f8b4d4.png" class="latex" alt="$DE$" width="29" height="12" /> pass through <img src="//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> while point <img src="//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png" class="latex" alt="$D$" style="vertical-align: -1px" width="17" height="14" /> is on the outside of line segment <img src="//latex.artofproblemsolving.com/b/7/a/b7a762ac8b4e23ffdd778ad6d5a8b97df8c7ce01.png" class="latex" alt="$OA$" width="28" height="13" /> and point <img src="//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png" class="latex" alt="$E$" style="vertical-align: -1px" width="16" height="14" /> is in between <img src="//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> and <img src="//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />. We aim to show <img src="//latex.artofproblemsolving.com/6/d/5/6d5c9afa92ae3180f02754c177e530d9d0f8b4d4.png" class="latex" alt="$DE$" width="29" height="12" /> is longer than <img src="//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png" class="latex" alt="$AB$" width="27" height="13" />. Now since <img src="//latex.artofproblemsolving.com/3/0/e/30e049532148caaf1c48e37658b548a6255c8d59.png" class="latex" alt="$PC$" width="28" height="12" /> is the altitude of triangle <img src="//latex.artofproblemsolving.com/4/f/5/4f550db59d15933de1a0871aaa917acdd99966af.png" class="latex" alt="$PAB$" width="41" height="13" /> yet just a cevian on the base <img src="//latex.artofproblemsolving.com/6/d/5/6d5c9afa92ae3180f02754c177e530d9d0f8b4d4.png" class="latex" alt="$DE$" width="29" height="12" /> of triangle <img src="//latex.artofproblemsolving.com/0/c/5/0c50832a4e8275442471998c9b72c9fa16b16126.png" class="latex" alt="$PDE$" style="vertical-align: -1px" width="46" height="14" /> (thus making the height shorter than <img src="//latex.artofproblemsolving.com/3/0/e/30e049532148caaf1c48e37658b548a6255c8d59.png" class="latex" alt="$PC$" width="28" height="12" />), it suffices to show the area of triangle <img src="//latex.artofproblemsolving.com/0/c/5/0c50832a4e8275442471998c9b72c9fa16b16126.png" class="latex" alt="$PDE$" style="vertical-align: -1px" width="46" height="14" /> is bigger than that of triangle <img src="//latex.artofproblemsolving.com/4/f/5/4f550db59d15933de1a0871aaa917acdd99966af.png" class="latex" alt="$PAB$" width="41" height="13" />. To do this, we compare these two triangles (let <img src="//latex.artofproblemsolving.com/6/d/5/6d5c9afa92ae3180f02754c177e530d9d0f8b4d4.png" class="latex" alt="$DE$" width="29" height="12" /> intersect <img src="//latex.artofproblemsolving.com/3/7/7/377291318df52e4f013ab2bf28ee82454a9e57da.png" class="latex" alt="$PA$" width="27" height="13" /> at point <img src="//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png" class="latex" alt="$F$" style="vertical-align: -1px" width="16" height="14" />), and we just want to show <img src="//latex.artofproblemsolving.com/9/9/c/99cc330143f299dbf11c11b4a43b696b931be3bf.png" class="latex" alt="$PF*AD &gt; AF*AO$" style="vertical-align: -2px" width="174" height="15" />. This is trivial by similarity ratios. ~gougutheorem
+</p><p>Thanks! Now we know that it's possible to solve the AIME problem with only geometry. ~Furaken
+</p><p>Can someone better explain this solution please? How does <img src="//latex.artofproblemsolving.com/9/9/c/99cc330143f299dbf11c11b4a43b696b931be3bf.png" class="latex" alt="$PF*AD &gt; AF*AO$" style="vertical-align: -2px" width="174" height="15" /> show that <img src="//latex.artofproblemsolving.com/0/c/5/0c50832a4e8275442471998c9b72c9fa16b16126.png" class="latex" alt="$PDE$" style="vertical-align: -1px" width="46" height="14" /> is bigger than <img src="//latex.artofproblemsolving.com/4/f/5/4f550db59d15933de1a0871aaa917acdd99966af.png" class="latex" alt="$PAB$" width="41" height="13" />? ~inaccessibles
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="/wiki/index.php/2024_AIME_II" title="2024 AIME II">2024 AIME II</a></b> (<b><a href="/wiki/index.php/2024_AIME_II_Problems" title="2024 AIME II Problems">Problems</a></b> • <b><a href="/wiki/index.php/2024_AIME_II_Answer_Key" title="2024 AIME II Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/Forum/resources.php?c=182&amp;cid=45&amp;year=2024">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="/wiki/index.php/2024_AIME_II_Problems/Problem_11" title="2024 AIME II Problems/Problem 11">Problem 11</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="/wiki/index.php/2024_AIME_II_Problems/Problem_13" title="2024 AIME II Problems/Problem 13">Problem 13</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="/wiki/index.php/2024_AIME_II_Problems/Problem_1" title="2024 AIME II Problems/Problem 1">1</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_2" title="2024 AIME II Problems/Problem 2">2</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_3" title="2024 AIME II Problems/Problem 3">3</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_4" title="2024 AIME II Problems/Problem 4">4</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_5" title="2024 AIME II Problems/Problem 5">5</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_6" title="2024 AIME II Problems/Problem 6">6</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_7" title="2024 AIME II Problems/Problem 7">7</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_8" title="2024 AIME II Problems/Problem 8">8</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_9" title="2024 AIME II Problems/Problem 9">9</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_10" title="2024 AIME II Problems/Problem 10">10</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_11" title="2024 AIME II Problems/Problem 11">11</a> <b>•</b> <a class="mw-selflink selflink">12</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_13" title="2024 AIME II Problems/Problem 13">13</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_14" title="2024 AIME II Problems/Problem 14">14</a> <b>•</b> <a href="/wiki/index.php/2024_AIME_II_Problems/Problem_15" title="2024 AIME II Problems/Problem 15">15</a>
+</td></tr>
+<tr>
+<td align="center" colspan="3"><b><a href="/wiki/index.php/AIME_Problems_and_Solutions" title="AIME Problems and Solutions"> All AIME Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>These problems are copyrighted &#169; by the <a rel="nofollow" class="external text" href="https://www.maa.org">Mathematical Association of America</a>, as part of the <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="/wiki/index.php/File:AMC_Logo.png" class="image"><img alt="AMC Logo.png" src="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/50px-AMC_Logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/d/d1/AMC_Logo.png/75px-AMC_Logo.png 1.5x, https://wiki-images.artofproblemsolving.com//d/d1/AMC_Logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250818193652
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.140 seconds
+Real time usage: 0.145 seconds
+Preprocessor visited node count: 2508/1000000
+Preprocessor generated node count: 5786/1000000
+Post‐expand include size: 1734/2097152 bytes
+Template argument size: 132/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 49736/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.303      1 -total
+ 70.88%    3.050      1 Template:AIME_box
+ 26.52%    1.141      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:27011-0!canonical and timestamp 20250818193652 and revision id 240740
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2024_AIME_II_Problems/Problem_12&amp;oldid=240740">https://artofproblemsolving.com/wiki/index.php?title=2024_AIME_II_Problems/Problem_12&amp;oldid=240740</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/index.php/Category:Intermediate_Geometry_Problems" title="Category:Intermediate Geometry Problems">Intermediate Geometry Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="https://artofproblemsolving.com/assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="https://artofproblemsolving.com/assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5105596&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'981e799e5facc9b5',t:'MTc1ODM0MTQ0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- Cached 20250818193652 -->
+</html>
+
