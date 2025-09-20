@@ -3,10 +3,10 @@
 set -euo pipefail
 
 # Directory containing the per-year AIME JSON inputs
-JSON_DIR="data/aime_json"
+JSON_DIR="./data/aime_json"
 
 # Python script that generates traces
-SCRIPT="scripts/generate_traces.py"
+SCRIPT="./scripts/generate_traces.py"
 
 if [[ ! -d "${JSON_DIR}" ]]; then
   echo "Input directory '${JSON_DIR}' not found" >&2
