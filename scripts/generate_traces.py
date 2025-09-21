@@ -139,7 +139,6 @@ def main() -> None:
     ensure_dir(args.out)
     out_f = open(args.out, "w", encoding="utf-8")
 
-    # Options: temperature 0 for reproducibility
     options = {
         "temperature": 0.0,
         "seed": args.seed,
@@ -171,6 +170,9 @@ def main() -> None:
             "temperature": 0.0,
             "trace": resp,
             "timestamp": int(time.time()),
+            "given_answer": None,
+            "pred_answer": None,
+            "reference_solution": None,
         }
         row["pred_answer"] = pred_answer
         if final_answer is not None:

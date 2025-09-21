@@ -19,9 +19,9 @@ if [[ ! -f "${SCRIPT}" ]]; then
 fi
 
 models=(
-  "deepseek-r1:70b"
-  "gpt-oss:120b"
-  "qwen3:235b"
+  "deepseek-r1:32b"
+  "qwen3:32b"
+  "gpt-oss:20b"
 )
 
 shopt -s nullglob
