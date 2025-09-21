@@ -45,7 +45,7 @@ def main() -> None:
     )
     ap.add_argument(
         "--device",
-        default="mps",
+        default="cuda:7",
         help="Torch device for embeddings (e.g. cpu, mps, cuda)",
     )
     args = ap.parse_args()
