@@ -16,7 +16,7 @@ class SentenceTransformerEmbedder:
     Thin wrapper around sentence-transformers with lazy import and helpful errors.
     """
 
-    def __init__(self, cfg: EmbeddingConfig | None = None):
+    def __init__(self, cfg: EmbeddingConfig):
         self.cfg = cfg or EmbeddingConfig()
         self.model = SentenceTransformer(self.cfg.model_name, device=self.cfg.device)
 
@@ -26,7 +26,7 @@ class SentenceTransformerEmbedder:
             batch_size=self.cfg.batch_size,
             convert_to_numpy=True,
             normalize_embeddings=True,
-            show_progress_bar=False,
+            show_progress_bar=True,
         )
         return np.asarray(arr)
 

@@ -1,29 +1,23 @@
 import re
 
 
-_STEP_PATTERNS = [
-    re.compile(r"^\s*(?:step\s*\d+\s*[:\.-]|\(\d+\)|\d+\.|\d+\))\s*", re.I),
-]
-
-
-def _looks_like_step_start(s: str) -> bool:
-    return any(pat.search(s) for pat in _STEP_PATTERNS)
+def _strip_math_inline_markers(text: str) -> str:
+    """Remove lightweight LaTeX inline math wrappers."""
+    return text.replace("\\(", "").replace("\\)", "").replace("$", "").replace("\\[","").replace("\\]","").replace("\\","").replace("<think>","")
 
 
 def segment_steps(text: str, min_len: int = 2) -> list[str]:
-    """
-    Heuristic segmentation of reasoning into steps.
-
-    Priority:
-    - Respect explicit step markers ("Step 1:", "1.", "(1)") when present.
-    - Otherwise, split by sentences as a fallback.
-    """
     if not text:
         return []
-
-    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-    return lines
-
+    cleaned = _strip_math_inline_markers(text)
+    segments: list[str] = []
+    for ln in cleaned.splitlines():
+        ln = ln.strip()
+        if not ln:
+            continue
+        pieces = re.split(r"(?<=\.)\s+", ln)
+        segments.extend(piece.strip() for piece in pieces if piece.strip())
+    return segments
 
 def segment_solution_steps(text: str) -> list[str]:
     """
