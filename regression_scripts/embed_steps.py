@@ -33,26 +33,22 @@ def save_npz(path: str | Path, **arrays: np.ndarray) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Segment traces and compute embeddings")
-    ap.add_argument("--traces", default="data/raw/traces_aime2024.jsonl", help="Input JSONL")
-    ap.add_argument("--outdir", default="data/processed/embeddings/", help="Output dir")
+    ap.add_argument("--traces", default="data/aime_traces/deepseek-r1_32b/traces_aime2025.jsonl", help="Input JSONL")
+    ap.add_argument("--outdir", default="data/aime_embed/deepseek-r1_32b/", help="Output dir")
     ap.add_argument(
         "--model-name",
-        default="sentence-transformers/all-MiniLM-L6-v2",
+        default="sentence-transformers/all-mpnet-base-v2",
         help="Sentence-transformers embedding model",
     )
-    ap.add_argument("--device", default="cpu", help="Device override (e.g., cuda or cpu)")
+    ap.add_argument("--device", default="cuda:7", help="Device override (e.g., cuda or cpu)")
     args = ap.parse_args()
 
     embedder = SentenceTransformerEmbedder(EmbeddingConfig(model_name=args.model_name, device=args.device))
     n = 0
     for row in tqdm(read_jsonl(args.traces), desc="Embedding steps", unit="trace"):
         pid = row.get("id")
-        trace = row.get("trace", "")
+        trace = row.get("trace")
         steps: list[str] = segment_steps(trace)
-        if not steps:
-            steps = [trace] if trace else []
-        if not steps:
-            continue
         X = embedder.encode(steps)
         out_path = Path(args.outdir) / f"{pid}.npz"
         save_npz(out_path, X=X)

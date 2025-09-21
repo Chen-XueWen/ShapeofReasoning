@@ -83,9 +83,7 @@ def check_multicollinearity(df, outdir=Path("data/processed/analysis")):
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Analyze TDA feature influence on alignment score (OLS)")
-    # ap.add_argument("--align", default="data/processed/alignments.jsonl")
-    # ap.add_argument("--features", default="data/processed/tda_features.jsonl")
-    ap.add_argument("--align", default="data/processed/alignments_aime_2022.jsonl")
+    ap.add_argument("--align", default="data/aime_align_dp/deepseek-r1_32b/align_aime2020.jsonl")
     ap.add_argument("--features", default="data/processed/gpt-oss_120b_aime2022/tda_features.jsonl")
     ap.add_argument("--outdir", default="data/processed/analysis/gpt-oss_120b_aime2022_tda")
     ap.add_argument("--pca-reg-k", type=int, default=5, help="Number of principal components for PCA-OLS")

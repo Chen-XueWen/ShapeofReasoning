@@ -1,0 +1,2 @@
+1. Generate Traces
+2. Align to Gold (including embeddings for both gold and trace)

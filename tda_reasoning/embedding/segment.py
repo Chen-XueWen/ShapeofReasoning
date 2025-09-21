@@ -16,11 +16,3 @@ def segment_steps(text: str, min_len: int = 2) -> list[str]:
         pieces = re.split(r"(?<=\.)\s+", ln)
         segments.extend(piece.strip() for piece in pieces if piece.strip())
     return segments
-
-def segment_solution_steps(text: str) -> list[str]:
-    """
-    Segment solution text into steps
-    """
-    sentences = re.split(r"(?<=[\.\!\?])\s+", text.strip())
-    sentences = [s.strip() for s in sentences if s.strip()]
-    return [s for s in sentences]

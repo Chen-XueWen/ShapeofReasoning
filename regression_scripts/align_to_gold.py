@@ -30,6 +30,11 @@ def ensure_dir(path: str | Path) -> None:
     Path(path).parent.mkdir(parents=True, exist_ok=True)
 
 
+def save_npz(path: str | Path, **arrays: np.ndarray) -> None:
+    ensure_dir(path)
+    np.savez_compressed(path, allow_pickle=True, **arrays)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Align model steps to gold solution steps")
     ap.add_argument("--traces", default="data/aime_traces/deepseek-r1_32b/traces_aime2025.jsonl", help="Model traces JSONL")
@@ -37,6 +42,11 @@ def main() -> None:
         "--out",
         default="data/aime_align_dp/deepseek-r1_32b/align_aime2025.jsonl",
         help="Output JSONL",
+    )
+    ap.add_argument(
+        "--embed-outdir",
+        default="data/aime_embed/deepseek-r1_32b/",
+        help="Directory to store per-trace embeddings",
     )
     ap.add_argument(
         "--model-name",
@@ -52,6 +62,12 @@ def main() -> None:
 
     ensure_dir(args.out)
 
+    embed_root = Path(args.embed_outdir)
+    trace_embed_dir = embed_root / "trace"
+    gold_embed_dir = embed_root / "gold"
+    trace_embed_dir.mkdir(parents=True, exist_ok=True)
+    gold_embed_dir.mkdir(parents=True, exist_ok=True)
+
     embedder = SentenceTransformerEmbedder(
         EmbeddingConfig(model_name=args.model_name, device=args.device)
     )
@@ -65,6 +81,8 @@ def main() -> None:
 
         X_model = embedder.encode(trace_steps)
         X_gold = embedder.encode(gold_steps)
+        save_npz(trace_embed_dir / f"{pid}.npz", X=X_model)
+        save_npz(gold_embed_dir / f"{pid}.npz", X=X_gold)
         align = align_steps(X_model, X_gold)
         row = {
             "id": pid,
@@ -75,7 +93,10 @@ def main() -> None:
         out_f.write(json.dumps(row) + "\n")
         n += 1
     out_f.close()
-    print(f"Wrote {n} alignments to {args.out}")
+    print(
+        "Wrote "
+        f"{n} alignments to {args.out} with embeddings under {trace_embed_dir.parent}"
+    )
 
 
 if __name__ == "__main__":

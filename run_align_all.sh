@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Name of the model whose traces you want to align. Update this single variable.
-MODEL="deepseek-r1:32b"
+MODEL="gpt-oss:20b"
 
 TRACE_ROOT="./data/aime_traces"
 ALIGN_ROOT="./data/aime_align_dp"
@@ -43,7 +43,6 @@ for trace_file in "${trace_files[@]}"; do
   base_name=$(basename "${trace_file}" ".jsonl")
   suffix=${base_name#traces_}
   out_file="${OUT_DIR}/align_${suffix}.jsonl"
-
   echo "Aligning model '${MODEL}' file '${trace_file}' -> '${out_file}'"
   python3 "${ALIGN_SCRIPT}" \
     --traces "${trace_file}" \
