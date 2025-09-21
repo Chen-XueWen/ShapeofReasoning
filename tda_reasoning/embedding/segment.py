@@ -1,10 +1,8 @@
 import re
 
-
 def _strip_math_inline_markers(text: str) -> str:
     """Remove lightweight LaTeX inline math wrappers."""
     return text.replace("\\(", "").replace("\\)", "").replace("$", "").replace("\\[","").replace("\\]","").replace("\\","").replace("<think>","")
-
 
 def segment_steps(text: str, min_len: int = 2) -> list[str]:
     if not text:
