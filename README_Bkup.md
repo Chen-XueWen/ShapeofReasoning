@@ -39,8 +39,8 @@ Quickstart
 4) Extract TDA features
    - Uses ripser for VR diagrams (default metric: cosine, maxdim: 1)
    - Run:
-     `python scripts/tda_extract.py --emb-dir data/processed/embeddings --out data/processed/tda_features.jsonl`
-   - Output: `data/processed/tda_features.jsonl`
+     `python regression_scripts/create_diags.py --emb-dir data/processed/embeddings --diag-dir data/processed/diagrams --features-out data/processed/tda_features.jsonl`
+   - Output: diagrams saved under `data/processed/diagrams/` and `data/processed/tda_features.jsonl`
 
 5) Align model steps to gold steps
    - If dataset includes structured gold steps they are used; otherwise gold solutions are segmented heuristically
