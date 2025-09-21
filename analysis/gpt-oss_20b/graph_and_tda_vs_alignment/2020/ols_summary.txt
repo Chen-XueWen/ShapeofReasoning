@@ -1,0 +1,67 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  score   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                    nan
+Method:                 Least Squares   F-statistic:                       nan
+Date:                Mon, 22 Sep 2025   Prob (F-statistic):                nan
+Time:                        00:14:40   Log-Likelihood:                 819.45
+No. Observations:                  30   AIC:                            -1579.
+Df Residuals:                       0   BIC:                            -1537.
+Df Model:                          29                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                -3.4911        inf         -0        nan         nan         nan
+H0_count              0.0002        inf          0        nan         nan         nan
+H0_total_life        -0.0539        inf         -0        nan         nan         nan
+H0_max_life           2.4209        inf          0        nan         nan         nan
+H0_mean_life          2.3544        inf          0        nan         nan         nan
+H0_entropy            3.4486        inf          0        nan         nan         nan
+H0_skewness          -1.3868        inf         -0        nan         nan         nan
+H0_max_birth       4.389e-13        inf          0        nan         nan         nan
+H0_max_death          2.4209        inf          0        nan         nan         nan
+H1_count             -0.0025        inf         -0        nan         nan         nan
+H1_total_life         0.2502        inf          0        nan         nan         nan
+H1_max_life          -2.4288        inf         -0        nan         nan         nan
+H1_mean_life         -0.8790        inf         -0        nan         nan         nan
+H1_entropy           -0.9527        inf         -0        nan         nan         nan
+H1_skewness          -0.0056        inf         -0        nan         nan         nan
+H1_max_birth         -3.0616        inf         -0        nan         nan         nan
+H1_max_death         -0.1064        inf         -0        nan         nan         nan
+H0_betti_peak         0.0002        inf          0        nan         nan         nan
+H0_betti_location    -3.8274        inf         -0        nan         nan         nan
+H0_betti_width       -4.9538        inf         -0        nan         nan         nan
+H0_betti_centroid     4.6954        inf          0        nan         nan         nan
+H0_betti_spread      16.4080        inf          0        nan         nan         nan
+H0_betti_trend        9.8127        inf          0        nan         nan         nan
+H1_betti_peak        -0.0146        inf         -0        nan         nan         nan
+H1_betti_location    -2.2471        inf         -0        nan         nan         nan
+H1_betti_width       -0.4993        inf         -0        nan         nan         nan
+H1_betti_centroid     1.1076        inf          0        nan         nan         nan
+H1_betti_spread      -5.0426        inf         -0        nan         nan         nan
+H1_betti_trend        0.4401        inf          0        nan         nan         nan
+H0_landscape_mean     0.4035        inf          0        nan         nan         nan
+H0_landscape_max      1.2105        inf          0        nan         nan         nan
+H0_landscape_area    -1.2355        inf         -0        nan         nan         nan
+H1_landscape_mean     5.0917        inf          0        nan         nan         nan
+H1_landscape_max     -1.2144        inf         -0        nan         nan         nan
+H1_landscape_area    -0.0117        inf         -0        nan         nan         nan
+has_loop              0.0401        inf          0        nan         nan         nan
+loop_count            0.0009        inf          0        nan         nan         nan
+diameter              0.0079        inf          0        nan         nan         nan
+avg_clustering        7.4275        inf          0        nan         nan         nan
+avg_path_length      -0.0173        inf         -0        nan         nan         nan
+small_world_index    -0.4638        inf         -0        nan         nan         nan
+==============================================================================
+Omnibus:                        3.045   Durbin-Watson:                   0.438
+Prob(Omnibus):                  0.218   Jarque-Bera (JB):                1.535
+Skew:                          -0.206   Prob(JB):                        0.464
+Kurtosis:                       1.972   Cond. No.                     8.34e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The input rank is higher than the number of observations.
+[3] The condition number is large, 8.34e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.

@@ -1,0 +1,61 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      small_world_index   R-squared:                       0.975
+Model:                            OLS   Adj. R-squared:                  0.272
+Method:                 Least Squares   F-statistic:                     1.387
+Date:                Mon, 22 Sep 2025   Prob (F-statistic):              0.597
+Time:                        00:25:14   Log-Likelihood:                 75.522
+No. Observations:                  30   AIC:                            -93.04
+Df Residuals:                       1   BIC:                            -52.41
+Df Model:                          28                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                31.7750     19.929      1.594      0.357    -221.442     284.992
+H0_count             -0.0032      0.005     -0.594      0.659      -0.071       0.065
+H0_total_life         0.0377      0.073      0.516      0.697      -0.889       0.964
+H0_max_life         -34.7497     23.890     -1.455      0.383    -338.295     268.796
+H0_mean_life        -13.1469     19.466     -0.675      0.622    -260.486     234.192
+H0_entropy           -4.4973      2.846     -1.580      0.359     -40.663      31.669
+H0_skewness           1.5455      1.515      1.020      0.494     -17.710      20.801
+H0_max_birth       4.331e-11   3.54e-11      1.224      0.436   -4.06e-10    4.93e-10
+H0_max_death        -34.7497     23.890     -1.455      0.383    -338.295     268.796
+H1_count             -0.0213      0.014     -1.532      0.368      -0.198       0.155
+H1_total_life         0.7028      0.443      1.587      0.358      -4.923       6.329
+H1_max_life           2.6693      7.747      0.345      0.789     -95.766     101.104
+H1_mean_life        -43.0936     39.377     -1.094      0.471    -543.427     457.239
+H1_entropy            1.4827      0.988      1.501      0.374     -11.070      14.036
+H1_skewness           0.3753      0.762      0.492      0.709      -9.312      10.063
+H1_max_birth          0.3638      3.185      0.114      0.928     -40.107      40.835
+H1_max_death          3.0752      3.563      0.863      0.547     -42.201      48.351
+H0_betti_peak        -0.0032      0.005     -0.594      0.659      -0.071       0.065
+H0_betti_location   -31.6542     47.163     -0.671      0.624    -630.918     567.610
+H0_betti_width        1.1305      5.294      0.214      0.866     -66.135      68.396
+H0_betti_centroid    43.8743     87.475      0.502      0.704   -1067.606    1155.354
+H0_betti_spread     -94.0624    106.721     -0.881      0.540   -1450.083    1261.958
+H0_betti_trend      -23.3885     16.221     -1.442      0.386    -229.499     182.722
+H1_betti_peak        -0.0189      0.024     -0.791      0.574      -0.323       0.285
+H1_betti_location    -1.1275      0.887     -1.272      0.424     -12.394      10.139
+H1_betti_width       -0.6715      1.107     -0.607      0.653     -14.734      13.391
+H1_betti_centroid     1.1427      1.746      0.654      0.631     -21.043      23.328
+H1_betti_spread      12.5872      9.137      1.378      0.400    -103.508     128.682
+H1_betti_trend       -0.2615      0.494     -0.529      0.690      -6.537       6.014
+H0_landscape_mean    -5.7916      3.982     -1.455      0.383     -56.383      44.799
+H0_landscape_max    -17.3748     11.945     -1.455      0.383    -169.148     134.398
+H0_landscape_area   198.5065    153.781      1.291      0.420   -1755.471    2152.484
+H1_landscape_mean    27.4559     47.251      0.581      0.665    -572.919     627.831
+H1_landscape_max      1.3347      3.873      0.345      0.789     -47.883      50.552
+H1_landscape_area  -110.4721     85.596     -1.291      0.420   -1198.077     977.132
+==============================================================================
+Omnibus:                        0.275   Durbin-Watson:                   1.837
+Prob(Omnibus):                  0.872   Jarque-Bera (JB):                0.216
+Skew:                           0.182   Prob(JB):                        0.898
+Kurtosis:                       2.800   Cond. No.                     1.01e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The input rank is higher than the number of observations.
+[3] The smallest eigenvalue is 2.45e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

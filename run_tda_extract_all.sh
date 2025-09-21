@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-TDA_SCRIPT="./regression_scripts/tda_extract.py"
+TDA_SCRIPT="./feature_scripts/tda_extract.py"
 
 if [[ ! -f "${TDA_SCRIPT}" ]]; then
   echo "TDA extraction script '${TDA_SCRIPT}' not found" >&2
@@ -10,9 +10,10 @@ if [[ ! -f "${TDA_SCRIPT}" ]]; then
 fi
 
 MODELS=(
-  "deepseek-r1:32b"
-  "qwen3:32b"
-  "gpt-oss:20b"
+  "gpt-oss:120b"
+  #"deepseek-r1:32b"
+  #"qwen3:32b"
+  #"gpt-oss:20b"
 )
 
 SPLITS=(

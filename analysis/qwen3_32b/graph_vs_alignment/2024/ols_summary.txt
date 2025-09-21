@@ -1,0 +1,32 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  score   R-squared:                       0.421
+Model:                            OLS   Adj. R-squared:                  0.300
+Method:                 Least Squares   F-statistic:                     3.486
+Date:                Mon, 22 Sep 2025   Prob (F-statistic):             0.0165
+Time:                        00:14:34   Log-Likelihood:                 41.508
+No. Observations:                  30   AIC:                            -71.02
+Df Residuals:                      24   BIC:                            -62.61
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                 0.2099      0.033      6.323      0.000       0.141       0.278
+has_loop              0.2099      0.033      6.323      0.000       0.141       0.278
+loop_count            0.0283      0.012      2.314      0.030       0.003       0.054
+diameter             -0.0001      0.001     -0.088      0.931      -0.003       0.003
+avg_clustering      -11.1961      4.672     -2.397      0.025     -20.838      -1.554
+avg_path_length      -0.0005      0.004     -0.127      0.900      -0.009       0.008
+small_world_index     0.5350      0.214      2.496      0.020       0.093       0.977
+==============================================================================
+Omnibus:                        0.248   Durbin-Watson:                   1.867
+Prob(Omnibus):                  0.883   Jarque-Bera (JB):                0.249
+Skew:                          -0.184   Prob(JB):                        0.883
+Kurtosis:                       2.746   Cond. No.                     2.14e+17
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.16e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

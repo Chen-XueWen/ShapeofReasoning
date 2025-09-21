@@ -1,0 +1,34 @@
+\begin{table}[!htbp] \centering
+  \caption{OLS Regression Results (score)}
+\begin{tabular}{@{\extracolsep{5pt}}lc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+& \multicolumn{1}{c}{\textit{Dependent variable: score}} \
+\cr \cline{2-2}
+\\[-1.8ex] & (1) \\
+\hline \\[-1.8ex]
+ avg_clustering & -15.132$^{**}$ \\
+& (7.254) \\
+ avg_path_length & 0.004$^{}$ \\
+& (0.003) \\
+ const & 0.599$^{***}$ \\
+& (0.081) \\
+ diameter & -0.001$^{}$ \\
+& (0.001) \\
+ has_loop & -0.234$^{***}$ \\
+& (0.063) \\
+ loop_count & 0.014$^{}$ \\
+& (0.014) \\
+ small_world_index & 0.726$^{**}$ \\
+& (0.322) \\
+\hline \\[-1.8ex]
+ Observations & 30 \\
+ $R^2$ & 0.509 \\
+ Adjusted $R^2$ & 0.381 \\
+ Residual Std. Error & 0.057 (df=23) \\
+ F Statistic & 3.980$^{***}$ (df=6; 23) \\
+\hline
+\hline \\[-1.8ex]
+\textit{Note:} & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}

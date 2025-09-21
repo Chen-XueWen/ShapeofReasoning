@@ -4,14 +4,15 @@ set -euo pipefail
 
 # Models whose traces you want to align. Extend the list as needed.
 MODELS=(
-  "gpt-oss:20b"
-  "deepseek-r1_32b"
-  "qwen3_32b"
+  "gpt-oss:120b"
+  #"gpt-oss:20b"
+  #"deepseek-r1_32b"
+  #"qwen3_32b"
 )
 
 TRACE_ROOT="./data/aime_traces"
 ALIGN_ROOT="./data/aime_align_dp"
-ALIGN_SCRIPT="./regression_scripts/align_to_gold.py"
+ALIGN_SCRIPT="./feature_scripts/align_to_gold.py"
 
 if [[ ! -f "${ALIGN_SCRIPT}" ]]; then
   echo "Alignment script '${ALIGN_SCRIPT}' not found" >&2
