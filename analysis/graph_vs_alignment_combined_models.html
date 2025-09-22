@@ -1,0 +1,11 @@
+<style>table {border-collapse: collapse; font-family: Arial, sans-serif;} th, td {border: 1px solid #ccc; padding: 6px 10px;} th {background-color: #f5f5f5;} td {text-align: center;} td:first-child {text-align: left; font-weight: 600;} .stderr {display: block; color: #555; font-size: 0.85em;}</style>
+<table>
+<tr><th>Feature</th><th>deepseek-r1_32b</th><th>gpt-oss_120b</th><th>gpt-oss_20b</th><th>qwen3_32b</th></tr>
+<tr><td>has_loop</td><td>-0.036<br><span class="stderr">(0.025)</span></td><td>-0.020<br><span class="stderr">(0.021)</span></td><td>-0.063<br><span class="stderr">(0.047)</span></td><td>-0.116**<br><span class="stderr">(0.052)</span></td></tr>
+<tr><td>loop_count</td><td>0.002<br><span class="stderr">(0.004)</span></td><td>-0.001<br><span class="stderr">(0.004)</span></td><td>0.000<br><span class="stderr">(0.002)</span></td><td>0.004<br><span class="stderr">(0.005)</span></td></tr>
+<tr><td>diameter</td><td>-0.001**<br><span class="stderr">(0.000)</span></td><td>0.000<br><span class="stderr">(0.000)</span></td><td>-0.001<br><span class="stderr">(0.001)</span></td><td>-0.001<br><span class="stderr">(0.000)</span></td></tr>
+<tr><td>avg_clustering</td><td>-0.003<br><span class="stderr">(1.517)</span></td><td>-0.394<br><span class="stderr">(1.287)</span></td><td>-0.160<br><span class="stderr">(0.654)</span></td><td>-0.485<br><span class="stderr">(1.646)</span></td></tr>
+<tr><td>avg_path_length</td><td>0.002<br><span class="stderr">(0.001)</span></td><td>-0.002<br><span class="stderr">(0.001)</span></td><td>0.001<br><span class="stderr">(0.002)</span></td><td>0.000<br><span class="stderr">(0.001)</span></td></tr>
+<tr><td>small_world_index</td><td>-0.030<br><span class="stderr">(0.062)</span></td><td>0.041<br><span class="stderr">(0.075)</span></td><td>0.015<br><span class="stderr">(0.031)</span></td><td>0.020<br><span class="stderr">(0.072)</span></td></tr>
+<tr><td>const</td><td>0.499***<br><span class="stderr">(0.032)</span></td><td>0.495***<br><span class="stderr">(0.027)</span></td><td>0.521***<br><span class="stderr">(0.050)</span></td><td>0.603***<br><span class="stderr">(0.060)</span></td></tr>
+</table>
