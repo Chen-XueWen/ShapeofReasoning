@@ -1,143 +1,131 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-"""OLS regressions of TDA features against individual graph properties.
+"""OLS regressions of TDA features against graph properties.
 
-For each requested year (and the combined dataset if enabled), this script:
-1. Loads the TDA and graph feature JSONL traces and filters rows by year prefix.
-2. Merges them on `id` to form a single feature matrix.
-3. Runs a separate OLS regression for each graph property listed in
-   GRAPH_TARGET_COLUMNS, using the ordered TDA feature set as predictors.
-4. Writes statsmodels summaries, Stargazer tables, and coefficient CSVs under
-   `<outdir>/<target>/<year>/`.
+The script operates on the unified CSV dataset and can run regressions per
+model, per year, and across all models. Output structure mirrors the target
+variable first: ``<outdir>/<target>/<model>/<year>/`` plus ``combined`` and
+``all_models`` folders when enabled.
 """
 
 import argparse
+import json
 from pathlib import Path
+from typing import Iterable, Sequence
 
 import pandas as pd
 import statsmodels.api as sm
 from stargazer.stargazer import Stargazer
 
-# Ordered TDA features reused from analyze_tda_vs_alignment.py
-TDA_FEATURE_COLUMNS = [
-    "H0_count",
-    "H0_total_life",
-    "H0_max_life",
-    "H0_mean_life",
-    "H0_entropy",
-    "H0_skewness",
-    "H0_max_birth",
-    "H0_max_death",
-    "H1_count",
-    "H1_total_life",
-    "H1_max_life",
-    "H1_mean_life",
-    "H1_entropy",
-    "H1_skewness",
-    "H1_max_birth",
-    "H1_max_death",
-    "H0_betti_peak",
-    "H0_betti_location",
-    "H0_betti_width",
-    "H0_betti_centroid",
-    "H0_betti_spread",
-    "H0_betti_trend",
-    "H1_betti_peak",
-    "H1_betti_location",
-    "H1_betti_width",
-    "H1_betti_centroid",
-    "H1_betti_spread",
-    "H1_betti_trend",
-    "H0_landscape_mean",
-    "H0_landscape_max",
-    "H0_landscape_area",
-    "H1_landscape_mean",
-    "H1_landscape_max",
-    "H1_landscape_area",
-]
-
-# Graph properties to treat as dependent variables by default
-GRAPH_TARGET_COLUMNS = [
-    "avg_path_length",
-    "diameter",
-    "loop_count",
-    "small_world_index",
-    "avg_clustering",
-]
+DEFAULT_DATASET = Path("data/aime_regression_dataset.csv")
+DEFAULT_MODELS: tuple[str, ...] = (
+    "deepseek-r1_32b",
+    "gpt-oss_120b",
+    "gpt-oss_20b",
+    "qwen3_32b",
+)
+DEFAULT_YEARS: tuple[str, ...] = ("2020", "2021", "2022", "2023", "2024", "2025")
 
 
-def ensure_dir(path: str | Path) -> None:
-    Path(path).mkdir(parents=True, exist_ok=True)
+def ensure_dir(path: Path) -> None:
+    path.mkdir(parents=True, exist_ok=True)
 
 
-def read_jsonl(path: Path) -> pd.DataFrame:
-    if path.is_dir():
-        files = sorted(path.glob("*.jsonl"))
-        if not files:
-            raise FileNotFoundError(f"No JSONL files found under {path}")
-        frames = [pd.read_json(f, lines=True) for f in files]
-        return pd.concat(frames, ignore_index=True)
+def _prefixed_columns(df: pd.DataFrame, prefix: str) -> list[str]:
+    """Return dataset columns that start with ``prefix`` preserving CSV order."""
+
+    return [column for column in df.columns if column.startswith(prefix)]
+
+
+def load_dataset(path: Path) -> pd.DataFrame:
     if not path.exists():
-        raise FileNotFoundError(f"File '{path}' not found")
-    return pd.read_json(path, lines=True)
+        raise FileNotFoundError(f"Dataset not found: {path}")
+
+    df = pd.read_csv(path)
+    for column in ("model", "id", "year", "exam", "problem"):
+        if column in df.columns:
+            df[column] = df[column].astype(str)
+
+    if "align_indices" in df.columns and "align_n_pairs" not in df.columns:
+        def count_pairs(value: object) -> float | pd.NA:
+            if pd.isna(value):
+                return pd.NA
+            text = str(value).strip()
+            if not text:
+                return pd.NA
+            try:
+                parsed = json.loads(text)
+            except Exception:
+                return pd.NA
+            if isinstance(parsed, list):
+                return float(len(parsed))
+            return pd.NA
+
+        df["align_n_pairs"] = df["align_indices"].apply(count_pairs)
+
+    numeric_candidates = [
+        col
+        for col in df.columns
+        if col.startswith("tda_") or col.startswith("graph_")
+    ]
+    for col in numeric_candidates:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    return df
 
 
-def filter_by_year(df: pd.DataFrame, year: str | None) -> pd.DataFrame:
-    if year is None:
-        return df.copy()
-    prefix = f"{year}-"
-    return df[df["id"].astype(str).str.startswith(prefix)].copy()
+def select_rows(
+    df: pd.DataFrame,
+    models: Iterable[str] | None,
+    years: Iterable[str] | None,
+) -> pd.DataFrame:
+    result = df
+    if models is not None:
+        result = result[result["model"].isin(list(models))]
+    if years is not None:
+        result = result[result["year"].isin(list(years))]
+    return result.copy()
 
 
-def merge_tda_graph(df_tda: pd.DataFrame, df_graph: pd.DataFrame) -> pd.DataFrame:
-    df_tda = df_tda.copy()
-    df_graph = df_graph.copy()
-    df_tda = df_tda.drop("score", axis=1, errors="ignore")
-    df_graph = df_graph.drop("score", axis=1, errors="ignore")
-
-    df_tda["id"] = df_tda["id"].astype(str)
-    df_graph["id"] = df_graph["id"].astype(str)
-
-    return df_tda.merge(df_graph, on="id", how="inner")
-
-
-def run_regression(df: pd.DataFrame, dependent: str, dest: Path, label: str) -> None:
+def run_regression(
+    df: pd.DataFrame,
+    dependent: str,
+    feature_columns: Sequence[str],
+    dest: Path,
+    label: str,
+) -> None:
     if dependent not in df.columns:
-        print(f"Column '{dependent}' missing for {label}; skipping regression.")
+        print(f"[{label}] column '{dependent}' missing; skipping.")
         return
 
-    available_features = [col for col in TDA_FEATURE_COLUMNS if col in df.columns]
+    available_features = [col for col in feature_columns if col in df.columns]
     if not available_features:
-        print(f"No TDA feature columns present for {label}; skipping regression.")
+        print(f"[{label}] no TDA feature columns present; skipping.")
         return
 
     ensure_dir(dest)
 
-    features = (
-        df[available_features]
-        .apply(pd.to_numeric, errors="coerce")
-        .astype(float)
-    )
+    features = df[available_features].apply(pd.to_numeric, errors="coerce").astype(float)
     target = pd.to_numeric(df[dependent], errors="coerce").astype(float)
 
     data = pd.concat([features, target.rename(dependent)], axis=1).dropna()
     if data.empty:
-        print(f"All rows dropped due to NaNs for {label} ({dependent}); skipping.")
+        print(f"[{label}] all rows dropped after NaN filtering; skipping.")
         return
 
-    X = sm.add_constant(data[available_features].astype(float), has_constant="add")
-    y = data[dependent].astype(float)
+    X = sm.add_constant(data[available_features], has_constant="add")
+    y = data[dependent]
 
     if len(y) < 2:
-        print(f"Not enough observations for regression ({label}, {dependent}).")
+        print(f"[{label}] not enough observations; skipping regression.")
         return
 
     model = sm.OLS(y, X).fit()
 
     summary_path = dest / "ols_summary.txt"
     summary_path.write_text(model.summary().as_text(), encoding="utf-8")
-    
+
     sg = Stargazer([model])
     sg.title(f"OLS Regression Results ({dependent})")
     try:
@@ -149,93 +137,139 @@ def run_regression(df: pd.DataFrame, dependent: str, dest: Path, label: str) -> 
     tex_path = dest / "ols_stargazer.tex"
     tex_path.write_text(sg.render_latex(), encoding="utf-8")
 
-    print(f"[{label}] {dependent}: wrote {summary_path}")
+    print(f"[{label}] wrote {summary_path}")
 
 
-def process_year(
-    df_tda: pd.DataFrame,
-    df_graph: pd.DataFrame,
-    year: str | None,
-    targets: list[str],
-    base_outdir: Path,
-    label: str,
+def process_model(
+    df_full: pd.DataFrame,
+    model_name: str,
+    years: Sequence[str] | None,
+    targets: Sequence[str],
+    feature_columns: Sequence[str],
+    outdir: Path,
+    skip_combined: bool,
 ) -> None:
-    df_tda_year = filter_by_year(df_tda, year)
-    df_graph_year = filter_by_year(df_graph, year)
-    df_year = merge_tda_graph(df_tda_year, df_graph_year)
+    df_model = select_rows(df_full, [model_name], years)
+    if df_model.empty:
+        print(f"[{model_name}] no rows found; skipping model.")
+        return
 
-    if df_year.empty:
-        print(f"No merged rows for {label}; skipping year.")
+    per_year = years or sorted(df_model["year"].unique())
+    for year in per_year:
+        df_year = df_model[df_model["year"] == year]
+        for target in targets:
+            label = f"{model_name}_{year}_{target}"
+            dest = outdir / target / model_name / year
+            run_regression(df_year, target, feature_columns, dest, label)
+
+    if not skip_combined:
+        for target in targets:
+            label = f"{model_name}_combined_{target}"
+            dest = outdir / target / model_name / "combined"
+            run_regression(df_model, target, feature_columns, dest, label)
+
+
+def process_overall(
+    df_full: pd.DataFrame,
+    models: Sequence[str] | None,
+    years: Sequence[str] | None,
+    targets: Sequence[str],
+    feature_columns: Sequence[str],
+    outdir: Path,
+) -> None:
+    df_subset = select_rows(df_full, models, years)
+    if df_subset.empty:
+        print("[all_models] no observations; skipping overall regressions.")
         return
 
     for target in targets:
-        dest = base_outdir / target / label
-        run_regression(df_year, target, dest, label)
+        label = f"all_models_{target}"
+        dest = outdir / target / "all_models"
+        run_regression(df_subset, target, feature_columns, dest, label)
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(
-        description="Regress TDA features against graph properties (OLS)"
+    parser = argparse.ArgumentParser(
+        description="Regress TDA features against graph properties (OLS)",
     )
-    ap.add_argument(
-        "--tda",
-        default="data/aime_tda/trace/gpt-oss_20b.jsonl",
-        help="TDA feature JSONL (trace split)",
+    parser.add_argument(
+        "--dataset",
+        type=Path,
+        default=DEFAULT_DATASET,
+        help="Path to the unified regression dataset CSV",
     )
-    ap.add_argument(
-        "--graph",
-        default="data/aime_graph/trace/gpt-oss_20b.jsonl",
-        help="Graph feature JSONL (trace split)",
+    parser.add_argument(
+        "--models",
+        nargs="*",
+        default=list(DEFAULT_MODELS),
+        help="Model identifiers to analyse (omit for all models in the dataset)",
     )
-    ap.add_argument(
-        "--outdir",
-        default="analysis/gpt-oss_20b/tda_vs_graph",
-        help="Directory to write analysis artifacts",
+    parser.add_argument(
+        "--years",
+        nargs="*",
+        default=list(DEFAULT_YEARS),
+        help="Contest years to analyse individually",
     )
-    ap.add_argument(
+    parser.add_argument(
         "--targets",
-        nargs="+",
-        default=GRAPH_TARGET_COLUMNS,
+        nargs="*",
+        default=None,
         help="Graph feature columns to use as dependent variables",
     )
-    ap.add_argument(
-        "--years",
-        nargs="+",
-        default=["2020", "2021", "2022", "2023", "2024", "2025"],
-        help="List of AIME contest years to analyze individually",
+    parser.add_argument(
+        "--outdir",
+        type=Path,
+        default=Path("analysis/tda_vs_graph"),
+        help="Directory to write analysis artefacts",
     )
-    ap.add_argument(
+    parser.add_argument(
         "--skip-combined",
         action="store_true",
-        help="Skip combined regression across all specified years",
+        help="Skip per-model combined regression across selected years",
     )
-    args = ap.parse_args()
+    parser.add_argument(
+        "--skip-overall",
+        action="store_true",
+        help="Skip the overall regression across all specified models",
+    )
+    args = parser.parse_args()
 
-    outdir = Path(args.outdir)
-    ensure_dir(outdir)
+    df_full = load_dataset(args.dataset)
+    tda_feature_columns = _prefixed_columns(df_full, "tda_")
+    if args.targets:
+        resolved_targets: list[str] = []
+        for target in args.targets:
+            if target in df_full.columns:
+                resolved_targets.append(target)
+            else:
+                candidate = f"graph_{target}" if not target.startswith("graph_") else target
+                resolved_targets.append(candidate)
+        targets = resolved_targets
+    else:
+        targets = _prefixed_columns(df_full, "graph_")
 
-    df_tda_full = read_jsonl(Path(args.tda))
-    df_graph_full = read_jsonl(Path(args.graph))
+    requested_models = args.models or sorted(df_full["model"].unique())
+    requested_years = [str(year) for year in args.years] if args.years else None
 
-    years = [str(y) for y in args.years]
-    for year in years:
-        process_year(
-            df_tda_full,
-            df_graph_full,
-            year,
-            args.targets,
-            outdir,
-            label=year,
+    for model_name in requested_models:
+        process_model(
+            df_full,
+            model_name,
+            requested_years,
+            targets,
+            tda_feature_columns,
+            args.outdir,
+            args.skip_combined,
         )
 
-    if not args.skip_combined:
-        process_year(
-            df_tda_full,
-            df_graph_full,
-            None,
-            args.targets,
-            outdir,
-            label="combined",
+    if not args.skip_overall:
+        process_overall(
+            df_full,
+            requested_models,
+            requested_years,
+            targets,
+            tda_feature_columns,
+            args.outdir,
         )
 
 

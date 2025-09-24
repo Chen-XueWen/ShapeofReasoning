@@ -2,4 +2,5 @@
 2. run_align_all.sh
 3. run_tda_extract_all.sh
 4. run_graph_extract_all.sh (need to take note of the kmean, maybe 200 is too many?)
-5. run_regression_all.sh
+5. regression_scripts/build_combined_dataset.py
+6. 
