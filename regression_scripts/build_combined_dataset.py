@@ -16,12 +16,25 @@ DEFAULT_MODELS: Tuple[str, ...] = (
     "gpt-oss_120b",
     "gpt-oss_20b",
     "qwen3_32b",
+    "qwen3_8b",
+    "deepseek-r1_8b",
+    "deepseek-r1_70b",
 )
 
 TDA_SUBPATH = Path("data/aime_tda/trace")
 GRAPH_SUBPATH = Path("data/aime_graph/trace")
 ALIGN_SUBPATH = Path("data/aime_align_dp")
-DEFAULT_OUTPUT = Path("data/aime_regression_dataset.csv")
+DEFAULT_OUTPUT = Path("data/aime_regression_dataset_cleaned.csv")
+
+
+EXCLUDED_FIELDS = {
+    "H0_betti_trend",
+    "H1_betti_trend",
+    "H0_betti_peak",
+    "H0_betti_location",
+    "H0_max_birth",
+    "H0_max_death",
+}
 
 
 @dataclass(frozen=True)
@@ -149,6 +162,7 @@ def write_csv(
             for row in rows
             for key in row
             if key not in base_fields
+            and key not in EXCLUDED_FIELDS
         }
     )
     fieldnames = base_fields + feature_fields
@@ -158,7 +172,12 @@ def write_csv(
         writer = csv.DictWriter(stream, fieldnames=fieldnames)
         writer.writeheader()
         for row in rows:
-            writer.writerow(row)
+            filtered_row = {
+                key: value
+                for key, value in row.items()
+                if key not in EXCLUDED_FIELDS
+            }
+            writer.writerow(filtered_row)
 
     return len(rows)
 
