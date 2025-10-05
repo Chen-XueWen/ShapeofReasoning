@@ -1,163 +1,132 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-"""
-Analyze association between topological features and alignment score using OLS.
+"""OLS regressions of TDA features against alignment score.
 
-Configuration:
-- Dependent variable: score
-- Predictors: all numeric TDA features (excluding id/score/coverage/n_pairs/indices),
-  including scalar Betti descriptors (betti_*)
-- Controls: coverage, n_pairs (if available)
-
-Outputs (default under analysis/):
-- ols_summary.txt: OLS regression summary
-- ols_coefficients.csv: per-feature OLS coefficients with p-values
-- ols_stargazer.html: Stargazer-formatted regression table (HTML)
-- ols_stargazer.tex: Stargazer-formatted regression table (LaTeX)
+Consumes the unified CSV dataset and produces per-model, per-year, combined, and
+all-model regressions with outputs arranged under
+``<outdir>/<model>/<year>/`` (plus ``combined`` and ``all_models`` when enabled).
 """
 
 import argparse
+import json
 from pathlib import Path
+from typing import Iterable, Sequence
+
 
 import pandas as pd
 import statsmodels.api as sm
 from stargazer.stargazer import Stargazer
 
-# Ordered feature set for regression
-FEATURE_COLUMNS = [
-    "H0_count",
-    "H0_total_life",
-    "H0_max_life",
-    "H0_mean_life",
-    "H0_entropy",
-    "H0_skewness",
-    "H0_max_birth",
-    "H0_max_death",
-    "H1_count",
-    "H1_total_life",
-    "H1_max_life",
-    "H1_mean_life",
-    "H1_entropy",
-    "H1_skewness",
-    "H1_max_birth",
-    "H1_max_death",
-    "H0_betti_peak",
-    "H0_betti_location",
-    "H0_betti_width",
-    "H0_betti_centroid",
-    "H0_betti_spread",
-    "H0_betti_trend",
-    "H1_betti_peak",
-    "H1_betti_location",
-    "H1_betti_width",
-    "H1_betti_centroid",
-    "H1_betti_spread",
-    "H1_betti_trend",
-    "H0_landscape_mean",
-    "H0_landscape_max",
-    "H0_landscape_area",
-    "H1_landscape_mean",
-    "H1_landscape_max",
-    "H1_landscape_area",
-]
+DEFAULT_DATASET = Path("data/aime_regression_dataset.csv")
+DEFAULT_MODELS: tuple[str, ...] = (
+    "deepseek-r1_32b",
+    "gpt-oss_120b",
+    "gpt-oss_20b",
+    "qwen3_32b",
+)
+DEFAULT_YEARS: tuple[str, ...] = ("2020", "2021", "2022", "2023", "2024", "2025")
+
+# Backwards-compatibility alias for downstream utilities that import this module.
+FEATURE_COLUMNS: list[str] = []
+TARGET_COLUMN = "align_score"
 
 
-def ensure_dir(path: str | Path) -> None:
-    Path(path).mkdir(parents=True, exist_ok=True)
+def ensure_dir(path: Path) -> None:
+    path.mkdir(parents=True, exist_ok=True)
 
-def read_jsonl(path: Path) -> pd.DataFrame:
-    if path.is_dir():
-        files = sorted(path.glob("*.jsonl"))
-        if not files:
-            raise FileNotFoundError(f"No JSONL files found under {path}")
-        frames = [pd.read_json(f, lines=True) for f in files]
-        return pd.concat(frames, ignore_index=True)
+
+def _prefixed_columns(df: pd.DataFrame, prefix: str) -> list[str]:
+    """Return dataset columns that start with ``prefix`` preserving CSV order."""
+
+    return [column for column in df.columns if column.startswith(prefix)]
+
+
+def load_dataset(path: Path) -> pd.DataFrame:
     if not path.exists():
-        raise FileNotFoundError(f"File '{path}' not found")
-    return pd.read_json(path, lines=True)
+        raise FileNotFoundError(f"Dataset not found: {path}")
 
+    df = pd.read_csv(path)
+    for column in ("model", "id", "year", "exam", "problem"):
+        if column in df.columns:
+            df[column] = df[column].astype(str)
 
-def load_align_df(align_path: Path, year: str | None) -> pd.DataFrame:
-    """Load alignment data for a specific year or all years."""
+    if "align_indices" in df.columns and "align_n_pairs" not in df.columns:
+        def count_pairs(value: object) -> float | pd.NA:
+            if pd.isna(value):
+                return pd.NA
+            text = str(value).strip()
+            if not text:
+                return pd.NA
+            try:
+                parsed = json.loads(text)
+            except Exception:
+                return pd.NA
+            if isinstance(parsed, list):
+                return float(len(parsed))
+            return pd.NA
 
-    if align_path.is_dir():
-        if year is None:
-            files = sorted(align_path.glob("*.jsonl"))
-            if not files:
-                raise FileNotFoundError(f"No alignment JSONL files found under {align_path}")
-        else:
-            pattern = f"*{year}*.jsonl"
-            files = sorted(align_path.glob(pattern))
-            if not files:
-                raise FileNotFoundError(
-                    f"No alignment file matching '{pattern}' found under {align_path}"
-                )
-        frames = [pd.read_json(f, lines=True) for f in files]
-        df = pd.concat(frames, ignore_index=True)
-    else:
-        df = read_jsonl(align_path)
-        if year is not None:
-            df = df[df["id"].astype(str).str.startswith(f"{year}")].copy()
+        df["align_n_pairs"] = df["align_indices"].apply(count_pairs)
+
+    numeric_candidates = [
+        col
+        for col in df.columns
+        if col.startswith("tda_") or col.startswith("align_")
+    ]
+    for col in numeric_candidates:
+        if col == "align_indices":
+            continue
+        df[col] = pd.to_numeric(df[col], errors="coerce")
 
     return df
 
 
-def filter_features_by_year(df_feats: pd.DataFrame, year: str | None) -> pd.DataFrame:
-    if year is None:
-        return df_feats.copy()
-    prefix = f"{year}-"
-    return df_feats[df_feats["id"].astype(str).str.startswith(prefix)].copy()
+def select_rows(
+    df: pd.DataFrame,
+    models: Iterable[str] | None,
+    years: Iterable[str] | None,
+) -> pd.DataFrame:
+    result = df
+    if models is not None:
+        result = result[result["model"].isin(list(models))]
+    if years is not None:
+        result = result[result["year"].isin(list(years))]
+    return result.copy()
 
 
-def merge_align_features(df_align: pd.DataFrame, df_feats: pd.DataFrame) -> pd.DataFrame:
-    df_align = df_align.copy()
-    df_feats = df_feats.copy()
-    df_feats = df_feats.drop("score", axis=1, errors="ignore")
-    df_align["id"] = df_align["id"].astype(str)
-    df_feats["id"] = df_feats["id"].astype(str)
-
-    if "indices" in df_align.columns:
-        df_align["n_pairs"] = df_align["indices"].apply(
-            lambda x: len(x) if isinstance(x, list) else np.nan
-        )
-    else:
-        df_align["n_pairs"] = np.nan
-
-    cols = ["id", "score", "coverage", "n_pairs", "indices"]
-    df_align = df_align[[c for c in cols if c in df_align.columns]]
-
-    return df_feats.merge(df_align, on="id", how="inner")
-
-def run_analysis(df: pd.DataFrame, dest: Path, label: str) -> None:
+def run_analysis(
+    df: pd.DataFrame,
+    feature_columns: Sequence[str],
+    dest: Path,
+    label: str,
+) -> None:
     if df.empty:
-        print(f"No merged rows available for {label}; skipping analysis.")
+        print(f"[{label}] no observations; skipping.")
         return
 
     ensure_dir(dest)
 
-    available_features = [col for col in FEATURE_COLUMNS if col in df.columns]
+    available_features = [col for col in feature_columns if col in df.columns]
     if not available_features:
-        print(f"No configured feature columns present for {label}; skipping analysis.")
+        print(f"[{label}] none of the configured TDA features are present; skipping.")
         return
 
-    features = df[available_features].apply(pd.to_numeric, errors="coerce")
-    if "score" not in df.columns:
-        print(f"Column 'score' missing for {label}; skipping analysis.")
+    features = df[available_features].apply(pd.to_numeric, errors="coerce").astype(float)
+    if TARGET_COLUMN not in df.columns:
+        print(f"[{label}] missing target column '{TARGET_COLUMN}'; skipping.")
         return
-    target = pd.to_numeric(df["score"], errors="coerce")
+    target = pd.to_numeric(df[TARGET_COLUMN], errors="coerce").astype(float)
 
-    data = pd.concat([features, target.rename("score")], axis=1).dropna()
-
+    data = pd.concat([features, target.rename(TARGET_COLUMN)], axis=1).dropna()
     if data.empty:
-        print(f"All rows dropped due to NaNs for {label}; skipping analysis.")
+        print(f"[{label}] all rows dropped after NaN filtering; skipping.")
         return
 
     X = sm.add_constant(data[available_features], has_constant="add")
-    y = data["score"]
+    y = data[TARGET_COLUMN]
 
     if len(y) < 2:
-        print(f"Not enough observations for regression ({label}); skipping analysis.")
+        print(f"[{label}] not enough observations for regression; skipping.")
         return
 
     model = sm.OLS(y, X).fit()
@@ -166,9 +135,9 @@ def run_analysis(df: pd.DataFrame, dest: Path, label: str) -> None:
     summary_path.write_text(model.summary().as_text(), encoding="utf-8")
 
     sg = Stargazer([model])
-    sg.title("OLS Regression Results (score)")
+    sg.title("OLS Regression Results (align_score)")
     try:
-        sg.dependent_variable_name("score")
+        sg.dependent_variable_name("align_score")
     except Exception:
         pass
     html_path = dest / "ols_stargazer.html"
@@ -176,44 +145,79 @@ def run_analysis(df: pd.DataFrame, dest: Path, label: str) -> None:
     tex_path = dest / "ols_stargazer.tex"
     tex_path.write_text(sg.render_latex(), encoding="utf-8")
 
-    print(f"Wrote: {summary_path}")
-    print(f"Wrote: {html_path}")
-    print(f"Wrote: {tex_path}")
+    print(f"[{label}] wrote {summary_path}")
+
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Analyze TDA feature influence on alignment score (OLS)")
-    ap.add_argument("--align", default="data/aime_align_dp/gpt-oss_20b", help="Alignment JSONL file or directory")
-    ap.add_argument("--features", default="data/aime_tda/trace/gpt-oss_20b.jsonl", help="TDA feature JSONL (trace split)")
-    ap.add_argument(
-        "--outdir",
-        default="analysis/gpt-oss_20b/tda_vs_alignment",
-        help="Directory to write analysis artifacts",
+    parser = argparse.ArgumentParser(
+        description="Analyze TDA feature influence on alignment score (OLS)",
     )
-    ap.add_argument("--years", nargs="+", default=["2020", "2021", "2022", "2023", "2024", "2025"], help="List of AIME contest years to analyze individually")
-    ap.add_argument("--skip-combined", action="store_true", help="Skip combined regression across all specified years")
-    args = ap.parse_args()
+    parser.add_argument(
+        "--dataset",
+        type=Path,
+        default=DEFAULT_DATASET,
+        help="Path to the unified regression dataset CSV",
+    )
+    parser.add_argument(
+        "--models",
+        nargs="*",
+        default=list(DEFAULT_MODELS),
+        help="Model identifiers to analyse (omit for all models in the dataset)",
+    )
+    parser.add_argument(
+        "--years",
+        nargs="*",
+        default=list(DEFAULT_YEARS),
+        help="Contest years to analyse individually",
+    )
+    parser.add_argument(
+        "--outdir",
+        type=Path,
+        default=Path("analysis/tda_vs_alignment"),
+        help="Directory to write analysis artefacts",
+    )
+    parser.add_argument(
+        "--skip-combined",
+        action="store_true",
+        help="Skip per-model combined regression across selected years",
+    )
+    parser.add_argument(
+        "--skip-overall",
+        action="store_true",
+        help="Skip the overall regression across all specified models",
+    )
+    args = parser.parse_args()
 
-    outdir = Path(args.outdir)
-    ensure_dir(outdir)
+    df_full = load_dataset(args.dataset)
+    tda_feature_columns = _prefixed_columns(df_full, "tda_")
+    global FEATURE_COLUMNS
+    FEATURE_COLUMNS = list(tda_feature_columns)
+    requested_models = args.models or sorted(df_full["model"].unique())
+    requested_years = [str(year) for year in args.years] if args.years else None
 
-    align_path = Path(args.align)
-    features_path = Path(args.features)
+    for model_name in requested_models:
+        df_model = select_rows(df_full, [model_name], requested_years)
+        if df_model.empty:
+            print(f"[{model_name}] no rows found; skipping model.")
+            continue
 
-    df_feats_full = read_jsonl(features_path)
+        for year in requested_years or sorted(df_model["year"].unique()):
+            df_year = df_model[df_model["year"] == year]
+            label = f"{model_name}_{year}"
+            dest = args.outdir / model_name / year
+            run_analysis(df_year, tda_feature_columns, dest, label)
 
-    years = [str(y) for y in args.years]
+        if not args.skip_combined:
+            df_combined = df_model
+            label = f"{model_name}_combined"
+            dest = args.outdir / model_name / "combined"
+            run_analysis(df_combined, tda_feature_columns, dest, label)
 
-    for year in years:
-        df_align_year = load_align_df(align_path, year)
-        df_feats_year = filter_features_by_year(df_feats_full, year)
-        df_year = merge_align_features(df_align_year, df_feats_year)
-        year_outdir = outdir / year
-        run_analysis(df_year, year_outdir, year)
-
-    if not args.skip_combined:
-        df_align_all = load_align_df(align_path, None)
-        df_all = merge_align_features(df_align_all, df_feats_full)
-        run_analysis(df_all, outdir / "combined", "combined")
+    if not args.skip_overall:
+        df_overall = select_rows(df_full, requested_models, requested_years)
+        label = "all_models"
+        dest = args.outdir / label
+        run_analysis(df_overall, tda_feature_columns, dest, label)
 
 
 if __name__ == "__main__":
