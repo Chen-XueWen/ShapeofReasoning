@@ -5,7 +5,7 @@ set -euo pipefail
 PYTHON_BIN=${PYTHON_BIN:-python}
 
 REGRESSION_DIR="regression_scripts"
-DATASET_PATH="data/aime_regression_dataset_kmeans.csv"
+DATASET_PATH="data/aime_regression_dataset_cleaned.csv"
 
 SCRIPTS=(
   "analyze_tda_vs_alignment.py"
