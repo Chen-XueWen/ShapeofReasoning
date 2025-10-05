@@ -22,7 +22,9 @@ models=(
   #"deepseek-r1:32b"
   #"qwen3:32b"
   #"gpt-oss:20b"
-  gpt-oss:120b
+  #"gpt-oss:120b"
+  "deepseek-r1:8b"
+  "qwen3:8b"
 )
 
 shopt -s nullglob

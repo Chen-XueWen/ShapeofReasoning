@@ -10,10 +10,12 @@ if [[ ! -f "${GRAPH_SCRIPT}" ]]; then
 fi
 
 MODELS=(
-  "gpt-oss:120b"
+  #"gpt-oss:120b"
   #"deepseek-r1:32b"
   #"qwen3:32b"
   #"gpt-oss:20b"
+  "deepseek-r1:8b"
+  "qwen3:8b"
 )
 
 SPLITS=(
