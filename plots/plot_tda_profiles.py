@@ -9,7 +9,86 @@ from typing import Dict, Iterable, List, Tuple
 import numpy as np
 import matplotlib.pyplot as plt
 
-Diagram = Dict[str, np.ndarray]
+
+def _curve_features_from_samples(ts: np.ndarray, ys: np.ndarray) -> dict[str, float | None]:
+    """Derive interpretable descriptors for a sampled 1-D curve."""
+    if ts.size == 0 or ys.size == 0:
+        return {}
+    mask = np.isfinite(ts) & np.isfinite(ys)
+    if not np.any(mask):
+        return {}
+    ts = ts[mask]
+    ys = ys[mask]
+    order = np.argsort(ts)
+    ts = ts[order]
+    ys = ys[order]
+    t_min = float(ts[0])
+    t_max = float(ts[-1])
+    if not np.isfinite(t_min) or not np.isfinite(t_max) or t_max <= t_min:
+        return {}
+    peak = float(np.max(ys))
+    if peak <= 0 or not np.isfinite(peak):
+        return {}
+    i_peak = int(np.argmax(ys))
+    t_peak = float(ts[i_peak])
+    mass = float(np.trapezoid(ys, ts))
+    centroid = None
+    centroid_y = None
+    if mass > 0 and np.isfinite(mass):
+        centroid = float(np.trapezoid(ys * ts, ts) / mass)
+        if np.isfinite(centroid):
+            centroid_y = float(np.interp(centroid, ts, ys))
+    return {
+        "peak": peak,
+        "t_peak": t_peak,
+        "centroid": centroid,
+        "centroid_y": centroid_y,
+        "t_min": t_min,
+        "t_max": t_max,
+    }
+
+
+def _annotate_curve(
+    ax: plt.Axes,
+    ts: np.ndarray,
+    ys: np.ndarray,
+    color: str,
+    label: str,
+) -> None:
+    features = _curve_features_from_samples(ts, ys)
+    if not features:
+        return
+    peak = features["peak"]
+    t_peak = features["t_peak"]
+    centroid = features.get("centroid")
+    centroid_y = features.get("centroid_y")
+
+    # Peak marker
+    ax.axvline(t_peak, color=color, linestyle="--", alpha=0.7)
+    ax.annotate(
+        f"{label} peak\n({t_peak:.2f}, {peak:.2f})",
+        xy=(t_peak, peak),
+        xytext=(0, 10),
+        textcoords="offset points",
+        ha="center",
+        color=color,
+        fontsize=9,
+    )
+
+    # Centroid marker (if defined)
+    if centroid is not None and centroid_y is not None:
+        ax.axvline(centroid, color=color, linestyle=":", alpha=0.7)
+        ax.annotate(
+            f"{label} centroid\n({centroid:.2f})",
+            xy=(centroid, centroid_y),
+            xytext=(0, -12),
+            textcoords="offset points",
+            ha="center",
+            color=color,
+            fontsize=9,
+        )
+
+    Diagram = Dict[str, np.ndarray]
 
 def load_diagram(path: Path) -> Diagram:
     arrays: Diagram = {}
@@ -96,9 +175,12 @@ def plot_curves(
     landscape_level: int,
     output_path: Path,
     show: bool,
+    fig_width: float,
+    fig_row_height: float,
 ) -> None:
     rows = len(splits)
-    fig, axes = plt.subplots(rows, 2, figsize=(10, 4 * rows), sharex=False)
+    fig_height = max(fig_row_height * rows, 1.0)
+    fig, axes = plt.subplots(rows, 2, figsize=(fig_width, fig_height), sharex=False)
     if rows == 1:
         axes = np.expand_dims(axes, axis=0)
     colors = {"H0": "tab:blue", "H1": "tab:orange"}
@@ -107,6 +189,10 @@ def plot_curves(
         landscape_ax = axes[row_idx, 1]
         betti_ax.set_title(f"{split} Betti curves")
         landscape_ax.set_title(f"{split} landscapes (level {landscape_level})")
+        betti_secondary_axes: dict[str, plt.Axes] = {}
+        landscape_secondary_axes: dict[str, plt.Axes] = {}
+        betti_axes_all = [betti_ax]
+        landscape_axes_all = [landscape_ax]
         for dim_key in dims:
             try:
                 grid, betti_mean, betti_std, landscape_mean, landscape_std = aggregate_curves(
@@ -114,23 +200,74 @@ def plot_curves(
                 )
             except ValueError:
                 continue
-            color = colors.get(dim_key, None)
-            betti_ax.plot(grid, betti_mean, label=dim_key, color=color)
-            betti_ax.fill_between(grid, betti_mean - betti_std, betti_mean + betti_std, color=color, alpha=0.2)
-            landscape_ax.plot(grid, landscape_mean, label=dim_key, color=color)
-            landscape_ax.fill_between(
+            if dim_key == "H0":
+                betti_plot_ax = betti_ax
+                landscape_plot_ax = landscape_ax
+            else:
+                betti_plot_ax = betti_secondary_axes.get(dim_key)
+                if betti_plot_ax is None:
+                    betti_plot_ax = betti_ax.twinx()
+                    betti_secondary_axes[dim_key] = betti_plot_ax
+                    betti_axes_all.append(betti_plot_ax)
+                landscape_plot_ax = landscape_secondary_axes.get(dim_key)
+                if landscape_plot_ax is None:
+                    landscape_plot_ax = landscape_ax.twinx()
+                    landscape_secondary_axes[dim_key] = landscape_plot_ax
+                    landscape_axes_all.append(landscape_plot_ax)
+            line, = betti_plot_ax.plot(grid, betti_mean, label=dim_key, color=colors.get(dim_key))
+            line_color = line.get_color()
+            betti_plot_ax.fill_between(
+                grid,
+                betti_mean - betti_std,
+                betti_mean + betti_std,
+                color=line_color,
+                alpha=0.2,
+            )
+            _annotate_curve(betti_plot_ax, grid, betti_mean, color=line_color, label=dim_key)
+            if dim_key != "H0":
+                betti_plot_ax.spines["right"].set_color(line_color)
+                betti_plot_ax.tick_params(axis="y", colors=line_color)
+                betti_plot_ax.set_ylabel(f"Betti ({dim_key})", color=line_color)
+            landscape_line, = landscape_plot_ax.plot(grid, landscape_mean, label=dim_key, color=line_color)
+            landscape_line_color = landscape_line.get_color()
+            landscape_plot_ax.fill_between(
                 grid,
                 landscape_mean - landscape_std,
                 landscape_mean + landscape_std,
-                color=color,
+                color=landscape_line_color,
                 alpha=0.2,
             )
+            _annotate_curve(
+                landscape_plot_ax,
+                grid,
+                landscape_mean,
+                color=landscape_line_color,
+                label=f"{dim_key} landscape",
+            )
+            if dim_key != "H0":
+                landscape_plot_ax.spines["right"].set_color(landscape_line_color)
+                landscape_plot_ax.tick_params(axis="y", colors=landscape_line_color)
+                landscape_plot_ax.set_ylabel(f"Landscape ({dim_key})", color=landscape_line_color)
         betti_ax.set_xlabel("Filtration value")
         betti_ax.set_ylabel("Betti")
-        betti_ax.legend()
+        betti_handles: list = []
+        betti_labels: list = []
+        for ax_ in betti_axes_all:
+            handles, labels = ax_.get_legend_handles_labels()
+            betti_handles.extend(handles)
+            betti_labels.extend(labels)
+        if betti_handles:
+            betti_ax.legend(betti_handles, betti_labels)
         landscape_ax.set_xlabel("Filtration value")
         landscape_ax.set_ylabel("Landscape height")
-        landscape_ax.legend()
+        landscape_handles: list = []
+        landscape_labels: list = []
+        for ax_ in landscape_axes_all:
+            handles, labels = ax_.get_legend_handles_labels()
+            landscape_handles.extend(handles)
+            landscape_labels.extend(labels)
+        if landscape_handles:
+            landscape_ax.legend(landscape_handles, landscape_labels)
     fig.tight_layout()
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output_path, dpi=300)
@@ -147,7 +284,9 @@ def parse_args() -> argparse.Namespace:
     )
     ap.add_argument(
         "--model",
-        default="deepseek-r1_32b",
+        #default="deepseek-r1_32b",
+        #default="gpt-oss_20b",
+        default="qwen3_32b",
         help="Model slug used inside the diagram root",
     )
     ap.add_argument(
@@ -178,6 +317,18 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Display the figure interactively after saving",
     )
+    ap.add_argument(
+        "--fig-width",
+        type=float,
+        default=12.0,
+        help="Figure width in inches",
+    )
+    ap.add_argument(
+        "--fig-row-height",
+        type=float,
+        default=5.0,
+        help="Figure height per row in inches",
+    )
     return ap.parse_args()
 
 
@@ -197,6 +348,8 @@ def main() -> None:
         landscape_level=args.landscape_level,
         output_path=output_path,
         show=args.show,
+        fig_width=args.fig_width,
+        fig_row_height=args.fig_row_height,
     )
     print(f"Saved Betti and landscape plots to {output_path}")
 

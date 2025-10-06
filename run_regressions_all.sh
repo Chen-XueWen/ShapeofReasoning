@@ -5,7 +5,7 @@ set -euo pipefail
 PYTHON_BIN=${PYTHON_BIN:-python}
 
 REGRESSION_DIR="regression_scripts"
-DATASET_PATH="data/aime_regression_dataset_kmeans.csv"
+DATASET_PATH="data/aime_regression_dataset_cleaned.csv"
 
 SCRIPTS=(
   "analyze_tda_vs_alignment.py"
@@ -19,9 +19,9 @@ MODELS=(
   #"deepseek-r1:32b"
   #"qwen3:32b"
   #"gpt-oss:20b"
-  "deepseek-r1:8b"
-  "deepseek-r1:70b"
-  #"qwen3:8b"
+  #"deepseek-r1:8b"
+  #"deepseek-r1:70b"
+  "qwen3:8b"
 )
 
 run_regression() {
