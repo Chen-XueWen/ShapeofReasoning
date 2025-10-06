@@ -15,13 +15,13 @@ SCRIPTS=(
 )
 
 MODELS=(
-  #"gpt-oss:120b"
-  #"deepseek-r1:32b"
-  #"qwen3:32b"
-  #"gpt-oss:20b"
-  #"deepseek-r1:8b"
-  #"deepseek-r1:70b"
-  "qwen3:8b"
+  #"gpt-oss_120b"
+  #"deepseek-r1_32b"
+  #"qwen3_32b"
+  #"gpt-oss_20b"
+  #"deepseek-r1_8b"
+  #"deepseek-r1_70b"
+  "qwen3_8b"
 )
 
 run_regression() {
@@ -46,7 +46,7 @@ run_regression() {
       ;;
   esac
 
-  echo "Running ${script} -> ${outdir}"
+  echo "Running ${DATASET_PATH} ${script} -> ${outdir}"
   "${PYTHON_BIN}" "${REGRESSION_DIR}/${script}" \
     --dataset "${DATASET_PATH}" \
     --models "${MODELS[@]}" \
