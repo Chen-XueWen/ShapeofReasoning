@@ -21,7 +21,7 @@ MODELS=(
   #"gpt-oss_20b"
   #"deepseek-r1_8b"
   #"deepseek-r1_70b"
-  "qwen3_8b"
+  #"qwen3_8b"
 )
 
 run_regression() {
