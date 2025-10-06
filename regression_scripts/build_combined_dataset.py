@@ -17,8 +17,8 @@ DEFAULT_MODELS: Tuple[str, ...] = (
     "gpt-oss_20b",
     "qwen3_32b",
     "qwen3_8b",
-    "deepseek-r1_8b",
-    "deepseek-r1_70b",
+    #"deepseek-r1_8b",
+    #"deepseek-r1_70b",
 )
 
 TDA_SUBPATH = Path("data/aime_tda/trace")
