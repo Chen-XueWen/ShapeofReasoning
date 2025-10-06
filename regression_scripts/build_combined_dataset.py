@@ -27,12 +27,12 @@ DEFAULT_OUTPUT = Path("data/aime_regression_dataset_cleaned.csv")
 
 
 EXCLUDED_FIELDS = {
-    "H0_betti_trend",
-    "H1_betti_trend",
-    "H0_betti_peak",
-    "H0_betti_location",
-    "H0_max_birth",
-    "H0_max_death",
+    "tda_H0_betti_trend",
+    "tda_H1_betti_trend",
+    "tda_H0_betti_peak",
+    "tda_H0_betti_location",
+    "tda_H0_max_birth",
+    "tda_H0_max_death",
 }
 
 
