@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--membership",
-        default="data/aime_tda_feature_clusters.csv",
+        default="cluster_features/aime_tda_feature_clusters.csv",
         help="Optional CSV path to write feature-to-cluster assignments.",
     )
     parser.add_argument(
@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--prefix", default="tda_", help="Feature prefix to cluster.")
     parser.add_argument("--min-clusters", type=int, default=2, help="Minimum clusters to evaluate.")
-    parser.add_argument("--max-clusters", type=int, default=26, help="Maximum clusters to evaluate.")
+    parser.add_argument("--max-clusters", type=int, default=15, help="Maximum clusters to evaluate.")
     return parser.parse_args()
 
 
