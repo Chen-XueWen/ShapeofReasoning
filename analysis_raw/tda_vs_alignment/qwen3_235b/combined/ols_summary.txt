@@ -1,0 +1,54 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            align_score   R-squared:                       0.163
+Model:                            OLS   Adj. R-squared:                  0.027
+Method:                 Least Squares   F-statistic:                     1.200
+Date:                Tue, 07 Oct 2025   Prob (F-statistic):              0.247
+Time:                        16:06:39   Log-Likelihood:                 249.19
+No. Observations:                 180   AIC:                            -446.4
+Df Residuals:                     154   BIC:                            -363.4
+Df Model:                          25                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+const                     0.0667      2.105      0.032      0.975      -4.092       4.225
+tda_H0_betti_centroid     1.2716      1.127      1.128      0.261      -0.956       3.499
+tda_H0_betti_spread      -0.9746      1.048     -0.930      0.354      -3.045       1.096
+tda_H0_betti_width        0.0976      0.389      0.251      0.802      -0.671       0.866
+tda_H0_count             -0.0010      0.001     -0.794      0.428      -0.003       0.001
+tda_H0_entropy           -0.1040      0.195     -0.535      0.594      -0.488       0.280
+tda_H0_landscape_area    -9.3534     13.485     -0.694      0.489     -35.993      17.286
+tda_H0_landscape_max      1.4663      1.936      0.757      0.450      -2.358       5.291
+tda_H0_landscape_mean     0.4888      0.645      0.757      0.450      -0.786       1.764
+tda_H0_max_life           2.9326      3.872      0.757      0.450      -4.716      10.581
+tda_H0_mean_life         -1.7634      1.163     -1.516      0.132      -4.061       0.535
+tda_H0_skewness          -0.0115      0.048     -0.241      0.810      -0.106       0.083
+tda_H0_total_life         0.0046      0.005      0.931      0.353      -0.005       0.014
+tda_H1_betti_centroid    -0.0754      0.143     -0.526      0.599      -0.358       0.208
+tda_H1_betti_location    -0.0373      0.055     -0.680      0.498      -0.146       0.071
+tda_H1_betti_peak        -0.0014      0.002     -0.583      0.561      -0.006       0.003
+tda_H1_betti_spread      -0.0967      0.337     -0.287      0.775      -0.763       0.569
+tda_H1_betti_width       -0.0099      0.044     -0.227      0.821      -0.096       0.076
+tda_H1_count              0.0004      0.001      0.362      0.718      -0.002       0.003
+tda_H1_entropy           -0.0280      0.086     -0.327      0.744      -0.197       0.141
+tda_H1_landscape_area    -2.9294      3.584     -0.817      0.415     -10.010       4.151
+tda_H1_landscape_max      0.3244      0.194      1.673      0.096      -0.059       0.708
+tda_H1_landscape_mean     2.1163      1.659      1.276      0.204      -1.161       5.393
+tda_H1_max_birth          0.6037      0.314      1.921      0.057      -0.017       1.225
+tda_H1_max_death         -0.6789      0.352     -1.927      0.056      -1.375       0.017
+tda_H1_max_life           0.6488      0.388      1.673      0.096      -0.118       1.415
+tda_H1_mean_life         -4.6748      2.644     -1.768      0.079      -9.898       0.548
+tda_H1_skewness          -0.0568      0.038     -1.478      0.141      -0.133       0.019
+tda_H1_total_life         0.0056      0.023      0.239      0.811      -0.040       0.052
+==============================================================================
+Omnibus:                        4.904   Durbin-Watson:                   1.738
+Prob(Omnibus):                  0.086   Jarque-Bera (JB):                4.480
+Skew:                           0.336   Prob(JB):                        0.106
+Kurtosis:                       3.381   Cond. No.                     1.04e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 6.32e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

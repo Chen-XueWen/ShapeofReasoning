@@ -42,12 +42,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--models",
         nargs="+",
-        default=["qwen3_32b", "deepseek-r1_32b", "gpt-oss_20b"],
-        help="Model identifiers to include when computing correlations.",
+        help="Optional model identifiers to include when computing correlations. Defaults to all models.",
     )
     parser.add_argument("--prefix", default="tda_", help="Feature prefix to cluster.")
     parser.add_argument("--min-clusters", type=int, default=2, help="Minimum clusters to evaluate.")
-    parser.add_argument("--max-clusters", type=int, default=15, help="Maximum clusters to evaluate.")
+    parser.add_argument("--max-clusters", type=int, default=20, help="Maximum clusters to evaluate.")
     return parser.parse_args()
 
 
@@ -210,9 +209,12 @@ def main() -> None:
     plot_path = Path(args.plot)
 
     df = pd.read_csv(input_path)
-    filtered = df[df["model"].isin(args.models)].copy()
-    if filtered.empty:
-        raise ValueError("No rows match the requested models; check identifiers or source data.")
+    if args.models:
+        filtered = df[df["model"].isin(args.models)].copy()
+        if filtered.empty:
+            raise ValueError("No rows match the requested models; check identifiers or source data.")
+    else:
+        filtered = df.copy()
 
     feature_columns = [col for col in filtered.columns if col.startswith(args.prefix)]
     if len(feature_columns) < 2:

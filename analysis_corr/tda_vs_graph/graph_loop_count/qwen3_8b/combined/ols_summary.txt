@@ -1,0 +1,42 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       graph_loop_count   R-squared:                       0.276
+Model:                            OLS   Adj. R-squared:                  0.195
+Method:                 Least Squares   F-statistic:                     3.406
+Date:                Tue, 07 Oct 2025   Prob (F-statistic):           1.57e-05
+Time:                        17:54:29   Log-Likelihood:                -353.76
+No. Observations:                 180   AIC:                             745.5
+Df Residuals:                     161   BIC:                             806.2
+Df Model:                          18                                         
+Covariance Type:            nonrobust                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                  1.6888      0.257      6.575      0.000       1.182       2.196
+tda_corrcluster_1     -0.2475      1.183     -0.209      0.835      -2.584       2.089
+tda_corrcluster_2      0.4875      0.708      0.689      0.492      -0.910       1.885
+tda_corrcluster_3     -0.8652      0.579     -1.494      0.137      -2.009       0.279
+tda_corrcluster_4     -0.5394      0.540     -0.999      0.319      -1.606       0.527
+tda_corrcluster_5      0.0960      0.445      0.216      0.829      -0.783       0.975
+tda_corrcluster_6      0.2365      0.877      0.270      0.788      -1.495       1.968
+tda_corrcluster_7     -0.7199      0.494     -1.456      0.147      -1.696       0.256
+tda_corrcluster_8     -0.3917      0.283     -1.382      0.169      -0.952       0.168
+tda_corrcluster_9      0.3441      0.195      1.766      0.079      -0.041       0.729
+tda_corrcluster_10     0.0585      0.455      0.129      0.898      -0.840       0.957
+tda_corrcluster_11    -0.0387      0.283     -0.137      0.891      -0.597       0.519
+tda_corrcluster_12     0.0300      0.207      0.145      0.885      -0.379       0.439
+tda_corrcluster_13    -1.0314      0.429     -2.404      0.017      -1.879      -0.184
+tda_corrcluster_14     0.0117      0.403      0.029      0.977      -0.784       0.807
+tda_corrcluster_15     1.0982      0.316      3.475      0.001       0.474       1.722
+tda_corrcluster_16     0.1600      0.206      0.778      0.438      -0.246       0.566
+tda_corrcluster_17     0.1843      0.419      0.440      0.660      -0.642       1.011
+tda_corrcluster_18     0.6244      0.322      1.938      0.054      -0.012       1.261
+==============================================================================
+Omnibus:                      223.894   Durbin-Watson:                   2.033
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            13775.991
+Skew:                           4.883   Prob(JB):                         0.00
+Kurtosis:                      44.730   Cond. No.                         31.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

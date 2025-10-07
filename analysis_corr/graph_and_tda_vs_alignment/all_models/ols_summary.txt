@@ -1,0 +1,50 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            align_score   R-squared:                       0.090
+Model:                            OLS   Adj. R-squared:                  0.075
+Method:                 Least Squares   F-statistic:                     5.842
+Date:                Tue, 07 Oct 2025   Prob (F-statistic):           2.15e-17
+Time:                        17:54:28   Log-Likelihood:                 1877.2
+No. Observations:                1440   AIC:                            -3704.
+Df Residuals:                    1415   BIC:                            -3572.
+Df Model:                          24                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+const                       0.4648      0.014     33.584      0.000       0.438       0.492
+tda_corrcluster_1          -0.0044      0.009     -0.503      0.615      -0.022       0.013
+tda_corrcluster_2           0.0088      0.005      1.834      0.067      -0.001       0.018
+tda_corrcluster_3          -0.0188      0.007     -2.539      0.011      -0.033      -0.004
+tda_corrcluster_4           0.0011      0.006      0.191      0.849      -0.010       0.013
+tda_corrcluster_5          -0.0050      0.005     -0.907      0.365      -0.016       0.006
+tda_corrcluster_6           0.0098      0.010      0.979      0.328      -0.010       0.030
+tda_corrcluster_7          -0.0035      0.005     -0.758      0.448      -0.012       0.006
+tda_corrcluster_8           0.0014      0.004      0.407      0.684      -0.006       0.008
+tda_corrcluster_9          -0.0036      0.003     -1.357      0.175      -0.009       0.002
+tda_corrcluster_10         -0.0027      0.005     -0.592      0.554      -0.012       0.006
+tda_corrcluster_11         -0.0024      0.003     -0.735      0.462      -0.009       0.004
+tda_corrcluster_12          0.0064      0.003      2.479      0.013       0.001       0.011
+tda_corrcluster_13         -0.0052      0.005     -1.052      0.293      -0.015       0.004
+tda_corrcluster_14          0.0043      0.005      0.922      0.357      -0.005       0.014
+tda_corrcluster_15         -0.0005      0.004     -0.121      0.904      -0.008       0.007
+tda_corrcluster_16         -0.0032      0.003     -1.264      0.206      -0.008       0.002
+tda_corrcluster_17         -0.0007      0.004     -0.159      0.874      -0.009       0.008
+tda_corrcluster_18         -0.0019      0.004     -0.483      0.629      -0.009       0.006
+graph_avg_clustering       -0.5273      0.382     -1.379      0.168      -1.278       0.223
+graph_avg_path_length       0.0003      0.000      0.638      0.523      -0.001       0.001
+graph_diameter             -0.0003      0.000     -1.717      0.086      -0.001    4.11e-05
+graph_has_loop             -0.0165      0.011     -1.467      0.143      -0.039       0.006
+graph_loop_count           -0.0006      0.001     -0.629      0.529      -0.002       0.001
+graph_small_world_index     0.0316      0.018      1.708      0.088      -0.005       0.068
+==============================================================================
+Omnibus:                       59.656   Durbin-Watson:                   1.829
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               66.488
+Skew:                           0.499   Prob(JB):                     3.65e-15
+Kurtosis:                       3.336   Cond. No.                     2.89e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.89e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.

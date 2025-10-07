@@ -1,0 +1,32 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            align_score   R-squared:                       0.047
+Model:                            OLS   Adj. R-squared:                  0.014
+Method:                 Least Squares   F-statistic:                     1.413
+Date:                Tue, 07 Oct 2025   Prob (F-statistic):              0.212
+Time:                        16:06:40   Log-Likelihood:                 229.31
+No. Observations:                 180   AIC:                            -444.6
+Df Residuals:                     173   BIC:                            -422.3
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+const                       0.4465      0.036     12.374      0.000       0.375       0.518
+graph_avg_clustering        0.2494      1.634      0.153      0.879      -2.975       3.474
+graph_avg_path_length      -0.0001      0.001     -0.087      0.931      -0.003       0.002
+graph_diameter             -0.0002      0.000     -0.362      0.718      -0.001       0.001
+graph_has_loop             -0.0045      0.030     -0.150      0.881      -0.063       0.054
+graph_loop_count            0.0073      0.005      1.462      0.146      -0.003       0.017
+graph_small_world_index     0.0058      0.068      0.085      0.932      -0.129       0.140
+==============================================================================
+Omnibus:                        7.050   Durbin-Watson:                   1.744
+Prob(Omnibus):                  0.029   Jarque-Bera (JB):                7.158
+Skew:                           0.488   Prob(JB):                       0.0279
+Kurtosis:                       2.982   Cond. No.                     4.61e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.61e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.

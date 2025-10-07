@@ -1,0 +1,50 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            align_score   R-squared:                       0.136
+Model:                            OLS   Adj. R-squared:                  0.008
+Method:                 Least Squares   F-statistic:                     1.066
+Date:                Tue, 07 Oct 2025   Prob (F-statistic):              0.389
+Time:                        17:54:28   Log-Likelihood:                 246.31
+No. Observations:                 180   AIC:                            -444.6
+Df Residuals:                     156   BIC:                            -368.0
+Df Model:                          23                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+const                       0.1987      0.014     14.304      0.000       0.171       0.226
+tda_corrcluster_1           0.0320      0.021      1.493      0.137      -0.010       0.074
+tda_corrcluster_2          -0.0089      0.013     -0.680      0.497      -0.035       0.017
+tda_corrcluster_3          -0.0007      0.022     -0.033      0.974      -0.044       0.042
+tda_corrcluster_4          -0.0036      0.020     -0.180      0.858      -0.043       0.036
+tda_corrcluster_5           0.0183      0.016      1.151      0.252      -0.013       0.050
+tda_corrcluster_6          -0.0297      0.026     -1.140      0.256      -0.081       0.022
+tda_corrcluster_7          -0.0074      0.015     -0.485      0.628      -0.037       0.023
+tda_corrcluster_8          -0.0063      0.010     -0.622      0.535      -0.026       0.014
+tda_corrcluster_9          -0.0046      0.007     -0.652      0.515      -0.019       0.009
+tda_corrcluster_10         -0.0123      0.018     -0.671      0.503      -0.049       0.024
+tda_corrcluster_11         -0.0020      0.010     -0.196      0.845      -0.022       0.018
+tda_corrcluster_12         -0.0014      0.008     -0.188      0.851      -0.017       0.014
+tda_corrcluster_13         -0.0162      0.014     -1.175      0.242      -0.043       0.011
+tda_corrcluster_14          0.0187      0.014      1.341      0.182      -0.009       0.046
+tda_corrcluster_15          0.0120      0.011      1.130      0.260      -0.009       0.033
+tda_corrcluster_16      -5.292e-05      0.008     -0.006      0.995      -0.017       0.016
+tda_corrcluster_17         -0.0135      0.012     -1.103      0.272      -0.038       0.011
+tda_corrcluster_18         -0.0133      0.012     -1.124      0.263      -0.037       0.010
+graph_avg_clustering       -0.9278      1.370     -0.677      0.499      -3.634       1.778
+graph_avg_path_length      -0.0017      0.002     -0.914      0.362      -0.005       0.002
+graph_diameter              0.0006      0.001      0.990      0.324      -0.001       0.002
+graph_has_loop              0.1987      0.014     14.304      0.000       0.171       0.226
+graph_loop_count            0.0014      0.002      0.725      0.469      -0.002       0.005
+graph_small_world_index     0.0466      0.072      0.651      0.516      -0.095       0.188
+==============================================================================
+Omnibus:                        3.557   Durbin-Watson:                   1.772
+Prob(Omnibus):                  0.169   Jarque-Bera (JB):                3.213
+Skew:                           0.320   Prob(JB):                        0.201
+Kurtosis:                       3.136   Cond. No.                     1.54e+17
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 7.82e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

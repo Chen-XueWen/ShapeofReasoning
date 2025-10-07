@@ -1,0 +1,60 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            align_score   R-squared:                       0.167
+Model:                            OLS   Adj. R-squared:                 -0.001
+Method:                 Least Squares   F-statistic:                    0.9963
+Date:                Tue, 07 Oct 2025   Prob (F-statistic):              0.480
+Time:                        16:06:41   Log-Likelihood:                 249.62
+No. Observations:                 180   AIC:                            -437.2
+Df Residuals:                     149   BIC:                            -338.3
+Df Model:                          30                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+const                       0.1608      1.102      0.146      0.884      -2.017       2.339
+tda_H0_betti_centroid       1.1093      1.196      0.928      0.355      -1.253       3.472
+tda_H0_betti_spread        -0.9048      1.075     -0.842      0.401      -3.029       1.220
+tda_H0_betti_width          0.0429      0.415      0.103      0.918      -0.777       0.862
+tda_H0_count               -0.0010      0.001     -0.755      0.452      -0.003       0.002
+tda_H0_entropy             -0.1305      0.206     -0.635      0.527      -0.537       0.276
+tda_H0_landscape_area      -8.2458     14.024     -0.588      0.557     -35.958      19.466
+tda_H0_landscape_max        1.2823      2.017      0.636      0.526      -2.703       5.267
+tda_H0_landscape_mean       0.4274      0.672      0.636      0.526      -0.901       1.756
+tda_H0_max_life             2.5645      4.033      0.636      0.526      -5.406      10.535
+tda_H0_mean_life           -1.6369      1.214     -1.348      0.180      -4.036       0.762
+tda_H0_skewness            -0.0114      0.050     -0.228      0.820      -0.110       0.088
+tda_H0_total_life           0.0051      0.005      0.982      0.328      -0.005       0.016
+tda_H1_betti_centroid      -0.0759      0.146     -0.520      0.604      -0.364       0.213
+tda_H1_betti_location      -0.0355      0.056     -0.636      0.526      -0.146       0.075
+tda_H1_betti_peak          -0.0014      0.002     -0.559      0.577      -0.006       0.004
+tda_H1_betti_spread        -0.0926      0.346     -0.267      0.790      -0.777       0.592
+tda_H1_betti_width         -0.0107      0.046     -0.235      0.815      -0.101       0.079
+tda_H1_count                0.0004      0.001      0.271      0.787      -0.002       0.003
+tda_H1_entropy             -0.0213      0.089     -0.240      0.811      -0.196       0.154
+tda_H1_landscape_area      -2.9802      3.655     -0.815      0.416     -10.203       4.243
+tda_H1_landscape_max        0.3197      0.197      1.621      0.107      -0.070       0.709
+tda_H1_landscape_mean       2.1358      1.725      1.238      0.218      -1.274       5.545
+tda_H1_max_birth            0.5546      0.329      1.685      0.094      -0.096       1.205
+tda_H1_max_death           -0.5917      0.377     -1.570      0.118      -1.336       0.153
+tda_H1_max_life             0.6394      0.395      1.621      0.107      -0.140       1.419
+tda_H1_mean_life           -4.5951      2.690     -1.708      0.090      -9.910       0.720
+tda_H1_skewness            -0.0567      0.039     -1.447      0.150      -0.134       0.021
+tda_H1_total_life           0.0057      0.025      0.231      0.818      -0.043       0.054
+graph_avg_clustering       -0.7649      1.492     -0.513      0.609      -3.712       2.183
+graph_avg_path_length      -0.0010      0.002     -0.551      0.583      -0.005       0.003
+graph_diameter              0.0003      0.001      0.530      0.597      -0.001       0.002
+graph_has_loop              0.1608      1.102      0.146      0.884      -2.017       2.339
+graph_loop_count            0.0008      0.002      0.408      0.684      -0.003       0.005
+graph_small_world_index     0.0314      0.076      0.412      0.681      -0.119       0.182
+==============================================================================
+Omnibus:                        4.635   Durbin-Watson:                   1.757
+Prob(Omnibus):                  0.099   Jarque-Bera (JB):                4.218
+Skew:                           0.318   Prob(JB):                        0.121
+Kurtosis:                       3.397   Cond. No.                     1.04e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 7.94e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
