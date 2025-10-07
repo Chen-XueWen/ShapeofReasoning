@@ -6,7 +6,7 @@ set -euo pipefail
 JSON_DIR="./data/aime_json"
 
 # Python script that generates traces
-SCRIPT="./scripts/generate_traces.py"
+SCRIPT="./generate_traces.py"
 
 if [[ ! -d "${JSON_DIR}" ]]; then
   echo "Input directory '${JSON_DIR}' not found" >&2
