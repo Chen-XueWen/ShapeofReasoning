@@ -12,12 +12,14 @@ from pathlib import Path
 from typing import Dict, Iterable, Iterator, List, Mapping, MutableMapping, Sequence, Tuple
 
 DEFAULT_MODELS: Tuple[str, ...] = (
-    "deepseek-r1_32b",
-    "gpt-oss_120b",
-    "gpt-oss_20b",
-    "qwen3_32b",
-    "qwen3_8b",
-    "deepseek-r1_70b",
+  "deepseek-r1_32b",
+  "gpt-oss_20b",
+  "gpt-oss_120b",
+  "deepseek-r1_7b",
+  "deepseek-r1_70b",
+  "qwen3_8b",
+  "qwen3_32b",
+  "qwen3_235b"
 )
 
 TDA_SUBPATH = Path("data/aime_tda/trace")
