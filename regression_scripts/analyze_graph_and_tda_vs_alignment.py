@@ -3,11 +3,10 @@ from __future__ import annotations
 
 """OLS regressions of combined graph + TDA features against alignment score.
 
-The script now consumes the unified CSV dataset produced by
-``regression_scripts/build_combined_dataset.py`` and can iterate across models,
-years, and an overall 720-sample view in a single run. Outputs are organised as
-``<outdir>/<model>/<year>/`` (plus ``combined`` and ``all_models`` buckets when
-requested).
+The script consumes the unified CSV dataset produced by
+``regression_scripts/build_combined_dataset.py`` and produces per-model combined
+results alongside an optional all-model regression. Outputs are organised as
+``<outdir>/<model>/combined/`` plus ``all_models`` when requested.
 """
 
 import argparse
@@ -19,7 +18,7 @@ import pandas as pd
 import statsmodels.api as sm
 from stargazer.stargazer import Stargazer
 
-DEFAULT_DATASET = Path("data/aime_regression_dataset.csv")
+DEFAULT_DATASET = Path("data/aime_regression_dataset_cleaned.csv")
 DEFAULT_MODELS: tuple[str, ...] = (
     "deepseek-r1_32b",
     "gpt-oss_120b",
@@ -190,18 +189,13 @@ def main() -> None:
         "--years",
         nargs="*",
         default=list(DEFAULT_YEARS),
-        help="Contest years to analyse individually",
+        help="Contest years to include in the regression",
     )
     parser.add_argument(
         "--outdir",
         type=Path,
         default=Path("analysis/graph_and_tda_vs_alignment"),
         help="Directory to write analysis artefacts",
-    )
-    parser.add_argument(
-        "--skip-combined",
-        action="store_true",
-        help="Skip per-model combined regression across selected years",
     )
     parser.add_argument(
         "--skip-overall",
@@ -223,17 +217,10 @@ def main() -> None:
             print(f"[{model_name}] no rows found; skipping model.")
             continue
 
-        for year in requested_years or sorted(df_model["year"].unique()):
-            df_year = df_model[df_model["year"] == year]
-            label = f"{model_name}_{year}"
-            dest = args.outdir / model_name / year
-            run_analysis(df_year, combined_feature_columns, dest, label)
-
-        if not args.skip_combined:
-            df_combined = df_model
-            label = f"{model_name}_combined"
-            dest = args.outdir / model_name / "combined"
-            run_analysis(df_combined, combined_feature_columns, dest, label)
+        df_combined = df_model
+        label = f"{model_name}_combined"
+        dest = args.outdir / model_name / "combined"
+        run_analysis(df_combined, combined_feature_columns, dest, label)
 
     if not args.skip_overall:
         df_overall = select_rows(df_full, requested_models, requested_years)

@@ -3,10 +3,9 @@ from __future__ import annotations
 
 """OLS regressions of TDA features against graph properties.
 
-The script operates on the unified CSV dataset and can run regressions per
-model, per year, and across all models. Output structure mirrors the target
-variable first: ``<outdir>/<target>/<model>/<year>/`` plus ``combined`` and
-``all_models`` folders when enabled.
+The script operates on the unified CSV dataset and runs per-model combined and
+across-model regressions. Output structure mirrors the target variable first:
+``<outdir>/<target>/<model>/combined/`` plus ``all_models`` when enabled.
 """
 
 import argparse
@@ -147,26 +146,16 @@ def process_model(
     targets: Sequence[str],
     feature_columns: Sequence[str],
     outdir: Path,
-    skip_combined: bool,
 ) -> None:
     df_model = select_rows(df_full, [model_name], years)
     if df_model.empty:
         print(f"[{model_name}] no rows found; skipping model.")
         return
 
-    per_year = years or sorted(df_model["year"].unique())
-    for year in per_year:
-        df_year = df_model[df_model["year"] == year]
-        for target in targets:
-            label = f"{model_name}_{year}_{target}"
-            dest = outdir / target / model_name / year
-            run_regression(df_year, target, feature_columns, dest, label)
-
-    if not skip_combined:
-        for target in targets:
-            label = f"{model_name}_combined_{target}"
-            dest = outdir / target / model_name / "combined"
-            run_regression(df_model, target, feature_columns, dest, label)
+    for target in targets:
+        label = f"{model_name}_combined_{target}"
+        dest = outdir / target / model_name / "combined"
+        run_regression(df_model, target, feature_columns, dest, label)
 
 
 def process_overall(
@@ -208,7 +197,7 @@ def main() -> None:
         "--years",
         nargs="*",
         default=list(DEFAULT_YEARS),
-        help="Contest years to analyse individually",
+        help="Contest years to include in the regression",
     )
     parser.add_argument(
         "--targets",
@@ -221,11 +210,6 @@ def main() -> None:
         type=Path,
         default=Path("analysis/tda_vs_graph"),
         help="Directory to write analysis artefacts",
-    )
-    parser.add_argument(
-        "--skip-combined",
-        action="store_true",
-        help="Skip per-model combined regression across selected years",
     )
     parser.add_argument(
         "--skip-overall",
@@ -259,7 +243,6 @@ def main() -> None:
             targets,
             tda_feature_columns,
             args.outdir,
-            args.skip_combined,
         )
 
     if not args.skip_overall:

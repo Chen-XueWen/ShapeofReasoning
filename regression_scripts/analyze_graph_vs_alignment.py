@@ -3,10 +3,9 @@ from __future__ import annotations
 
 """OLS regressions of graph connectivity features against alignment score.
 
-Reads the unified CSV dataset and supports per-model, per-year, combined, and
-all-model regressions in one invocation. Results are written under
-``<outdir>/<model>/<year>/`` with optional ``combined`` and ``all_models``
-folders.
+Reads the unified CSV dataset and produces per-model combined and all-model
+regressions in one invocation. Results are written under
+``<outdir>/<model>/combined/`` with an optional ``all_models`` folder.
 """
 
 import argparse
@@ -187,18 +186,13 @@ def main() -> None:
         "--years",
         nargs="*",
         default=list(DEFAULT_YEARS),
-        help="Contest years to analyse individually",
+        help="Contest years to include in the regression",
     )
     parser.add_argument(
         "--outdir",
         type=Path,
         default=Path("analysis/graph_vs_alignment"),
         help="Directory to write analysis artefacts",
-    )
-    parser.add_argument(
-        "--skip-combined",
-        action="store_true",
-        help="Skip per-model combined regression across selected years",
     )
     parser.add_argument(
         "--skip-overall",
@@ -218,17 +212,10 @@ def main() -> None:
             print(f"[{model_name}] no rows found; skipping model.")
             continue
 
-        for year in requested_years or sorted(df_model["year"].unique()):
-            df_year = df_model[df_model["year"] == year]
-            label = f"{model_name}_{year}"
-            dest = args.outdir / model_name / year
-            run_analysis(df_year, graph_feature_columns, dest, label)
-
-        if not args.skip_combined:
-            df_combined = df_model
-            label = f"{model_name}_combined"
-            dest = args.outdir / model_name / "combined"
-            run_analysis(df_combined, graph_feature_columns, dest, label)
+        df_combined = df_model
+        label = f"{model_name}_combined"
+        dest = args.outdir / model_name / "combined"
+        run_analysis(df_combined, graph_feature_columns, dest, label)
 
     if not args.skip_overall:
         df_overall = select_rows(df_full, requested_models, requested_years)
