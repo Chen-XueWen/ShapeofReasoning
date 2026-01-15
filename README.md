@@ -1,6 +1,7 @@
 # TDA on LLM Reasoning Traces
 
-Pipeline for comparing topological signatures of LLM reasoning traces against AIME gold solutions, as described in the paper "2510.20665v1.pdf".
+Pipeline for comparing topological signatures of LLM reasoning traces against AIME gold solutions, as described in the paper [The Shape of Reasoning: Topological Analysis of Reasoning Traces in Large Language Models
+](https://arxiv.org/abs/2510.20665v1)
 
 This repository contains scripts for:
 
